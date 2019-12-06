@@ -893,9 +893,12 @@ body {
 
 @media all and (max-width: 425px) {
   .chat-box__wrapper {
-    min-height: 130vh;
-    height: 130%;
-    height: 130vh; } }
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto; } }
 
 @media all and (max-width: 325px) {
   .controls .emojionearea {
