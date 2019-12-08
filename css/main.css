@@ -892,8 +892,14 @@ body {
     max-width: 75%; } }
 
 @media all and (max-width: 425px) {
+  html {
+    position: relative; }
   .chat-box {
-    height: calc(var(--vh, 1vh) * 100); } }
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; } }
 
 @media all and (max-width: 325px) {
   .controls .emojionearea {
