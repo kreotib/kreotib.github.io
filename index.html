@@ -3,100 +3,832 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@3.1.7/extras/css/emojione.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Стартовая страница</title>
 </head>
-<body onload="initElement()">
-<div class="wrapper">
-    <div class="custom_block hidden">
-    
-    </div>
-    <div class="chat-box__wrapper">
-        <div class="chat-box">
-            <div class="chat-box__header">
-                <div class="header__text">
-                    <p>
-                        Чат
-                    </p>
+<body>
+    <section class="welcome">
+        <div class="welcome__filter">
+
+        </div>
+        <div class="welcome__text">
+            <h1 class="logo">
+                Your <br> Logo
+            </h1>
+            <h2 class="sub-logo">
+                <p>
+                    Далеко-далеко, за.
+                </p>
+                <p>
+                    Далеко-далеко за словесными горами в стране гласных и согласных живут.
+                </p>
+                <p>
+                    Далеко-далеко за словесными горами в стране гласных и согласных живут.
+                </p>
+            </h2>
+        </div>
+    </section>
+    <nav class="main-nav">
+        <div class="replace-empty"></div>
+        <div class="bar">
+            <div class="bar__wrapper">
+                <div class="bar__line"></div>
+                <div class="bar__line"></div>
+                <div class="bar__line"></div>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="main-nav__list main-nav__lvl-one">
+                <li class="main-nav__item main-nav__item-close">
+                   <a href="#" class="main-nav__link close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                   </a>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">Услуги</a>
+                    <ul class="main-nav__list main-nav__lvl-two">
+                        <li class="main-nav__item"><a href="" class="main-nav__link">lorem</a></li>
+                        <li class="main-nav__item"><a href="" class="main-nav__link">lorem</a></li>
+                        <li class="main-nav__item"><a href="" class="main-nav__link">lorem</a></li>
+                        <li class="main-nav__item"><a href="" class="main-nav__link">lorem</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">FAQ</a>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">Отзывы</a>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">Тесты</a>
+                </li>
+                <li class="main-nav__item main-nav__logo">
+                    <a href="">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">b2b</a>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">фото</a>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">цены</a>
+                </li>
+                <li class="main-nav__item main-nav__item-one">
+                    <a class="main-nav__link" href="">контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <h1 class="section__title">
+            АНГЛИЙСКИЙ: КАК ВЫБРАТЬ ЛУЧШИЕ КУРСЫ
+            </h1>
+            <h2 class="section__subTitle">
+                Далеко-далеко за словесными горами.
+            </h2>
+            <div class="section__row section__content">
+                <div class="section__column">
+                    <div class="img__wrapper">
+                       <img src="img/section_img.jpg" alt="">
+                    </div>
                 </div>
-                <div class="header__button">
-                    <button class="btn" onclick="printSystem('Поиск опонента',true)">
-                        Найти оппонента
-                    </button>
+                <div class="section__column">
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <ul class="advantages-list lvl-two">
+                                    <li class="lvl-two__item">Только топ преподаватели</li>
+                                    <li class="lvl-two__item">Отборный контент на занятиях</li>
+                                    <li class="lvl-two__item">Гарантированно работающие методики</li>
+                                    <li class="lvl-two__item">Ощутимый прогресс с первых занятий</li>
+                                </ul>
+                            </li>
+                        </ul>
+                  </div>
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <ul class="advantages-list lvl-two">
+                                    <li class="lvl-two__item">Только топ преподаватели</li>
+                                    <li class="lvl-two__item">Отборный контент на занятиях</li>
+                                    <li class="lvl-two__item">Гарантированно работающие методики</li>
+                                    <li class="lvl-two__item">Ощутимый прогресс с первых занятий</li>
+                                </ul>
+                            </li>
+                        </ul>
+                  </div>
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <ul class="advantages-list lvl-two">
+                                    <li class="lvl-two__item">Только топ преподаватели</li>
+                                    <li class="lvl-two__item">Отборный контент на занятиях</li>
+                                    <li class="lvl-two__item">Гарантированно работающие методики</li>
+                                    <li class="lvl-two__item">Ощутимый прогресс с первых занятий</li>
+                                </ul>
+                            </li>
+                        </ul>
+                  </div>
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <ul class="advantages-list lvl-two">
+                                    <li class="lvl-two__item">Только топ преподаватели</li>
+                                    <li class="lvl-two__item">Отборный контент на занятиях</li>
+                                    <li class="lvl-two__item">Гарантированно работающие методики</li>
+                                    <li class="lvl-two__item">Ощутимый прогресс с первых занятий</li>
+                                </ul>
+                            </li>
+                        </ul>
+                  </div>
                 </div>
             </div>
-            <div id="chat-box__content" class="chat-box__content">
-                 
-                    <div class="message-block someone unread">
-                        <div class="message-block__icon">
-        
-                        </div>
-                        <div class="message-block__text">
-                            привет 
-                        </div>
-                        <div class="message-block__time">
-                            22:39
-                        </div>
-                    </div>
-                    <div class="message-block self">
-                        <div class="message-block__icon">
-        
-                        </div>
-                        <div class="message-block__text">
-                            привет 
-                        </div>
-                        <div class="message-block__time">
-                            22:39
-                        </div>
-                    </div>
+            <div class="btn__wrapper left-right">
+                <a href="#" class="btn">Записаться на курс</a>
             </div>
-            <div class="chat-box__footer">
-                    
-                <div class="controls">
-                    <div id="close" class="but but-connect"><i class="connect material-icon close">close</i></div>
-                    <div autocomplete="off" id="text" contenteditable="true" class="text" tabindex="1" style="max-height: 493px;"/></div>                    <!-- <div class="but but-emoji disabled"><i class="add-emoji material-icon tooltipped tooltipped-top emoji-loading">insert_emoticon</i></div>-->
-                    <div id="send" onclick="createMessage(text);clearText();" class="but but-send"><i class="send material-icon">send</i></div>
+        </div>
+    </section>
+     <section class="section">
+        <div class="container">
+            <h1 class="section__title">
+            АНГЛИЙСКИЙ: КАК ВЫБРАТЬ ЛУЧШИЕ КУРСЫ
+            </h1>
+            <h2 class="section__subTitle">
+                Далеко-далеко за словесными горами.
+            </h2>
+            <div class="section__row section__content">
+                <div class="section__column">
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <div class="advantages__content">
+                                    <p class="advantages__text">Никаких оплат за семестр вперед</p>
+                                    <p class="advantages__text">Можно переносить занятия</p>
+                                    <p class="advantages__text">Можно посетить все группы своего уровня</p>
+                                </div>
+                            </li>
+                        </ul>
+                  </div>
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <div class="advantages__content">
+                                    <p class="advantages__text">Никаких оплат за семестр вперед</p>
+                                    <p class="advantages__text">Можно переносить занятия</p>
+                                    <p class="advantages__text">Можно посетить все группы своего уровня</p>
+                                </div>
+                            </li>
+                        </ul>
+                  </div>
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <div class="advantages__content">
+                                    <p class="advantages__text">Никаких оплат за семестр вперед</p>
+                                    <p class="advantages__text">Можно переносить занятия</p>
+                                    <p class="advantages__text">Можно посетить все группы своего уровня</p>
+                                </div>
+                            </li>
+                        </ul>
+                  </div>
+                  <div class="advantages">
+                      <div class="advantages__img">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                      </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h4 class="advantages__title">
+                                    Главное
+                                </h4>
+                                <div class="advantages__content">
+                                    <p class="advantages__text">Никаких оплат за семестр вперед</p>
+                                    <p class="advantages__text">Можно переносить занятия</p>
+                                    <p class="advantages__text">Можно посетить все группы своего уровня</p>
+                                </div>
+                            </li>
+                        </ul>
+                  </div>
                 </div>
-            </div>  
+                <div class="section__column">
+                    <div class="img__wrapper">
+                       <img src="img/section_img_1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="btn__wrapper right-left">
+                <a href="#" class="btn">Записаться на курс</a>
+            </div>
         </div>
-    </div>
-    <div class="custom_block">
-        <div class="change-background">
-        <div class="change-background__button">
-            Надоел фон ?
+    </section>
+    <section class="section section-review">
+        <div class="container">
+            <h1 class="section__title">
+            отзывы
+            </h1>
+            <h2 class="section__subTitle">
+                Далеко-далеко за словесными горами.
+            </h2>
+            <div class="section__row section__content">
+                <div class="section__column">
+                    <h3 class="section_subTitle">
+                        видео отзывы
+                    </h3>
+                    <div class="img__wrapper">
+                        <img src="img/youtube.png" alt="">
+                    </div>
+                    <div class="btn__wrapper left-right">
+                        <a href="#" class="btn">Оставить отзыв</a>
+                    </div>
+                </div>
+                <div class="section__column">
+                    <div class="reviews">
+                        <ul class="reviews__list">
+                            <li class="reviews__item">
+                                <div class="reviews__img">
+                                    <img src="img/review.jpg" alt="">
+                                </div>
+                                <div class="reviews__content">
+                                    <div class="reviews__info">
+                                        <p>Имя Фамилия</p>
+                                        <p class="date-time">
+                                            <span class="date">
+                                                30.06.19
+                                            </span>
+                                            <span class="time">
+                                                22:48
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="reviews__desc">
+                                        <p>
+                                            За год я выучил больше, чем за всю свою жизнь.За год я выучил больше, чем за всю свою жизнь.
+                                        </p>
+                                    </div>
+                                    <div class="reviews__mark">
+                                        Оценка: <span class="mark">5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__img">
+                                    <img src="img/review.jpg" alt="">
+                                </div>
+                                <div class="reviews__content">
+                                    <div class="reviews__info">
+                                        <p>Имя Фамилия</p>
+                                        <p class="date-time">
+                                            <span class="date">
+                                                30.06.19
+                                            </span>
+                                            <span class="time">
+                                                22:48
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="reviews__desc">
+                                        <p>
+                                            За год я выучил больше, чем за всю свою жизнь.За год я выучил больше, чем за всю свою жизнь.
+                                        </p>
+                                    </div>
+                                    <div class="reviews__mark">
+                                        Оценка: <span class="mark">5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__img">
+                                    <img src="img/review.jpg" alt="">
+                                </div>
+                                <div class="reviews__content">
+                                    <div class="reviews__info">
+                                        <p>Имя Фамилия</p>
+                                        <p class="date-time">
+                                            <span class="date">
+                                                30.06.19
+                                            </span>
+                                            <span class="time">
+                                                22:48
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="reviews__desc">
+                                        <p>
+                                            За год я выучил больше, чем за всю свою жизнь.За год я выучил больше, чем за всю свою жизнь.
+                                        </p>
+                                    </div>
+                                    <div class="reviews__mark">
+                                        Оценка: <span class="mark">5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__img">
+                                    <img src="img/review.jpg" alt="">
+                                </div>
+                                <div class="reviews__content">
+                                    <div class="reviews__info">
+                                        <p>Имя Фамилия</p>
+                                        <p class="date-time">
+                                            <span class="date">
+                                                30.06.19
+                                            </span>
+                                            <span class="time">
+                                                22:48
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="reviews__desc">
+                                        <p>
+                                            За год я выучил больше, чем за всю свою жизнь.За год я выучил больше, чем за всю свою жизнь.
+                                        </p>
+                                    </div>
+                                    <div class="reviews__mark">
+                                        Оценка: <span class="mark">5</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="more_link">
+                            <a href="">
+                                Еще отзывы
+                            </a>
+                        </div>
+                        <div class="reviews__sumary">
+                            <p>Средняя оценка:
+                                <span class="mark">4.97</span> из
+                                <span class="mark">5</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
         </div>
-        <ul class="background-list">
-            <li class="background-list__item">
-                <a href="#" class="background-list__link">
-                    <img class="background-list__img" src="img/bckg/bg1.png" alt="">
-                    Фон 1
-                </a>
-            </li>
-            <li class="background-list__item">
-                <a href="#" class="background-list__link">
-                    <img class="background-list__img" src="img/bckg/5-dots.png" alt="">
-                    Фон 2
-                </a>
-            </li>
-            <li class="background-list__item">
-                <a href="#" class="background-list__link no-bckg">
-                    Без фона
-                </a>
-            </li>
-        </ul>
+    </section>
+    <div class="section-instagram">
+       <div class="instagram-slider">
+           <ul class="instragram-slider__list">
+               <li class="instagram-slider__item">
+                   <img class="instragram-slider__img" src="img/123.jpg" alt="">
+               </li>
+               <li class="instagram-slider__item">
+                    <img class="instragram-slider__img" src="img/section_img.jpg" alt="">
+                </li>
+                <li class="instagram-slider__item">
+                   <img class="instragram-slider__img" src="img/123.jpg" alt="">
+               </li>
+               <li class="instagram-slider__item">
+                   <img class="instragram-slider__img" src="img/section_img.jpg" alt="">
+               </li>
+               <li class="instagram-slider__item">
+                   <img class="instragram-slider__img" src="img/123.jpg" alt="">
+               </li>
+               <li class="instagram-slider__item">
+                   <img class="instragram-slider__img" src="img/section_img.jpg" alt="">
+               </li>
+               <li class="instagram-slider__item">
+                   <img class="instragram-slider__img" src="img/123.jpg" alt="">
+               </li>
+           </ul>
+       </div>
     </div>
-    </div>
-</div>
+    <section class="section">
+        <div class="container">
+            <h1 class="section__title">
+            цены
+            </h1>
+            <h2 class="section__subTitle">
+                Далеко-далеко за словесными горами.
+            </h2>
+            <div class="section__row section__content">
+                <div class="section__column">
+                   <div class="img__wrapper">
+                       <img src="img/price.jpg" alt="">
+                    </div>
+                </div>
+                <div class="section__column">
+                    <div class="prices">
+                        <div class="prices__block">
+                            <h3 class="prices__title">
+                                Групповые занятия
+                            </h3>
+                            <h4 class="prices__subTitle">
+                                чтобы быстро разговориться
+                            </h4>
+                            <div class="prices__table">
+                                <div class="prices__row">
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">8</span> занятий в месяц
+                                        </p>
+                                    </div>
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">3400</span>  грн/мес.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prices__block">
+                            <h3 class="prices__title">
+                                Групповые занятия
+                            </h3>
+                            <h4 class="prices__subTitle">
+                                чтобы быстро разговориться
+                            </h4>
+                            <div class="prices__table">
+                                <div class="prices__row">
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">8</span> занятий в месяц
+                                        </p>
+                                    </div>
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">3400</span>  грн/мес.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="prices__row">
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">8</span> занятий в месяц
+                                        </p>
+                                    </div>
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">3400</span>  грн/мес.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prices__block">
+                            <h3 class="prices__title">
+                                Групповые занятия
+                            </h3>
+                            <h4 class="prices__subTitle">
+                                чтобы быстро разговориться
+                            </h4>
+                            <div class="prices__table">
+                                <div class="prices__row">
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">8</span> занятий в месяц
+                                        </p>
+                                    </div>
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">3400</span> грн/мес.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="prices__row">
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">8</span> занятий в месяц
+                                        </p>
+                                    </div>
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">3400</span>  грн/мес.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="prices__row">
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">8</span> занятий в месяц
+                                        </p>
+                                    </div>
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">3400</span>  грн/мес.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="prices__row">
+                                    <div class="prices__column">
+                                        <p>
+                                           <span class="price">8</span> занятий в месяц
+                                        </p> 
+                                    </div>
+                                    <div class="prices__column">
+                                        <p>
+                                            <span class="price">3400</span>  грн/мес.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section btn-section">
+        <div class="container">
+            <h2 class="section__subTitle">
+                Никаких чат-ботов, Вам ответят живые люди
+            </h2>
+            <div class="section__row section__content">
+                <div class="section__column">
+                   <div class="btn__wrapper left-right">
+                        <a href="" class="btn">
+                            Пишите в viber
+                        </a>
+                   </div>
+                   <div class="btn__wrapper left-right">
+                        <a href="" class="btn">
+                            Пишите в telegram
+                        </a>
+                   </div>
+                </div>
+                <div class="section__column">
+                    <div class="btn__wrapper right-left">
+                        <a href="" class="btn">
+                            Пишите в viber
+                        </a>
+                   </div>
+                   <div class="btn__wrapper right-left">
+                        <a href="" class="btn">
+                            Пишите в telegram
+                        </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h1 class="section__title">
+            фото
+            </h1>
+            <h2 class="section__subTitle">
+                Далеко-далеко за словесными горами.
+            </h2>
+            <div class="section__row section__content">
+                <div class="photo">
+                    <div class="photo__item">
+                        <div class="photo__img">
+                            <img src="img/photo.jpg" alt="">
+                        </div>
+                        <div class="photo__title">
+                            <h4>рымарская,6</h4>
+                        </div>
+                        <div class="photo__desc">
+                            <p>
+                                6-этажный дом с историей
+                            </p>
+                        </div>
+                    </div>
+                    <div class="photo__item">
+                        <div class="photo__img">
+                            <img src="img/photo.jpg" alt="">
+                        </div>
+                        <div class="photo__title">
+                            <h4>рымарская,6</h4>
+                        </div>
+                        <div class="photo__desc">
+                            <p>
+                                6-этажный дом с историей
+                            </p>
+                        </div>
+                    </div>
+                    <div class="photo__item">
+                        <div class="photo__img">
+                            <img src="img/photo.jpg" alt="">
+                        </div>
+                        <div class="photo__title">
+                            <h4>рымарская,6</h4>
+                        </div>
+                        <div class="photo__desc">
+                            <p>
+                                6-этажный дом с историей
+                            </p>
+                        </div>
+                    </div>
+                    <div class="photo__item">
+                        <div class="photo__img">
+                            <img src="img/photo.jpg" alt="">
+                        </div>
+                        <div class="photo__title">
+                            <h4>рымарская,6</h4>
+                        </div>
+                        <div class="photo__desc">
+                            <p>
+                                6-этажный дом с историей
+                            </p>
+                        </div>
+                    </div>
+                    <div class="photo__item">
+                        <div class="photo__img">
+                            <img src="img/photo.jpg" alt="">
+                        </div>
+                        <div class="photo__title">
+                            <h4>рымарская,6</h4>
+                        </div>
+                        <div class="photo__desc">
+                            <p>
+                                6-этажный дом с историей
+                            </p>
+                        </div>
+                    </div>
+                    <div class="photo__item">
+                        <div class="photo__img">
+                            <img src="img/photo.jpg" alt="">
+                        </div>
+                        <div class="photo__title">
+                            <h4>рымарская,6</h4>
+                        </div>
+                        <div class="photo__desc">
+                            <p>
+                                6-этажный дом с историей
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn__wrapper right-left">
+                <a href="#" class="btn">Записаться на курс</a>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h1 class="section__title">
+            Записаться на курс
+            </h1>
+            <h2 class="section__subTitle">
+                Далеко-далеко за словесными горами.
+            </h2>
+            <div class="section__row section__content">
+                <div class="section__column">
+                    <form action="" class="form-feedback">
+                        <div class="form-feedback__row">
+                            <div class="form-feedback__input">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="form-feedback__input">
+                                <input type="text" placeholder="Ваш номер телефона">
+                            </div>
+                        </div>
+                        <div class="form-feedback__row">
+                            <div class="form-feedback__input">
+                                <label for="">Какая группа</label>
+                                <select name="" id="">
+                                    <option value="">Группа A1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-feedback__row">
+                            <div class="form-feedback__input">
+                                <label for="">Какая группа</label>
+                                <select name="" id="">
+                                    <option value="">Группа A1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-feedback__row">
+                            <div class="btn__wrapper right-left">
+                                <a href="#" class="btn">Записаться на курс</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="section__column">
+                    <div class="contact">
+                        <div class="contact__block">
+                            <div class="contact__img">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__content">
+                                <p>
+                                    "Business Language" - курсы английского языка Харьков ул. Рымарская, 6 (весь 2 этаж)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact__block">
+                            <div class="contact__img">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__content">
+                                <ul class="phone-list">
+                                    <li class="phone-list__item">
+                                        <a href="">
+                                            (050)237-70-00
+                                        </a>
+                                    </li>
+                                    <li class="phone-list__item">
+                                        <a href="">
+                                            (050)237-70-00
+                                        </a>
+                                    </li>
+                                    <li class="phone-list__item">
+                                        <a href="">
+                                            (050)237-70-00
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contact__block">
+                            <div class="contact__img">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__content operating_mode">
+                                <p>
+                                    У нас английский без перерывов и выходных
+                                </p>
+                                <p>
+                                    <span class="week-day">пн-пт</span>: с <span class="number">9-00</span> до <span class="number">21-00</span>
+                                </p>
+                                <p>
+                                    <span class="week-day">сб</span>: с <span class="number">10-00</span> до <span class="number">19-00</span>
+                                </p>
+                                <p>
+                                    <span class="week-day">вс</span>: с <span class="number">10-00</span> до <span class="number">16-00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact__block">
+                            <ul class="social-list">
+                                <li class="social-list__item">
+                                    <a href="">
+                                        <i class="fa fa-telegram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="">
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emojione@3.1.7/lib/js/emojione.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.js"></script>
-<script src="js/main.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
