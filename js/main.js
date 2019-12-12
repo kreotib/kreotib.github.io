@@ -1,7 +1,17 @@
 // Импортируем другие js-файлы
 $(document).ready(function(){
-    /*
-    console.log('123');
+    $('.left').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated fadeInLeft',
+    offset: 100
+    });
+    $('.right').addClass("hidden").viewportChecker({
+      classToAdd: 'visible animated fadeInRight',
+      offset: 100
+      });
+      $('.bottom').addClass("hidden").viewportChecker({
+        classToAdd: 'visible animated fadeInUp',
+        offset: 100
+        });
     $(window).on('resize', function(){
         var win = $(this); //this = window
         if (win.width() <= 768) {
@@ -11,7 +21,6 @@ $(document).ready(function(){
         }
         location.reload;
     });
-    */
    $('.bar').click(function(){
         $('.main-nav').addClass('active');
         $('body').addClass('no_overflow');

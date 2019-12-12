@@ -6,35 +6,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Стартовая страница</title>
 </head>
 <body>
-    <section class="welcome">
-        <div class="welcome__filter">
-
-        </div>
-        <div class="welcome__text">
-            <h1 class="logo">
-                Intelligent <br> Generation
-            </h1>
-            <h2 class="sub-logo">
-                <p>
-                    Школа немецкого и английского языка 
-                </p>
-                <p>
-                    У нас специалисты широкого профиля 
-                </p>
-                <p>
-                    Готовы обучать с нуля до совершенства 
-                    Вы не только освоите тонкости иностранного языка, но также сможете заговорить на нем!
-                </p>
-            </h2>
-        </div>
-    </section>
-    <nav class="main-nav">
+     <nav class="main-nav">
         <div class="replace-empty"></div>
         <div class="bar">
             <div class="bar__wrapper">
@@ -88,6 +67,29 @@
             </ul>
         </div>
     </nav>
+    <section class="welcome animated fadeIn">
+        <div class="welcome__filter">
+
+        </div>
+        <div class="welcome__text">
+            <h1 class="logo">
+                Intelligent <br> Generation
+            </h1>
+            <h2 class="sub-logo">
+                <p>
+                    Школа немецкого и английского языка 
+                </p>
+                <p>
+                    У нас специалисты широкого профиля 
+                </p>
+                <p>
+                    Готовы обучать с нуля до совершенства 
+                    Вы не только освоите тонкости иностранного языка, но также сможете заговорить на нем!
+                </p>
+            </h2>
+        </div>
+    </section>
+   
     <section class="section">
         <div class="container">
             <h1 class="section__title">
@@ -97,12 +99,12 @@
                 Далеко-далеко за словесными горами.
             </h2>
             <div class="section__row section__content">
-                <div class="section__column">
+                <div class="section__column left">
                     <div class="img__wrapper">
                        <img src="img/section_img.jpg" alt="">
                     </div>
                 </div>
-                <div class="section__column">
+                <div class="section__column right">
                   <div class="advantages">
                         <ul class="advantages-list">
                             <li class="advantages-list__item">
@@ -138,7 +140,7 @@
                 Далеко-далеко за словесными горами.
             </h2>
             <div class="section__row section__content">
-                <div class="section__column">
+                <div class="section__column left">
                   <div class="advantages">
                         <ul class="advantages-list">
                             <li class="advantages-list__item">
@@ -164,7 +166,7 @@
                         </ul>
                   </div>
                 </div>
-                <div class="section__column">
+                <div class="section__column right">
                     <div class="img__wrapper">
                        <img src="img/section_img_1.jpg" alt="">
                     </div>
@@ -184,7 +186,7 @@
                 Далеко-далеко за словесными горами.
             </h2>
             <div class="section__row section__content">
-                <div class="section__column">
+                <div class="section__column left">
                     <h3 class="section_subTitle">
                         видео отзывы
                     </h3>
@@ -195,7 +197,7 @@
                         <a href="#" class="btn">Оставить отзыв</a>
                     </div>
                 </div>
-                <div class="section__column">
+                <div class="section__column right">
                     <div class="reviews">
                         <ul class="reviews__list">
                             <li class="reviews__item">
@@ -356,12 +358,12 @@
                 Далеко-далеко за словесными горами.
             </h2>
             <div class="section__row section__content">
-                <div class="section__column">
+                <div class="section__column left">
                    <div class="img__wrapper">
                        <img src="img/price.jpg" alt="">
                     </div>
                 </div>
-                <div class="section__column">
+                <div class="section__column right">
                     <div class="prices">
                         <div class="prices__block">
                             <h3 class="prices__title">
@@ -488,7 +490,7 @@
                 Никаких чат-ботов, Вам ответят живые люди
             </h2>
             <div class="section__row section__content">
-                <div class="section__column">
+                <div class="section__column left">
                    <div class="btn__wrapper left-right">
                         <a href="" class="btn">
                             Пишите в viber
@@ -500,7 +502,7 @@
                         </a>
                    </div>
                 </div>
-                <div class="section__column">
+                <div class="section__column right">
                     <div class="btn__wrapper right-left">
                         <a href="" class="btn">
                             Пишите в viber
@@ -515,7 +517,7 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section left">
         <div class="container">
             <h1 class="section__title">
             фото
@@ -610,7 +612,7 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section right">
         <div class="container">
             <h1 class="section__title">
             Записаться на курс
@@ -731,6 +733,9 @@
             </div>
         </div>
     </section>
+    <div class="map_section bottom">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26463.36182451345!2d-118.272216217118!3d33.994582705029785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1576164565413!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
 <footer class="footer">
     <div class="footer__block">
         <div class="footer__address">
@@ -747,6 +752,7 @@
     </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="js/main.js"></script>
 </body>
