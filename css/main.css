@@ -463,7 +463,14 @@ body {
   font-family: 'Montserrat',sans-serif;
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 15px; }
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center; }
+  .advantages__title .fa {
+    font-size: 30px;
+    margin-right: 15px; }
 
 .advantages__img {
   font-size: 30px;
@@ -478,15 +485,16 @@ body {
           justify-content: flex-start;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 5px;
-  color: #808080; }
+  color: #2E2C39; }
   .lvl-two__item:last-child {
     margin-bottom: 0; }
   .lvl-two__item::before {
     margin-right: 10px;
     content: '\f00c ';
-    font-family: 'FontAwesome'; }
+    font-family: 'FontAwesome';
+    color: #FF9C01; }
 
 .advantages {
   width: 100%;
@@ -498,9 +506,17 @@ body {
 .advantages__text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 10px;
   color: #808080; }
+
+.advantages-list .cirlce_style .lvl-two__item::before {
+  content: '\f1db  ';
+  color: #FF9C01;
+  margin-right: 15px; }
+
+.advantages-list .lvl-two__item + .lvl-two__item {
+  margin-top: 15px; }
 
 .section-review .btn__wrapper {
   margin-top: 30px; }
@@ -637,6 +653,8 @@ body {
   -webkit-box-align: center;
           align-items: center;
   height: 35px; }
+  .prices__column p {
+    text-align: center; }
   .prices__column .price {
     font-weight: 600;
     font-size: 16px; }
@@ -826,3 +844,48 @@ body {
     color: #8A41D0; }
   .fa-facebook-official:hover {
     color: #1D4D99; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 15px 0;
+  background: #2E2E2E;
+  color: white;
+  flex-wrap: wrap;
+  z-index: 999; }
+
+.footer__block + .footer__block {
+  margin-left: 70px; }
+
+.footer__text {
+  font-size: 15px; }
+  .footer__text span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px; }
+
+.footer__address {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center; }
+  .footer__address .fa {
+    color: #FF9C01;
+    font-size: 20px;
+    margin-right: 15px; }
+
+@media all and (max-width: 425px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+  .footer__block + .footer__block {
+    margin-left: 0;
+    margin-top: 10; } }
