@@ -1,90 +1,59 @@
 // Импортируем другие js-файлы
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 $(document).ready(function(){
-    $('.left').addClass("hidden").viewportChecker({
-    classToAdd: 'visible animated fadeInLeft',
-    offset: 100
-    });
-    $('.right').addClass("hidden").viewportChecker({
-      classToAdd: 'visible animated fadeInRight',
-      offset: 100
-      });
-      $('.bottom').addClass("hidden").viewportChecker({
-        classToAdd: 'visible animated fadeInUp',
-        offset: 100
-        });
-    $(window).on('resize', function(){
-        var win = $(this); //this = window
-        if (win.width() <= 768) {
-            $('.main-nav').addClass('mobile');
-        }else{
-            $('.main-nav').removeClass('mobile');
-        }
-        location.reload;
-    });
-   $('.bar').click(function(){
-        $('.main-nav').addClass('active');
-        $('body').addClass('no_overflow');
-   });
-   $('.close').click(function(event){
-    event.preventDefault();
-    $('.main-nav').removeClass('active');
-    $('body').removeClass('no_overflow');
-});
-    function checkWidth() {
-        var windowWidth = $('body').innerWidth(),
-            mainNav = $('.main-nav'); 
-        if(windowWidth <= 768){
-            mainNav.addClass('mobile');
-            mainNav.removeClass('descktop');
-        }
-        else{
-            mainNav.removeClass('mobile');
-            mainNav.addClass('descktop');
-        }
+  $('.faq-section__title').click(function(){
+    $(this).toggleClass('active');
+  });
+  
+$('.achievements-slider').slick({
+  slidesToShow: 3,
+  dots:true,
+  centerMode: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
       }
-    
-      checkWidth(); // проверит при загрузке страницы
-    
-      $(window).resize(function(){
-        checkWidth(); // проверит при изменении размера окна клиента
-      });
-      $(function(){
-        $(window).scroll(function() {
-            var target = $('.main-nav');
-            var targetPos = target.offset().top;
-            if($(this).scrollTop() >= targetPos) {
-                $(target).addClass('stickytop'); 
-            }
-            else{
-                $(target).removeClass('stickytop');
-            }
-        });
-      });
-      $('.instragram-slider__list').slick({
-        infinite: true,
-        arrows:false,
-        autoplay:true,
-        autoplaySpeed:3000,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        responsive: [
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
-              }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ]
-    });
-    });
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
+});
