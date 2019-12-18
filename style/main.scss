@@ -1,0 +1,10 @@
+// Переопределение дефолтных значений переменных Bootstrap 4 и определение своих
+@import "variables";
+
+
+@import 'stylesheet';
+
+// Подключение своих SCSS файлов
+@import "nullstyle";
+@import "my";
+@import 'forecast';

@@ -1,16 +1,12 @@
 <!doctype html> 
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700&display=swap" rel="stylesheet">
-    <title>Стартовая страница</title>
+    //= template/head.html
 </head>
 <body>
+    <div class="blur-block">
+        
+    </div>
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -239,17 +235,17 @@
             Fee-based <span>forecasts</span>
         </h1>
         <div class="tab">
-        <button class="tablinks active" onclick="openCity(event, 'London')">VIP forecasts</button>
+        <button id="foreacst" class="tablinks active" onclick="openTab(event, 'forecasts')">VIP forecasts</button>
         <div class="toggler">
             <div class="toogler__item">
 
             </div>
         </div>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">VIP subscription</button>
+        <button  class="tablinks" onclick="openTab(event, 'subscriptions')">VIP subscription</button>
         </div>
 
         <!-- Tab content -->
-        <div id="London" class="tabcontent" style="display: block;">
+        <div id="forecasts" class="tabcontent" style="display: block;">
             <div class="tile-block">
                 <div class="tile">
                     <div class="tile__info">
@@ -259,7 +255,7 @@
                         <p class="text-second tile__title">
                             Daily estimate
                         </p>
-                        <button class="btn btn-one tile__btn">
+                        <button class="btn btn-one tile__btn purchase__toggle">
                             Purchase
                         </button>
                     </div>
@@ -319,7 +315,7 @@
                                 </p>
                             </div>
                             <div class="win-section__column">
-                                <p class="text-one">
+                                <p class="text-one text-primary">
                                         $ 10
                                 </p>
                             </div>
@@ -329,12 +325,12 @@
                 <div class="tile">
                     <div class="tile__info">
                         <p class="text-one text-light">
-                            Beginner
+                            Recommended
                         </p>
                         <p class="text-second tile__title">
-                            Daily estimate
+                            Express
                         </p>
-                        <button class="btn btn-one tile__btn">
+                        <button class="btn btn-one tile__btn purchase__toggle">
                             Purchase
                         </button>
                     </div>
@@ -359,7 +355,7 @@
                             </div>
                             <div class="win-section__column">
                                 <p class="text-one">
-                                        1.50
+                                    2.42
                                 </p>
                             </div>
                         </div>
@@ -371,7 +367,7 @@
                             </div>
                             <div class="win-section__column">
                                 <p class="text-one">
-                                        90%
+                                    80%
                                 </p>
                             </div>
                         </div>
@@ -394,7 +390,7 @@
                                 </p>
                             </div>
                             <div class="win-section__column">
-                                <p class="text-one">
+                                <p class="text-one text-primary">
                                         $ 10
                                 </p>
                             </div>
@@ -404,12 +400,12 @@
                 <div class="tile">
                     <div class="tile__info">
                         <p class="text-one text-light">
-                            Beginner
+                            Expert
                         </p>
                         <p class="text-second tile__title">
-                            Daily estimate
+                            VIP Express
                         </p>
-                        <button class="btn btn-one tile__btn">
+                        <button class="btn btn-one tile__btn purchase__toggle">
                             Purchase
                         </button>
                     </div>
@@ -434,7 +430,7 @@
                             </div>
                             <div class="win-section__column">
                                 <p class="text-one">
-                                        1.50
+                                        5.50
                                 </p>
                             </div>
                         </div>
@@ -446,7 +442,7 @@
                             </div>
                             <div class="win-section__column">
                                 <p class="text-one">
-                                        90%
+                                        70%
                                 </p>
                             </div>
                         </div>
@@ -469,8 +465,201 @@
                                 </p>
                             </div>
                             <div class="win-section__column">
-                                <p class="text-one">
+                                <p class="text-one text-primary">
                                         $ 10
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="subscriptions" class="tabcontent">
+            <div class="tile-block">
+                <div class="tile">
+                    <div class="tile__info">
+                        <p class="text-one text-light">
+                            Beginner
+                        </p>
+                        <p class="text-second tile__title">
+                            Cyber Chat
+                        </p>
+                        <button class="btn btn-one tile__btn subs__toggle">
+                            Choose subscription
+                        </button>
+                    </div>
+                    <div class="tile__info">
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Last month grew up
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    272%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Bank growth per month
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    400%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Forecasts each day
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    Min. 3
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Subscription payback
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one text-primary">
+                                    2-3 days
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile__info">
+                        <p class="text-one text-light">
+                            Recommended
+                        </p>
+                        <p class="text-second tile__title">
+                            VIP Chat
+                        </p>
+                        <button class="btn btn-one tile__btn subs__toggle">
+                            Choose subscription
+                        </button>
+                    </div>
+                    <div class="tile__info">
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Last month grew up
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    342%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Bank growth per month
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    500%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Forecasts each day
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    Min. 5
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Subscription payback
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one text-primary">
+                                    1-2 days
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile__info">
+                        <p class="text-one text-light">
+                            Expert
+                        </p>
+                        <p class="text-second tile__title">
+                            Bank growth
+                        </p>
+                        <button class="btn btn-one tile__btn">
+                            Learn more
+                        </button>
+                    </div>
+                    <div class="tile__info">
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Last month grew up
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    272%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Bank growth per month
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    400%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Forecasts each day
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one">
+                                    Min. 3
+                                </p>
+                            </div>
+                        </div>
+                        <div class="win-section__row">
+                            <div class="win-section__column">
+                                <p class="text-one text-light">
+                                    Subscription payback
+                                </p>
+                            </div>
+                            <div class="win-section__column">
+                                <p class="text-one text-primary">
+                                    2-3 days
                                 </p>
                             </div>
                         </div>
@@ -660,96 +849,6 @@
         </form>
     </div>
 </section>
-<footer class="footer">
-    <div class="container">
-       <div class="row">
-           <div class="column">
-                <div class="logo">
-                    messi.<span>Bet</span>
-                </div>
-                <div class="copyright text-one text-light">
-                    &#169; 2019
-                </div>
-           </div>
-           <div class="column-big">
-               <ul class="footer-list">
-                   <li class="footer-list__item footer-list__title">
-                    Services
-                   </li>
-                   <li class="footer-list__item">
-                       <a class="text-one text-light" href="">
-                        Estimates
-                       </a>
-                   </li>
-                   <li class="footer-list__item">
-                       <a class="text-one text-light" href="">
-                        Forecasts
-                       </a>
-                   </li>
-                   <li class="footer-list__item">
-                       <a class="text-one text-light" href="">
-                        Subscription
-                       </a>
-                   </li>
-               </ul>
-           </div>
-           <div class="column column-big">
-               <ul class="footer-list">
-                   <li class="footer-list__item footer-list__title">
-                    Services
-                   </li>
-                   <li class="footer-list__item">
-                       <a class="text-one text-light" href="">
-                        Estimates
-                       </a>
-                   </li>
-                   <li class="footer-list__item">
-                       <a class="text-one text-light" href="">
-                        Forecasts
-                       </a>
-                   </li>
-                   <li class="footer-list__item">
-                       <a class="text-one text-light" href="">
-                        Subscription
-                       </a>
-                   </li>
-               </ul>
-           </div>
-           <div class="column">
-               <div class="social">
-                <p class="social__item footer-list__item footer-list__title">
-                    Find us
-                </p>
-                <ul class="social__list">
-                    <li class="social__item">
-                        <a href="">
-                            <img src="img/telegram.png" alt="">
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a href="">
-                            <img src="img/phone.png" alt="">
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a href="">
-                            <img src="img/whatApp.png" alt="">
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a href="">
-                            <img src="img/facebook.png" alt="">
-                        </a>
-                    </li>
-                </ul> 
-            </div>
-           </div>
-       </div>
-    </div>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script src="js/main.js"></script>
+//= template/footer.html
 </body>
 </html>
