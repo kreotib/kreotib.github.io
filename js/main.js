@@ -42,7 +42,7 @@ $('.achievements-slider').slick({
       breakpoint: 480,
       settings: {
         arrows: false,
-        centerMode: true,
+        centerMode: false,
         centerPadding: '40px',
         slidesToShow: 1
       }
@@ -72,4 +72,7 @@ $(document).ready(function(){
     $('body').toggleClass('no-overflow');
     $('.blur-block').toggleClass('active');
   });
+  $('.menu__toggler').click(function(){
+    $('.header__menu').toggle();
+  }); 
 });
