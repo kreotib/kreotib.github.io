@@ -92,4 +92,13 @@ $(document).ready(function(){
             // instead of a settings object
           ]
     });
+    (function($) {
+      $(function() {
+        $('.tab-caption').on('click', 'label:not(.active)', function() {
+         /* $(this).closest('.modal-content').find('.tab-content').find('.bottom-stack-item').addClass('active').siblings().removeClass('active');*/
+          $(this).addClass('active').siblings().removeClass('active')
+            .closest('div.person-card__language').find('div.tab-content').removeClass('active').eq($(this).index()).addClass('active');
+        })
+      })
+      })(jQuery)
     });
