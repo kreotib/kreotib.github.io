@@ -101,7 +101,9 @@ $(document).ready(function(){
         })
       })
       })(jQuery)
-      $("a.main-nav__link").click(function () {
+      $("a.main-nav__link.anchor").click(function () {
+         $('.main-nav').removeClass('active');
+          $('body').removeClass('no_overflow');
         var elementClick = $(this).attr("href")
         var destination = $(elementClick).offset().top;
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
