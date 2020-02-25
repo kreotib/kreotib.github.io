@@ -716,7 +716,8 @@ body {
     content: url(/img/dna-workshop.png);
     position: absolute;
     bottom: 180px;
-    right: 0px; }
+    right: 0px;
+    z-index: -1; }
   .workShop__section .section__desc {
     max-width: 960px;
     margin-top: 45px;
