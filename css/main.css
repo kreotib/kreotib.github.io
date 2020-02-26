@@ -76,7 +76,8 @@ body {
   font-family: "Arimo";
   font-weight: bold;
   font-size: 14px;
-  padding: 25px 20px;
+  padding: 20px 20px;
+  width: 220px;
   color: #FFFFFF;
   display: block; }
 
@@ -283,15 +284,40 @@ body {
 
 .header__block .nav-list {
   display: -webkit-box;
-  display: flex; }
+  display: flex;
+  height: 120px;
+  -webkit-box-align: center;
+          align-items: center; }
 
-.header__block .nav-list__item.active a {
-  color: #21272D; }
-
-.header__block .nav-list__item a {
-  font-family: "Arimo";
-  font-size: 16px;
-  color: rgba(33, 39, 45, 0.5); }
+.header__block .nav-list__item {
+  position: relative;
+  height: inherit;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center; }
+  .header__block .nav-list__item::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #0677DE;
+    border-radius: 5px;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+    left: 0; }
+  .header__block .nav-list__item a {
+    font-family: "Arimo";
+    font-size: 16px;
+    color: rgba(33, 39, 45, 0.5);
+    -webkit-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out; }
+  .header__block .nav-list__item:hover::before {
+    opacity: 1; }
+  .header__block .nav-list__item:hover a {
+    color: #21272D; }
 
 .header__block .nav-list__item + .nav-list__item {
   margin-left: 45px; }
