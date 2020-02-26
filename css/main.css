@@ -235,7 +235,8 @@ html {
   font-weight: bold;
   font-size: 14px;
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.5); }
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer; }
 
 .main-nav {
   position: fixed;
@@ -380,6 +381,9 @@ html {
 .footer-list {
   display: -webkit-box;
   display: flex; }
+
+.footer-list__item a {
+  color: #8495A4; }
 
 .footer-list__item + .footer-list__item {
   margin-left: 45px; }
@@ -861,6 +865,7 @@ html {
   -webkit-box-pack: center;
           justify-content: center;
   margin: 55px 0;
+  cursor: pointer;
   padding: 0 30px; }
   .certificates__item img {
     text-align: center;

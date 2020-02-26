@@ -13,6 +13,17 @@ $(document).ready(function() {
     );
     return false;
   });
+  $('.footer-list__item a[href*="#"]').click(function() {
+    let href = $($.attr(this,"href")).offset().top;
+    let headerHeight = $('.header').height();
+    $page.animate(
+      {
+        scrollTop: href - headerHeight
+      },
+      1500
+    );
+    return false;
+  });
   
   $(".certificates__slider").slick({
     slidesToShow: 4,
