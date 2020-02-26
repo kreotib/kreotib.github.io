@@ -1,7 +1,5 @@
 // Импортируем другие js-файлы
 $(document).ready(function() {
- 
-
   //NAV SCROOLL
   var $page = $("html, body");
   $('.header-nav a[href*="#"]').click(function() {
@@ -33,11 +31,10 @@ $(document).ready(function() {
     cssEase: "linear",
     nextArrow: '<button class="slick-next"></button>',
     prevArrow: '<button class="slick-prev"></button>',
-    dots:true,
+    dots: true,
     customPaging: function(slider, i) {
-      
       return '<div class="pager__item" id=' + i + ">  </div>";
-    },
+    }
   });
   $(".certificates__slider").slick({
     slidesToShow: 4,
@@ -194,9 +191,9 @@ $(document).ready(function() {
       $(photoContainer).removeClass("active");
     }
   });
-   //INSTITUE SLICK NEXT
-   let dotsLeft = $('.slider-test .slick-dots').offset().left;
-   let dotsWidth = $('.slider-test .slick-dots').width();
-   let dotsSum = +dotsLeft + dotsWidth + 15;
-   $('.slider-test .slick-next').css('left',dotsSum);
+  //INSTITUE SLICK NEXT
+  let dotsLeft = $(".slider-test .slick-dots").offset().left;
+  let dotsWidth = $(".slider-test .slick-dots").width();
+  let dotsSum = +dotsLeft + dotsWidth + 15;
+  $(".slider-test .slick-next").css("left", dotsSum);
 });
