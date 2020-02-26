@@ -86,6 +86,9 @@ html {
   color: #FFFFFF;
   display: block; }
 
+.button a {
+  color: #fff; }
+
 .img-fluid {
   width: 100%; }
 

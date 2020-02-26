@@ -2,7 +2,7 @@
 $(document).ready(function() {
   //NAV SCROOLL
   var $page = $("html, body");
-  $('.header-nav a[href*="#"]').click(function() {
+  $('.header a[href*="#"]').click(function() {
     let href = $($.attr(this, "href")).offset().top;
     let headerHeight = $(".header").height();
     $page.animate(
