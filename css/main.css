@@ -1145,6 +1145,9 @@ html {
     right: unset; } }
 
 @media screen and (max-width: 475px) {
+  .photo-container img {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3); }
   .certificates__section .section__title {
     margin-bottom: 0; }
   .certificates__item img {
