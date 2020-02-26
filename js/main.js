@@ -121,6 +121,7 @@ $(document).ready(function() {
   });
 
   //MOBILE MENU SETTINGS
+
   const showButton = $(".menu-show"),
     hideButton = $(".menu-hide"),
     menuMobile = $(".main-nav.mobile");
@@ -133,4 +134,19 @@ $(document).ready(function() {
     $(menuMobile).removeClass("active");
     $("body").removeClass("overflow");
   });
+});
+$('.mobile-nav a[href*="#"]').click(function() {
+  let href = $($.attr(this,"href")).offset().top;
+  let headerHeight = $('.header').height();
+  $("html, body").animate(
+    {
+      scrollTop: href - headerHeight
+    },
+    1500
+  );
+  return false;
+});
+$('.mobile-nav a').click(function(){
+  $(".main-nav.mobile").removeClass("active");
+  $("body").removeClass("overflow");
 });

@@ -992,6 +992,8 @@ html {
 @media screen and (max-width: 768px) {
   .certificates__item img {
     height: 300px; }
+  .workShop__section {
+    padding-top: 60px; }
   .formWhom__section {
     display: unset; }
   .formWhom__img img {
@@ -1153,6 +1155,8 @@ html {
     padding-top: 80px;
     margin-bottom: 0; }
   .section.professors__section {
+    margin-bottom: 0; }
+  .section.forWhom__section {
     margin-bottom: 0; }
   .institutes__slider .img-slider {
     height: 500px; }
