@@ -13,7 +13,41 @@ $(document).ready(function() {
     );
     return false;
   });
+  
+  $(".certificates__slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    nextArrow: '<button class="slick-next"></button>',
+    prevArrow: '<button class="slick-prev"></button>',
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 475,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 376,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }
+    ]
+  });
   //SLIDERS SETTINGS
+
   $(".professors-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
