@@ -59,6 +59,8 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 body {
   font-family: "Playfair Display"; }
+  body.overflow {
+    overflow: hidden; }
 
 html {
   height: auto; }
@@ -269,6 +271,30 @@ html {
     font-family: 'Arimo';
     font-size: 20px;
     color: #FFFFFF; }
+
+.photo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  opacity: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out; }
+  .photo-container.active {
+    z-index: 999;
+    opacity: 1; }
+  .photo-container img {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5); }
 
 .header {
   height: 120px;
@@ -1003,8 +1029,6 @@ html {
             justify-content: space-between; }
   .slider-blog .slider-blog__item {
     margin: 0 10px; }
-  body.overflow {
-    overflow: hidden; }
   .main-nav.active {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
