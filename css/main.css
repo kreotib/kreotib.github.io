@@ -725,7 +725,8 @@ html {
 .forWhom__section {
   background: -webkit-gradient(linear, left top, left bottom, from(#E3F0F0), to(rgba(227, 240, 240, 0.5)));
   background: linear-gradient(180deg, #E3F0F0 0%, rgba(227, 240, 240, 0.5) 100%);
-  padding-top: 80px; }
+  padding-top: 80px;
+  margin-bottom: 0; }
   .forWhom__section .slick-next {
     right: 0; }
   .forWhom__section .slick-prev {
@@ -837,7 +838,8 @@ html {
   text-align: center; }
 
 .workShop__section {
-  position: relative; }
+  position: relative;
+  padding-top: 150px; }
   .workShop__section::before {
     content: url(/img/dna-workshop.png);
     position: absolute;
@@ -980,6 +982,8 @@ html {
     display: block; } }
 
 @media screen and (max-width: 768px) {
+  .certificates__section {
+    display: none; }
   .formWhom__section {
     display: unset; }
   .formWhom__img img {
