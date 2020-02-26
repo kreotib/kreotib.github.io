@@ -31,14 +31,14 @@
                 </div>
             </div>
             <div class="header__block mobile">
-                <div class="burger">
+                <div class="burger menu-show">
                     <span class="burger__item"></span>
                     <span class="burger__item"></span>
                     <span class="burger__item"></span>
                 </div>
             </div>
             <div class="header__block descktop header-nav">
-                <nav class="header__nav">
+                <nav class="header__nav"> 
                     <ul class="nav-list">
                         <li class="nav-list__item"><a href="#">О нас</a></li>
                         <li class="nav-list__item"><a href="#">Врача</a></li>
@@ -55,11 +55,13 @@
         </div>
     </header>
     <section class="section welcome__section">
-      <img src="/img/section/welcome.jpg" alt="">
+      <img class="welcome-big" src="/img/section/welcome.jpg" alt="" />
+      <img class="welcome-middle" src="/img/section/welcome-m.jpg" alt="" />
+      <img class="welcome-small" src="/img/section/welcome-s.jpg" alt="" />
     </section>
     <section class="section about__section">
       <div class="about__bckg">
-        <img src="/img/dna-welcome.png" alt="">
+        <img src="/img/dna-welcome.png" alt="" />
       </div>
       <div class="container">
         <div class="section__row">
@@ -104,6 +106,42 @@
         </div>
       </div>
     </section>
+    <section class="section forWhom__section">
+      <h1 class="section__title">
+        Для кого
+      </h1>
+      <div class="forWhom-slider">
+        <div class="forWhom-slider__item w-b">
+          <div class="forWhom-slider__img">
+            <img src="/img/forWhom/doctor.png" alt="" />
+          </div>
+          <div class="forWhom-slider__info">
+            <h5 class="title-second">
+              Для врачей
+            </h5>
+            <p class="section__desc">
+              Vermittlung und Organisation von Trainings und
+              Qualifikationsmaßnahmen ausländischer Ärzte in deutschen Kliniken.
+            </p>
+          </div>
+        </div>
+        <div class="forWhom-slider__item no-b">
+          <div class="forWhom-slider__img">
+            <img src="/img/forWhom/patient.png" alt="" />
+          </div>
+          <div class="forWhom-slider__info">
+            <h5 class="title-second">
+              Для пациентов
+            </h5>
+            <p class="section__desc">
+              Organisation & Durchführung von Medizintourismus -
+              länderübergreifende Bereitstellung medizinischer Behandlungen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--
     <section class="section formWhom__section">
       <h1 class="section__title">
         Для кого?
@@ -140,7 +178,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="section workShop__section">
       <div class="container">
         <h1 class="section__title">
@@ -222,17 +260,16 @@
                   Название института
                 </h5>
                 <p class="slider__desc">
-                  Unsere Mission ist die Inkubation von Wissen über die praktische
-                  Anwendung der jüngsten Errungenschaften der Medizinforschung. In
-                  diesem Sinne stellt UneMed Munich eine Plattform dar, die Patienten
-                  sowie Ärzten weltweit Zugang zu modernsten Technologien und Methoden
-                  der Medizin aus renommierten Universitätskliniken ermöglicht.
+                  Unsere Mission ist die Inkubation von Wissen über die
+                  praktische Anwendung der jüngsten Errungenschaften der
+                  Medizinforschung. In diesem Sinne stellt UneMed Munich eine
+                  Plattform dar, die Patienten sowie Ärzten weltweit Zugang zu
+                  modernsten Technologien und Methoden der Medizin aus
+                  renommierten Universitätskliniken ermöglicht.
                 </p>
               </div>
               <div class="slider__column">
-                <div class="img-slider">
-
-                </div>
+                <div class="img-slider"></div>
               </div>
             </div>
           </div>
@@ -247,7 +284,7 @@
         <div class="professors-slider">
           <div class="professorrs-slider__item">
             <div class="professorrs-slider__img">
-              <img src="/img/section/proffesor.png" alt="">
+              <img src="/img/section/proffesor.png" alt="" />
             </div>
             <div class="professorrs-slider__info">
               <h3 class="professorrs-slide__name">
@@ -260,7 +297,7 @@
           </div>
           <div class="professorrs-slider__item">
             <div class="professorrs-slider__img">
-              <img src="/img/section/proffesor.png" alt="">
+              <img src="/img/section/proffesor.png" alt="" />
             </div>
             <div class="professorrs-slider__info">
               <h3 class="professorrs-slide__name">
@@ -273,7 +310,7 @@
           </div>
           <div class="professorrs-slider__item">
             <div class="professorrs-slider__img">
-              <img src="/img/section/proffesor.png" alt="">
+              <img src="/img/section/proffesor.png" alt="" />
             </div>
             <div class="professorrs-slider__info">
               <h3 class="professorrs-slide__name">
@@ -286,7 +323,7 @@
           </div>
           <div class="professorrs-slider__item">
             <div class="professorrs-slider__img">
-              <img src="/img/section/proffesor.png" alt="">
+              <img src="/img/section/proffesor.png" alt="" />
             </div>
             <div class="professorrs-slider__info">
               <h3 class="professorrs-slide__name">
@@ -528,15 +565,19 @@
                 Мы с радостью на них ответим
               </p>
               <div class="input__wrapper">
-                <input type="text" placeholder="Ваше имя *">
+                <input type="text" placeholder="Ваше имя *" />
               </div>
               <div class="input__wrapper">
-                <input type="text" placeholder="E-mail *">
+                <input type="text" placeholder="E-mail *" />
               </div>
               <div class="input__wrapper">
                 <textarea name="" id="" placeholder="Ваше сообщение"></textarea>
               </div>
-              <input class="send-form" type="submit" value="Отправить сообщение">
+              <input
+                class="send-form"
+                type="submit"
+                value="Отправить сообщение"
+              />
             </form>
           </div>
         </div>
@@ -577,11 +618,30 @@
           <div class="footer__text">
             <span>Email:</span> info@unemed.de <br />
             <br />
-            <span>Tel.:</span> +49 89 7801 9366 <br> <span>Fax:</span> +49 89 7801 7436
+            <span>Tel.:</span> +49 89 7801 9366 <br />
+            <span>Fax:</span> +49 89 7801 7436
           </div>
         </div>
       </div>
     </footer>
+    <div class="main-nav mobile">
+        <div class="menu-hide">
+            <img src="/img/section/close.png" alt="">
+        </div>
+      <ul class="mobile-nav">
+        <li class="mobile-nav__item"><a href="">О нас</a></li>
+        <li class="mobile-nav__item"><a href="">Врачам</a></li>
+        <li class="mobile-nav__item"><a href="">Пациентам</a></li>
+        <li class="mobile-nav__item"><a href="">Контакты</a></li>
+        <li class="mobile-nav__item">
+          <a href="">
+            <button class="button button-one button-form">
+              Получить консультацию
+            </button></a
+          >
+        </li>
+      </ul>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       type="text/javascript"

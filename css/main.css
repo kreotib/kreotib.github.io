@@ -61,7 +61,7 @@ body {
   font-family: "Playfair Display"; }
 
 .container {
-  max-width: 1160px;
+  max-width: 1190px;
   width: 100%;
   margin: 0 auto; }
   .container-small {
@@ -97,7 +97,7 @@ body {
   top: 50%;
   margin-top: -32px;
   z-index: 10;
-  right: 470px; }
+  right: 500px; }
   .slick-next::before {
     position: absolute;
     content: '';
@@ -134,9 +134,8 @@ body {
   .slider-blog .slick-next {
     right: -32px; }
   .slider-blog .slider-blog__item {
-    width: 360px; }
-  .slider-blog .slider-blog__item + .slider-blog__item {
-    margin-left: 40px; }
+    width: 360px;
+    margin: 0 20px; }
   .slider-blog .slider-blog__title {
     margin-top: 25px;
     margin-bottom: 16px; }
@@ -227,6 +226,45 @@ body {
   font-weight: bold;
   font-size: 14px;
   color: #FFFFFF; }
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0B283F;
+  padding-top: 80px;
+  -webkit-transition: .3s all linear;
+  transition: .3s all linear;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 999;
+  display: none; }
+  .main-nav .menu-hide {
+    position: absolute;
+    top: 35px;
+    right: 20px; }
+  .main-nav .button {
+    background: -webkit-gradient(linear, left top, right top, from(#1F4E78), to(#0677DF));
+    background: linear-gradient(90deg, #1F4E78 0%, #0677DF 100%);
+    box-shadow: 0px 10px 30px #071F32;
+    width: 220px; }
+  .main-nav .mobile-nav {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+  .main-nav .mobile-nav__item + .mobile-nav__item {
+    margin-top: 30px; }
+  .main-nav .mobile-nav__item:last-child {
+    margin-top: 50px; }
+  .main-nav .mobile-nav__item a {
+    font-family: 'Arimo';
+    font-size: 20px;
+    color: #FFFFFF; }
 
 .header {
   height: 120px; }
@@ -348,32 +386,17 @@ body {
   .formWhom__section .section__desc {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 50px; }
-  .formWhom__section .section__row {
-    display: -webkit-box;
-    display: flex;
-    position: relative; }
-  .formWhom__section .section__column {
-    flex-basis: 100%;
+  .formWhom__section .section__column:nth-child(1) {
+    -webkit-box-align: end;
+            align-items: flex-end;
+    padding-right: 125px;
     position: relative;
-    height: 750px;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    -webkit-box-pack: end;
-            justify-content: flex-end; }
-    .formWhom__section .section__column:nth-child(1) {
-      -webkit-box-align: end;
-              align-items: flex-end;
-      padding-right: 125px;
-      position: relative;
-      background: -webkit-gradient(linear, left top, right top, from(#1F4E78), to(#0677DF));
-      background: linear-gradient(90deg, #1F4E78 0%, #0677DF 100%); }
-      .formWhom__section .section__column:nth-child(1) .formWhom__img {
-        right: 0; }
-    .formWhom__section .section__column:nth-child(2) {
-      padding-left: 125px; }
+    background: -webkit-gradient(linear, left top, right top, from(#1F4E78), to(#0677DF));
+    background: linear-gradient(90deg, #1F4E78 0%, #0677DF 100%); }
+    .formWhom__section .section__column:nth-child(1) .formWhom__img {
+      right: 0; }
+  .formWhom__section .section__column:nth-child(2) {
+    padding-left: 125px; }
 
 .formWhom__desc {
   max-width: 350px;
@@ -523,14 +546,6 @@ body {
 
 .about__section {
   position: relative; }
-  .about__section::before {
-    content: '';
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    display: block;
-    height: 100%;
-    background: url(/img/dna-welcome.png) top left no-repeat; }
   .about__section .section__row {
     height: 600px; }
 
@@ -660,7 +675,8 @@ body {
   .professorrs-slider__item.slick-current .professorrs-slider__info {
     opacity: 1; }
 
-.professorrs-slider__info {
+.professorrs-slider__info,
+.forWhom-slider__info {
   position: absolute;
   z-index: 2;
   bottom: 40px;
@@ -670,6 +686,81 @@ body {
   opacity: 0;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out; }
+
+.forWhom__section {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E3F0F0), to(rgba(227, 240, 240, 0.5)));
+  background: linear-gradient(180deg, #E3F0F0 0%, rgba(227, 240, 240, 0.5) 100%);
+  padding-top: 80px; }
+  .forWhom__section .slick-next {
+    right: 0; }
+  .forWhom__section .slick-prev {
+    left: 0; }
+  .forWhom__section .section__title {
+    text-align: center; }
+
+.forWhom-slider {
+  margin-top: 25px; }
+
+.forWhom-slider__item {
+  position: relative; }
+  .forWhom-slider__item .section__desc {
+    color: rgba(255, 255, 255, 0.7); }
+  .forWhom-slider__item .title-second {
+    color: white; }
+  .forWhom-slider__item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(23.39%, rgba(6, 41, 72, 0)), to(#124B7D));
+    background: linear-gradient(180deg, rgba(6, 41, 72, 0) 23.39%, #124B7D 100%); }
+  .forWhom-slider__item.w-b::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 730px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background: -webkit-gradient(linear, left top, right top, from(#1F4E78), to(#0677DF));
+    background: linear-gradient(90deg, #1F4E78 0%, #0677DF 100%); }
+  .forWhom-slider__item.w-b .forWhom-slider__img {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+            justify-content: flex-end; }
+  .forWhom-slider__item.w-b .forWhom-slider__info {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    margin-right: 125px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+  .forWhom-slider__item.no-b .forWhom-slider__img {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    margin-left: 125px; }
+  .forWhom-slider__item.no-b .forWhom-slider__info {
+    left: 125px;
+    right: unset; }
+
+.forWhom-slider__img {
+  z-index: -1; }
+  .forWhom-slider__img img {
+    height: 800px; }
+
+.forWhom-slider__info {
+  opacity: 1;
+  width: 350px;
+  right: 0;
+  left: unset;
+  margin-left: 0; }
 
 .professors-slider__post {
   font-family: 'Arimo';
@@ -746,6 +837,9 @@ body {
 .mobile {
   display: none; }
 
+.welcome-middle, .welcome-small {
+  display: none; }
+
 @media screen and (max-width: 1250px) {
   .slider-blog .slick-next {
     right: 0; }
@@ -766,17 +860,24 @@ body {
     margin-top: 20px; }
   .slider-one .slider__column {
     flex-basis: unset;
-    text-align: center; }
+    text-align: center;
+    -webkit-box-align: center;
+            align-items: center; }
     .slider-one .slider__column:nth-child(2) {
       max-width: unset; }
   .slider-one .slider__column + .slider__column {
     margin-left: 0; }
+  .professors-slider .slick-prev {
+    left: 0; }
+  .professors-slider .slick-next {
+    right: 0; }
   .patient__section .section__row::before {
     display: none; }
   .workShop__section::before {
     display: none; }
   .patient__section .column-img {
-    background: linear-gradient(180.17deg, #145793 0.11%, rgba(0, 33, 62, 0.16) 125.64%), url(/img/slider/second.png); }
+    background: linear-gradient(180.17deg, #145793 0.11%, rgba(0, 33, 62, 0.16) 125.64%), url(/img/slider/second.png);
+    background-size: cover; }
   .patient__section .section__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -785,10 +886,51 @@ body {
     flex-basis: unset; }
   .patient__section .section__column:nth-child(2) {
     flex-basis: unset;
-    padding-top: 80px; }
+    padding-top: 80px;
+    -webkit-box-align: center;
+            align-items: center; }
   .img-fluid {
     position: relative;
     width: 100%; } }
+
+@media screen and (max-width: 1024px) {
+  .welcome-big {
+    display: none; }
+  .welcome-middle {
+    display: block; }
+  .about__bckg {
+    display: none; }
+  .person-list {
+    padding: 0 20px; }
+  .professors__section::before {
+    display: none; }
+  .slider-blog__img img {
+    width: 100%; }
+  .slider-one__item .slider__column {
+    width: 100%; }
+  .slider-one__item .slider__img img {
+    width: 100%; }
+  .institutes__section {
+    height: auto;
+    background: #145793; }
+    .institutes__section::before {
+      content: ''; }
+  .institutes__slider .img-slider {
+    background: linear-gradient(180.17deg, #145793 0.11%, rgba(0, 33, 62, 0.16) 125.64%), url(/img/slider/instituteMobile.png) no-repeat;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    z-index: 2; }
+  .institutes__slider .slider__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+  .institutes__slider .slider__column:nth-child(1) {
+    flex-basis: unset;
+    padding: 0 20px; }
+  .institutes__slider .slider__column:nth-child(2) {
+    flex-basis: unset;
+    padding-top: 80px; } }
 
 @media screen and (max-width: 900px) {
   .header {
@@ -796,16 +938,38 @@ body {
     .header .descktop {
       display: none; }
     .header .mobile {
-      display: block; } }
+      display: block; }
+  .about__bckg {
+    display: none; }
+  .main-nav {
+    display: block; } }
 
 @media screen and (max-width: 768px) {
+  .formWhom__section {
+    display: unset; }
+  .formWhom__img img {
+    width: 100%; }
+  .header .container {
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+  .slider-blog .slider-blog__item {
+    margin: 0 10px; }
+  body.overflow {
+    overflow: hidden; }
+  .main-nav.active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   .section__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column; }
+  .welcome__section {
+    margin-bottom: 60px; }
   .about__section .section__column + .section__column,
   .mission__section .section__column + .section__column {
     margin-left: 0; }
+  .about__section .section__row {
+    height: auto; }
   .mission__section .section__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -816,4 +980,156 @@ body {
     padding-right: 20px;
     padding-left: 20px; }
   .section__desc {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .contacts__section {
+    padding-bottom: 0; }
+    .contacts__section .section__row .section__column {
+      flex-basis: 100%;
+      width: 100%; }
+    .contacts__section .section__row .section__column + .section__column {
+      margin-top: 40px; }
+    .contacts__section .link {
+      margin-left: 20px; }
+  .workShop__section .section__subTitle {
+    margin-left: 20px; }
+  .img-fluid {
+    margin-top: 40px; }
+  .about__section .section__column:nth-child(1) {
+    max-width: unset; }
+  .professors__section {
+    padding-top: 80px;
+    margin-bottom: 80px; }
+  .certificates__section {
+    margin-top: 80px; }
+  .footer {
+    height: auto;
+    padding-bottom: 40px; }
+    .footer .container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-flow: row wrap;
+      align-content: space-between;
+      padding: 0 20px; }
+  .footer-block {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px; }
+    .footer-block:nth-child(3) {
+      -webkit-box-ordinal-group: 3;
+              order: 2; }
+    .footer-block:nth-child(2) {
+      -webkit-box-ordinal-group: 4;
+              order: 3; }
+    .footer-block:nth-child(3) {
+      -webkit-box-ordinal-group: 5;
+              order: 4;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: end;
+              align-items: flex-end; }
+      .footer-block:nth-child(3) .footer__text span {
+        display: block; }
+    .footer-block:nth-child(4) {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: end;
+              align-items: flex-end; }
+  .footer-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+  .footer-list__item + .footer-list__item {
+    margin-left: 0;
+    margin-top: 20px; }
+  .forWhom-slider__item .section__desc {
+    padding: 0; }
+  .forWhom-slider__item.w-b .forWhom-slider__img {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center; }
+  .forWhom-slider__item.w-b .forWhom-slider__info {
+    -webkit-box-pack: center;
+            justify-content: center;
+    left: 50%;
+    margin-left: -175px; }
+  .forWhom-slider__item.no-b .forWhom-slider__img {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center; }
+  .forWhom-slider__item.no-b .forWhom-slider__info {
+    left: 50%;
+    margin-left: -175px;
+    right: unset; } }
+
+@media screen and (max-width: 475px) {
+  .section__title {
+    font-size: 48px; }
+  .header__logo img {
+    width: 151px; }
+  .forWhom-slider__img img {
+    height: 500px; }
+  .forWhom-slider__item.w-b::after {
+    height: 450px; }
+  .forWhom-slider__item.w-b .forWhom-slider__info {
+    margin-left: -150px; }
+  .forWhom-slider__item.no-b .forWhom-slider__info {
+    margin-left: -150px; }
+  .forWhom-slider__item .forWhom-slider__info {
+    width: 300px; }
+    .forWhom-slider__item .forWhom-slider__info .section__desc {
+      margin-bottom: 0;
+      font-size: 14px;
+      margin-top: 15px; }
+    .forWhom-slider__item .forWhom-slider__info .title-second {
+      font-size: 20px; }
+  .header {
+    height: 100px; }
+  .institutes__section .section__title, .certificates__section .section__title {
+    font-size: 38px; }
+  .professors__section {
+    padding-top: 80px; }
+  .institutes__slider .img-slider {
+    height: 500px; }
+  .institutes__slider .slider__title {
+    margin-top: 60px; }
+  .welcome-middle {
+    display: none; }
+  .welcome-small {
+    display: block; }
+  .section {
+    margin-bottom: 60px; }
+    .section.institutes__section {
+      margin-bottom: 0; }
+    .section.certificates__section {
+      margin-top: 80px; }
+    .section.patient__section .column-img {
+      height: 324px;
+      background: linear-gradient(180.17deg, #145793 0.11%, rgba(0, 33, 62, 0.16) 125.64%), url(/img/slider/second.png) center bottom;
+      background-repeat: no-repeat;
+      background-size: contain; }
+    .section.contacts__section {
+      margin: 0; }
+  .slider-blog .slider-blog__item {
+    margin: 0; }
+  .slider-blog .slider-blog__info {
+    padding: 0 20px; }
+  .slider-blog .slick-next, .slider-blog .slick-prev {
+    top: 25%; }
+  .slider-blog .section__desc {
+    padding: 0; }
+  .slider-blog .button {
+    margin-left: 20px; }
+  .person-list__info {
+    padding: 0; }
+  .person-list__img img {
+    width: 100%; }
+  .contacts-form .send-form, .contacts-form .input__wrapper input, .contacts-form .input__wrapper textarea {
+    width: 300px; } }
