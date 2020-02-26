@@ -3,9 +3,13 @@ $(document).ready(function() {
   //NAV SCROOLL
   var $page = $("html, body");
   $('.header-nav a[href*="#"]').click(function() {
+    let href = $($.attr(this,"href")).offset().top;
+    console.log(href);
+    let headerHeight = $('.header').height();
+    console.log(headerHeight);
     $page.animate(
       {
-        scrollTop: $($.attr(this, "href")).offset().top
+        scrollTop: href - headerHeight
       },
       1500
     );
