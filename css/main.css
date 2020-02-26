@@ -136,9 +136,11 @@ html {
 .slider-blog {
   margin-top: 50px; }
   .slider-blog .slick-prev {
-    left: -32px; }
+    left: -16px;
+    top: 25%; }
   .slider-blog .slick-next {
-    right: -32px; }
+    top: 25%;
+    right: -16px; }
   .slider-blog .slider-blog__item {
     width: 360px;
     margin: 0 20px; }
@@ -1225,3 +1227,8 @@ html {
   .contacts-form .input__wrapper input,
   .contacts-form .input__wrapper textarea {
     width: 300px; } }
+
+@media screen and (max-width: 320px) {
+  .photo-container img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
