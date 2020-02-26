@@ -221,7 +221,8 @@ html {
       color: rgba(255, 255, 255, 0.7); }
   .contacts-form .input__wrapper textarea {
     resize: none;
-    height: 160px; }
+    height: 160px;
+    position: relative; }
 
 .send-form {
   background: -webkit-gradient(linear, left top, right top, from(#0677DF), to(#3CA2FE));
@@ -233,7 +234,8 @@ html {
   font-family: 'Arimo';
   font-weight: bold;
   font-size: 14px;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.5); }
 
 .main-nav {
   position: fixed;
