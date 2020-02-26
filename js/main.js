@@ -1,5 +1,16 @@
 // Импортируем другие js-файлы
 $(document).ready(function() {
+  //NAV SCROOLL
+  var $page = $("html, body");
+  $('.header-nav a[href*="#"]').click(function() {
+    $page.animate(
+      {
+        scrollTop: $($.attr(this, "href")).offset().top
+      },
+      1500
+    );
+    return false;
+  });
   //SLIDERS SETTINGS
   $(".professors-slider").slick({
     slidesToShow: 3,
@@ -72,7 +83,7 @@ $(document).ready(function() {
       }
     ]
   });
- 
+
   //MOBILE MENU SETTINGS
   const showButton = $(".menu-show"),
     hideButton = $(".menu-hide"),
