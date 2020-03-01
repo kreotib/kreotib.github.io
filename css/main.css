@@ -676,11 +676,9 @@ body {
   top: 0;
   opacity: 0;
   -webkit-transition: 0.3s all linear;
-  transition: 0.3s all linear;
-  display: none; }
+  transition: 0.3s all linear; }
   .modal-block .modal-block__content {
-    opacity: 0;
-    display: none; }
+    opacity: 0; }
   .modal-block .input__wrapper input {
     width: 100%;
     border-bottom: 2px solid #ff9c01; }
@@ -894,7 +892,6 @@ body {
   .contact-form {
     right: unset;
     left: 50%;
-    display: none;
     margin-left: -125px; } }
 
 @media all and (max-width: 505px) {
