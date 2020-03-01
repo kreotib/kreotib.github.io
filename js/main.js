@@ -120,7 +120,7 @@ window.addEventListener("DOMContentLoaded", function() {
   }
 
   function mask(event) {
-    var matrix = "+38 (___) ___ __ __",
+    var matrix = "+38 (0__) ___ __ __",
       i = 0,
       def = matrix.replace(/\D/g, ""),
       val = this.value.replace(/\D/g, "");
@@ -136,8 +136,13 @@ window.addEventListener("DOMContentLoaded", function() {
       if (this.value.length == 2) this.value = "";
     } else setCursorPosition(this.value.length, this);
   }
-  var input = document.querySelector(".input-phone");
-  input.addEventListener("input", mask, false);
-  input.addEventListener("focus", mask, false);
-  input.addEventListener("blur", mask, false);
+  var input = document.querySelectorAll(".input-phone");
+  input.forEach(function(element,index){
+    element.addEventListener("input", mask, false);
+    element.addEventListener("focus", mask, false);
+    element.addEventListener("blur", mask, false);
+  });
+  //input.addEventListener("input", mask, false);
+  //input.addEventListener("focus", mask, false);
+  //input.addEventListener("blur", mask, false);
 });
