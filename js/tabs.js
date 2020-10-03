@@ -47,4 +47,21 @@ document.addEventListener('DOMContentLoaded',()=>{
     tabsList.forEach((element)=>{
         tabsInit(element,0);
     });
+
+    // const fonderListItem = document.querySelectorAll('.btn-card');
+    //
+    //     fonderListItem.forEach(element=>{
+    //         element.addEventListener('click',(event)=>{
+    //            event.preventDefault();
+    //            let price = element.dataset.price;
+    //            $.ajax({
+    //                type:'POST',
+    //                url: "/payment.php",
+    //                data: price,
+    //                dataType: 'json',
+    //                cache:false
+    //            });
+    //         });
+    //     });
+
 });

@@ -78,6 +78,9 @@ body {
 body.main-page {
   background-color: #161A25;
 }
+body.main-page .section__img img {
+  object-fit: fill;
+}
 body.main-page .footer {
   margin-top: 0;
 }

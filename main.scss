@@ -57,14 +57,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit; }
 
 /*--------------------*/
-body{
+body {
   background-color: #171A23;
-  &.main-page{
+  &.main-page {
     background-color: #161A25;
-    .footer{
-      margin-top: 0;
+    .section{
+      &__img{
+        img{
+          object-fit: fill;
+        }
+      }
     }
+  .footer {
+    margin-top: 0;
   }
+}
 }
 .container{
   width: 100%;
