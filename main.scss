@@ -593,7 +593,12 @@ body{
 
 @media screen and (max-width: 1440px){
   .container{
-    padding: 0 30px;
+    padding: 0 150px;
+  }
+  .header{
+    .container{
+      padding: 0 5px;
+    }
   }
   .item-list{
     padding: 40px 0 5px 0;
@@ -712,6 +717,9 @@ body{
 }
 
 @media screen and (max-width: 768px){
+  .container{
+    padding: 0 15px;
+  }
   .footer{
     &-nav{
       &__list{

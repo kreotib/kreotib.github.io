@@ -571,7 +571,11 @@ body.main-page .footer {
 
 @media screen and (max-width: 1440px) {
   .container {
-    padding: 0 30px;
+    padding: 0 150px;
+  }
+
+  .header .container {
+    padding: 0 5px;
   }
 
   .item-list {
@@ -664,6 +668,10 @@ body.main-page .footer {
   }
 }
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .footer-nav__list {
     flex-direction: column;
     text-align: center;
