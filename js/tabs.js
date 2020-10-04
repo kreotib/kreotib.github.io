@@ -30,14 +30,19 @@ const showTabs = (tabsBlock,nextIndex) =>{
     const tabsNavList = tabsBlock.querySelector('.tabs-nav__list'),
           tabsNavItems = [...tabsNavList.children],
           tabsContent = tabsBlock.querySelector('.tabs-content'),
-          tabsContentItems = [...tabsContent.children];
+          tabsContentItems = [...tabsContent.children],
+          pageTitle= document.querySelector('.page-title');
 
     tabsNavItems.forEach((element,index)=>{
         index === nextIndex ? element.classList.add('active') : element.classList.remove('active');
+        if(index === nextIndex){
+            pageTitle ? pageTitle.innerHTML = element.querySelector('.tabs-nav__link').innerHTML : false;
+        }
     });
     tabsContentItems.forEach((element,index)=>{
         index === nextIndex ? element.classList.add('active') : element.classList.remove('active');
     });
+
 };
 
 
