@@ -264,7 +264,7 @@ a[href^=tel] {
     }
 }
 
-@media only screen and (min-width: 1920px){
+@media only screen and (min-width: 1921px){
     .header{
         height: 1120px;
     }
