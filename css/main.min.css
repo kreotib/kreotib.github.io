@@ -263,10 +263,14 @@ a[href^=tel] {
         background-size: contain;
     }
 }
-
-@media only screen and (min-width: 1920px){
+@media screen and (min-width: 1920px){
     .header{
         height: 900px;
+    }
+}
+@media only screen and (min-width: 1921px){
+    .header{
+        height: 1120px;
     }
     .logo img{
         max-width: 250px;
