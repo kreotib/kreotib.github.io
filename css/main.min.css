@@ -254,7 +254,7 @@ a[href^=tel] {
 
 .header__page-header {
     margin-top: 1em;
-    font-size: 60px;
+    font-size: 2em;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
@@ -264,19 +264,21 @@ a[href^=tel] {
     }
 }
 
-@media only screen and (min-width: 1921px){
+@media only screen and (min-width: 1920px){
     .header{
-        height: 1120px;
+        height: 900px;
     }
     .logo img{
         max-width: 250px;
     }
-
+    .header__page-header{
+        font-size: 50px;
+    }
 }
 @media only screen and (max-width: 2560px) {
     .header {
         min-height: 780px;
-        background-size: cover;
+        background-size: contain;
     }
 }
 
@@ -286,7 +288,7 @@ a[href^=tel] {
         font-size: 1.9em;
     }
     .header {
-        min-height: 590px;
+        min-height: 650px;
     }
 }
 @media only screen and (max-width: 1280px) {
@@ -295,7 +297,10 @@ a[href^=tel] {
         font-size: 1.6em;
     }
     .header {
-        min-height: 540px;
+        min-height: 560px;
+    }
+    .logo img{
+        width: 140px;
     }
 }
 
@@ -340,7 +345,7 @@ a[href^=tel] {
     .header {
         background-image: url(../img/bg-small.jpg);
         background-size: cover;
-        min-height: 460px;
+        min-height: 400px;
         position: relative;
     }
     .header::before{
@@ -360,7 +365,7 @@ a[href^=tel] {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 475px) {
     .header{
         min-height: 350px;
     }
