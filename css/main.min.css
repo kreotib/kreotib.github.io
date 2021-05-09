@@ -575,6 +575,13 @@ a[href^=tel] {
     .header{
         min-height: 285px;
     }
+    .promo__info{
+        width: 100%;
+    }
+    .icon_tg,.icon_vib,.icon_wats,.icon_vk{
+        width: 20px;
+        height: 20px;
+    }
 }
 
 span.color {
