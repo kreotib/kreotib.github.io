@@ -229,166 +229,63 @@ a[href^=tel] {
 }
 
 .logo img {
-    max-width: 220px
+    max-width: calc(88px + (220 - 88) * (100vw - 320px) / (1920 - 320));
 }
 
-@media only screen and (max-width: 979px) {
-    .logo img {
-        max-width: 140px
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .logo img {
-        max-width: 86px
-    }
-}
 
 .header {
-    min-height: 540px;
     padding-top: 20px;
-    background-image: url(../img/img-bg-header.png);
+    background-image: url(../img/header-bg-b.png);
     text-align: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
+.page-header__img{
+    margin-top: calc(22px + (25 - 22)*(100vw - 320px)/(1920 - 320));
+    margin-bottom:-1px;
+}
 .header__page-header {
-    margin-top: 1em;
-    font-size: 2em;
+    margin-top: calc(22px + (35 - 22)*(100vw - 320px)/(1920 - 320));
+    font-size: calc(22px + (60 - 22)*(100vw - 320px)/(1920 - 320));
+}
+.page-header__img img{
+    width: 100%;
+}
+.page-header__img_small{
+    display: none;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
     .header {
-        background-image: url(../img/img-bg-header_2x.png);
-        background-size: contain;
-    }
-}
-@media screen and (min-width: 1920px){
-    .header{
-        height: 900px;
-    }
-}
-@media only screen and (min-width: 1921px){
-    .header{
-        height: 1120px;
-    }
-    .logo img{
-        max-width: 250px;
-    }
-    .header__page-header{
-        font-size: 50px;
-    }
-}
-@media only screen and (max-width: 2560px) {
-    .header {
-        min-height: 780px;
-        background-size: contain;
-    }
-}
-
-@media only screen and (max-width: 1480px) {
-    .header__page-header {
-        margin-top: 0.95em;
-        font-size: 1.9em;
-    }
-    .header {
-        min-height: 650px;
-    }
-}
-@media only screen and (max-width: 1280px) {
-    .header__page-header {
-        margin-top: 0.85em;
-        font-size: 1.6em;
-    }
-    .header {
-        min-height: 560px;
-    }
-    .logo img{
-        width: 140px;
-    }
-}
-
-
-@media only screen and (max-width: 1129px) {
-    .header {
-        background-size: 100%;
-        min-height: 600px;
+        background-image: url(../img/header-bg-b.png);
         background-size: cover;
     }
-    .header__page-header {
-        margin-top:1.2em;
-        font-size: 2em;
-    }
-}
-
-
-@media only screen and (max-width: 979px) {
-    .header {
-        min-height: 535px
-    }
-
-    .header__page-header {
-        margin-top:1.2em;
-        font-size: 2em;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .header {
-        min-height: 400px
-    }
-
-    .header__page-header {
-        margin-top: 16px;
-        font-size:22px;
-    }
-
 }
 
 @media only screen and (max-width: 575px) {
     .header {
         background-image: url(../img/bg-small.jpg);
         background-size: cover;
-        min-height: 400px;
         position: relative;
     }
-    .header::before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 250px;
-        background: url("../img/hands.png") bottom center no-repeat;
-        background-size: contain;
-        display: block;
-        bottom: 0;
-        left: 0 ;
+    .page-header__img_big{
+        display: none;
     }
-    .header__page-header {
-        margin-top: 16px;
-        font-size:22px;
+    .page-header__img_small{
+        display: block;
     }
 }
 
 @media only screen and (max-width: 475px) {
-    .header{
-        min-height: 350px;
+    .promo__product-img {
+        width: 100%
+    }
+    .promo__info{
+        width: 100%;
     }
 }
-
-
-@media only screen and (max-width: 376px) {
-    .header__page-header {
-        font-size:24px;
-        margin-top: 21px
-    }
-}
-
-@media only screen and (max-width: 360px) {
-    .header__page-header {
-        font-size:20px;
-    }
-}
-
 
 .promo {
     display: -webkit-box;
@@ -439,9 +336,7 @@ a[href^=tel] {
         align-items: center;
     }
 
-    .promo__product-img {
-        width: 100%
-    }
+
 
     .promo__info {
         margin: 40px auto 0;
@@ -495,9 +390,8 @@ a[href^=tel] {
 
 @media only screen and (max-width: 767px) {
     .promo__info {
-        width: 75%
+        width: 100%
     }
-
 }
 .promo-info__item {
     display: -webkit-box;
@@ -578,9 +472,6 @@ a[href^=tel] {
         margin-top: 4px
     }
 
-    .header{
-        min-height: 300px;
-    }
     .promo__info{
         width: 100%;
     }
