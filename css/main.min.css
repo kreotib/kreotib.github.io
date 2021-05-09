@@ -240,13 +240,7 @@ a[href^=tel] {
 
 @media only screen and (max-width: 767px) {
     .logo img {
-        max-width: 100px
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .logo img {
-        max-width: 88px
+        max-width: 86px
     }
 }
 
@@ -260,7 +254,7 @@ a[href^=tel] {
 
 .header__page-header {
     margin-top: 1em;
-    font-size: 2em;
+    font-size: 60px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
@@ -274,6 +268,10 @@ a[href^=tel] {
     .header{
         height: 1120px;
     }
+    .logo img{
+        max-width: 250px;
+    }
+
 }
 @media only screen and (max-width: 2560px) {
     .header {
@@ -371,16 +369,15 @@ a[href^=tel] {
 
 @media only screen and (max-width: 376px) {
     .header__page-header {
-        font-size:18px;
+        font-size:24px;
         margin-top: 21px
     }
 }
 
 @media only screen and (max-width: 360px) {
     .header__page-header {
-        font-size:17px;
+        font-size:20px;
     }
-
 }
 
 
@@ -573,14 +570,14 @@ a[href^=tel] {
     }
 
     .header{
-        min-height: 285px;
+        min-height: 300px;
     }
     .promo__info{
         width: 100%;
     }
     .icon_tg,.icon_vib,.icon_wats,.icon_vk{
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -665,8 +662,12 @@ span.color {
 }
 @media only screen and (max-width: 374px) {
     .social__link {
-        width: 40px;
-        height: 40px
+        width: 50px;
+        height: 50px;
+        margin-right:0px;
+    }
+    .social__link + .social__link{
+        margin-left: 12px;
     }
 }
 
@@ -702,7 +703,7 @@ span.color {
 @media only screen and (max-width: 767px) {
     .info-game__header {
         font-size: 28px;
-        line-height: 1.2
+        line-height: 1.2;
     }
 
     .info-game__readmore {
