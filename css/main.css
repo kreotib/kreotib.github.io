@@ -648,10 +648,7 @@ body {
   height: 100%;
   background: rgba(13, 84, 135, 0.2);
   padding: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
