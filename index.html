@@ -1,34 +1,172 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@3.1.7/extras/css/emojione.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic-ext"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600&display=swap&subset=cyrillic-ext"
+          rel="stylesheet">
+
+    <title>Стартовая страница</title>
 </head>
-<body>
+<body onload="initElement()">
+<div class="wrapper">
+    <div class="custom_block hidden">
 
-<form class="images-form">
-    <div class="images-form__upload">
-        <input id="images-form__input" name="images-form__input" class="images-form__input" type="file" formenctype="multipart/form-data" accept="image/jpeg,image/png,image/gif">
-        <label for="images-form__input" class="images-form__label">
-            <img class="images-form__label-img" src="upload.svg" alt="">
-            <span class="images-form__label-text">Перетащите или вставьте файлы сюда</span>
-            <span class="images-form__label-btn">
-                Выбрать из файлов
-            </span>
-        </label>
     </div>
-    <div class="images-form__info">
-        <div class="images-form__file">
+    <div class="chat-box__wrapper">
+        <div class="chat-box">
+            <div class="chat-box__header accent-bg">
+                <div class="header__text">
+                    <p>
+                        ChatikApp
+                    </p>
+                </div>
+                <div class="header__button chat-block">
+                    <!-- <button class="btn accent-bg" onclick="printSystem('Поиск опонента',true)">
+                        Найти оппонента
+                    </button> -->
+                    <div class="chat-state" onclick="changeChatState()">
+                        <div class="chat-state__item chat-end-btn" title="Завершить чат">
+                            <img src="img/icons/close.svg" alt="x">
+                        </div>
+                        <div class="chat-state__item chat-start-btn show" title="Начать чат">
+                            <img src="img/icons/refresh.svg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <img class="context-menu-link context-menu-link-default" data-context="settings" src="img/icons/more-vert.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="chat-box__content" class="chat-box__content">
+                <div class="welcome-block">
+                    <div class="message-block system">
+                        <div id="initOnlineCounter" class="message-block__text">Онлайн: 123</div>
+                    </div>
+                    <div class="message-block system">
+                        <div class="message-block_hello_text">ChatikApp – это анонимное и конфиденциальное общение.
+                            Здесь не нужна регистрация, приложение работает по принципу рулетки. Надеемся вы сможете
+                            найти приятных и разносторонних собеседников
+                        </div>
+                    </div>
+                    <div class="message-block system">
+                        <img src="img/cat-privet.png"/>
+                    </div>
+                    <div class="chat-toggler theme-choose">
+                        <div class="chat-toggler__wrapper">
+                            <p class="chat-toggler__title">
+                                Тема общения :
+                            </p>
+                            <div class="button-grid chat-toggler__btns">
+                                <button class="button button_color-blue button-toggler theme-choose-btn"
+                                        onclick="changeAccentBg()">
+                                    <span class="button__text">
+                                        Общение
+                                    </span>
+                                </button>
+                                <button class="button button_color-xxx button-toggler button_non-active theme-choose-btn"
+                                        onclick="changeAccentBg('xxx')" data-theme="xxx">
+                                    <span class="button__text">
+                                        Флирт 18+
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="chat-toggler__submit">
+                                <button class="button button_height-big button_color-green theme-choose-submit"
+                                        data-theme="default" onclick="startChat()">
+                                    <span class="button__text">
+                                        Искать собеседника
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="messages-wrapper chat-block">
+                    <div class="message-block someone unread">
+                        <div class="message-block__icon">
 
+                        </div>
+                        <div class="message-block__text context-menu-link copy-wrapper" data-context="messages">
+                            привет
+                        </div>
+                        <div class="message-block__time">
+                            22:39
+                        </div>
+                    </div>
+                    <div class="message-block self">
+                        <div class="message-block__icon">
+
+                        </div>
+                        <div class="message-block__text context-menu-link copy-wrapper" data-context="messages">
+                            привет 2
+                        </div>
+                        <div class="message-block__time">
+                            22:39
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box__footer chat-block">
+                <div class="controls">
+                    <div id="close" class="but but-connect"><i class="connect material-icon close">close</i></div>
+                    <div autocomplete="off" id="text" contenteditable="true" class="text" tabindex="1"
+                         style="max-height: 493px;"/>
+                </div>
+                <!-- <div class="but but-emoji disabled"><i class="add-emoji material-icon tooltipped tooltipped-top emoji-loading">insert_emoticon</i></div>-->
+                <div id="send" onclick="createMessage(text);clearText();" class="but but-send"><i
+                        class="send material-icon">send</i></div>
+            </div>
+            <div class="welcome-block">
+
+            </div>
         </div>
     </div>
-</form>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="script.js"></script>
+</div>
+<div class="custom_block">
+    <div class="change-background">
+        <div class="change-background__button accent-bg">
+            Надоел фон ?
+        </div>
+        <ul class="background-list">
+            <li class="background-list__item">
+                <a href="#" class="background-list__link">
+                    <img class="background-list__img" src="img/bckg/bg1.png" alt="">
+                    Фон 1
+                </a>
+            </li>
+            <li class="background-list__item">
+                <a href="#" class="background-list__link">
+                    <img class="background-list__img" src="img/bckg/5-dots.png" alt="">
+                    Фон 2
+                </a>
+            </li>
+            <li class="background-list__item">
+                <a href="#" class="background-list__link no-bckg">
+                    Без фона
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="context-menu">
+    <div class="context-menu__wrapper">
+        <ul class="context-menu__list">
+        </ul>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emojione@3.1.7/lib/js/emojione.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
