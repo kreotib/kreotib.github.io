@@ -36,11 +36,29 @@
           </div>
           <div class="inventory-wrapper">
             <div class="inventory-wrapper__icon"><img src="img/inventory.png"></div><a class="btn btn-inventory inventory-wrapper__btn" href="#">Inventory</a>
+            <button class="sendEthButton">send</button>
           </div>
         </div>
       </div>
     </header>
-    <div class="page-wrapper">
+    <div class="page-wrapper"><div class="alert alert-danger" id="alert-error-https" style="display: none">
+      <You>can run this example only over HTTPS connection.</You></div>
+<div id="prepare">
+<button class="btn btn-primary" id="btn-connect">
+      <Connect>wallet</Connect></button>
+</div>
+<div id="connected" style="display: none">
+<button class="btn btn-primary" id="btn-disconnect">
+      <Disconnect>wallet</Disconnect></button>
+<hr>
+<div id="network">
+<p>
+<strong>Connected blockchain:</strong> <span id="network-name"></span>
+</p>
+<p>
+<strong>Selected account:</strong> <span id="selected-account"></span>
+</p>
+</div>
       <div class="page-logo">
         <div class="page-logo__img"><img src="img/logo.png"></div>
         <p class="page-logo__text">Artifacts</p>
@@ -108,7 +126,11 @@
         </div>
       </div>
     </div>
-    <script src="libs/custom-select/custom-select.min.js"></script>
+    <script src="libs/custom-select/custom-select.min.js"></script><script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+<script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
