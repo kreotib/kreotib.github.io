@@ -1,172 +1,114 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@3.1.7/extras/css/emojione.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.css">
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Главная</title>
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic-ext"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600&display=swap&subset=cyrillic-ext"
-          rel="stylesheet">
-
-    <title>Стартовая страница</title>
-</head>
-<body onload="initElement()">
-<div class="wrapper">
-    <div class="custom_block hidden">
-
-    </div>
-    <div class="chat-box__wrapper">
-        <div class="chat-box">
-            <div class="chat-box__header accent-bg">
-                <div class="header__text">
-                    <p>
-                        ChatikApp
-                    </p>
-                </div>
-                <div class="header__button chat-block">
-                    <!-- <button class="btn accent-bg" onclick="printSystem('Поиск опонента',true)">
-                        Найти оппонента
-                    </button> -->
-                    <div class="chat-state" onclick="changeChatState()">
-                        <div class="chat-state__item chat-end-btn" title="Завершить чат">
-                            <img src="img/icons/close.svg" alt="x">
-                        </div>
-                        <div class="chat-state__item chat-start-btn show" title="Начать чат">
-                            <img src="img/icons/refresh.svg" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <img class="context-menu-link context-menu-link-default" data-context="settings" src="img/icons/more-vert.svg" alt="">
-                    </div>
-                </div>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-wrapper">
+        <div class="header-wrapper__block">
+          <div class="profile header__profile"><a class="profile__img" href="#"><img src="img/profile.jpg"></a></div>
+          <div class="language-change">
+            <div class="language-change__current">
+              <svg class="icon icon-uk-flag ">
+                <use xlink:href="/img/svg/sprite.svg#uk-flag"></use>
+              </svg>
             </div>
-            <div id="chat-box__content" class="chat-box__content">
-                <div class="welcome-block">
-                    <div class="message-block system">
-                        <div id="initOnlineCounter" class="message-block__text">Онлайн: 123</div>
-                    </div>
-                    <div class="message-block system">
-                        <div class="message-block_hello_text">ChatikApp – это анонимное и конфиденциальное общение.
-                            Здесь не нужна регистрация, приложение работает по принципу рулетки. Надеемся вы сможете
-                            найти приятных и разносторонних собеседников
-                        </div>
-                    </div>
-                    <div class="message-block system">
-                        <img src="img/cat-privet.png"/>
-                    </div>
-                    <div class="chat-toggler theme-choose">
-                        <div class="chat-toggler__wrapper">
-                            <p class="chat-toggler__title">
-                                Тема общения :
-                            </p>
-                            <div class="button-grid chat-toggler__btns">
-                                <button class="button button_color-blue button-toggler theme-choose-btn"
-                                        onclick="changeAccentBg()">
-                                    <span class="button__text">
-                                        Общение
-                                    </span>
-                                </button>
-                                <button class="button button_color-xxx button-toggler button_non-active theme-choose-btn"
-                                        onclick="changeAccentBg('xxx')" data-theme="xxx">
-                                    <span class="button__text">
-                                        Флирт 18+
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="chat-toggler__submit">
-                                <button class="button button_height-big button_color-green theme-choose-submit"
-                                        data-theme="default" onclick="startChat()">
-                                    <span class="button__text">
-                                        Искать собеседника
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="messages-wrapper chat-block">
-                    <div class="message-block someone unread">
-                        <div class="message-block__icon">
-
-                        </div>
-                        <div class="message-block__text context-menu-link copy-wrapper" data-context="messages">
-                            привет
-                        </div>
-                        <div class="message-block__time">
-                            22:39
-                        </div>
-                    </div>
-                    <div class="message-block self">
-                        <div class="message-block__icon">
-
-                        </div>
-                        <div class="message-block__text context-menu-link copy-wrapper" data-context="messages">
-                            привет 2
-                        </div>
-                        <div class="message-block__time">
-                            22:39
-                        </div>
-                    </div>
-                </div>
+            <div class="language-change__list language-list">
+              <div class="language-list__item language-item"><a class="language-link" href="ru.html">
+                  <svg class="icon icon-ru-flag ">
+                    <use xlink:href="/img/svg/sprite.svg#ru-flag"></use>
+                  </svg></a></div>
             </div>
-            <div class="chat-box__footer chat-block">
-                <div class="controls">
-                    <div id="close" class="but but-connect"><i class="connect material-icon close">close</i></div>
-                    <div autocomplete="off" id="text" contenteditable="true" class="text" tabindex="1"
-                         style="max-height: 493px;"/>
-                </div>
-                <!-- <div class="but but-emoji disabled"><i class="add-emoji material-icon tooltipped tooltipped-top emoji-loading">insert_emoticon</i></div>-->
-                <div id="send" onclick="createMessage(text);clearText();" class="but but-send"><i
-                        class="send material-icon">send</i></div>
-            </div>
-            <div class="welcome-block">
-
-            </div>
+          </div>
         </div>
-    </div>
-</div>
-<div class="custom_block">
-    <div class="change-background">
-        <div class="change-background__button accent-bg">
-            Надоел фон ?
+        <div class="header-wrapper__block header-wrapper__block_connect">
+          <div class="connect-value-box"><a class="btn btn-connect" href="#">Connect to a Wallet</a></div>
         </div>
-        <ul class="background-list">
-            <li class="background-list__item">
-                <a href="#" class="background-list__link">
-                    <img class="background-list__img" src="img/bckg/bg1.png" alt="">
-                    Фон 1
-                </a>
-            </li>
-            <li class="background-list__item">
-                <a href="#" class="background-list__link">
-                    <img class="background-list__img" src="img/bckg/5-dots.png" alt="">
-                    Фон 2
-                </a>
-            </li>
-            <li class="background-list__item">
-                <a href="#" class="background-list__link no-bckg">
-                    Без фона
-                </a>
-            </li>
-        </ul>
+        <div class="header-wrapper__block header-wrapper__block_inventory">
+          <div class="social-icon header-social__icon">
+            <svg class="icon icon-telegram ">
+              <use xlink:href="/img/svg/sprite.svg#telegram"></use>
+            </svg>
+          </div>
+          <div class="inventory-wrapper">
+            <div class="inventory-wrapper__icon"><img src="img/inventory.png"></div><a class="btn btn-inventory inventory-wrapper__btn" href="#">Inventory</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-wrapper">
+      <div class="page-logo">
+        <div class="page-logo__img"><img src="img/logo.png"></div>
+        <p class="page-logo__text">Artifacts</p>
+      </div>
+      <div class="page-content">
+        <div class="page-content__wrapper">
+          <div class="container">
+            <div class="product-grid">
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-1.png"></div>
+                <p class="product-item__title">Trophy</p>
+                <p class="product-item__desc">This is a lottery trophy. Out of 300 artifacts, only 100 have an effect, and the rest are blank. 33% of the income of all players will be distributed among the 100 winners. These 33% will be generated in the form of new tokens, so that the rest of the players will not receive less.</p>
+                <p class="product-item__price">1000 BUSD</p><span class="product-item__count">575/1000</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-2.png"></div>
+                <p class="product-item__title">Mystery box</p>
+                <p class="product-item__desc">Contains a random number of Snake tokens. Mystery box can contain from 0 to 10,000 Snake tokens.</p>
+                <p class="product-item__price">10 BUSD</p><span class="product-item__count">2302/10000</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-3.png"></div>
+                <p class="product-item__title">Diamond</p>
+                <p class="product-item__desc">Adds 50% to the APR of the snake during the game. Can be applied up to 4 times to one character</p>
+                <p class="product-item__price">100 BUSD</p><span class="product-item__count">28/100</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-4.png"></div>
+                <p class="product-item__title">Bomb</p>
+                <p class="product-item__desc">Can increase any TVL (Total Locked Value) by two or more times, but can also destroy the snake and all parameters, including the balance and accrued Snake tokens</p>
+                <p class="product-item__price">300 BUSD</p><span class="product-item__count">484/500</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-5.png"></div>
+                <p class="product-item__title">Mouse</p>
+                <p class="product-item__desc">Increases the snake's TVL by 10%. Can be applied multiple times.</p>
+                <p class="product-item__price">500 BUSD</p><span class="product-item__count">21/100</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-6.png"></div>
+                <p class="product-item__title">Rainbow unicorn</p>
+                <p class="product-item__desc">Is a mega cool unique artifact. Those with a rainbow unicorn receive 2% of the APR % of all players every month. The reward is paid in USD to the owner's wallet.</p>
+                <p class="product-item__price">100000 BUSD</p><span class="product-item__count">2/5</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-7.png"></div>
+                <p class="product-item__title">Snake hunter</p>
+                <p class="product-item__desc">After applying this artifact, the entire current APR will be transferred to the character\'s owner\'s wallet monthly in SNAKE tokens, so you don\'t need to break the snake to get tokens.</p>
+                <p class="product-item__price">200 BUSD</p><span class="product-item__count">197/500</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-8.png"></div>
+                <p class="product-item__title">Snake charmer</p>
+                <p class="product-item__desc">After applying this artifact, the entire current APR will be transferred to the character's owner's wallet monthly in USDT tokens, so you don't need to break the snake to get tokens.</p>
+                <p class="product-item__price">1000 BUSD</p><span class="product-item__count">59/100</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+              <div class="product-grid__item product-item">
+                <div class="product-item__img"><img src="img/box-9.png"></div>
+                <p class="product-item__title">Snake Time</p>
+                <p class="product-item__desc">Transfers APR percentage to the owner's wallet in SNAKE tokens without destroying the snake. The artifact can be applied any number of times.</p>
+                <p class="product-item__price">50 BUSD</p><span class="product-item__count">390/1000</span><a class="product-item__btn" href="#">Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-</div>
-<div class="context-menu">
-    <div class="context-menu__wrapper">
-        <ul class="context-menu__list">
-        </ul>
-    </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emojione@3.1.7/lib/js/emojione.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-<script src="js/main.js"></script>
-</body>
+    <script src="libs/custom-select/custom-select.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
 </html>
