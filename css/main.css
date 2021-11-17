@@ -237,10 +237,15 @@ body::before {
   height: 20px;
 }
 
+.web3modal-modal-lightbox {
+  z-index: 5;
+  position: relative;
+}
+
 .header {
   padding-top: 14px;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .header-wrapper {
