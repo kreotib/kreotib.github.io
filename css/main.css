@@ -620,7 +620,7 @@ p .text-small {
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 450px) {
   .payment-block {
     padding: 20px 0;
   }
