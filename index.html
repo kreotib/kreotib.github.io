@@ -19,73 +19,71 @@
       </div>
     </header>
     <main class="content">
-      <div class="content__container">
+      <div class="content__container tabs">
+        <div class="tabs-nav">
+          <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">регистрация</a></div>
+          <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">вход</a></div>
+        </div>
         <div class="content__wrapper">
-          <div class="tabs">
-            <div class="tabs-nav">
-              <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">регистрация</a></div>
-              <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">вход</a></div>
+          <div class="tabs-content">
+            <div class="tabs-content__item">
+              <form class="form">
+                <div class="form__wrapper">
+                  <p class="form__title">Укажите данные для регистрации
+                    <div class="form__content">
+                      <div class="form-item">
+                        <label class="form-item__label">
+                          <input class="form-item__input" type="text"><span class="form-item__placeholder">Электронная почта *</span>
+                        </label>
+                      </div>
+                      <div class="form-item">
+                        <label class="form-item__label">
+                          <input class="form-item__input" type="text"><span class="form-item__placeholder">Придумайте пароль *</span>
+                        </label>
+                      </div>
+                      <div class="form-item">
+                        <label class="form-item__label">
+                          <input class="form-item__input" type="text"><span class="form-item__placeholder">Повторите пароль *</span>
+                        </label>
+                      </div>
+                      <input class="form__btn btn btn-green" type="submit" value="зарегистрироваться">
+                      <div class="form__agree checkbox">
+                        <label class="checkbox__label">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark">
+                            <svg viewbox="0 0 18 18" version="1.1">
+                              <g>
+                                <rect fill="none" x="0" y="0" width="18" height="18"></rect>
+                                <polygon fill="#FFFFFF" points="8 10 14 4 16 6 8 14 2 8 4 6"></polygon>
+                              </g>
+                            </svg></span><span class="checkbox__text">Согласен с политикой обработки персональных данных, правилами предоставления услуг по подписке. *</span>
+                        </label>
+                      </div>
+                    </div>
+                  </p>
+                </div>
+              </form>
             </div>
-            <div class="tabs-content">
-              <div class="tabs-content__item">
-                <form class="form">
-                  <div class="form__wrapper">
-                    <p class="form__title">Укажите данные для регистрации
-                      <div class="form__content">
-                        <div class="form-item">
-                          <label class="form-item__label">
-                            <input class="form-item__input" type="text"><span class="form-item__placeholder">Электронная почта *</span>
-                          </label>
-                        </div>
-                        <div class="form-item">
-                          <label class="form-item__label">
-                            <input class="form-item__input" type="text"><span class="form-item__placeholder">Придумайте пароль *</span>
-                          </label>
-                        </div>
-                        <div class="form-item">
-                          <label class="form-item__label">
-                            <input class="form-item__input" type="text"><span class="form-item__placeholder">Повторите пароль *</span>
-                          </label>
-                        </div>
-                        <input class="form__btn btn btn-green" type="submit" value="зарегистрироваться">
-                        <div class="form__agree checkbox">
-                          <label class="checkbox__label">
-                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark">
-                              <svg viewbox="0 0 18 18" version="1.1">
-                                <g>
-                                  <rect fill="none" x="0" y="0" width="18" height="18"></rect>
-                                  <polygon fill="#FFFFFF" points="8 10 14 4 16 6 8 14 2 8 4 6"></polygon>
-                                </g>
-                              </svg></span><span class="checkbox__text">Согласен с политикой обработки персональных данных, правилами предоставления услуг по подписке. *</span>
-                          </label>
-                        </div>
+            <div class="tabs-content__item">
+              <form class="form">
+                <div class="form__wrapper">
+                  <p class="form__title">Укажите данные для входа
+                    <div class="form__content">
+                      <div class="form-item">
+                        <label class="form-item__label">
+                          <input class="form-item__input" type="text"><span class="form-item__placeholder">Электронная почта *</span>
+                        </label>
                       </div>
-                    </p>
-                  </div>
-                </form>
-              </div>
-              <div class="tabs-content__item">
-                <form class="form">
-                  <div class="form__wrapper">
-                    <p class="form__title">Укажите данные для входа
-                      <div class="form__content">
-                        <div class="form-item">
-                          <label class="form-item__label">
-                            <input class="form-item__input" type="text"><span class="form-item__placeholder">Электронная почта *</span>
-                          </label>
-                        </div>
-                        <div class="form-item">
-                          <label class="form-item__label">
-                            <input class="form-item__input" type="text"><span class="form-item__placeholder">Пароль *</span>
-                          </label>
-                        </div>
-                        <input class="form__btn form__btn_enter btn btn-yellow" type="submit" value="Войти"><a class="forgot-password" href="#">Забыли пароль ?</a>
-                        <div class="form__agree">Согласен с <a href='#'>политикой обработки персональных данных, правилами предоставления услуг по подписке, офертой рекуррентных платежей, договором-офертой и условиями использования</a></div>
+                      <div class="form-item">
+                        <label class="form-item__label">
+                          <input class="form-item__input" type="text"><span class="form-item__placeholder">Пароль *</span>
+                        </label>
                       </div>
-                    </p>
-                  </div>
-                </form>
-              </div>
+                      <input class="form__btn form__btn_enter btn btn-yellow" type="submit" value="Войти"><a class="forgot-password" href="#">Забыли пароль ?</a>
+                      <div class="form__agree">Согласен с <a href='#'>политикой обработки персональных данных, правилами предоставления услуг по подписке, офертой рекуррентных платежей, договором-офертой и условиями использования</a></div>
+                    </div>
+                  </p>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -94,7 +92,6 @@
     <footer class="footer">
       <div class="container">
         <ul class="footer-list">
-          <li class="footer-list__item"><a class="footer-list__link footer-list__link_faq" href="#">faq</a></li>
           <li class="footer-list__item"><a class="footer-list__link footer-list__link_contacts" href="#">контакты</a></li>
           <li class="footer-list__item"><a class="footer-list__link footer-list__link_offer" href="#">оферта</a></li>
           <li class="footer-list__item"><a class="footer-list__link footer-list__link_policy" href="#">политика конфиденциальности</a></li>
