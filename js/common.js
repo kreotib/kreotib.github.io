@@ -1,38 +1,66 @@
-const tabsChange = (tabs, idx = 1) => {
-    const tabsNavItems = tabs.querySelectorAll('.tabs-nav__item'),
-        tabsContentItems = tabs.querySelectorAll('.tabs-content__item');
+const Web3Modal = window.Web3Modal.default,
+    WalletConnectProvider = window.WalletConnectProvider.default,
+    evmChains = window.evmChains;
 
-    tabsNavItems.forEach((el, index) => {
-        index === idx ? el.classList.add('active') : el.classList.remove('active');
+let web3Modal, provider, selectedAccount;
+const initWalletConnect = () => {
+        const providerOptions = {
+            walletconnect: {
+                package: WalletConnectProvider,
+                options: {
+                    // Mikko's test key - don't copy as your mileage may vary
+                    infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+                }
+            }
+        };
+        web3Modal = new Web3Modal({
+            cacheProvider: false, // optional
+            providerOptions, // required
+            disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
+        });
+    },
+    fetchAccountData = async () => {
+        const web3 = new Web3(provider),
+            chainId = await web3.eth.getChainId(),
+            chainData = evmChains.getChain(chainId),
+            accounts = await web3.eth.getAccounts();
+        console.log("Got accounts", accounts);
+        selectedAccount = accounts[0];
+        localStorage.setItem('account',accounts[0]);
+    };
+let onConnect = async (e) => {
+    e.preventDefault();
+    try {
+        provider = await web3Modal.connect();
+    } catch (e) {
+        return;
+    }
+
+    provider.on("accountsChanged", (accounts) => {
+        fetchAccountData();
     });
-
-    tabsContentItems.forEach((el, index) => {
-        index === idx ? el.classList.add('active') : el.classList.remove('active');
+    provider.on("chainChanged", (chainId) => {
+        fetchAccountData();
+    });
+    provider.on("networkChanged", (networkId) => {
+        fetchAccountData();
     });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    const formInput = document.querySelectorAll('.form-item__input');
+    // Language scripts
+    const languageChangeTrigger = document.querySelector('.language-change__current'),
+        languageChange = document.querySelector('.language-change');
 
-    formInput.forEach(el => {
-        el.addEventListener('blur', () => {
-            el.value !== '' ? el.closest('.form-item').classList.add('form-item-filled') : null;
-        });
+    languageChangeTrigger.addEventListener('click', (event) => {
+        languageChange.classList.toggle('open');
     });
-
-    const tabsNavItems = document.querySelectorAll('.tabs-nav__item'),
-        tabs = document.querySelector('.tabs');
-
-    tabsChange(tabs);
-
-    tabsNavItems.forEach(el=>{
-       el.addEventListener('click',(e)=>{
-           e.preventDefault();
-
-           const idx = [...e.target.closest('.tabs-nav').querySelectorAll('.tabs-nav__item')].indexOf(e.target.closest('.tabs-nav__item')),
-               tabs = e.target.closest('.tabs');
-
-           tabsChange(tabs,idx);
-       });
+    document.body.addEventListener('click', (event) => {
+        !(event.target === languageChange || languageChange.contains(event.target)) && languageChange.classList.contains('open') ? languageChange.classList.toggle('open') : null;
     });
+    //wallet scripts
+    initWalletConnect();
+    document.querySelector(".btn-connect").addEventListener("click", onConnect);
+    document.querySelector(".btn-connect").addEventListener("tap", onConnect);
 });
+
