@@ -9,7 +9,7 @@ const initWalletConnect = () => {
                 package: WalletConnectProvider,
                 options: {
                     // Mikko's test key - don't copy as your mileage may vary
-                    infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+                    infuraId: "95c0f8ed605140dcaf0e238032fe300a",
                 }
             }
         };
@@ -26,7 +26,7 @@ const initWalletConnect = () => {
             accounts = await web3.eth.getAccounts();
         console.log("Got accounts", accounts);
         selectedAccount = accounts[0];
-        localStorage.setItem('account', accounts[0]);
+        localStorage.setItem('account',accounts[0]);
     };
 let onConnect = async (e) => {
     e.preventDefault();
@@ -47,7 +47,6 @@ let onConnect = async (e) => {
     });
 };
 
-
 document.addEventListener('DOMContentLoaded', () => {
     // Language scripts
     const languageChangeTrigger = document.querySelector('.language-change__current'),
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         !(event.target === languageChange || languageChange.contains(event.target)) && languageChange.classList.contains('open') ? languageChange.classList.toggle('open') : null;
     });
     //wallet scripts
+    initWalletConnect();
     document.querySelector(".btn-connect").addEventListener("click", onConnect);
     document.querySelector(".btn-connect").addEventListener("tap", onConnect);
 });
-
