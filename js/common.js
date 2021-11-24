@@ -1,4 +1,3 @@
-/*
 const Web3Modal = window.Web3Modal.default,
     WalletConnectProvider = window.WalletConnectProvider.default,
     evmChains = window.evmChains;
@@ -47,30 +46,7 @@ let onConnect = async (e) => {
         fetchAccountData();
     });
 };
-*/
 
-//  You have to refer to default since it was bundled for ESModules
-// but after that the documentation will be the same
-
-const Web3Modal = window.Web3Modal.default;
-const providerOptions = {
-    /* See Provider Options Section */
-};
-
-const web3Modal = new Web3Modal({
-    network: "mainnet", // optional
-    cacheProvider: true, // optional
-    providerOptions // required
-});
-
-let onConnect = async (e) => {
-    e.preventDefault();
-    try {
-        provider = await web3Modal.connect();
-    } catch (e) {
-        return;
-    }
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     // Language scripts
