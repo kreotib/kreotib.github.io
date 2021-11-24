@@ -1,3 +1,4 @@
+/*
 const Web3Modal = window.Web3Modal.default,
     WalletConnectProvider = window.WalletConnectProvider.default,
     evmChains = window.evmChains;
@@ -26,7 +27,7 @@ const initWalletConnect = () => {
             accounts = await web3.eth.getAccounts();
         console.log("Got accounts", accounts);
         selectedAccount = accounts[0];
-        localStorage.setItem('account',accounts[0]);
+        localStorage.setItem('account', accounts[0]);
     };
 let onConnect = async (e) => {
     e.preventDefault();
@@ -46,6 +47,30 @@ let onConnect = async (e) => {
         fetchAccountData();
     });
 };
+*/
+
+//  You have to refer to default since it was bundled for ESModules
+// but after that the documentation will be the same
+
+const Web3Modal = window.Web3Modal.default;
+const providerOptions = {
+    /* See Provider Options Section */
+};
+
+const web3Modal = new Web3Modal({
+    network: "mainnet", // optional
+    cacheProvider: true, // optional
+    providerOptions // required
+});
+
+let onConnect = async (e) => {
+    e.preventDefault();
+    try {
+        provider = await web3Modal.connect();
+    } catch (e) {
+        return;
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // Language scripts
@@ -59,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         !(event.target === languageChange || languageChange.contains(event.target)) && languageChange.classList.contains('open') ? languageChange.classList.toggle('open') : null;
     });
     //wallet scripts
-    initWalletConnect();
     document.querySelector(".btn-connect").addEventListener("click", onConnect);
     document.querySelector(".btn-connect").addEventListener("tap", onConnect);
 });
