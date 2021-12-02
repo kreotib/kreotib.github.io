@@ -11,6 +11,7 @@
   display: none;
 }
 .ox__btn {
+  -webkit-appearance: none;
   cursor: pointer;
   border-radius: 9px;
   text-align: center;
@@ -287,9 +288,6 @@
   .ox__inputs {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
-  }
-  .ox-zodiak__item {
-    width: calc(50% - 10px);
   }
   .rezult-list__cardtitle {
     font-size: 1.35rem;

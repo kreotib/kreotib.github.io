@@ -3449,6 +3449,20 @@ $(function () {
         $(this).closest('.ox-zodiak').attr('data-date', znak_data);
         $('.ox__second').slideDown(250);
     });
+    const oxZodiaItems = document.querySelectorAll('.ox-zodiak__item');
+    oxZodiaItems.forEach(el=>{
+       el.addEventListener('touchstart',function (){
+           $(this).closest('.ox-zodiak').find('.ox-zodiak__item').removeClass('active');
+           $(this).addClass('active');
+           var znak = $.trim($(this).find('.ox-zodiak__text').text());
+           $(this).closest('.ox-zodiak').attr('data-znak', znak);
+           var img_src = $(this).find('.ox-zodiak__icon img').attr('src');
+           $(this).closest('.ox-zodiak').attr('data-img', img_src);
+           var znak_data = $(this).find('.ox-zodiak__desc').text();
+           $(this).closest('.ox-zodiak').attr('data-date', znak_data);
+           $('.ox__second').slideDown(250);
+       });
+    });
     $('#start').click(function (e) {
         e.preventDefault();
         var zodiak = $('#zodiak').attr('data-znak');

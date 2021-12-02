@@ -19,6 +19,7 @@
 }
 
 .ox__btn {
+    -webkit-appearance: none;
     cursor: pointer;
     border-radius: 9px;
     text-align: center;

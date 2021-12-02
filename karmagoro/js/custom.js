@@ -1,39 +1,46 @@
 var currentdate = new Date();
-$(function() {
-    $('.ox-zodiak__item').click(function() {
-		$(this).closest('.ox-zodiak').find('.ox-zodiak__item').removeClass('active');
-		$(this).addClass('active');
+$(function () {
+    $('.ox-zodiak__item').click(function () {
+        $(this).closest('.ox-zodiak').find('.ox-zodiak__item').removeClass('active');
+        $(this).addClass('active');
         $('.do_year').slideDown(250);
-		var znak = $.trim($(this).find('.ox-zodiak__text').text());
-		$(this).closest('.ox-zodiak').attr('data-znak', znak);
-	});
-    $('.ox__form-control').change(function() {
+        var znak = $.trim($(this).find('.ox-zodiak__text').text());
+        $(this).closest('.ox-zodiak').attr('data-znak', znak);
+    });
+    const oxZodiaItems = document.querySelectorAll('.ox-zodiak__item');
+    oxZodiaItems.forEach(el => {
+        el.addEventListener('touchstart', function () {
+            $(this).closest('.ox-zodiak').find('.ox-zodiak__item').removeClass('active');
+            $(this).addClass('active');
+            $('.do_year').slideDown(250);
+            var znak = $.trim($(this).find('.ox-zodiak__text').text());
+            $(this).closest('.ox-zodiak').attr('data-znak', znak);
+        });
+    });
+    $('.ox__form-control').change(function () {
         var god = $(this).val();
         $('#god').attr('data-god', god);
     });
-	$('#start').click(function(e) {
-		e.preventDefault();
-		var zodiak = $('#zodiak').attr('data-znak');
+    $('#start').click(function (e) {
+        e.preventDefault();
+        var zodiak = $('#zodiak').attr('data-znak');
         var mygod = $('#god').attr('data-god');
-		if (zodiak && mygod) {
-			sendAjaxForm('result_form', 'ajax_form', '/ox_gad/goroskop/karmagoro/js/text.php');
-	    	return false; 
-	    } 
-        else if (zodiak && !mygod) {
+        if (zodiak && mygod) {
+            sendAjaxForm('result_form', 'ajax_form', '/ox_gad/goroskop/karmagoro/js/text.php');
+            return false;
+        } else if (zodiak && !mygod) {
             Swal.fire({
                 type: 'error',
                 title: 'Упс!',
                 text: 'Укажите год',
             })
-        }
-        else if (!zodiak && mygod) {
+        } else if (!zodiak && mygod) {
             Swal.fire({
                 type: 'error',
                 title: 'Упс!',
                 text: 'Выберите знак зодиака',
             })
-        }
-        else if (!zodiak && !mygod) {
+        } else if (!zodiak && !mygod) {
             Swal.fire({
                 type: 'error',
                 title: 'Упс!',
@@ -41,51 +48,53 @@ $(function() {
             })
         }
     });
-    $('#reset').click(function() {
-    	location.reload();
+    $('#reset').click(function () {
+        location.reload();
     });
 });
 
 function sendAjaxForm(result_form, ajax_form, url) {
     myAjax().done(showRezult);
+
     function myAjax() {
         var dfd = new $.Deferred();
         $.ajax({
-            url:  url,
+            url: url,
             type: "POST",
             dataType: "html",
             data: {
-				'zodiak' : $('#zodiak').attr('data-znak'),
-                'god' : $('#god').attr('data-god'),
+                'zodiak': $('#zodiak').attr('data-znak'),
+                'god': $('#god').attr('data-god'),
             },
-            success: function(response){ // если запрос успешен вызываем функцию
+            success: function (response) { // если запрос успешен вызываем функцию
                 result = $.parseJSON(response);
                 dfd.resolve(result);
             }
         });
         return dfd.promise();
     }
+
     function showRezult(selected_card) {
-        var CurImg = $('.ox-zodiak__text:contains("'+result.zodiak+'")').closest('.ox-zodiak__item').find('img').attr('src');
+        var CurImg = $('.ox-zodiak__text:contains("' + result.zodiak + '")').closest('.ox-zodiak__item').find('img').attr('src');
         var answer = result.answer;
         var showHtml = '<div class="rezult-list"> \
                             <div class="rezult-list__cardtitle"> \
-                                <div class="rezult-list__cardtitle-img"><img src="'+CurImg+'"></div>  \
+                                <div class="rezult-list__cardtitle-img"><img src="' + CurImg + '"></div>  \
                                 <div class="rezult-list__cardtitle-text">Знак зодиака: ' + result.zodiak + '<br/>Год рождения: ' + result.god + '</div>\
                             </div>\
                         <div class="rezult-list__info"> \
                             <div class="rezult-list__content">' + answer + '</div>\
                         </div>\
                     </div>';
-        setTimeout(function() {
-        	$('.ox__info').slideUp(250);
-        	$('.do_btns').slideUp(250);
+        setTimeout(function () {
+            $('.ox__info').slideUp(250);
+            $('.do_btns').slideUp(250);
             $('#showRezult').html(showHtml);
             $('#ox__rezult').slideDown(250);
             var elementClick = '#ox__gadanie';
-		    var destination = $(elementClick).offset().top;
-		    jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-		    return false;
+            var destination = $(elementClick).offset().top;
+            jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+            return false;
         }, 500);
     }
 }
