@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Индивидуальный гороскоп жизни</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<style>
+		.ox__gad{
+			max-width: 770px;
+			width: 100%;
+			margin: 0 auto;
+			box-shadow: 0 0 10px #333;
+			border-radius: 20px;
+			padding: 40px 60px 50px;
+			box-sizing: border-box;
+		}
+		@media screen and (max-width: 579px) {
+			.ox__gad{
+				padding: 20px;
+			}
+		}
+		@media screen and (max-width: 340px) {
+			.ox__gad{
+				padding: 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="ox__gad" id="ox__gadanie">
+		<div class="ox__title ox__title-big">Индивидуальный гороскоп жизни</div>
+		<div class="ox__info">
+			<div class="ox__info_title">Выберите знак зодиака</div>
+			<div class="ox-zodiak" id="zodiak">
+				<div class="ox-zodiak__item s1">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/1.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Овен</div>
+						<div class="ox-zodiak__desc">21.03 - 19.04</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s2">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/2.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Телец</div>
+						<div class="ox-zodiak__desc">20.04 - 20.05</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s3">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/3.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Близнецы</div>
+						<div class="ox-zodiak__desc">21.05 - 21.06</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s4">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/4.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Рак</div>
+						<div class="ox-zodiak__desc">22.06 - 22.07</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s5">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/5.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Лев</div>
+						<div class="ox-zodiak__desc">23.06 - 22.08</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s6">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/6.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Дева</div>
+						<div class="ox-zodiak__desc">23.08 - 22.09</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s7">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/7.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Весы</div>
+						<div class="ox-zodiak__desc">23.09 - 23.10</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s8">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/8.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Скорпион</div>
+						<div class="ox-zodiak__desc">24.10 - 22.11</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s9">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/9.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Стрелец</div>
+						<div class="ox-zodiak__desc">23.11 - 21.12</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s10">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/10.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Козерог</div>
+						<div class="ox-zodiak__desc">22.12 - 20.01</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s11">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/11.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Водолей</div>
+						<div class="ox-zodiak__desc">21.01 - 18.02</div>
+					</div>
+				</div>
+				<div class="ox-zodiak__item s12">
+					<div class="ox-zodiak__item-wrapper">
+						<div class="ox-zodiak__icon">
+							<img src="img/12.png" alt="">
+						</div>
+						<div class="ox-zodiak__text">Рыбы</div>
+						<div class="ox-zodiak__desc">19.02 - 20.03</div>
+					</div>
+				</div>
+			</div>
+			<div class="ox__second"></div>
+		</div>		
+		<div id="ox__rezult">
+			<div class="ox__rezult-wrapper">
+				<div id="showRezult"></div>
+				<div class="btns">
+					<div class="ox__btn" id="reset">Выбрать другой знак зодиака</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jq.js"></script>
+	<script src="js/swal/sweetalert2.all.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

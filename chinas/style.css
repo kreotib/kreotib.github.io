@@ -1,0 +1,240 @@
+.ox__gad {
+  padding: 20px 0;
+}
+
+.story .box_in > .text img {
+    max-width: 50% !important;
+}
+
+.ox__gad * {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.ox__gad *:focus {
+  outline: none;
+}
+.ox__btn {
+  cursor: pointer;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  color: #fff;
+  transition: all 250ms ease-out;
+  white-space: normal;
+  height: 55px;
+  padding: 0 33px;
+  border:none;
+  background-color: #746fff;
+  max-width: max-content;
+  width: 100%;
+}
+.ox__btn:focus {
+  box-shadow: 0px 0px transparent;
+}
+.ox__btn:hover {
+  background: #60acec;
+  color: #fff;
+}
+.ox__btn:active,
+.ox__btn:focus {
+  background: #3394e6;
+  color: #fff;
+  border: 1px solid #1c88e3;
+}
+.ox__btn:active:hover,
+.ox__btn:focus:hover {
+  background: #60acec;
+  color: #fff;
+}
+.ox__icon svg {
+  width: 100%;
+  fill: #000;
+}
+.ox_mimg {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 100%;
+}
+.ox__formcontrol {
+  padding: .5rem 1rem;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  display: block;
+  width: 100%;
+}
+.ox_form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr 30px 1fr;
+      grid-template-columns: 1fr 30px 1fr;
+  grid-gap: 2rem;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+.ox__people {
+  width: 100%;
+  text-align: center;
+}
+.ox__people img {
+  max-width: 60%;
+}
+.ox__people-title {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.ox__forminfo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35px calc(100% - 35px - 2rem);
+      grid-template-columns: 35px calc(100% - 35px - 2rem);
+  grid-gap: 1rem;
+  margin: 1rem auto;
+}
+.ox__forminfo img {
+  max-width: 100%;
+}
+.ox__centerimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ox__centerimg img {
+  max-width: 100%;
+}
+.ox__title {
+  text-align: center;
+  margin: 15px 0;
+  padding: 0;
+}
+.ox__title-big {
+  font-weight: 800;
+  font-size: 2rem;
+}
+.ox__kub {
+  text-align: center;
+}
+.ox__kub img {
+  max-width: 100%;
+  display: inline-block;
+  margin: 0 1rem;
+}
+.ox__rezult {
+  display: none;
+  padding: 15px;
+}
+.ox__item .alignleft {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 16px;
+}
+.ox__item:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  clear: both;
+}
+.btns {
+  text-align: center;
+  margin: 20px auto;
+  -ms-grid-column: span 3;
+      grid-column: span 3;
+}
+#ox__rezult {
+  display: none;
+  max-width: 750px;
+  margin: 0 auto;
+  background: linear-gradient(to top, #3fbbfe, #a541ff);
+  border-radius: 13px;
+  padding: 4px;
+  box-shadow: 0 0 10.2px 1.8px #a4a1ff;
+}
+.rezult-list {
+  border-bottom: 1px solid #262626;
+}
+.rezult-list__title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.rezult-list__cardtitle {
+  padding: 10px 15px;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 9px;
+  background-color: #ff7a9a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rezult-list__content {font-size:15px;}
+.rezult-list__cardtitle span {
+  display: block;
+  font-size: 0.85rem;
+}
+.rezult_people {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 25px;
+}
+.rezult_people__item {
+  text-align: center;
+}
+.rezult_people__item img {
+  width: 100%;
+  max-width: 150px;
+}
+.rezult_people__title {
+    font-weight: 600;
+    font-size: 15px;
+}
+@media (max-width: 767px) {
+  .ox_form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: .5rem;
+  }
+  .ox__centerimg {
+    max-width: 50px;
+    margin: 2rem auto;
+  }
+  .btns {
+    -ms-grid-column: span 1;
+    grid-column: span 1;
+  }
+}
+@media (max-width: 560px) {
+  .ox__title {
+    font-size: 1.35rem;
+  }
+  .ox__title-big {
+    font-size: 1.5rem;
+  }
+  .rezult-list__cardtitle {
+    font-size: 1.35rem;
+  }
+  .rezult_people__item img {
+    max-width: 80px;
+  }
+  .rezult_people__title {
+    font-size: 12px;
+  }
+  .rezult-list__title{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

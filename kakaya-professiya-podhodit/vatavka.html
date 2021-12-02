@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/ox_gad/goroskop/kakaya-professiya-podhodit/js/swal/sweetalert2.min.css">
+<link rel="stylesheet" type="text/css" href="/ox_gad/goroskop/kakaya-professiya-podhodit/style.css"/>
+<div class="ox__gad">
+    <form class="ox_form"  method="post" id="ajax_form" action="">
+        <div class="ox_form-wrapper">
+            <div class="ox_form-block">
+                <p class="ox_small ox_title">Введите ФИО:</p>
+                <div class="ox_form-inline">
+                    <input type="text" class="ox__formcontrol" id="surname" placeholder="Фамилия">
+                    <input type="text" class="ox__formcontrol" id="name" placeholder="Имя">
+                    <input type="text" class="ox__formcontrol" id="lastname" placeholder="Отчество">
+                </div>
+            </div>
+
+            <div class="ox_form-block">
+                <p class="ox_small ox_title ox__formcontrol-big">Дата рождения:</p>
+                <div class="ox_form-inline">
+                    <select id="day" class="ox__formcontrol"></select>
+                    <select id="month" class="ox__formcontrol"></select>
+                    <select id="year" class="ox__formcontrol"></select>
+                </div>
+            </div>
+
+            <!-- <input type="text" class="ox__formcontrol ox__formcontrol-big" id="city" placeholder="Москва"> -->
+            <div class="ox_form-block">
+                <p class="ox_small ox_title ox__formcontrol-big">Город (ближайший к месту рождения):</p>
+                <div class="ox__formcontrol-big">
+                    <select class="ox__formcontrol " id="city"></select>
+                </div>
+            </div>
+
+            <div class="btns">
+                <input type="submit" class="ox__btn" id="start" value="Узнать">
+            </div>
+        </div>
+    </form>
+    <div id="ox__rezult">
+        <div class="ox__rezult-wrapper">
+            <div id="showRezult"></div>
+            <div class="btns">
+                <div class="ox__btn" id="reset">Узнать еще раз</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/ox_gad/goroskop/kakaya-professiya-podhodit/js/jq.js"></script>
+<script src="/ox_gad/goroskop/kakaya-professiya-podhodit/js/swal/sweetalert2.all.min.js"></script>
+<script src="/ox_gad/goroskop/kakaya-professiya-podhodit/js/custom.js"></script>

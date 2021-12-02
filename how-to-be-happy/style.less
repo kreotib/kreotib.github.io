@@ -1,0 +1,560 @@
+@mn-cl: #3394e6;
+@wht: #fff;
+@txt: #000;
+@blk: #000;
+@s-cl: #7dc1f0;
+
+
+
+
+
+.ox__gad {
+	padding: 20px 0;
+	.do_btns {
+		margin-top: -2rem;
+	}
+}
+
+.ox__gad * {
+	box-sizing: border-box;
+}
+
+.ox__gad *:focus {
+	outline: none;
+}
+
+.ox__none {
+	display: none;
+}
+
+.ox__btn  {
+	cursor: pointer;
+	border-radius: 6px;
+	padding: 0.5rem 2.5rem 0.5rem;
+	text-align: center;
+	font-size: 1.2rem;
+  	font-weight: 400;
+  	text-decoration: none;
+  	display: inline-block;
+  	border: 0px solid transparent;
+  	line-height: 1;
+	background: @mn-cl;
+	color: @wht;
+	border: 1px solid darken(@mn-cl, 5%);
+	transition: all 250ms ease-out;
+	&:focus {
+		box-shadow: 0px 0px transparent;
+	}
+	&:hover {
+		background: lighten(@mn-cl, 10%);
+		color: @wht;
+	}
+	&:active, &:focus {
+		background: @mn-cl;
+		color: @wht;
+		border: 1px solid darken(@mn-cl, 5%);
+		&:hover {
+			background: lighten(@mn-cl, 10%);
+			color: @wht;
+		}
+	}
+}
+
+.ox_perfect {
+	background-image: url('/ox_gad/goroskop/how-to-be-happy/img/stars3.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	color: @wht;
+	padding: 3rem 0;
+	margin-bottom: 1rem;
+}
+
+.ox {
+	&__form-control {
+		display: block;
+		padding: .5rem 1rem;
+		margin: 0 auto;
+	}
+	&__title {
+		text-align: center;
+		margin: 15px 0;
+		padding: 0;
+		@media (max-width: 560px) {
+			font-size: 1.35rem;
+		}
+		&-big {
+			font-weight: 800;
+			font-size: 2rem;
+			@media (max-width: 560px) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	
+	&__rezult {
+		display: none;
+		padding: 15px;
+	}
+	&__item {
+		.alignleft {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 16px;
+		}
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			clear: both;
+		}
+	}
+	&__info {
+		text-align: center;
+		margin: 1rem auto 3rem;
+		max-width: 700px;
+		&_title {
+			font-weight: bold;
+			font-size: 1.25rem;
+			margin-bottom: 1rem;
+			position: relative;
+		}
+	}
+	&-zodiak {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		@w: 40px;
+		&__item {
+			width: calc(~'16.66% - 10px');
+			margin: 5px;
+			cursor: pointer;
+			background: transparent; 
+			border: 1px solid @wht;
+			padding: 0.5rem;
+			border-radius: 0;
+			display: inline-block;
+			transition: all 250ms ease-out;
+			position: relative;
+			@media (max-width: 600px) {
+				width: calc(~'33.33% - 10px');
+			}
+			&.s1 {
+				@bg-cl: linear-gradient(140deg,#fc7c78,#fa7e78,#f5976c,#eabb9d,#ebc399);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s2 {
+				@bg-cl: linear-gradient(60deg,#e19ba4,#ec77a6,#ea6171);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s3 {
+				@bg-cl: linear-gradient(60deg,#abc09d,#bac585,#8cbc72);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s4 {
+				@bg-cl: linear-gradient(60deg,#f0c55d,#ebcb80,#f39f79,#fb8971);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s5 {
+				@bg-cl: linear-gradient(70deg,#a0c050,#c2c261,#c5af66);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s6 {
+				@bg-cl: linear-gradient(70deg,#ef8878,#f1848a,#f791a9,#f78eaf,#efbeba);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s7 {
+				@bg-cl: linear-gradient(70deg,#c1acec,#b3a8f5,#a682ee);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s8 {
+				@bg-cl: linear-gradient(70deg,#d991fb,#e190f8,#e791f4,#f17ee2,#eeb5e8);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s9 {
+				@bg-cl: linear-gradient(50deg,#a693fa,#cb7af1,#b682f5,#dbb5ee);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s10 {
+				@bg-cl: linear-gradient(90deg,#8cb4bf,#6ccab0,#6ac4be,#5eabc1);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s11 {
+				@bg-cl: linear-gradient(90deg,#56dcde,#65cbd7,#5ebfd7,#58acd4,#4f9bd5);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.s12 {
+				@bg-cl: linear-gradient(120deg,#5f68cd,#646ed0 2.9%,#646fcc 2.9%,#5c8cd6 51.3%,#59a1db 72.4%,#59a7d8 77.6%,#5fa8da 79.5%,#66b9d9);
+				.ox {
+					&-zodiak {
+						&__icon {
+							&:before {
+								background: @bg-cl;
+							}
+						}
+					}
+				}
+				&.active, &:hover {
+					.ox {
+						&-zodiak {
+							&__icon {
+								&:before {
+									background: @bg-cl;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.active, &:hover {
+				.ox {
+					&-zodiak {
+						&__icon {
+							//background: #e300ff;
+							&:before {
+								opacity: 1;
+							}
+						}
+						&__svg {
+							//fill: #fff;
+						}
+					}
+				}
+			}
+		}
+		&__icon {
+			width: 100%;
+			height: 100px;
+			overflow: hidden;
+			margin: 0 auto;
+			//position: relative;
+			&:before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 0;
+				background: @mn-cl;
+				left: 0;
+				top: 0;
+				transition: all 250ms ease-out;
+				opacity: 0;
+			}
+		}
+		&__svg {
+			margin-top: -15px;
+			position: relative;
+			z-index: 2;
+			width: 100%;
+			transition: all 250ms ease-out;
+			fill: @wht;
+		}
+		&__text {
+			font-size: 1rem;
+			margin-top: 0.5rem;
+			margin-bottom: 0.25rem;
+			position: relative;
+			z-index: 1;
+			transition: all 250ms ease-out;
+			color: @wht;
+		}
+		&__desc {
+			font-size: 0.75rem;
+			position: relative;
+			z-index: 1;
+			transition: all 250ms ease-out;
+			color: @wht;
+		}
+	}
+	&__period {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		&-item {
+			margin: 5px;
+			cursor: pointer;
+			background: darken(@wht, 5%); 
+			border: 1px solid darken(@wht, 10%);
+			padding: 0.5rem 1rem;
+			border-radius: 6px;
+			display: inline-block;
+			text-align: center;
+			transition: all 250ms ease-out;
+			@media (max-width: 560px) {
+				display: block;
+				width: 100%;
+				margin: 10px auto;
+			}
+			&.active, &:hover {
+				box-shadow: 0px 10px 15px -15px fade(@blk, 60%);
+				background: @wht;
+				border: 1px solid darken(@wht, 5%);
+			}
+		}
+	}
+}
+/*
+.ox_wht {
+	fill: @wht;
+}
+.ox_scl {
+	fill: @s-cl;
+}
+*/
+.btns {
+	text-align: center;
+	margin: 20px auto;
+	@media (max-width: 767px) {
+	}
+}
+
+
+#ox__rezult {
+	display: none;
+	max-width: 750px;
+	margin: 0 auto;
+	border: 1px solid lighten(@blk, 15%);
+    border-radius: 5px;
+	padding: 5px 15px;
+}
+
+.rezult-list {
+	margin: 1rem auto 1.25rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px solid  lighten(@blk, 15%);
+	&__title {
+    	font-size: 1.25rem;
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+	&__cardtitle {
+		background: darken(@wht, 10%);
+		padding: 10px 15px;
+		font-weight: 800;
+		font-size: 1.75rem;
+		text-align: center;
+		margin-bottom: 1rem;
+		span {
+			display: block;
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			font-size: 1.35rem;
+		}
+	}
+}
+
+
+	

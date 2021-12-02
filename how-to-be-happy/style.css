@@ -1,0 +1,384 @@
+
+.ox__gad {
+  padding: 20px 0;
+}
+.ox__gad .do_btns {
+  margin-top: -2rem;
+}
+.ox__gad * {
+  box-sizing: border-box;
+}
+.ox__gad *:focus {
+  outline: none;
+}
+.ox__none {
+  display: none;
+}
+.ox__btn {
+  cursor: pointer;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1;
+  color: #fff;
+  transition: all 250ms ease-out;
+  white-space: normal;
+  height: 55px;
+  padding: 0 33px;
+  border:none;
+  background-color: #746fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  width: 100%;
+  margin: 0 auto;
+}
+.ox__btn:focus {
+  box-shadow: 0px 0px transparent;
+}
+.ox__btn:hover {
+  background: #60acec;
+  color: #fff;
+}
+.ox__btn:active,
+.ox__btn:focus {
+  background: #3394e6;
+  color: #fff;
+  border: 1px solid #1c88e3;
+}
+.ox__btn:active:hover,
+.ox__btn:focus:hover {
+  background: #60acec;
+  color: #fff;
+}
+.ox_perfect {
+  background-image: url('img/stars3.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+.ox__form-control {
+  display: block;
+  padding: .5rem 1rem;
+  margin: 0 auto;
+}
+.ox__title {
+  text-align: center;
+  margin: 15px 0;
+  padding: 0;
+}
+.ox__title-big {
+  font-weight: 800;
+  font-size: 2rem;
+}
+.ox__rezult {
+  display: none;
+  padding: 15px;
+}
+.ox__item .alignleft {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 16px;
+}
+.ox__item:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  clear: both;
+}
+.ox__info {
+  text-align: center;
+  margin: 1rem auto 3rem;
+  max-width: 700px;
+}
+.ox__info_title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.ox-zodiak {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+}
+.ox-zodiak__item {
+  margin: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  border-radius: 0;
+  display: inline-block;
+  transition: all 250ms ease-out;
+  position: relative;
+}
+.ox-zodiak__item.s1 .ox-zodiak__icon:before {
+  background: linear-gradient(140deg, #fc7c78, #fa7e78, #f5976c, #eabb9d, #ebc399);
+}
+.ox-zodiak__item.s1.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s1:hover .ox-zodiak__icon:before {
+  background: linear-gradient(140deg, #fc7c78, #fa7e78, #f5976c, #eabb9d, #ebc399);
+}
+.ox-zodiak__item.s2 .ox-zodiak__icon:before {
+  background: linear-gradient(60deg, #e19ba4, #ec77a6, #ea6171);
+}
+.ox-zodiak__item.s2.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s2:hover .ox-zodiak__icon:before {
+  background: linear-gradient(60deg, #e19ba4, #ec77a6, #ea6171);
+}
+.ox-zodiak__item.s3 .ox-zodiak__icon:before {
+  background: linear-gradient(60deg, #abc09d, #bac585, #8cbc72);
+}
+.ox-zodiak__item.s3.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s3:hover .ox-zodiak__icon:before {
+  background: linear-gradient(60deg, #abc09d, #bac585, #8cbc72);
+}
+.ox-zodiak__item.s4 .ox-zodiak__icon:before {
+  background: linear-gradient(60deg, #f0c55d, #ebcb80, #f39f79, #fb8971);
+}
+.ox-zodiak__item.s4.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s4:hover .ox-zodiak__icon:before {
+  background: linear-gradient(60deg, #f0c55d, #ebcb80, #f39f79, #fb8971);
+}
+.ox-zodiak__item.s5 .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #a0c050, #c2c261, #c5af66);
+}
+.ox-zodiak__item.s5.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s5:hover .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #a0c050, #c2c261, #c5af66);
+}
+.ox-zodiak__item.s6 .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #ef8878, #f1848a, #f791a9, #f78eaf, #efbeba);
+}
+.ox-zodiak__item.s6.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s6:hover .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #ef8878, #f1848a, #f791a9, #f78eaf, #efbeba);
+}
+.ox-zodiak__item.s7 .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #c1acec, #b3a8f5, #a682ee);
+}
+.ox-zodiak__item.s7.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s7:hover .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #c1acec, #b3a8f5, #a682ee);
+}
+.ox-zodiak__item.s8 .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #d991fb, #e190f8, #e791f4, #f17ee2, #eeb5e8);
+}
+.ox-zodiak__item.s8.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s8:hover .ox-zodiak__icon:before {
+  background: linear-gradient(70deg, #d991fb, #e190f8, #e791f4, #f17ee2, #eeb5e8);
+}
+.ox-zodiak__item.s9 .ox-zodiak__icon:before {
+  background: linear-gradient(50deg, #a693fa, #cb7af1, #b682f5, #dbb5ee);
+}
+.ox-zodiak__item.s9.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s9:hover .ox-zodiak__icon:before {
+  background: linear-gradient(50deg, #a693fa, #cb7af1, #b682f5, #dbb5ee);
+}
+.ox-zodiak__item.s10 .ox-zodiak__icon:before {
+  background: linear-gradient(90deg, #8cb4bf, #6ccab0, #6ac4be, #5eabc1);
+}
+.ox-zodiak__item.s10.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s10:hover .ox-zodiak__icon:before {
+  background: linear-gradient(90deg, #8cb4bf, #6ccab0, #6ac4be, #5eabc1);
+}
+.ox-zodiak__item.s11 .ox-zodiak__icon:before {
+  background: linear-gradient(90deg, #56dcde, #65cbd7, #5ebfd7, #58acd4, #4f9bd5);
+}
+.ox-zodiak__item.s11.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s11:hover .ox-zodiak__icon:before {
+  background: linear-gradient(90deg, #56dcde, #65cbd7, #5ebfd7, #58acd4, #4f9bd5);
+}
+.ox-zodiak__item.s12 .ox-zodiak__icon:before {
+  background: linear-gradient(120deg, #5f68cd, #646ed0 2.9%, #646fcc 2.9%, #5c8cd6 51.3%, #59a1db 72.4%, #59a7d8 77.6%, #5fa8da 79.5%, #66b9d9);
+}
+.ox-zodiak__item.s12.active .ox-zodiak__icon:before,
+.ox-zodiak__item.s12:hover .ox-zodiak__icon:before {
+  background: linear-gradient(120deg, #5f68cd, #646ed0 2.9%, #646fcc 2.9%, #5c8cd6 51.3%, #59a1db 72.4%, #59a7d8 77.6%, #5fa8da 79.5%, #66b9d9);
+}
+.ox-zodiak__item.active .ox-zodiak__icon:before,
+.ox-zodiak__item:hover .ox-zodiak__icon:before {
+  opacity: 1;
+}
+.ox-zodiak__icon {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.ox-zodiak__icon:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background: #3394e6;
+  left: 0;
+  top: 0;
+  transition: all 250ms ease-out;
+  opacity: 0;
+}
+.ox-zodiak__svg {
+  margin-top: -15px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  transition: all 250ms ease-out;
+  fill: #fff;
+}
+.ox-zodiak__text {
+  font-size: 20px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  position: relative;
+  z-index: 1;
+  transition: all 250ms ease-out;
+  color: #fff;
+}
+.ox-zodiak__desc {
+  font-size: 16px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  transition: all 250ms ease-out;
+  color: #fff;
+}
+.ox__period {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.ox__period-item {
+  margin: 5px;
+  cursor: pointer;
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  transition: all 250ms ease-out;
+}
+.ox__period-item.active,
+.ox__period-item:hover {
+  box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  border: 1px solid #f2f2f2;
+}
+/*
+.ox_wht {
+  fill: @wht;
+}
+.ox_scl {
+  fill: @s-cl;
+}
+*/
+.btns {
+  text-align: center;
+  margin: 20px auto;
+}
+#ox__rezult {
+  display: none;
+  max-width: 750px;
+  margin: 0 auto;
+  background: linear-gradient(to top, #3fbbfe, #a541ff);
+  border-radius: 13px;
+  padding: 4px;
+  box-shadow: 0 0 10.2px 1.8px #a4a1ff;
+}
+.ox__rezult-wrapper{
+  background-color: #fff;
+  border-radius: 13px;
+  padding: 15px;
+}
+.rezult-list {
+  border-bottom: 1px solid #262626;
+}
+.rezult-list__title {
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+}
+.rezult-list__cardtitle {
+  padding: 10px 15px;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 9px;
+  background-color: #ff7a9a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.rezult-list__cardtitle span {
+  display: block;
+  font-size: 0.85rem;
+}
+.rezult__icon {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  border: 1px solid #000;
+}
+.rezult__icon_svg {
+  width: 120px;
+}
+.rezult__icon_svg .ox-zodiak__svg {
+  fill: #000;
+}
+.rezult__icon_text {
+  text-align: center;
+    /* padding: .5rem; */
+    margin-top: -45px;
+    color: #fff;
+}
+.rezult-list:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+@media (max-width: 767px) {
+  .rezult__icon {
+    display: block;
+    float: initial;
+    margin: 1rem auto;
+    max-width: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .ox-zodiak {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+}
+@media (max-width: 560px) {
+  .ox__title {
+    font-size: 1.35rem;
+  }
+  .ox__title-big {
+    font-size: 1.5rem;
+  }
+  .ox__period-item {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+  }
+  .rezult-list__cardtitle {
+    font-size: 1.35rem;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .ox-zodiak{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
