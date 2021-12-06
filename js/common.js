@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
             600:{
                spaceBetween: 25
             }
-        }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+        },
     });
     var servicesSlider = new Swiper(".services-slider", {
         direction: "horizontal",

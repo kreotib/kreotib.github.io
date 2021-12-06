@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="libs/swiper/swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header header-black">
+      <div class="header-row header-row_first header-row_black">
+        <div class="container">
+          <div class="header-row__wrapper">
+            <div class="header__block">
+              <div class="logo header__logo"><img class="logo__img" src="img/logo-black.png">
+                <p class="logo__text logo__text_black">Проверенная база недвижимости <br> г. Старый Оскол</p>
+              </div>
+            </div>
+            <div class="header__block header__block_info"><a class="header__phone header__phone_black" href="tel:88005113908">8 (800) 511-39-08</a>
+              <p class="header__address header__address_black">Старый Оскол, Лесной проспект 19</p>
+            </div>
+            <div class="header__block header__block_burger">
+              <div class="header-burger header-burger_black burger">
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-row header-row_second header-row_black">
+        <div class="container">
+          <div class="header-row__wrapper">
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-list__item"><a class="nav-item__link nav-item__catalog nav-item__link_black nav-item__catalog_black" href="#"><span class="catalog-burger catalog-burger_black burger"><span class="burger__item"></span><span class="burger__item"></span><span class="burger__item"></span></span>Каталог недвижимости</a></li>
+                <li class="nav-list__item nav-item"><a class="nav-item__link nav-item__link_black" href="#">Новостройки</a></li>
+                <li class="nav-list__item nav-item"><a class="nav-item__link nav-item__link_black" href="#">Дома</a></li>
+                <li class="nav-list__item nav-item"><a class="nav-item__link nav-item__link_black" href="#">Участки</a></li>
+                <li class="nav-list__item nav-item"><a class="nav-item__link nav-item__link_black" href="#">Комнаты</a></li>
+                <li class="nav-list__item nav-item"><a class="nav-item__link nav-item__link_black" href="#">Услуги агенства</a></li>
+                <li class="nav-list__item nav-item nav-list__item_catalog"><a class="nav-item__link nav-item__link_black" href="#">Контакты</a></li>
+              </ul>
+            </nav><a class="btn btn-orange header__btn" href="#">Подать заявку</a>
+            <div class="header__block header__block_info"><a class="header__phone" href="tel:88005113908">8 (800) 511-39-08</a>
+              <p class="header__address">Старый Оскол, Лесной проспект 19</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-wrapper">
+      <div class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb-wrapper">
+            <ul class="breadcrumb-list breadcrumb__list">
+              <li class="breadcrumb-list__item breadcrumb-item"><a class="breadcrumb-item__link" href="#">Недвижимость в Старом Осколе</a></li>
+              <li class="breadcrumb-list__item breadcrumb-item"><a class="breadcrumb-item__link" href="#">Продажа квартиры</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="catalog-preview">
+        <div class="container">
+          <div class="catalog-preview__grid">
+            <div class="catalog-preview__item">
+              <h2 class="catalog-preview__title">Купить квартиру в Старом Осколе</h2>
+              <p class="catalog-preview__desc">Стартовые цены, открыты продажи в новой очереди! Новогодние скидки на квартиры до 7%! Звоните, наши менеджеры вам все расскажут 4-комн. квартира с европланировкой в ЖК "Остров" на 2 этаже.</p>
+            </div>
+            <div class="catalog-preview__item">
+              <div class="catalog-preview__img"><img src="img/catalog.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-catalog-search">
+        <div class="container">
+          <form class="search-form catalog-search">
+            <div class="search-form__wrapper catalog-search__wrapper">
+              <div class="search-block">
+                <div class="search-block__item search-block__item_room">
+                  <div class="search-room">
+                    <div class="radio-input room-input">
+                      <label class="room-input__label">
+                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">1</span>
+                      </label>
+                    </div>
+                    <div class="radio-input room-input">
+                      <label class="room-input__label">
+                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">2</span>
+                      </label>
+                    </div>
+                    <div class="radio-input room-input">
+                      <label class="room-input__label">
+                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">3</span>
+                      </label>
+                    </div>
+                    <div class="radio-input room-input">
+                      <label class="room-input__label">
+                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">4+</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-block__item search-block__item_params">
+                  <div class="search-input">
+                    <p class="search-input__title">Цена</p>
+                    <div class="search-input__wrapper">
+                      <div class="search-input__item"><span>от</span>
+                        <input type="text"><span class="search-input__item-sign">₽</span>
+                      </div>
+                      <div class="search-input__item"><span>до</span>
+                        <input type="text"><span class="search-input__item-sign">₽</span>
+                      </div><span>₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-block__item search-block__item_params">
+                  <div class="search-input">
+                    <p class="search-input__title">Площадь</p>
+                    <div class="search-input__wrapper">
+                      <div class="search-input__item"><span>от</span>
+                        <input type="text"><span class="search-input__item-sign">м</span>
+                      </div>
+                      <div class="search-input__item"><span>до</span>
+                        <input type="text"><span class="search-input__item-sign">м</span>
+                      </div><span>м</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-block__item search-select">
+                  <div class="search-select">
+                    <select>
+                      <option>Район</option>
+                      <option>Район</option>
+                      <option>Район</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <input class="btn btn-orange catalog-search__submit" type="submit" value="Показать">
+            </div>
+          </form>
+        </div>
+      </section>
+      <div class="catalog-box">
+        <div class="container">
+          <div class="catalog-box__search-result">
+            <div class="catalog-box__search-text">
+              <p>Найдено 84 899 объявлений</p>
+            </div>
+            <div class="catalog-box__search-wrapper">
+              <div class="catalog__item product">
+                <div class="product__img swiper item-img-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="product-content">
+                  <div class="product-content__header"><a class="product__title" href="#">72м , 2-комнатная</a>
+                    <p class="product__info">2-комн. квартира, 67,м2, 2/4 этаж</p>
+                  </div>
+                  <div class="product-content__desc">
+                    <p class="product__address">Старый Оскол, Белгородская область, м-он Интернациональный</p>
+                    <p class="product__price">12 200 000 ₽</p>
+                  </div>
+                  <div class="product-content__footer">
+                    <p class="product__text">Объект № 762965 Стильная 3-комнатная видовая квартира с новым дизайнерским ремонтом в экологически чистом районе Москвы в комплексе Premium класса Долина Сетунь. В квартире...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item product">
+                <div class="product__img swiper item-img-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="product-content">
+                  <div class="product-content__header"><a class="product__title" href="#">72м , 2-комнатная</a>
+                    <p class="product__info">2-комн. квартира, 67,м2, 2/4 этаж</p>
+                  </div>
+                  <div class="product-content__desc">
+                    <p class="product__address">Старый Оскол, Белгородская область, м-он Интернациональный</p>
+                    <p class="product__price">12 200 000 ₽</p>
+                  </div>
+                  <div class="product-content__footer">
+                    <p class="product__text">Объект № 762965 Стильная 3-комнатная видовая квартира с новым дизайнерским ремонтом в экологически чистом районе Москвы в комплексе Premium класса Долина Сетунь. В квартире...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item product">
+                <div class="product__img swiper item-img-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="product-content">
+                  <div class="product-content__header"><a class="product__title" href="#">72м , 2-комнатная</a>
+                    <p class="product__info">2-комн. квартира, 67,м2, 2/4 этаж</p>
+                  </div>
+                  <div class="product-content__desc">
+                    <p class="product__address">Старый Оскол, Белгородская область, м-он Интернациональный</p>
+                    <p class="product__price">12 200 000 ₽</p>
+                  </div>
+                  <div class="product-content__footer">
+                    <p class="product__text">Объект № 762965 Стильная 3-комнатная видовая квартира с новым дизайнерским ремонтом в экологически чистом районе Москвы в комплексе Premium класса Долина Сетунь. В квартире...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item product">
+                <div class="product__img swiper item-img-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/item-1.jpg"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="product-content">
+                  <div class="product-content__header"><a class="product__title" href="#">72м , 2-комнатная</a>
+                    <p class="product__info">2-комн. квартира, 67,м2, 2/4 этаж</p>
+                  </div>
+                  <div class="product-content__desc">
+                    <p class="product__address">Старый Оскол, Белгородская область, м-он Интернациональный</p>
+                    <p class="product__price">12 200 000 ₽</p>
+                  </div>
+                  <div class="product-content__footer">
+                    <p class="product__text">Объект № 762965 Стильная 3-комнатная видовая квартира с новым дизайнерским ремонтом в экологически чистом районе Москвы в комплексе Premium класса Долина Сетунь. В квартире...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-box__search-pagination">
+              <div class="product-pagination">
+                <div class="product-pagination__wrapper">
+                  <div class="product-pagination__arrow"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.2562 0.500488L8.83545 2.07979L3.71813 7.19711L8.83545 12.3144L7.2562 13.8937L0.559573 7.19711L7.2562 0.500488Z" fill="#151515"/>
+</svg>
+                  </div>
+                  <div class="product-pagination__content">
+                    <div class="pagination-item active"><a class="pagination-item__link" href="#">1</a></div>
+                    <div class="pagination-item"><a class="pagination-item__link" href="#">2</a></div>
+                    <div class="pagination-item"><a class="pagination-item__link" href="#">3</a></div>
+                    <div class="pagination-item"><a class="pagination-item__link" href="#">4</a></div>
+                  </div>
+                  <div class="product-pagination__arrow"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8566 0.500488L0.277344 2.07979L5.39466 7.19711L0.277344 12.3144L1.8566 13.8937L8.55322 7.19711L1.8566 0.500488Z" fill="#151515"/>
+</svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section section-objects">
+        <div class="container">
+          <div class="object-block">
+            <p class="object-block__title">Объекты недвижимости</p>
+            <div class="object-block__grid">
+              <div class="object-item">
+                <div class="object-item__img"><img src="img/object-1.jpg"></div>
+                <div class="object-item__content">
+                  <p class="object-item__title">Новостройки</p>
+                  <p class="object-item__text">Лучшие новостройки в Старом Осколе</p>
+                </div>
+              </div>
+              <div class="object-item">
+                <div class="object-item__img"><img src="img/object-2.jpg"></div>
+                <div class="object-item__content">
+                  <p class="object-item__title object-item__title_black">Дома</p>
+                  <p class="object-item__text object-item__text_black">Уютные новые дома с теплоизоляцией</p>
+                </div>
+              </div>
+              <div class="object-item">
+                <div class="object-item__img"><img src="img/object-3.jpg"></div>
+                <div class="object-item__content">
+                  <p class="object-item__title">Участки</p>
+                  <p class="object-item__text">Более 200 выгодных участков от 150 тыс. р. за сотку.</p>
+                </div>
+              </div>
+              <div class="object-item">
+                <div class="object-item__img"><img src="img/object-4.jpg"></div>
+                <div class="object-item__content">
+                  <p class="object-item__title">Комнаты</p>
+                  <p class="object-item__text">Выгодный вариант жилья от 700 тыс. р.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-form section-form_catalog">
+        <div class="section-form__wrapper">
+          <div class="container">
+            <div class="section-form__grid">
+              <div class="section-form__item section-form__info">
+                <p class="section-form__title">Подберем для вас квартиру мечты</p>
+                <p class="section-form__desc">Отправьте заявку онлайн сразу в несколько банков и сократите время оформления ипотеки.</p>
+              </div>
+              <div class="section-form__img"><img src="img/form.jpg"></div>
+              <div class="section-form__item">
+                <form class="request-form">
+                  <div class="request-form__wrapper">
+                    <div class="request-form__header">
+                      <p class="request-form__title">Оставьте заявку</p>
+                      <p class="request-form__desc">Наш менеджер свяжется с вами для уточнения деталей</p>
+                    </div>
+                    <div class="request-form__content">
+                      <div class="request-form__input">
+                        <input class="text-input" placeholder="Ваше имя">
+                      </div>
+                      <div class="request-form__input">
+                        <input class="text-input" placeholder="Ваше имя">
+                      </div>
+                      <div class="request-form__input">
+                        <input class="text-input" placeholder="Ваше имя">
+                      </div>
+                    </div>
+                    <div class="request-form__footer">
+                      <input class="request-form__submit btn btn-orange" type="submit" value="Отправить заявку">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__row">
+            <div class="footer__block">
+              <div class="logo footer__logo"><img class="logo__img" src="img/logo-black.png"></div>
+              <div class="footer-info">
+                <div class="footer-info__item">
+                  <div class="footer-info__img"><img src="img/phone-icon.png"></div><a class="footer-info__link" href="tel:+79524342730">+7 (952) 434 27 30</a>
+                </div>
+                <div class="footer-info__item">
+                  <div class="footer-info__img"><img src="img/mail-icon.png"></div><a class="footer-info__text" href="mailto:info@DP-Agent.ru">info@DP-Agent.ru</a>
+                </div>
+                <div class="footer-info__item">
+                  <div class="footer-info__img"><img src="img/address-icon.png"></div>
+                  <p class="footer-info__text">г. Старый Оскол, м-он Дубрава квартал 3, дом 31 а</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer__block footer__block_list">
+              <ul class="footer-list">
+                <li class="footer-list__title">
+                  <p class="footer-list__text">Каталог</p>
+                </li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Новостройки</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Дома</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Новостройки</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Участки</a></li>
+              </ul>
+              <ul class="footer-list">
+                <li class="footer-list__title">
+                  <p class="footer-list__text">Услуги</p>
+                </li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Заключение договора</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Ипотека</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Юридическое сопровождение</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="">Оценка стоимости</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__row footer__row_second">
+            <div class="footer__copyright">
+              <p>&#xa9; 2015-2017, “Деловой подход”.</p>
+            </div>
+            <div class="footer-partners">
+              <div class="footer-partners__img"><img src="img/partners-1.png"></div>
+              <div class="footer-partners__img"><img src="img/partners-2.png"></div>
+              <div class="footer-partners__img"><img src="img/partners-3.png"></div>
+            </div>
+            <div class="footer-privacy"><a class="footer-privacy__link" href="#">Политика конфедициальности</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="libs/swiper/swiper.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
