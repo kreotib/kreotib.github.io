@@ -122,8 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     popupArray.forEach(el => {
         el.addEventListener('click', (e) => {
-            e.preventDefault();
-            const elWrapper = e.target.querySelector('.popup__wrapper');
+            const elWrapper = el.querySelector('.popup__wrapper');
             !(elWrapper.contains(e.target)) ? popupClose() : null;
         });
     });
