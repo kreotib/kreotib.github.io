@@ -1381,6 +1381,8 @@ body {
   background: url("../img/right-chevron.svg") center center no-repeat;
   background-size: contain;
   color: transparent;
+  width: 11px;
+  height: 11px;
 }
 
 .item-slide {
