@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
     <link rel="stylesheet" href="libs/swiper/swiper.css">
+    <link rel="stylesheet" href="libs/custom-select/custom-select.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -21,7 +22,7 @@
               <p class="header__address">Старый Оскол, Лесной проспект 19</p>
             </div>
             <div class="header__block header__block_burger">
-              <div class="header-burger burger">
+              <div class="header-burger burger mobile-nav-burger">
                 <div class="burger__item"></div>
                 <div class="burger__item"></div>
                 <div class="burger__item"></div>
@@ -30,22 +31,29 @@
           </div>
         </div>
       </div>
-      <div class="header-row header-row_second">
-        <div class="container">
-          <div class="header-row__wrapper">
-            <nav class="nav">
-              <ul class="nav-list">
-                <li class="nav-list__item"><a class="nav-item__link nav-item__catalog" href="#"><span class="catalog-burger burger"><span class="burger__item"></span><span class="burger__item"></span><span class="burger__item"></span></span>Каталог недвижимости</a></li>
-                <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Новостройки</a></li>
-                <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Дома</a></li>
-                <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Участки</a></li>
-                <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Комнаты</a></li>
-                <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Услуги агенства</a></li>
-                <li class="nav-list__item nav-item nav-list__item_catalog"><a class="nav-item__link" href="#">Контакты</a></li>
-              </ul>
-            </nav><a class="btn btn-orange header__btn" href="#">Подать заявку</a>
-            <div class="header__block header__block_info"><a class="header__phone" href="tel:88005113908">8 (800) 511-39-08</a>
-              <p class="header__address">Старый Оскол, Лесной проспект 19</p>
+      <div class="header-row header-row_second nav-row">
+        <div class="nav-row__close nav-close">
+          <svg class="icon icon-close ">
+            <use xlink:href="/img/svg/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <div class="mobile-nav">
+          <div class="container">
+            <div class="header-row__wrapper">
+              <nav class="nav">
+                <ul class="nav-list">
+                  <li class="nav-list__item"><a class="nav-item__link nav-item__catalog" href="#"><span class="catalog-burger burger"><span class="burger__item"></span><span class="burger__item"></span><span class="burger__item"></span></span>Каталог недвижимости</a></li>
+                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Новостройки</a></li>
+                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Дома</a></li>
+                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Участки</a></li>
+                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Комнаты</a></li>
+                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Услуги агенства</a></li>
+                  <li class="nav-list__item nav-item nav-list__item_catalog"><a class="nav-item__link" href="#">Контакты</a></li>
+                </ul>
+              </nav><a class="btn btn-orange header__btn popup-btn" href="#" data-popup=".popup-request">Подать заявку</a>
+              <div class="header__block header__block_info"><a class="header__phone" href="tel:88005113908">8 (800) 511-39-08</a>
+                <p class="header__address">Старый Оскол, Лесной проспект 19</p>
+              </div>
             </div>
           </div>
         </div>
@@ -136,10 +144,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="search-block__item search-select">
+                <div class="search-block__item search-block__item_search">
                   <div class="search-select">
                     <select>
-                      <option>Район</option>
+                      <option>Очень длинное название района</option>
                       <option>Район</option>
                       <option>Район</option>
                     </select>
@@ -202,36 +210,27 @@
       <div class="container">
         <div class="object-block">
           <p class="object-block__title">Объекты недвижимости</p>
-          <div class="object-block__grid">
-            <div class="object-item">
+          <div class="object-block__grid"><a class="object-item" href="#">
               <div class="object-item__img"><img src="img/object-1.jpg"></div>
               <div class="object-item__content">
                 <p class="object-item__title">Новостройки</p>
                 <p class="object-item__text">Лучшие новостройки в Старом Осколе</p>
-              </div>
-            </div>
-            <div class="object-item">
+              </div></a><a class="object-item" href="#">
               <div class="object-item__img"><img src="img/object-2.jpg"></div>
               <div class="object-item__content">
                 <p class="object-item__title object-item__title_black">Дома</p>
                 <p class="object-item__text object-item__text_black">Уютные новые дома с теплоизоляцией</p>
-              </div>
-            </div>
-            <div class="object-item">
+              </div></a><a class="object-item" href="#">
               <div class="object-item__img"><img src="img/object-3.jpg"></div>
               <div class="object-item__content">
                 <p class="object-item__title">Участки</p>
                 <p class="object-item__text">Более 200 выгодных участков от 150 тыс. р. за сотку.</p>
-              </div>
-            </div>
-            <div class="object-item">
+              </div></a><a class="object-item" href="#">
               <div class="object-item__img"><img src="img/object-4.jpg"></div>
               <div class="object-item__content">
                 <p class="object-item__title">Комнаты</p>
                 <p class="object-item__text">Выгодный вариант жилья от 700 тыс. р.</p>
-              </div>
-            </div>
-          </div>
+              </div></a></div>
         </div>
       </div>
     </section>
@@ -595,7 +594,7 @@
             </div>
             <div class="section-form__img"><img src="img/form.jpg"></div>
             <div class="section-form__item">
-              <form class="request-form">
+              <form class="request-form form">
                 <div class="request-form__wrapper">
                   <div class="request-form__header">
                     <p class="request-form__title">Оставьте заявку</p>
@@ -615,7 +614,14 @@
                   <div class="request-form__footer">
                     <input class="request-form__submit btn btn-orange" type="submit" value="Отправить заявку">
                     <div class="request-form__privacy">
-                      <p>Оставляя заявку вы соглашаетесь на обработку ваших персональных данных</p>
+                      <div class="form-privacy">
+                        <div class="form-checkbox">
+                          <label>
+                            <input class="form-checkbox__input" type="checkbox">
+                          </label>
+                        </div>
+                        <p>Оставляя заявку вы соглашаетесь на обработку ваших <a href='#'>персональных данных</a></p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -686,7 +692,7 @@
             <use xlink:href="/img/svg/sprite.svg#close"></use>
           </svg>
         </div>
-        <form class="popup-form popup-form">
+        <form class="popup-form popup-form form">
           <div class="popup-form__wrapper popup-from__wrapper">
             <div class="popup-form__header">
               <p class="popup-form__title">Есть вопросы? Оставьте заявку и мы проконсультируем вас</p>
@@ -704,6 +710,14 @@
             </div>
             <div class="popup-form__footer">
               <input class="popup-form__submit btn btn-orange popup-btn" type="submit" value="Перезвоните мне" data-popup=".popup-thanks">
+            </div>
+            <div class="form-privacy">
+              <div class="form-checkbox">
+                <label>
+                  <input class="form-checkbox__input" type="checkbox">
+                </label>
+              </div>
+              <p>Оставляя заявку вы соглашаетесь на обработку ваших <a href='#'>персональных данных</a></p>
             </div>
           </div>
         </form>
@@ -728,6 +742,7 @@
       </div>
     </div>
     <script src="libs/swiper/swiper.js"></script>
+    <script src="libs/custom-select/custom-select.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
