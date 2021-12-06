@@ -606,14 +606,17 @@
                       <input class="text-input" placeholder="Ваше имя">
                     </div>
                     <div class="request-form__input">
-                      <input class="text-input" placeholder="Ваше имя">
+                      <input class="text-input" placeholder="+7 XXX XXX XX XX">
                     </div>
                     <div class="request-form__input">
-                      <input class="text-input" placeholder="Ваше имя">
+                      <input class="text-input" placeholder="email">
                     </div>
                   </div>
                   <div class="request-form__footer">
                     <input class="request-form__submit btn btn-orange" type="submit" value="Отправить заявку">
+                    <div class="request-form__privacy">
+                      <p>Оставляя заявку вы соглашаетесь на обработку ваших персональных данных</p>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -676,6 +679,54 @@
         </div>
       </div>
     </footer>
+    <div class="popup popup-request">
+      <div class="popup__wrapper">
+        <div class="popup__close popup-close">
+          <svg class="icon icon-close ">
+            <use xlink:href="/img/svg/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <form class="popup-form popup-form">
+          <div class="popup-form__wrapper popup-from__wrapper">
+            <div class="popup-form__header">
+              <p class="popup-form__title">Есть вопросы? Оставьте заявку и мы проконсультируем вас</p>
+            </div>
+            <div class="popup-form__content">
+              <div class="popup-form__input">
+                <input class="text-input" placeholder="Ваше имя">
+              </div>
+              <div class="popup-form__input">
+                <input class="text-input" placeholder="+7 XXX XXX XX XX">
+              </div>
+              <div class="popup-form__input">
+                <input class="text-input" placeholder="email">
+              </div>
+            </div>
+            <div class="popup-form__footer">
+              <input class="popup-form__submit btn btn-orange popup-btn" type="submit" value="Перезвоните мне" data-popup=".popup-thanks">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup-thanks">
+      <div class="popup__wrapper">
+        <div class="popup__close popup-close">
+          <svg class="icon icon-close ">
+            <use xlink:href="/img/svg/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <div class="thanks-wrapper">
+          <div class="thanks-wrapper__icon">
+            <svg class="icon icon-check ">
+              <use xlink:href="/img/svg/sprite.svg#check"></use>
+            </svg>
+          </div>
+          <p class="thanks-wrapper__title">Спасибо за заявку</p>
+          <p class="thanks-wrapper__text">Наш менеджер свяжется с вами в ближайшее время</p>
+        </div>
+      </div>
+    </div>
     <script src="libs/swiper/swiper.js"></script>
     <script src="js/common.js"></script>
   </body>
