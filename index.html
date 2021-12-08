@@ -4,745 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
-    <link rel="stylesheet" href="libs/swiper/swiper.css">
-    <link rel="stylesheet" href="libs/custom-select/custom-select.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header-row header-row_first">
-        <div class="container">
-          <div class="header-row__wrapper">
-            <div class="header__block">
-              <div class="logo header__logo"><img class="logo__img" src="img/logo.png">
-                <p class="logo__text">Проверенная база недвижимости <br> г. Старый Оскол</p>
-              </div>
-            </div>
-            <div class="header__block header__block_info"><a class="header__phone" href="tel:88005113908">8 (800) 511-39-08</a>
-              <p class="header__address">Старый Оскол, Лесной проспект 19</p>
-            </div>
-            <div class="header__block header__block_burger">
-              <div class="header-burger burger mobile-nav-burger">
-                <div class="burger__item"></div>
-                <div class="burger__item"></div>
-                <div class="burger__item"></div>
-              </div>
-            </div>
-          </div>
+    <div class="popup popup-prank">
+      <div class="popup-prank__content">
+        <div class="popup-prank__header">
+          <div class="popup__close popup-close"></div>
+          <p class="popup-prank__title">Заказ пранка на стриме</p>
+          <p class="popup-prank__queue">Твое примерное место в очереди: <span>10</span></p>
         </div>
-      </div>
-      <div class="header-row header-row_second nav-row">
-        <div class="nav-row__close nav-close">
-          <svg class="icon icon-close ">
-            <use xlink:href="/img/svg/sprite.svg#close"></use>
-          </svg>
-        </div>
-        <div class="mobile-nav">
-          <div class="container">
-            <div class="header-row__wrapper">
-              <nav class="nav">
-                <ul class="nav-list">
-                  <li class="nav-list__item"><a class="nav-item__link nav-item__catalog" href="#"><span class="catalog-burger burger"><span class="burger__item"></span><span class="burger__item"></span><span class="burger__item"></span></span>Каталог недвижимости</a></li>
-                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Новостройки</a></li>
-                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Дома</a></li>
-                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Участки</a></li>
-                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Комнаты</a></li>
-                  <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Услуги агенства</a></li>
-                  <li class="nav-list__item nav-item nav-list__item_catalog"><a class="nav-item__link" href="#">Контакты</a></li>
-                </ul>
-              </nav><a class="btn btn-orange header__btn popup-btn" href="#" data-popup=".popup-request">Подать заявку</a>
-              <div class="header__block header__block_info"><a class="header__phone" href="tel:88005113908">8 (800) 511-39-08</a>
-                <p class="header__address">Старый Оскол, Лесной проспект 19</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="section section-hero">
-      <div class="section-hero__wrapper">
-        <div class="hero-title">
-          <div class="container">
-            <p class="hero-title__text">Покупка и продажа <br> недвижимости в Старом Осколе</p>
-          </div>
-        </div>
-        <div class="hero-search section-hero__search">
-          <div class="container">
-            <form class="hero-search__form search-form">
-              <div class="search-form__category search-category swiper">
-                <div class="swiper-wrapper">
-                  <div class="radio-input category-input search-category__item swiper-slide">
-                    <label>
-                      <input class="radio-input__item category-input__item" type="radio" name="category"><span class="radio-input__checkmark category-input__checkmark">Новостройки</span>
-                    </label>
+        <div class="popup-prank__box">
+          <div class="popup-prank__main">
+            <form class="order-prank">
+              <div class="popup-prank__block">
+                <div class="popup-input">
+                  <p class="popup-input__title">Как обращаться к жертве</p>
+                  <div class="popup-input__item">
+                    <input class="popup-input__input" type="text" placeholder="Имя мамки">
                   </div>
-                  <div class="radio-input category-input search-category__item swiper-slide">
-                    <label>
-                      <input class="radio-input__item category-input__item" type="radio" name="category"><span class="radio-input__checkmark category-input__checkmark">Дома</span>
-                    </label>
+                </div>
+                <div class="popup-input">
+                  <p class="popup-input__title">Номер телефона</p>
+                  <div class="popup-input__item">
+                    <input class="popup-input__input" type="text" placeholder="В международном формате">
                   </div>
-                  <div class="radio-input category-input search-category__item swiper-slide">
-                    <label>
-                      <input class="radio-input__item category-input__item" type="radio" name="category"><span class="radio-input__checkmark category-input__checkmark">Участки</span>
-                    </label>
+                </div>
+                <div class="popup-input">
+                  <p class="popup-input__title">Адрес</p>
+                  <div class="popup-input__item">
+                    <input class="popup-input__input" type="text" placeholder="Страна, город, улица, дом, квартира">
                   </div>
-                  <div class="radio-input category-input search-category__item swiper-slide">
-                    <label>
-                      <input class="radio-input__item category-input__item" type="radio" name="category"><span class="radio-input__checkmark category-input__checkmark">Комнаты</span>
-                    </label>
+                </div>
+                <div class="popup-input">
+                  <p class="popup-input__title">Комментарий <span>(по желанию)</span></p>
+                  <div class="popup-input__item popup-input__textarea">
+                    <textarea class="popup-input__input" placeholder="Факты или пожелания"></textarea>
                   </div>
                 </div>
               </div>
-              <div class="search-block">
-                <div class="search-block__item search-block__item_room">
-                  <div class="search-room">
-                    <div class="radio-input room-input">
-                      <label class="room-input__label">
-                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">1</span>
+              <div class="popup-prank__block">
+                <div class="popup-prank__checkbox">
+                  <div class="checkbox-block">
+                    <div class="checkbox-block__header">
+                      <label class="checkbox-block__label checkbox-label">
+                        <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content"><span class="checkbox-label__text">Требуется подмена номера</span><span class="checkbox-label__checkmark"></span></span>
                       </label>
                     </div>
-                    <div class="radio-input room-input">
-                      <label class="room-input__label">
-                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">2</span>
-                      </label>
-                    </div>
-                    <div class="radio-input room-input">
-                      <label class="room-input__label">
-                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">3</span>
-                      </label>
-                    </div>
-                    <div class="radio-input room-input">
-                      <label class="room-input__label">
-                        <input class="radio-input__item room-input__item" type="radio" name="room"><span class="radio-input__checkmark room-input__checkmark">4+</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="search-block__item search-block__item_params">
-                  <div class="search-input">
-                    <p class="search-input__title">Цена</p>
-                    <div class="search-input__wrapper">
-                      <div class="search-input__item"><span>от</span>
-                        <input type="text"><span class="search-input__item-sign">₽</span>
-                      </div>
-                      <div class="search-input__item"><span>до</span>
-                        <input type="text"><span class="search-input__item-sign">₽</span>
-                      </div><span>₽</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="search-block__item search-block__item_params">
-                  <div class="search-input">
-                    <p class="search-input__title">Площадь</p>
-                    <div class="search-input__wrapper">
-                      <div class="search-input__item"><span>от</span>
-                        <input type="text"><span class="search-input__item-sign">м</span>
-                      </div>
-                      <div class="search-input__item"><span>до</span>
-                        <input type="text"><span class="search-input__item-sign">м</span>
-                      </div><span>м</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="search-block__item search-block__item_search">
-                  <div class="search-select">
-                    <select>
-                      <option>Очень длинное название района</option>
-                      <option>Район</option>
-                      <option>Район</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <input class="btn btn-orange hero-search__submit" type="submit" value="Показать предложения">
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-services">
-      <div class="container">
-        <div class="services-block">
-          <p class="services-block__title">Сервисы</p>
-          <div class="swiper services-slider">
-            <div class="swiper-wrapper">
-              <div class="services-block__grid swiper-slide">
-                <div class="services-item">
-                  <div class="services-item__icon">
-                    <svg class="icon icon-dollar-white ">
-                      <use xlink:href="/img/svg/sprite.svg#dollar-white"></use>
-                    </svg>
-                  </div>
-                  <div class="services-item__content">
-                    <p class="services-item__title">Оценка рыночной <br> стоимости вашего жилья</p>
-                    <p class="services-item__text">Узнайте сколько стоит ваш дом</p>
-                  </div>
-                </div>
-                <div class="services-item">
-                  <div class="services-item__icon">
-                    <svg class="icon icon-like-white ">
-                      <use xlink:href="/img/svg/sprite.svg#like-white"></use>
-                    </svg>
-                  </div>
-                  <div class="services-item__content">
-                    <p class="services-item__title">Ипотека для покупки <br> квартиры</p>
-                    <p class="services-item__text">Подайте заявку на ипотеку</p>
-                  </div>
-                </div>
-                <div class="services-item">
-                  <div class="services-item__icon">
-                    <svg class="icon icon-document-white ">
-                      <use xlink:href="/img/svg/sprite.svg#document-white"></use>
-                    </svg>
-                  </div>
-                  <div class="services-item__content">
-                    <p class="services-item__title">Договор покупки жилого <br> помещения</p>
-                    <p class="services-item__text">Сделайте все юридически правильно</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-objects">
-      <div class="container">
-        <div class="object-block">
-          <p class="object-block__title">Объекты недвижимости</p>
-          <div class="object-block__grid"><a class="object-item" href="#">
-              <div class="object-item__img"><img src="img/object-1.jpg"></div>
-              <div class="object-item__content">
-                <p class="object-item__title">Новостройки</p>
-                <p class="object-item__text">Лучшие новостройки в Старом Осколе</p>
-              </div></a><a class="object-item" href="#">
-              <div class="object-item__img"><img src="img/object-2.jpg"></div>
-              <div class="object-item__content">
-                <p class="object-item__title object-item__title_black">Дома</p>
-                <p class="object-item__text object-item__text_black">Уютные новые дома с теплоизоляцией</p>
-              </div></a><a class="object-item" href="#">
-              <div class="object-item__img"><img src="img/object-3.jpg"></div>
-              <div class="object-item__content">
-                <p class="object-item__title">Участки</p>
-                <p class="object-item__text">Более 200 выгодных участков от 150 тыс. р. за сотку.</p>
-              </div></a><a class="object-item" href="#">
-              <div class="object-item__img"><img src="img/object-4.jpg"></div>
-              <div class="object-item__content">
-                <p class="object-item__title">Комнаты</p>
-                <p class="object-item__text">Выгодный вариант жилья от 700 тыс. р.</p>
-              </div></a></div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-catalog">
-      <div class="section-catalog__wrapper">
-        <div class="catalog-block section-catalog__block">
-          <div class="houses-block">
-            <div class="container">
-              <div class="catalog-block__title">
-                <p class="catalog-block__label">
-                  <svg class="icon icon-key ">
-                    <use xlink:href="/img/svg/sprite.svg#key"></use>
-                  </svg>Квартиры
-                </p><a class="catalog-block__link" href="#">Смотреть все</a>
-              </div>
-            </div>
-            <div class="container catalog-block__container">
-              <div class="items-slider swiper catalog-block__slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="catalog-block section-catalog__block">
-          <div class="houses-block">
-            <div class="container">
-              <div class="catalog-block__title">
-                <p class="catalog-block__label">
-                  <svg class="icon icon-house ">
-                    <use xlink:href="/img/svg/sprite.svg#house"></use>
-                  </svg>Дома
-                </p><a class="catalog-block__link" href="#">Смотреть все</a>
-              </div>
-            </div>
-            <div class="container catalog-block__container">
-              <div class="items-slider swiper catalog-block__slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="catalog-block section-catalog__block">
-          <div class="houses-block">
-            <div class="container">
-              <div class="catalog-block__title">
-                <p class="catalog-block__label">
-                  <svg class="icon icon-pin ">
-                    <use xlink:href="/img/svg/sprite.svg#pin"></use>
-                  </svg>Участки
-                </p><a class="catalog-block__link" href="#">Смотреть все</a>
-              </div>
-            </div>
-            <div class="container catalog-block__container">
-              <div class="items-slider swiper catalog-block__slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide items-slider__item item-slide">
-                    <div class="item-slide__img item-slide__img-slider swiper item-img-slider">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                        <div class="swiper-slide"><img src="img/item-1.jpg"></div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="item-slide__content"><a class="item-slide__title" href="#">72м , 2-комнатная</a>
-                      <div class="item-slide__info">
-                        <p class="item-slide__price">12 200 000 ₽</p>
-                        <p class="item-slide__text">76.4 м</p>
-                        <p class="item-slide__text">2/22 эт.</p>
-                      </div>
-                      <p class="item-slide__address">ул. Раменки, д.21</p><a class="item-slide__phone" href="#">
-                        <svg class="icon icon-phone ">
-                          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-                        </svg><span>Показать телефон</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-form">
-      <div class="section-form__wrapper">
-        <div class="container">
-          <div class="section-form__grid">
-            <div class="section-form__item section-form__info">
-              <p class="section-form__title">Подберем для вас квартиру мечты</p>
-              <p class="section-form__desc">Отправьте заявку онлайн сразу в несколько банков и сократите время оформления ипотеки.</p>
-            </div>
-            <div class="section-form__img"><img src="img/form.jpg"></div>
-            <div class="section-form__item">
-              <form class="request-form form">
-                <div class="request-form__wrapper">
-                  <div class="request-form__header">
-                    <p class="request-form__title">Оставьте заявку</p>
-                    <p class="request-form__desc">Наш менеджер свяжется с вами для уточнения деталей</p>
-                  </div>
-                  <div class="request-form__content">
-                    <div class="request-form__input">
-                      <input class="text-input" placeholder="Ваше имя">
-                    </div>
-                    <div class="request-form__input">
-                      <input class="text-input" placeholder="+7 XXX XXX XX XX">
-                    </div>
-                    <div class="request-form__input">
-                      <input class="text-input" placeholder="email">
-                    </div>
-                  </div>
-                  <div class="request-form__footer">
-                    <input class="request-form__submit btn btn-orange" type="submit" value="Отправить заявку">
-                    <div class="request-form__privacy">
-                      <div class="form-privacy">
-                        <div class="form-checkbox">
-                          <label>
-                            <input class="form-checkbox__input" type="checkbox">
-                            <p>Оставляя заявку вы соглашаетесь на обработку ваших <a href='#'>персональных данных</a></p>
-                          </label>
+                    <div class="checkbox-block__content">
+                      <div class="popup-input">
+                        <p class="popup-input__title">Подменный номер</p>
+                        <div class="popup-input__item">
+                          <input class="popup-input__input" type="text" placeholder="В международном формате">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__row">
-            <div class="footer__block">
-              <div class="logo footer__logo"><img class="logo__img" src="img/logo-black.png"></div>
-              <div class="footer-info">
-                <div class="footer-info__item">
-                  <div class="footer-info__img"><img src="img/phone-icon.png"></div><a class="footer-info__link" href="tel:+79524342730">+7 (952) 434 27 30</a>
+              </div>
+              <div class="popup-prank__block">
+                <div class="popup-prank__checkbox">
+                  <div class="checkbox-block">
+                    <div class="checkbox-block__header">
+                      <label class="checkbox-block__label checkbox-label">
+                        <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content"><span class="checkbox-label__text"><img class="checkbox-label__text-img" src="img/anon.png">Анонимно</span><span class="checkbox-label__checkmark"></span></span>
+                      </label>
+                    </div>
+                    <div class="checkbox-block__content">
+                      <p class="checkbox-block__text">В чате и на стриме никто не узнает твоего имени и не увидит аватарку</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="footer-info__item">
-                  <div class="footer-info__img"><img src="img/mail-icon.png"></div><a class="footer-info__text" href="mailto:info@DP-Agent.ru">info@DP-Agent.ru</a>
+                <div class="popup-prank__checkbox">
+                  <div class="checkbox-block">
+                    <div class="checkbox-block__header">
+                      <label class="checkbox-block__label checkbox-label">
+                        <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content"><span class="checkbox-label__text"><img class="checkbox-label__text-img" src="img/free.png">Предложить бесплатно</span><span class="checkbox-label__checkmark"></span></span>
+                      </label>
+                    </div>
+                    <div class="checkbox-block__content">
+                      <p class="checkbox-block__text">Твой сценарий настолько хорош, что может попасть в цикл эпичных? Предлагай его бесплатно, ,быть может его оплатит другой любитель пранкоты!</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="footer-info__item">
-                  <div class="footer-info__img"><img src="img/address-icon.png"></div>
-                  <p class="footer-info__text">г. Старый Оскол, м-он Дубрава квартал 3, дом 31 а</p>
+              </div>
+            </form>
+          </div>
+          <div class="popup-prank__footer">
+            <div class="popup-prank__tips popup-tips">
+              <div class="popup-tips__header">
+                <p class="popup-tips__text">Чаевые</p>
+                <div class="popup-tips__currency">
+                  <div class="checkbox-currency">
+                    <label class="checkbox-label">
+                      <input class="checkbox-label__input" type="radio" name="currency"><span class="checkbox-label__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text"><img src="img/money-1.png"></span></span>
+                    </label>
+                  </div>
+                  <div class="checkbox-currency">
+                    <label class="checkbox-label">
+                      <input class="checkbox-label__input" type="radio" name="currency"><span class="checkbox-label__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text"><img src="img/money-2.png"></span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-tips__content">
+                <div class="tips-counter popup-input">
+                  <div class="popup-input__item">
+                    <div class="tips-counter__control">
+                      <div class="tips-counter-minus tips-counter__minus"><img src="img/minus.svg"></div>
+                    </div>
+                    <div class="tips-counter__content">
+                      <input class="tips-counter popup-input__input" type="text" value="0">
+                    </div>
+                    <div class="tips-counter__control">
+                      <div class="tips-counter-plus tips-counter__plus"><img src="img/plus.svg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-tips__footer">
+                <p class="popup-tips__noticy">Чем дороже сценарий, тем быстрее он будет выполнен. Для попадания в начало очереди используй чаевые.</p>
+              </div>
+            </div>
+          </div>
+          <div class="popup-prank__consent">
+            <div class="checkbox-consent">
+              <label class="checkbox-label checkbox-consent">
+                <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content checkbox-consent__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text checkbox-consent__text">Даю согласие на последующую публикацию звонка</span></span>
+              </label>
+            </div>
+            <div class="checkbox-consent">
+              <label class="checkbox-label checkbox-consent">
+                <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content checkbox-consent__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text checkbox-consent__text">Я согласен с <a href='#'> Правилами заказа</a></span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="popup-prank__summary">
+          <div class="popup-summary">
+            <div class="popup-summary__wrapper">
+              <p class="popup-summary__text">Итоговая стоимость:</p>
+              <div class="popup-summary__currency">
+                <div class="popup-currency__item">
+                  <div class="popup-currency__img"><img src="img/money-1.png"></div>
+                  <p class="popup-currency__text">1400</p>
+                </div>
+                <div class="popup-currency__item">
+                  <div class="popup-currency__img"><img src="img/money-2.png"></div>
+                  <p class="popup-currency__text">14000</p>
                 </div>
               </div>
             </div>
-            <div class="footer__block footer__block_list">
-              <ul class="footer-list">
-                <li class="footer-list__title">
-                  <p class="footer-list__text">Каталог</p>
-                </li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Новостройки</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Дома</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Новостройки</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Участки</a></li>
-              </ul>
-              <ul class="footer-list">
-                <li class="footer-list__title">
-                  <p class="footer-list__text">Услуги</p>
-                </li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Заключение договора</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Ипотека</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Юридическое сопровождение</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="">Оценка стоимости</a></li>
-              </ul>
+          </div>
+          <div class="popup-sumbit">
+            <div class="popup-submit__wrapper">
+              <button class="popup-submit__btn" type="submit">Заказать за<img src="img/money-1.png"></button>
+              <button class="popup-submit__btn" type="submit">Заказать за<img src="img/money-2.png"></button>
             </div>
           </div>
-          <div class="footer__row footer__row_second">
-            <div class="footer__copyright">
-              <p>&#xa9; 2015-2017, “Деловой подход”.</p>
-            </div>
-            <div class="footer-partners">
-              <div class="footer-partners__img"><img src="img/partners-1.png"></div>
-              <div class="footer-partners__img"><img src="img/partners-2.png"></div>
-              <div class="footer-partners__img"><img src="img/partners-3.png"></div>
-            </div>
-            <div class="footer-privacy"><a class="footer-privacy__link" href="#">Политика конфедициальности</a></div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="popup popup-request">
-      <div class="popup__wrapper">
-        <div class="popup__close popup-close">
-          <svg class="icon icon-close ">
-            <use xlink:href="/img/svg/sprite.svg#close"></use>
-          </svg>
-        </div>
-        <form class="popup-form popup-form form">
-          <div class="popup-form__wrapper popup-from__wrapper">
-            <div class="popup-form__header">
-              <p class="popup-form__title">Есть вопросы? Оставьте заявку и мы проконсультируем вас</p>
-            </div>
-            <div class="popup-form__content">
-              <div class="popup-form__input">
-                <input class="text-input" placeholder="Ваше имя">
-              </div>
-              <div class="popup-form__input">
-                <input class="text-input" placeholder="+7 XXX XXX XX XX">
-              </div>
-              <div class="popup-form__input">
-                <input class="text-input" placeholder="email">
-              </div>
-            </div>
-            <div class="popup-form__footer">
-              <input class="popup-form__submit btn btn-orange" type="submit" value="Перезвоните мне">
-            </div>
-            <div class="form-privacy">
-              <div class="form-checkbox">
-                <label>
-                  <input class="form-checkbox__input" type="checkbox">
-                  <p>Оставляя заявку вы соглашаетесь на обработку ваших <a href='#'>персональных данных</a></p>
-                </label>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="popup popup-thanks">
-      <div class="popup__wrapper">
-        <div class="popup__close popup-close">
-          <svg class="icon icon-close ">
-            <use xlink:href="/img/svg/sprite.svg#close"></use>
-          </svg>
-        </div>
-        <div class="thanks-wrapper">
-          <div class="thanks-wrapper__icon">
-            <svg class="icon icon-check ">
-              <use xlink:href="/img/svg/sprite.svg#check"></use>
-            </svg>
-          </div>
-          <p class="thanks-wrapper__title">Спасибо за заявку</p>
-          <p class="thanks-wrapper__text">Наш менеджер свяжется с вами в ближайшее время</p>
         </div>
       </div>
     </div>
-    <script src="libs/swiper/swiper.js"></script>
-    <script src="libs/custom-select/custom-select.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
