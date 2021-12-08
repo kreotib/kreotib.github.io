@@ -42,7 +42,6 @@
           justify-content: center;
   padding: 60px 0;
   font-family: 'Barlow', sans-serif;
-  overflow-y: scroll;
 }
 
 .popup-prank__content {
@@ -50,13 +49,8 @@
   max-width: 600px;
   width: 100%;
   border-radius: 15px;
-  overflow: hidden;
-}
-
-.popup-prank__box {
-  max-height: calc(100vh - 410px);
-  height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
 }
 
 .popup-prank__header {
@@ -583,19 +577,12 @@
   margin: 0 auto;
 }
 
-@media screen and (orientation: landscape) {
-  .popup-prank__box {
-    max-height: 100%;
-    overflow-y: unset;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .popup-prank {
     padding: 30px 15px;
   }
-  .popup-prank__box {
-    max-height: calc(100vh - 350px);
+  .popup-prank__content {
+    max-height: calc(100vh - 60px);
   }
   .popup-prank__main {
     padding: 0 15px;
