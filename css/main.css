@@ -42,6 +42,7 @@
           justify-content: center;
   padding: 60px 0;
   font-family: 'Barlow', sans-serif;
+  overflow-y: auto;
 }
 
 .popup-prank__content {
@@ -49,8 +50,6 @@
   max-width: 600px;
   width: 100%;
   border-radius: 15px;
-  overflow-y: auto;
-  max-height: calc(100vh - 120px);
 }
 
 .popup-prank__header {
@@ -70,6 +69,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .popup-prank__title {
@@ -152,6 +153,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 14px 11px;
+  -webkit-transition: .3s border-color;
+  -o-transition: .3s border-color;
+  transition: .3s border-color;
+}
+
+.popup-input__item:hover, .popup-input__item:focus {
+  border-color: #6D7883;
 }
 
 .popup-input__input {
@@ -354,16 +362,20 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #2AC880;
+  background-color: #2AC880;
   border: none;
   outline: none;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
+  -webkit-transition: .3s background-color;
+  -o-transition: .3s background-color;
+  transition: .3s background-color;
 }
 
 .popup-submit__btn:hover {
   cursor: pointer;
+  background-color: #24A96D;
 }
 
 .popup-submit__btn img {
@@ -386,6 +398,9 @@
   width: 100%;
   display: block;
   background-color: #fff;
+  -webkit-transition: .3s background-color;
+  -o-transition: .3s background-color;
+  transition: .3s background-color;
 }
 
 .popup__close::before {
@@ -400,6 +415,14 @@
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.popup__close:hover {
+  cursor: pointer;
+}
+
+.popup__close:hover::before, .popup__close:hover::after {
+  background-color: #6D7883;
 }
 
 .checkbox-currency + .checkbox-currency {
@@ -490,6 +513,10 @@
   transition: .3s border-color;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.checkbox-label__checkmark:hover {
+  border-color: #fff;
 }
 
 .checkbox-label__checkmark::before {
