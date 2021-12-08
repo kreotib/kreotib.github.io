@@ -583,6 +583,13 @@
   margin: 0 auto;
 }
 
+@media screen and (orientation: landscape) {
+  .popup-prank__box {
+    max-height: 100%;
+    overflow-y: unset;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .popup-prank {
     padding: 30px 15px;
