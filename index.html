@@ -11,8 +11,8 @@
       <div class="popup-prank__content">
         <div class="popup-prank__header">
           <div class="popup__close popup-close"></div>
-          <p class="popup-prank__title">Заказ пранка на стриме</p>
-          <p class="popup-prank__queue">Твое примерное место в очереди: <span>10</span></p>
+          <p class="popup-prank__title">Пранк по твоему сценарию</p>
+          <p class="popup-prank__queue">Внимательно отнесись к описанию данных жертвы</p>
         </div>
         <div class="popup-prank__box">
           <div class="popup-prank__main">
@@ -21,146 +21,56 @@
                 <div class="popup-input">
                   <p class="popup-input__title">Как обращаться к жертве</p>
                   <div class="popup-input__item">
-                    <input class="popup-input__input" type="text" placeholder="Имя мамки">
+                    <input class="popup-input__input" type="text" placeholder="Имя">
                   </div>
                 </div>
                 <div class="popup-input">
                   <p class="popup-input__title">Номер телефона</p>
-                  <div class="popup-input__item">
-                    <div class="phone-country"></div>
+                  <div class="popup-input__item"><!-- TODO поменять на react компонент телефона -->
                     <input class="popup-input__input" type="text" placeholder="В международном формате">
                   </div>
                 </div>
                 <div class="popup-input">
-                  <p class="popup-input__title">Адрес</p>
-                  <div class="popup-input__item">
-                    <input class="popup-input__input" type="text" placeholder="Страна, город, улица, дом, квартира">
-                  </div>
-                </div>
-                <div class="popup-input">
-                  <p class="popup-input__title">Комментарий <span>(по желанию)</span></p>
+                  <p class="popup-input__title">Твое задание</p>
+                  <p class="popup-input__desc">Чем больше фактов - тем лучше выйдет в результате, но давай без простыней текста, ок?</p>
                   <div class="popup-input__item popup-input__textarea">
                     <textarea class="popup-input__input" placeholder="Факты или пожелания"></textarea>
                   </div>
                 </div>
               </div>
-              <div class="popup-prank__block">
-                <div class="popup-prank__checkbox">
-                  <div class="checkbox-block">
-                    <div class="checkbox-block__header">
-                      <label class="checkbox-block__label checkbox-label">
-                        <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content"><span class="checkbox-label__text">Требуется подмена номера</span><span class="checkbox-label__checkmark"></span></span>
-                      </label>
-                    </div>
-                    <div class="checkbox-block__content">
-                      <div class="popup-input">
-                        <p class="popup-input__title">Подменный номер</p>
-                        <div class="popup-input__item">
-                          <input class="popup-input__input" type="text" placeholder="В международном формате">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="popup-prank__block">
-                <div class="popup-prank__checkbox">
-                  <div class="checkbox-block">
-                    <div class="checkbox-block__header">
-                      <label class="checkbox-block__label checkbox-label">
-                        <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content"><span class="checkbox-label__text"><img class="checkbox-label__text-img" src="img/anon.png">Анонимно</span><span class="checkbox-label__checkmark"></span></span>
-                      </label>
-                    </div>
-                    <div class="checkbox-block__content">
-                      <p class="checkbox-block__text">В чате и на стриме никто не узнает твоего имени и не увидит аватарку</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="popup-prank__checkbox">
-                  <div class="checkbox-block">
-                    <div class="checkbox-block__header">
-                      <label class="checkbox-block__label checkbox-label">
-                        <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content"><span class="checkbox-label__text"><img class="checkbox-label__text-img" src="img/free.png">Предложить бесплатно</span><span class="checkbox-label__checkmark"></span></span>
-                      </label>
-                    </div>
-                    <div class="checkbox-block__content">
-                      <p class="checkbox-block__text">Твой сценарий настолько хорош, что может попасть в цикл эпичных? Предлагай его бесплатно, ,быть может его оплатит другой любитель пранкоты!</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </form>
           </div>
-          <div class="popup-prank__footer">
-            <div class="popup-prank__tips popup-tips">
-              <div class="popup-tips__header">
-                <p class="popup-tips__text">Чаевые</p>
-                <div class="popup-tips__currency">
-                  <div class="checkbox-currency">
-                    <label class="checkbox-label">
-                      <input class="checkbox-label__input" type="radio" name="currency"><span class="checkbox-label__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text"><img src="img/money-1.png"></span></span>
-                    </label>
-                  </div>
-                  <div class="checkbox-currency">
-                    <label class="checkbox-label">
-                      <input class="checkbox-label__input" type="radio" name="currency"><span class="checkbox-label__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text"><img src="img/money-2.png"></span></span>
-                    </label>
-                  </div>
-                </div>
+        </div>
+        <div class="popup-prank__steps">
+          <div class="popup-step">
+            <div class="popup-step__wrapper">
+              <div class="popup-step__item">
+                <button class="popup-step__button popup-step__button popup-step__button_current">Шаг 1</button>
               </div>
-              <div class="popup-tips__content">
-                <div class="tips-counter popup-input">
-                  <div class="popup-input__item">
-                    <div class="tips-counter__control">
-                      <div class="tips-counter-minus tips-counter__minus"></div>
-                    </div>
-                    <div class="tips-counter__content">
-                      <input class="tips-counter popup-input__input" type="text" value="0">
-                    </div>
-                    <div class="tips-counter__control">
-                      <div class="tips-counter-plus tips-counter__plus"></div>
-                    </div>
-                  </div>
-                </div>
+              <div class="popup-step__item">
+                <button class="popup-step__button">Шаг 2</button>
               </div>
-              <div class="popup-tips__footer">
-                <p class="popup-tips__noticy">Чем дороже сценарий, тем быстрее он будет выполнен. Для попадания в начало очереди используй чаевые.</p>
+              <div class="popup-step__item">
+                <button class="popup-step__button">Шаг 3</button>
               </div>
-            </div>
-          </div>
-          <div class="popup-prank__consent">
-            <div class="checkbox-consent">
-              <label class="checkbox-label checkbox-consent">
-                <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content checkbox-consent__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text checkbox-consent__text">Даю согласие на последующую публикацию звонка</span></span>
-              </label>
-            </div>
-            <div class="checkbox-consent">
-              <label class="checkbox-label checkbox-consent">
-                <input class="checkbox-label__input" type="checkbox"><span class="checkbox-label__content checkbox-consent__content"><span class="checkbox-label__checkmark"></span><span class="checkbox-label__text checkbox-consent__text">Я согласен с <a href='#'> Правилами заказа</a></span></span>
-              </label>
             </div>
           </div>
         </div>
         <div class="popup-prank__summary">
           <div class="popup-summary">
             <div class="popup-summary__wrapper">
-              <p class="popup-summary__text">Итоговая стоимость:</p>
+              <p class="popup-summary__text">Предварительная стоимость:</p>
               <div class="popup-summary__currency">
                 <div class="popup-currency__item">
                   <div class="popup-currency__img"><img src="img/money-1.png"></div>
-                  <p class="popup-currency__text">1400</p>
-                </div>
-                <div class="popup-currency__item">
-                  <div class="popup-currency__img"><img src="img/money-2.png"></div>
-                  <p class="popup-currency__text">14000</p>
+                  <p class="popup-currency__text">1000</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="popup-sumbit">
             <div class="popup-submit__wrapper">
-              <button class="popup-submit__btn" type="submit">Заказать за<img src="img/money-1.png"></button>
-              <button class="popup-submit__btn" type="submit">Заказать за<img src="img/money-2.png"></button>
+              <button class="popup-submit__btn">Дальше</button>
             </div>
           </div>
         </div>
