@@ -585,14 +585,49 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.tips-counter__minus:hover::before, .tips-counter__minus:hover::after, .tips-counter__plus:hover::before, .tips-counter__plus:hover::after {
+  background-color: #24A96D;
+}
+
+.tips-counter__minus::before, .tips-counter__minus::after, .tips-counter__plus::before, .tips-counter__plus::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 16px;
+  display: block;
+  background-color: #2AC880;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -8px;
+  -webkit-transition: .3s background-color;
+  -o-transition: .3s background-color;
+  transition: .3s background-color;
+}
+
+.tips-counter__minus:hover, .tips-counter__plus:hover {
+  cursor: pointer;
 }
 
 .tips-counter__minus {
   border-right: 1px solid #323A46;
 }
 
+.tips-counter__minus::after {
+  display: none;
+}
+
 .tips-counter__plus {
   border-left: 1px solid #323A46;
+}
+
+.tips-counter__plus::after {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .tips-counter__control {
