@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
         instaSlider = new Swiper(".instagram-slider", {
             slidesPerView: 4,
             spaceBetween: 30,
+            navigation: {
+                nextEl: ".instagram-slider-button-next",
+                prevEl: ".instagram-slider-button-prev",
+            },
         }),
         livingSlider = new Swiper(".living-slider", {
             slidesPerView: "auto",
