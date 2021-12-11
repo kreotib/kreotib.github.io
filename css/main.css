@@ -367,7 +367,7 @@ body {
   content: '';
   position: absolute;
   width: 100%;
-  height: 745px;
+  height: 100%;
   display: block;
   right: 0;
   bottom: 0;
@@ -391,6 +391,7 @@ body {
 
 .section-hero__item {
   min-height: 500px;
+  height: calc(100vh - 80px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,6 +524,15 @@ body {
   max-width: 505px;
   max-height: 586px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .person-item__img img {
@@ -665,7 +675,7 @@ body {
 }
 
 .vacancy-slider {
-  padding: 15px;
+  padding: 30px;
 }
 
 .vacancy-slider__item {
@@ -1703,6 +1713,7 @@ body {
 
 .section-plane__container {
   position: relative;
+  overflow: hidden;
 }
 
 .section-plane__container::before {
@@ -1719,7 +1730,6 @@ body {
 
 .section-plane__wrapper {
   position: relative;
-  overflow: hidden;
 }
 
 .section-plane__wrapper::before {
