@@ -1,77 +1,31 @@
+const tabsChange = (tabs, idx = 1) => {
+    const tabsNavItems = tabs.querySelectorAll('.tabs-nav__item'),
+        tabsContentItems = tabs.querySelectorAll('.tabs-content__item');
+
+    tabsNavItems.forEach((el, index) => {
+        index === idx ? el.classList.add('active') : el.classList.remove('active');
+    });
+
+    tabsContentItems.forEach((el, index) => {
+        index === idx ? el.classList.add('active') : el.classList.remove('active');
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    //Slider init
+    const tabsNavItems = document.querySelectorAll('.tabs-nav__item'),
+        tabs = document.querySelector('.tabs');
 
-    const vacancySlider = new Swiper(".vacancy-slider", {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".vacancy-slider-button-next",
-                prevEl: ".vacancy-slider-button-prev",
-            },
-        }),
-        personSlider = new Swiper(".person-slider", {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable:true,
-            },
-            navigation: {
-                nextEl: ".person-slider-button-next",
-                prevEl: ".person-slider-button-prev",
-            },
-        }),
-        statsSlider = new Swiper(".stats-slider", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".stats-slider-button-next",
-                prevEl: ".stats-slider-button-prev",
-            },
-        }),
-        countrySlider = new Swiper(".country-slider", {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            loop: true,
-            navigation: {
-                nextEl: ".country-slider-button-next",
-                prevEl: ".country-slider-button-prev",
-            },
-        }),
-        instaSlider = new Swiper(".instagram-slider", {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".instagram-slider-button-next",
-                prevEl: ".instagram-slider-button-prev",
-            },
-        }),
-        livingSlider = new Swiper(".living-slider", {
-            slidesPerView: "auto",
-            freeMode: true,
-            spaceBetween: 12,
-            initialSlide: 3,
-            loop: true,
-            breakpoints: {
-                600: {
-                    spaceBetween: 30
-                }
-            },
-            navigation: {
-                nextEl: ".living-slider-button-next",
-                prevEl: ".living-slider-button-prev",
-            },
-        });
+    tabsChange(tabs);
 
-    // Question settings
-    const questionTrigger = document.querySelectorAll('.question-trigger');
+    tabsNavItems.forEach(el=>{
+       el.addEventListener('click',(e)=>{
+           e.preventDefault();
 
-    questionTrigger.forEach(el => {
-        el.addEventListener('click', () => {
-            const elParentBlock = el.closest('.question-item');
+           const idx = [...e.target.closest('.tabs-nav').querySelectorAll('.tabs-nav__item')].indexOf(e.target.closest('.tabs-nav__item')),
+               tabs = e.target.closest('.tabs');
 
-            elParentBlock.classList.toggle('active');
-        });
+           tabsChange(tabs,idx);
+       });
     });
 });
