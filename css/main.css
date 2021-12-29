@@ -70,6 +70,14 @@ textarea {
 
 @font-face {
   font-family: 'TT Norms';
+  src: url("../fonts/TTNorms-Medium/TTNorms-Medium.woff2") format("woff2"), url("../fonts/TTNorms-Medium/TTNorms-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms';
   src: url("../fonts/TTNorms-Bold/TTNorms-Bold.woff2") format("woff2"), url("../fonts/TTNorms-Bold/TTNorms-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -117,7 +125,7 @@ body {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 .content {
@@ -144,7 +152,7 @@ body {
 
 .content__container {
   max-width: 400px;
-  padding: 0 30px;
+  padding: 0 15px;
   width: 100%;
   margin: 0 auto;
 }
@@ -367,7 +375,7 @@ body {
 }
 
 .checkbox__input {
-  display: none;
+  position: absolute;
 }
 
 .checkbox__input:checked ~ .checkbox__checkmark {
@@ -535,8 +543,8 @@ p .text-small {
 }
 
 .payment__title_bordered {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 500;
   letter-spacing: .04em;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -580,7 +588,7 @@ p .text-small {
 
 .promotion__text {
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -706,8 +714,24 @@ p .text-small {
 }
 
 @media screen and (max-width: 450px) {
+  .payment-block__img {
+    font-size: 330%;
+  }
   .payment__title {
     font-size: 21px;
+  }
+  .payment__title_bordered {
+    font-size: 24px;
+  }
+  .promotion__text {
+    font-size: 16px;
+  }
+  .promotion__title {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+  .promotion__text + .promotion__text {
+    margin-top: 0;
   }
   .payment-block {
     padding: 20px 0;
@@ -729,6 +753,7 @@ p .text-small {
   }
   .footer {
     padding-top: 20px;
+    margin-top: 70px;
   }
   .footer-list {
     row-gap: 20px;
@@ -782,7 +807,6 @@ p .text-small {
     font-size: 20px;
   }
   .payment-block__img img {
-    max-height: 110px;
     -o-object-fit: contain;
        object-fit: contain;
   }

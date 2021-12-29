@@ -1,4 +1,4 @@
-const tabsChange = (tabs, idx = 1) => {
+const tabsChange = (tabs, idx = 0) => {
     const tabsNavItems = tabs.querySelectorAll('.tabs-nav__item'),
         tabsContentItems = tabs.querySelectorAll('.tabs-content__item');
 
