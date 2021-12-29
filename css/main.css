@@ -397,6 +397,8 @@ body::before {
 
 .checkbox__input {
   position: absolute;
+  width: 5px;
+  height: 5px;
 }
 
 .checkbox__input:checked ~ .checkbox__checkmark {
@@ -735,6 +737,9 @@ p .text-small {
 }
 
 @media screen and (max-width: 450px) {
+  .content-tabs {
+    min-height: 600px;
+  }
   .payment-block__img {
     font-size: 330%;
   }
