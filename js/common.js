@@ -1,31 +1,35 @@
-const tabsChange = (tabs, idx = 0) => {
-    const tabsNavItems = tabs.querySelectorAll('.tabs-nav__item'),
-        tabsContentItems = tabs.querySelectorAll('.tabs-content__item');
+const popupShow = (selector) =>{
+    const popup = document.querySelector(selector);
 
-    tabsNavItems.forEach((el, index) => {
-        index === idx ? el.classList.add('active') : el.classList.remove('active');
-    });
-
-    tabsContentItems.forEach((el, index) => {
-        index === idx ? el.classList.add('active') : el.classList.remove('active');
-    });
-};
+    popup.classList.add('active');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger'),
+        mainNav = document.querySelector('.page-list');
 
-    const tabsNavItems = document.querySelectorAll('.tabs-nav__item'),
-        tabs = document.querySelector('.tabs');
+    burger.addEventListener('click', function () {
+        this.classList.toggle('hide');
+        mainNav.classList.toggle('hide');
+    });
 
-    tabsChange(tabs);
+    const triggerBlockLinks = document.querySelectorAll('.trigger-link');
 
-    tabsNavItems.forEach(el=>{
+    triggerBlockLinks.forEach(el=>{
        el.addEventListener('click',(e)=>{
            e.preventDefault();
 
-           const idx = [...e.target.closest('.tabs-nav').querySelectorAll('.tabs-nav__item')].indexOf(e.target.closest('.tabs-nav__item')),
-               tabs = e.target.closest('.tabs');
+           el.closest('.trigger').classList.toggle('active');
+       })
+    });
 
-           tabsChange(tabs,idx);
-       });
+    const popupTriggers = document.querySelectorAll('.popup-trigger');
+
+    popupTriggers.forEach(el=>{
+       el.addEventListener('click',(e)=>{
+           e.preventDefault();
+
+           popupShow(el.dataset.popup);
+       })
     });
 });
