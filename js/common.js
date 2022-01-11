@@ -98,4 +98,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 el: ".swiper-scrollbar",
             },
         });
+
+    var barChartData = {
+        labels: ["Mon 23.04",'Tue 24.04','Wed 25.04','Thu 26.04','Fri 27.04','Sat 28.04','Sun 29.04'],
+        datasets: [{
+            label: "Price",
+            backgroundColor: "#3e95cd",
+            data: [ 10,5,8,6,9,2,3,4,4.5,6.5]
+        }]
+    };
+
+
+    var ctx = document.querySelector(".chart").getContext("2d");
+    new Chart(ctx, {
+        type: 'line',
+        data: barChartData,
+        options: {
+            responsive: true,
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: 'Chart.js Bar Chart'
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        minRotation: 90,
+                        autoSkip: true,
+                        maxTicksLimit: 10
+                    }
+                }]
+            }
+        }
+    });
+
 });
