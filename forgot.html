@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
+    <link rel="stylesheet" href="libs/swiper/swiper.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__block">
+          <div class="header__menu">
+            <div class="burger">
+              <svg class="icon icon-burger ">
+                <use xlink:href="/img/svg/sprite.svg#burger"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="header__logo"><img src="img/logo-header.svg"></div>
+        </div>
+        <div class="header__block">
+          <div class="header__refresh refresh"><a class="refresh__link" href="#">
+              <svg class="icon icon-refresh ">
+                <use xlink:href="/img/svg/sprite.svg#refresh"></use>
+              </svg></a></div>
+          <div class="header__notification header-notification notification popup-trigger" data-popup=".popup-notifications"><a class="notification__link" href="#"><span class="notification-counter notification__counter header-notification__counter">1</span>
+              <svg class="icon icon-notifications ">
+                <use xlink:href="/img/svg/sprite.svg#notifications"></use>
+              </svg></a></div>
+          <div class="header__profile">
+            <div class="profile">
+              <div class="profile__wrapper"><a class="profile__link" href="#">john_appleseed</a>
+                <div class="profile__img">
+                  <div class="profile__img-item"><img src="img/profile.svg"></div>
+                  <div class="profile__img-verify"><img src="img/verification.svg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__languages">
+            <select class="language-select">
+              <option>en</option>
+              <option>ru</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="login-page">
       <div class="login-page__wrapper">
         <div class="login-page__img"><img src="img/logo.png"></div>
@@ -34,7 +75,7 @@
       <div class="popup__wrapper">
         <div class="popup__header">
           <p class="popup__title">Set Cryptocyrrency</p>
-          <div class="popup__close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
 </svg>
           </div>
@@ -49,6 +90,148 @@
         </div>
       </div>
     </div>
+    <div class="popup popup-notifications">
+      <div class="popup__wrapper popup-notifications__wrapper">
+        <div class="popup__header">
+          <p class="popup__title">Notifications</p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content popup-notification__content">
+          <div class="popup-notifications__header">
+            <div class="tabs notification-tabs">
+              <div class="tabs-header">
+                <div class="tabs-nav">
+                  <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">System</a></div>
+                  <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">Admins</a></div>
+                </div>
+                <div class="tabs-header__content">
+                  <div class="sort">
+                    <div class="sort-item">
+                      <div class="sort-item__icon">
+                        <svg class="icon icon-readed ">
+                          <use xlink:href="/img/svg/sprite.svg#readed"></use>
+                        </svg>
+                      </div><span class="sort-item__label">Set all as Read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-notifications__content">
+                <div class="tabs-content notification-tabs__content">
+                  <div class="tabs-content__item">
+                    <div class="notification-block">
+                      <div class="notification-block__item">
+                        <div class="notification-item">
+                          <div class="notification-item__wrapper">
+                            <p class="notification-item__date">12.12.2021, 21:10
+                              <p class="notification-item__title">Phone number verified</p>
+                              <p class="notification-item__text">You have verified your phone number +1 495 670 89 90</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notification-block__item">
+                        <div class="notification-item notification-item_chat notification-item_not-read">
+                          <div class="notification-item__wrapper">
+                            <div class="notification-item__header">
+                              <p class="notification-item__date">12.12.2021, 21:10</p><span class="notification-counter">1</span>
+                            </div><a class="notification-item__title" href="">Enrollment of funds</a>
+                            <p class="notification-item__text">Funds were transferred to your account in the amount of 0.00034345 BTC</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notification-block__item">
+                        <div class="notification-item notification-item_chat">
+                          <div class="notification-item__wrapper">
+                            <p class="notification-item__date">12.12.2021, 21:10</p><a class="notification-item__title" href="">Enrollment of funds</a>
+                            <p class="notification-item__text">Funds were transferred to your account in the amount of 0.00034345 BTC</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notification-block__item">
+                        <div class="notification-item">
+                          <div class="notification-item__wrapper">
+                            <p class="notification-item__date">12.12.2021, 21:10
+                              <p class="notification-item__title">Phone number verified</p>
+                              <p class="notification-item__text">You have verified your phone number +1 495 670 89 90</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notification-block__item">
+                        <div class="notification-item">
+                          <div class="notification-item__wrapper">
+                            <p class="notification-item__date">12.12.2021, 21:10
+                              <p class="notification-item__title">Phone number verified</p>
+                              <p class="notification-item__text">You have verified your phone number +1 495 670 89 90</p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-edit-blank">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title">SWIFT Blank</p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content">
+          <div class="edit-blank">
+            <div class="edit-blank__header">
+              <div class="blank-item__logo">
+                <div class="blank-item__logo-img"><img src="img/paypal.svg"></div>
+                <p class="blank-item__logo-label">PayPal</p>
+              </div>
+              <div class="new-link"><a class="new-link__wrapper" href="#"><span class="new-link__label">Change</span><span class="new-link__icon">
+                    <svg class="icon icon-edit ">
+                      <use xlink:href="/img/svg/sprite.svg#edit"></use>
+                    </svg></span></a></div>
+            </div>
+            <div class="edit-blank__content">
+              <div class="blank-desc">
+                <p class="blank-desc__title">My Pal 1</p>
+                <p class="blank-desc__text">@chupa_dupa_trader</p>
+                <p class="blank-desc__text">@chupa_dupa_crypto</p>
+              </div>
+            </div>
+            <div class="edit-blank__btn"><a class="btn btn-blue" href="#">Save Changes</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-add-blank">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title"><a class="popup-close" href="#"><span class="popup-close__back"><img src="img/white-arrow.svg"></span></a><span>Set Payment Method</span></p>
+        </div>
+        <div class="popup__content popup-currency__content">
+          <ul class="currency-list">
+            <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/btc.svg"></span><span class="currency-list__link-label"><span>BTC</span>  (Bitcoin)</span></a></li>
+            <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/paypal.svg"></span><span class="currency-list__link-label"><span>PayPal</span></span></a></li>
+            <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/swift.svg"></span><span class="currency-list__link-label"><span>SWIFT</span></span></a></li>
+            <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/qiwi.svg"></span><span class="currency-list__link-label"><span>QIWI</span></span></a></li>
+            <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/transferWise.svg"></span><span class="currency-list__link-label"><span>TransferWise</span></span></a></li>
+            <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/payonner.svg"></span><span class="currency-list__link-label"><span>Payoneer</span></span></a></li>
+            <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/skrill.svg"></span><span class="currency-list__link-label"><span>Skrill</span></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="libs/swiper/swiper.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
