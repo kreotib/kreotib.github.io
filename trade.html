@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="header__wrapper">
-        <div class="header__block">
+        <div class="header__block header__block_logo">
           <div class="header__menu">
             <div class="burger">
               <svg class="icon icon-burger ">
@@ -222,7 +222,7 @@
                   <div class="tabs-content__item">
                     <div class="settings-wrapper">
                       <div class="settings-wrapper__title"><span class="settings-wrapper__title-label">Blanks</span>
-                        <div class="new-link"><a class="new-link__wrapper" href="#"><span class="new-link__label">Add new Blank</span><span class="new-link__icon">
+                        <div class="new-link"><a class="new-link__wrapper popup-trigger" href="#" data-popup=".popup-add-blank"><span class="new-link__label">Add new Blank</span><span class="new-link__icon">
                               <svg class="icon icon-add ">
                                 <use xlink:href="/img/svg/sprite.svg#add"></use>
                               </svg></span></a></div>
@@ -240,7 +240,7 @@
                                       <div class="blank-item__logo-img"><img src="img/paypal.svg"></div>
                                       <p class="blank-item__logo-label">PayPal</p>
                                     </div>
-                                    <div class="blank-item__controls"><a class="blank-item__controls-item" href="#">
+                                    <div class="blank-item__controls"><a class="blank-item__controls-item popup-trigger" href="#" data-popup=".popup-edit-blank">
                                         <svg class="icon icon-edit ">
                                           <use xlink:href="/img/svg/sprite.svg#edit"></use>
                                         </svg></a><a class="blank-item__controls-item" href="#">
@@ -567,6 +567,207 @@
             <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/payonner.svg"></span><span class="currency-list__link-label"><span>Payoneer</span></span></a></li>
             <li class="currency-list__item"><a class="currency-list__link" href="#"><span class="currency-list__link-icon"><img src="img/skrill.svg"></span><span class="currency-list__link-label"><span>Skrill</span></span></a></li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-payment-methods">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title"><span>Paymend Method</span></p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content popup-currency__content">
+          <ul class="currency-list">
+            <li class="currency-list__item">
+              <div class="currency-list__link currency-list__link_payment"><span class="currency-list__link-icon"><img src="img/btc.svg"></span><span class="currency-list__link-label"><span>BTC</span>  (Bitcoin)</span>
+                <div class="radio-input currency-list__radio">
+                  <label class="radio-input__label">
+                    <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="currency-list__item">
+              <div class="currency-list__link currency-list__link_payment"><span class="currency-list__link-icon"><img src="img/paypal.svg"></span><span class="currency-list__link-label"><span>PayPal</span></span>
+                <div class="radio-input currency-list__radio">
+                  <label class="radio-input__label">
+                    <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="currency-list__item">
+              <div class="currency-list__link currency-list__link_payment"><span class="currency-list__link-icon"><img src="img/swift.svg"></span><span class="currency-list__link-label"><span>SWIFT</span></span>
+                <div class="radio-input currency-list__radio">
+                  <label class="radio-input__label">
+                    <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="currency-list__item">
+              <div class="currency-list__link currency-list__link_payment"><span class="currency-list__link-icon"><img src="img/qiwi.svg"></span><span class="currency-list__link-label"><span>QIWI</span></span>
+                <div class="radio-input currency-list__radio">
+                  <label class="radio-input__label">
+                    <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="currency-list__item">
+              <div class="currency-list__link currency-list__link_payment"><span class="currency-list__link-icon"><img src="img/transferWise.svg"></span><span class="currency-list__link-label"><span>TransferWise</span></span>
+                <div class="radio-input currency-list__radio">
+                  <label class="radio-input__label">
+                    <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="currency-list__item">
+              <div class="currency-list__link currency-list__link_payment"><span class="currency-list__link-icon"><img src="img/payonner.svg"></span><span class="currency-list__link-label"><span>Payoneer</span></span>
+                <div class="radio-input currency-list__radio">
+                  <label class="radio-input__label">
+                    <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="currency-list__item">
+              <div class="currency-list__link currency-list__link_payment"><span class="currency-list__link-icon"><img src="img/skrill.svg"></span><span class="currency-list__link-label"><span>Skrill</span></span>
+                <div class="radio-input currency-list__radio">
+                  <label class="radio-input__label">
+                    <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-paid">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title"><span>I Paid</span></p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content popup-paid__content">
+          <p class="popup-paid__title">Are you sure you made the transfer?</p>
+          <p class="popup-paid__desc"> If you have not made a transfer, do not confirm it. <br> (Your payment will not be lost, because the Merchant will not be able to cancel the deal, his funds are frozen until you cancel trade or until the trade is completed)</p>
+        </div>
+        <div class="popup-paid__footer"><a class="btn-blue btn popup-close" href="#">No, I Didn`t</a><a class="btn-yellow btn" href="#">Yes, I`m Sure</a></div>
+      </div>
+    </div>
+    <div class="popup popup-requisites">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title"><span>PayPal Requisites</span></p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content popup-paid__content">
+          <p class="popup-requisites__text">@chupa_dupa_trader</p>
+          <p class="popup-requisites__text">@chupa_dupa_trader</p>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-deal-close">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title"><span>Deal is closed</span></p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content popup-paid__content">
+          <div class="deal-close">
+            <div class="deal-close__header">
+              <p class="deal-close__name">Rate Terminator_USA</p>
+              <div class="deal-close__wrapper">
+                <label class="deal-close__radio">
+                  <input class="deal-close__radio-input" type="radio" name="mark[]" checked>
+                  <div class="deal-close__radio-checkmark deal-close__radio-checkmark_like"><svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.3125 78.2386H18.8352V37.6705H5.3125V78.2386ZM79.6875 41.0511C79.6875 37.3324 76.6449 34.2898 72.9261 34.2898H51.594L54.8057 18.8401L54.9071 17.7582C54.9071 16.3722 54.3324 15.0875 53.4196 14.1747L49.8361 10.625L27.5912 32.9037C26.3403 34.1207 25.5966 35.8111 25.5966 37.6705V71.4773C25.5966 75.196 28.6392 78.2386 32.358 78.2386H62.7841C65.5901 78.2386 67.9903 76.5483 69.0045 74.1142L79.2142 50.2804C79.5185 49.5028 79.6875 48.6915 79.6875 47.8125V41.0511Z" fill="#66FF66"/>
+</svg>
+                  </div>
+                </label>
+                <label class="deal-close__radio">
+                  <input class="deal-close__radio-input" type="radio" name="mark[]">
+                  <div class="deal-close__radio-checkmark deal-close__radio-checkmark_dislike"><svg width="89" height="89" viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M55.1193 11.125H23.2614C20.3234 11.125 17.8101 12.8949 16.7482 15.4435L6.05807 40.3989C5.73949 41.2131 5.5625 42.0626 5.5625 42.983V50.0625C5.5625 53.9562 8.7483 57.142 12.642 57.142H34.978L31.6152 73.3188L31.509 74.4515C31.509 75.9028 32.1108 77.248 33.0665 78.2037L36.8187 81.9205L60.1458 58.5933C61.4201 57.319 62.1989 55.5491 62.1989 53.6023V18.2045C62.1989 14.3108 59.0131 11.125 55.1193 11.125ZM69.2784 11.125V53.6023H83.4375V11.125H69.2784Z" fill="#297BC7"/>
+</svg>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="deal-close__textarea">
+              <textarea value="All is fine. "></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="popup__btn"><a class="btn btn-yellow" href="#">OK</a></div>
+      </div>
+    </div>
+    <div class="popup popup-exchange">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title"><span>Exchange</span></p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content popup-paid__content">
+          <div class="popup__desc">1000 BTC to 32242 LTC</div>
+        </div>
+        <div class="popup__btn"><a class="btn btn-yellow" href="#">Confirm</a></div>
+      </div>
+    </div>
+    <div class="popup popup-qr">
+      <div class="popup__wrapper">
+        <div class="popup__header">
+          <p class="popup__title"><span>Receive BTC</span></p>
+          <div class="popup__close popup-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 4.93468 4.93468 0 11 0C17.0653 0 22 4.93468 22 11C22 17.0653 17.0653 22 11 22C4.93468 22 0 17.0653 0 11ZM13.4955 15.3104L15.3104 13.4955L12.8149 11L15.3104 8.50452L13.4955 6.68962L11 9.18511L8.5045 6.68962L6.6896 8.50452L9.18509 11L6.6896 13.4955L8.5045 15.3104L11 12.8149L13.4955 15.3104Z" fill="#297BC7"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup__content">
+          <div class="popup-qr">
+            <div class="popup-qr__wrapper">
+              <p class="popup-qr__title">QR code to receive BTC</p>
+              <div class="popup-qr__img"><img src="img/qr.png"></div>
+            </div>
+            <div class="popup-qr__footer">
+              <div class="popup-qr__address">
+                <p class="popup-qr__address-title">Your address to receive BTC</p>
+                <div class="wallet-card">
+                  <div class="wallet-card__address popup-qr__wallet-address">
+                    <select class="wallet-card__address-select">
+                      <option>Bctgheh1846849kjKijdisjfdp[i8904lldfg.,lk</option>
+                      <option>Bctgheh1846849kjKijdisjfdp[i8904lldfg.,lk</option>
+                    </select>
+                    <div class="wallet-card__address-control"><a class="wallet-card__address-link" href="#">
+                        <svg class="icon icon-copy ">
+                          <use xlink:href="/img/svg/sprite.svg#copy"></use>
+                        </svg></a><a class="wallet-card__address-link" href="#">
+                        <svg class="icon icon-add ">
+                          <use xlink:href="/img/svg/sprite.svg#add"></use>
+                        </svg></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

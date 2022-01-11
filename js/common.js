@@ -29,11 +29,13 @@ const changeTab = (tabBlock, idx = 0) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger'),
-        mainNav = document.querySelector('.page-list');
+        mainNav = document.querySelector('.page-list'),
+        pageContent = document.querySelector('.page-content');
 
     burger.addEventListener('click', function () {
         this.classList.toggle('hide');
         mainNav.classList.toggle('hide');
+        pageContent.classList.toggle('full');
     });
 
     const triggerBlockLinks = document.querySelectorAll('.trigger-link');
