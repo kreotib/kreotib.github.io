@@ -778,6 +778,7 @@ body {
   body.no-scroll-mob {
     overflow: hidden;
     position: relative;
+    pointer-events: none;
   }
   .left-aside {
     position: fixed;

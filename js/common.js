@@ -114,7 +114,27 @@ document.addEventListener('DOMContentLoaded', () => {
             backgroundColor: gradient,
             pointRadius: 0,
             pointBackgroundColor: 'rgba(255, 66, 66, 0.0)',
-        }]
+            order: 0,
+        },{
+            label: 'Line Dataset',
+            type: 'scatter',
+            data: [{
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }, {
+                x: 0.5,
+                y: 5.5
+            }],
+            backgroundColor: 'rgb(255, 99, 132)',
+            // this dataset is drawn on top
+            order: 1
+        },]
     };
     let gainConfig = {
         plugins: {
