@@ -777,6 +777,7 @@ body {
 @media screen and (max-width: 991px) {
   body.no-scroll-mob {
     overflow: hidden;
+    position: relative;
   }
   .left-aside {
     position: fixed;
@@ -2384,6 +2385,10 @@ body {
 
 .currency-list__link-label span {
   font-weight: 700;
+}
+
+.chart {
+  height: 235px;
 }
 
 @media screen and (max-width: 475px) {

@@ -41,12 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const triggerBlockLinks = document.querySelectorAll('.trigger-link');
 
-    triggerBlockLinks.forEach(el=>{
-       el.addEventListener('click',(e)=>{
-           e.preventDefault();
+    triggerBlockLinks.forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
 
-           el.closest('.trigger').classList.toggle('active');
-       })
+            el.closest('.trigger').classList.toggle('active');
+        })
     });
 
     const popupBtns = document.querySelectorAll('.popup-trigger'),
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tabsArr = document.querySelectorAll('.tabs');
 
-    tabsArr.forEach(el=>{
-       changeTab(el,0)
+    tabsArr.forEach(el => {
+        changeTab(el, 0)
     });
 
     document.querySelectorAll('.tabs-nav__link').forEach(el => {
@@ -89,49 +89,89 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const tableSlider = new Swiper(".table", {
-            direction:"horizontal",
-            slidesPerView: 'auto',
-            freeMode: true,
-            spaceBetween:0,
-            mousewheel: true,
-            scrollbar: {
-                el: ".swiper-scrollbar",
-            },
-        });
+        direction: "horizontal",
+        slidesPerView: 'auto',
+        freeMode: true,
+        spaceBetween: 0,
+        mousewheel: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+    });
 
-    var barChartData = {
-        labels: ["Mon 23.04",'Tue 24.04','Wed 25.04','Thu 26.04','Fri 27.04','Sat 28.04','Sun 29.04'],
+    const gainedChart = document.querySelector('.chart').getContext('2d');
+
+    const gain = [74.699997, 76.580002, 81.349998, 83.000000, 85.879997, 83.120003, 77.989998, 81.279999,83.000000, 85.879997, 83.120003,];
+    const dates = ["Jan 2, 20","Jan 8, 20", "Feb 3, 20","Feb 8, 20","Feb 15, 20","Mar 4, 20", "Apr 5, 20", "May 6, 20", "Jun 9, 20", "Nov 10, 20", "Dec 11, 20", "Dec 14, 20"];
+    const gradient = gainedChart.createLinearGradient(0,0,0,400);
+    gradient.addColorStop(1,"rgba(255,217,0,1)");
+    gradient.addColorStop(0,"rgba(232,111,0,1)");
+    let gainData = {
         datasets: [{
-            label: "Price",
-            backgroundColor: "#3e95cd",
-            data: [ 10,5,8,6,9,2,3,4,4.5,6.5]
+            data: gain,
+            borderColor: gradient,
+            fill:true,
+            backgroundColor: gradient,
+            pointRadius: 0,
+            pointBackgroundColor: 'rgba(255, 66, 66, 0.0)',
         }]
     };
-
-
-    var ctx = document.querySelector(".chart").getContext("2d");
-    new Chart(ctx, {
-        type: 'line',
-        data: barChartData,
-        options: {
-            responsive: true,
+    let gainConfig = {
+        plugins: {
             legend: {
                 display: false,
             },
-            title: {
-                display: true,
-                text: 'Chart.js Bar Chart'
-            },
-            scales: {
-                xAxes: [{
-                    ticks: {
-                        minRotation: 90,
-                        autoSkip: true,
-                        maxTicksLimit: 10
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        return parseInt(tooltipItem.parsed.y)
                     }
-                }]
+                }
+            },
+        },
+        scales: {
+            x: {
+                type: 'time',
+                ticks: {
+                    color:'rgba(41,123,199,255)',
+                },
+                time: {
+                    minUnit: 'month'
+                },
+                grid:{
+                    display: false,
+                }
+            },
+            y: {
+                suggestedMax: 45,
+                ticks: {
+                    display:false,
+                    stepSize: 5,
+                    //max: 100
+                },
+                grid:{
+                    display: false,
+                    color:'transparent',
+                }
+            },
+        },
+        maintainAspectRatio: false,
+        responsive: true,
+    };
+    let lineGainChart = new Chart(gainedChart, {
+        type: 'line',
+        data: gainData,
+        options: gainConfig,
+        plugins: [{
+            beforeInit: function(lineGainChart) {
+                for (let c = 0; c < dates.length; c++) {
+
+                    let myMoment = moment(dates[c], 'MMM D, YYYY');
+
+                    lineGainChart.data.labels.push(myMoment);
+                }
             }
-        }
+        }]
     });
 
 });
