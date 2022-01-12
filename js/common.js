@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         this.classList.toggle('hide');
         mainNav.classList.toggle('hide');
         pageContent.classList.toggle('full');
-        document.body.classList.toggle('no-scroll-mob')
+        document.querySelector('body').classList.toggle('no-scroll-mob');
+        document.querySelector('html').classList.toggle('no-scroll-mob')
     });
 
     const triggerBlockLinks = document.querySelectorAll('.trigger-link');

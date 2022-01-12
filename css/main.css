@@ -775,7 +775,7 @@ body {
 }
 
 @media screen and (max-width: 991px) {
-  body.no-scroll-mob {
+  body.no-scroll-mob, html.no-scroll-mob {
     overflow: hidden;
     position: relative;
     pointer-events: none;
