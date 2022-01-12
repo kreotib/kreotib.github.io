@@ -778,9 +778,6 @@ body {
   body.no-scroll-mob, html.no-scroll-mob {
     overflow: hidden;
     position: relative;
-    pointer-events: none;
-    touch-action: none;
-    -ms-touch-action: none;
   }
   body.no-scroll-mob {
     position: fixed;
