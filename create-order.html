@@ -112,54 +112,73 @@
               <div class="page-block__header settings__header">
                 <p class="page-block__title"><span class="back-arrow"><img src="img/white-arrow.svg"></span>Create an Offer</p>
               </div>
-              <div class="settings-wrapper settings-tabs__content">
+              <div class="settings-wrapper settings-tabs__content step">
                 <div class="settings-wrapper__item">
                   <div class="settings-wrapper__content">
                     <div class="settings-grid">
-                      <div class="settings-grid__item">
+                      <div class="settings-grid__item settings-grid__item_big">
                         <div class="profile-wrapper">
                           <div class="profile-block profile-wrapper__block">
                             <div class="profile-block__wrapper">
-                              <div class="profile-item__input">
-                                <p class="profile-item__input-text">Password</p>
-                                <div class="profile-item__input-item">
-                                  <input placeholder="United States of America">
+                              <div class="order-steps">
+                                <div class="order-steps__item">
+                                  <div class="order-step operation">
+                                    <p class="order-step__title">1. Operation</p>
+                                    <div class="operation-radio">
+                                      <div class="operation-radio__wrapper">
+                                        <div class="operation__radio">
+                                          <label class="operation__radio-label">
+                                            <input class="operation__radio-input" type="radio" name="operation[]" checked>
+                                            <div class="operation__radio-checkmark">Sell</div>
+                                          </label>
+                                        </div>
+                                        <div class="operation__radio">
+                                          <label class="operation__radio-label">
+                                            <input class="operation__radio-input" type="radio" name="operation[]">
+                                            <div class="operation__radio-checkmark">Buy</div>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="profile-item__input">
-                                <p class="profile-item__input-text">Last Visit</p>
-                                <div class="profile-item__input-item">
-                                  <input placeholder="12.12.2020" disabled>
+                                <div class="order-steps__item">
+                                  <div class="order-step operation">
+                                    <p class="order-step__title">2. Cryptocurrency</p>
+                                    <div class="operation__input order-step__block"><a class="operation__link" href="#"><span class="operation__link-img"><img src="img/btc.svg"></span><span class="operation__link-label"><span>BTC</span>  (Bitcoin)</span></a></div>
+                                  </div>
+                                </div>
+                                <div class="order-steps__item">
+                                  <div class="order-step">
+                                    <p class="order-step__title">3. Payment Method</p>
+                                    <div class="operation__input order-step__block">
+                                      <select class="operation__select">
+                                        <option>USD (American dollar)</option>
+                                      </select>
+                                    </div>
+                                    <div class="order-step__block">
+                                      <div class="order-step__sort sort popup-trigger" data-popup=".popup-payment-methods">
+                                        <div class="sort-item"><span class="sort-item__label">Add Method</span>
+                                          <div class="sort-item__icon">
+                                            <svg class="icon icon-add ">
+                                              <use xlink:href="/img/svg/sprite.svg#add"></use>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="order-step__block">
+                                      <div class="operation__input"><a class="operation__link" href="#"><span class="operation__link-img"><img src="img/paypal.svg"></span><span class="operation__link-label">PayPal</span></a></div><a class="operation__input-remove" href="#">
+                                        <svg class="icon icon-delete-red ">
+                                          <use xlink:href="/img/svg/sprite.svg#delete-red"></use>
+                                        </svg></a>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="profile-block profile-wrapper__block">
-                            <div class="profile-block__wrapper">
-                              <div class="profile-item__input profile-item__input_radio">
-                                <div class="radio-input">
-                                  <label class="radio-input__label">
-                                    <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA Google</span><span class="radio-input__checkmark"></span>
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="profile-item__input profile-item__input_radio">
-                                <div class="radio-input">
-                                  <label class="radio-input__label">
-                                    <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA SMS</span><span class="radio-input__checkmark"></span>
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="profile-item__input profile-item__input_radio">
-                                <div class="radio-input">
-                                  <label class="radio-input__label">
-                                    <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA Email</span><span class="radio-input__checkmark"></span>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div><a class="btn btn-blue settings-wrapper__btn" href="#">Save all Changes</a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -167,14 +186,14 @@
                 <div class="settings-wrapper__item">
                   <div class="settings-wrapper__content">
                     <div class="settings-grid">
-                      <div class="settings-grid__item">
+                      <div class="settings-grid__item settings-grid__item_big">
                         <div class="profile-wrapper">
                           <div class="profile-block profile-wrapper__block">
                             <div class="profile-block__wrapper">
                               <div class="order-steps">
                                 <div class="order-steps__item">
                                   <div class="order-step">
-                                    <p class="order-step__title">1. Operation</p>
+                                    <p class="order-step__title">4. Price, limits, Comission</p>
                                   </div>
                                 </div>
                               </div>
@@ -182,25 +201,137 @@
                           </div>
                           <div class="profile-block profile-wrapper__block">
                             <div class="profile-block__wrapper">
-                              <div class="profile-item__input profile-item__input_radio">
-                                <div class="radio-input">
-                                  <label class="radio-input__label">
-                                    <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA Google</span><span class="radio-input__checkmark"></span>
-                                  </label>
+                              <div class="tabs tabs-price">
+                                <div class="tabs-header">
+                                  <div class="tabs-nav tabs-price__nav">
+                                    <div class="tabs-nav__item tabs-price__nav-item"><a class="tabs-nav__link" href="#">Price pegged to the market</a></div>
+                                    <div class="tabs-nav__item tabs-price__nav-item"><a class="tabs-nav__link" href="#">Fixed price</a></div>
+                                  </div>
+                                </div>
+                                <div class="tabs-content tabs-price__content">
+                                  <div class="tabs-content__item">
+                                    <div class="order-block">
+                                      <div class="order-block__wrapper">
+                                        <p class="order-block__title">Comission</p>
+                                        <div class="order-block__content">
+                                          <div class="count-block count-block_small">
+                                            <div class="count-block__wrapper">
+                                              <div class="count-block__minus"></div>
+                                              <div class="count-block__count">
+                                                <input value="5">
+                                              </div>
+                                              <div class="count-block__plus"></div>
+                                            </div>
+                                            <div class="count-block__desc">% for each Deal</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="order-block">
+                                      <div class="order-block__wrapper">
+                                        <p class="order-block__title">Current market price of bitcoin: 42 431.57 EUR <br> Offer price: 43,704.52 EUR per bitcoin (103% off market price) <br> You will pay EUR 1,272.95 more than the market price for every bitcoin bought.</p>
+                                      </div>
+                                    </div>
+                                    <div class="order-block">
+                                      <div class="order-block__wrapper">
+                                        <p class="order-block__title">Limits</p>
+                                        <div class="order-block__content">
+                                          <div class="count__wrapper">
+                                            <div class="count-block count-block_medium">
+                                              <div class="count-block__desc">Min</div>
+                                              <div class="count-block__wrapper">
+                                                <div class="count-block__minus"></div>
+                                                <div class="count-block__count">
+                                                  <input value="5">
+                                                </div>
+                                                <div class="count-block__plus"></div>
+                                              </div>
+                                            </div>
+                                            <div class="count-block count-block_medium">
+                                              <div class="count-block__desc">Max</div>
+                                              <div class="count-block__wrapper">
+                                                <div class="count-block__minus"></div>
+                                                <div class="count-block__count">
+                                                  <input value="5">
+                                                </div>
+                                                <div class="count-block__plus"></div>
+                                              </div>
+                                              <div class="count-block__desc">$</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="order-block">
+                                      <div class="order-block__wrapper">
+                                        <p class="order-block__title">Time for Payment</p>
+                                        <div class="order-block__content">
+                                          <div class="count__wrapper">
+                                            <div class="count-block count-block_medium">
+                                              <div class="count-block__wrapper">
+                                                <div class="count-block__minus"></div>
+                                                <div class="count-block__count">
+                                                  <input value="5">
+                                                </div>
+                                                <div class="count-block__plus"></div>
+                                              </div>
+                                              <div class="count-block__desc">min</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                              <div class="profile-item__input profile-item__input_radio">
-                                <div class="radio-input">
-                                  <label class="radio-input__label">
-                                    <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA SMS</span><span class="radio-input__checkmark"></span>
-                                  </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-wrapper__item">
+                  <div class="settings-wrapper__content">
+                    <div class="settings-grid">
+                      <div class="settings-grid__item settings-grid__item_big">
+                        <div class="profile-wrapper">
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="order-steps">
+                                <div class="order-steps__item">
+                                  <div class="order-step">
+                                    <p class="order-step__title">5. Terms of Transactions</p>
+                                  </div>
                                 </div>
                               </div>
-                              <div class="profile-item__input profile-item__input_radio">
-                                <div class="radio-input">
-                                  <label class="radio-input__label">
-                                    <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA Email</span><span class="radio-input__checkmark"></span>
-                                  </label>
+                            </div>
+                          </div>
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="requisites-block">
+                                <div class="requisites-block__header">
+                                  <div class="custom-select">
+                                    <select>
+                                      <option>Add from Blank</option>
+                                      <option>Add from Blank</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="requisites-block__content">
+                                  <div class="requisites-text">
+                                    <p>The terms of the deal are described here either from the system (the deal will start instantly, translate funds to this (or one of these) accounts, as soon as the system sees the money, bitcoin will be transferred to your account…. Seller comments if there is ... if not an instant deal - then only the conditions of the seller, let's say that the buyer must send a passport or dance with a tambourine by the fire.</p>
+                                    <p>There are no full details, only an exact description of payment methods and terms of crediting to <br> this or that account. The text field, when decreasing the screen, also decreases</p>
+                                  </div>
+                                </div>
+                                <div class="requisites-block__footer">
+                                  <div class="custom-select">
+                                    <div class="custom-select__label">Verification Level:</div>
+                                    <select>
+                                      <option>Medium</option>
+                                      <option>Medium</option>
+                                    </select>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -210,6 +341,439 @@
                     </div>
                   </div>
                 </div>
+                <div class="settings-wrapper__item">
+                  <div class="settings-wrapper__content">
+                    <div class="settings-grid">
+                      <div class="settings-grid__item settings-grid__item_big">
+                        <div class="profile-wrapper">
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="order-steps">
+                                <div class="order-steps__item">
+                                  <div class="order-step">
+                                    <p class="order-step__title">6. Requisites and Comments</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="requisites-block">
+                                <div class="requisites-block__header">
+                                  <div class="requisites-block__logo"><img src="img/paypal.svg"><span class="requisites-block__logo-text">PayPal</span></div>
+                                  <div class="custom-select">
+                                    <select>
+                                      <option>Add from Blank</option>
+                                      <option>Add from Blank</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="requisites-block__content">
+                                  <div class="requisites-text">
+                                    <p>@chupa_dupa_crypto</p>
+                                    <p>@chupa_dupa_crypto</p>
+                                  </div>
+                                </div>
+                                <div class="requisites-block__footer">
+                                  <div class="custom-select">
+                                    <div class="custom-select__label">Verification Level:</div>
+                                    <select>
+                                      <option>Medium</option>
+                                      <option>Medium</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="requisites-block">
+                                <div class="requisites-block__header">
+                                  <div class="requisites-block__logo"><img src="img/swift.svg"><span class="requisites-block__logo-text">SWIFT</span></div>
+                                  <div class="custom-select">
+                                    <select>
+                                      <option>Add from Blank</option>
+                                      <option>Add from Blank</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="requisites-block__content">
+                                  <div class="requisites-text">
+                                    <p>BANK OF BENEFICIARY:</p>
+                                    <p>JOINT STOCK COMPANY 'ACCENT-BANK' DNEPROPETROVSK,</p>
+                                    <p>UKRAINESWIFT CODE: UKCBUAUK</p>
+                                    <p>CORRESPONDENT BANK:</p>
+                                    <p>PJSC CB PRIVATBANK, DNEPROPETROVSK, UKRAINE  SWIFT</p>
+                                    <p>CODE: PBANUA2X</p>
+                                    <p>CORRESPONDENT ACCOUNT:</p>
+                                    <p>16008003064003</p>
+                                  </div>
+                                </div>
+                                <div class="requisites-block__footer">
+                                  <div class="requisites-block__radio">
+                                    <p class="requisites-block__radio-text">Activate an instant trade</p>
+                                    <div class="radio-input currency-list__radio">
+                                      <label class="radio-input__label">
+                                        <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><a class="btn btn-blue settings-wrapper__btn" href="#">Save all Changes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-wrapper__item">
+                  <div class="settings-wrapper__content">
+                    <div class="settings-grid">
+                      <div class="settings-grid__item settings-grid__item_big">
+                        <div class="profile-wrapper">
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="order-steps">
+                                <div class="order-steps__item">
+                                  <div class="order-step">
+                                    <p class="order-step__title">7. Activity Time</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="activity-block">
+                                <div class="activity-block__radio activity-block__item">
+                                  <p class="activity-block__radio-text"> Hold Offer</p>
+                                  <div class="radio-input currency-list__radio">
+                                    <label class="radio-input__label">
+                                      <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="activity-block__item">
+                                  <div class="custom-select">
+                                    <div class="custom-select__label">Time zone:</div>
+                                    <select>
+                                      <option>(GMT +3) Moscow, 09:25</option>
+                                      <option>(GMT +3) Moscow, 09:25</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="activity-block__radio activity-block__item">
+                                  <p class="activity-block__radio-text"> Detailed setting</p>
+                                  <div class="radio-input currency-list__radio">
+                                    <label class="radio-input__label">
+                                      <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="activity-block">
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="checkbox activity-block__checkbox">
+                                      <label class="checkbox__label">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <div class="checkbox__checkmark"></div>
+                                        <div class="checkbox__content offer-info__checkbox-content">
+                                          <p class="offer-info__checkbox-text">Monday</p>
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="checkbox activity-block__checkbox">
+                                      <label class="checkbox__label">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <div class="checkbox__checkmark"></div>
+                                        <div class="checkbox__content offer-info__checkbox-content">
+                                          <p class="offer-info__checkbox-text">Monday</p>
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="checkbox activity-block__checkbox">
+                                      <label class="checkbox__label">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <div class="checkbox__checkmark"></div>
+                                        <div class="checkbox__content offer-info__checkbox-content">
+                                          <p class="offer-info__checkbox-text">Monday</p>
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="checkbox activity-block__checkbox">
+                                      <label class="checkbox__label">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <div class="checkbox__checkmark"></div>
+                                        <div class="checkbox__content offer-info__checkbox-content">
+                                          <p class="offer-info__checkbox-text">Monday</p>
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="checkbox activity-block__checkbox">
+                                      <label class="checkbox__label">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <div class="checkbox__checkmark"></div>
+                                        <div class="checkbox__content offer-info__checkbox-content">
+                                          <p class="offer-info__checkbox-text">Monday</p>
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="checkbox activity-block__checkbox">
+                                      <label class="checkbox__label">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <div class="checkbox__checkmark"></div>
+                                        <div class="checkbox__content offer-info__checkbox-content">
+                                          <p class="offer-info__checkbox-text">Monday</p>
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="checkbox activity-block__checkbox">
+                                      <label class="checkbox__label">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <div class="checkbox__checkmark"></div>
+                                        <div class="checkbox__content offer-info__checkbox-content">
+                                          <p class="offer-info__checkbox-text">Monday</p>
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-wrapper__item">
+                  <div class="settings-wrapper__content">
+                    <div class="settings-grid">
+                      <div class="settings-grid__item settings-grid__item_big">
+                        <div class="profile-wrapper">
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="order-steps">
+                                <div class="order-steps__item">
+                                  <div class="order-step">
+                                    <p class="order-step__title">7. Activity Time</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="profile-block profile-wrapper__block">
+                            <div class="profile-block__wrapper">
+                              <div class="activity-block">
+                                <div class="activity-block__item">
+                                  <div class="custom-select">
+                                    <div class="custom-select__label">Time zone:</div>
+                                    <select>
+                                      <option>(GMT +3) Moscow, 09:25</option>
+                                      <option>(GMT +3) Moscow, 09:25</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="activity-block__radio activity-block__item">
+                                  <p class="activity-block__radio-text"> Detailed setting</p>
+                                  <div class="radio-input currency-list__radio">
+                                    <label class="radio-input__label">
+                                      <input class="radio-input__item" type="checkbox"><span class="radio-input__checkmark"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="activity-block">
+                                <div class="activity-grid">
+                                  <ul class="day-list">
+                                    <li class="day-list__item">Monday</li>
+                                    <li class="day-list__item">Tuesday</li>
+                                    <li class="day-list__item">Wednesday</li>
+                                    <li class="day-list__item">Thursday</li>
+                                    <li class="day-list__item">Friday</li>
+                                    <li class="day-list__item">Saturday</li>
+                                    <li class="day-list__item">Sunday</li>
+                                  </ul>
+                                </div>
+                                <div class="activity-grid">
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">from:</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="activity-grid__item">
+                                    <div class="custom-select">
+                                      <div class="custom-select__label">to</div>
+                                      <select>
+                                        <option>06:00</option>
+                                        <option>19:00</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step__btn"><a class="btn btn-yellow" href="#">Save Offer</a></div>
               </div>
             </div>
           </div>

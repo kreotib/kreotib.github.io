@@ -106,237 +106,88 @@
             </div>
           </div>
         </aside>
-        <div class="page-content settings-content settings">
+        <div class="page-content">
           <div class="page-content__wrapper">
             <div class="page-block">
-              <div class="page-block__header settings__header">
-                <p class="page-block__title">Settings</p>
-                <div class="settings__header-block">
-                  <div class="custom-select custom-select_revert settings__header-select">
-                    <div class="custom-select__label">Main Currency:</div>
-                    <select>
-                      <option>USD</option>
-                      <option>USD</option>
-                    </select>
-                  </div><a class="btn btn-blue settings__header-btn" href="#">Become a Trader</a>
-                </div>
+              <div class="page-block__header">
+                <p class="page-block__title">Wallet</p>
+                <select class="currency-select">
+                  <option>56,789.00 USD</option>
+                  <option>56,789.00 USD</option>
+                </select>
               </div>
               <div class="page-block__content">
-                <div class="settings-content__header">
-                  <ul class="settings-list">
-                    <li class="settings-list__item settings-list__item_current"><a class="settings-list__link" href="#">Profile</a></li>
-                    <li class="settings-list__item"><a class="settings-list__link" href="#">Messages</a><span class="notification-counter">1</span></li>
-                    <li class="settings-list__item"><a class="settings-list__link" href="#">History</a></li>
-                    <li class="settings-list__item"><a class="settings-list__link" href="#">Trade</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="tabs profile-tabs settings-tabs">
-                <div class="tabs-nav">
-                  <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">Personal</a></div>
-                  <div class="tabs-nav__item"><a class="tabs-nav__link" href="#">Security</a></div>
-                </div>
-                <div class="tabs-content profile-tabs__content settings-tabs__content">
-                  <div class="tabs-content__item">
-                    <div class="settings-wrapper">
-                      <div class="settings-wrapper__item">
-                        <div class="settings-wrapper__content">
-                          <div class="settings-grid">
-                            <div class="settings-grid__item">
-                              <div class="profile-wrapper">
-                                <div class="profile-block profile-wrapper__block">
-                                  <div class="profile-block__title">
-                                    <p class="profile-block__label">Account Data</p>
-                                  </div>
-                                  <div class="profile-block__wrapper">
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Login</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="machinegun@gmail.com">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Registration</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="12.12.2020">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Nickname</p>
-                                      <div class="profile-item__input-item">
-                                        <input value="john_appleseed">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="profile-block profile-wrapper__block">
-                                  <div class="profile-block__title">
-                                    <p class="profile-block__label">Personal Data</p>
-                                    <div class="verify profile-block__verify"><span class="verify__text">Verify</span>
-                                      <div class="verify__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_537_2983)">
-<path d="M23 12L20.56 9.07714L20.9 5.21143L17.29 4.35238L15.4 1L12 2.52952L8.6 1L6.71 4.34191L3.1 5.19048L3.44 9.06667L1 12L3.44 14.9229L3.1 18.799L6.71 19.6581L8.6 23L12 21.46L15.4 22.9895L17.29 19.6476L20.9 18.7886L20.56 14.9229L23 12ZM10.09 16.9448L6.29 12.9533L7.77 11.4029L10.09 13.8438L15.94 7.69429L17.42 9.24476L10.09 16.9448Z" fill="white" fill-opacity="0.2"/>
-</g>
-<defs>
-<clipPath id="clip0_537_2983">
-<rect width="22" height="22" fill="white" transform="translate(1 1)"/>
-</clipPath>
-</defs>
-</svg>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="profile-block__wrapper">
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">First Name</p>
-                                      <div class="profile-item__input-item">
-                                        <input value="John">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Last Name</p>
-                                      <div class="profile-item__input-item">
-                                        <input value="Appleseed">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="profile-block profile-wrapper__block">
-                                  <div class="profile-block__title">
-                                    <p class="profile-block__label">Contacts</p>
-                                    <div class="verify verify_verified profile-block__verify"><span class="verify__text">Verified</span>
-                                      <div class="verify__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_537_2983)">
-<path d="M23 12L20.56 9.07714L20.9 5.21143L17.29 4.35238L15.4 1L12 2.52952L8.6 1L6.71 4.34191L3.1 5.19048L3.44 9.06667L1 12L3.44 14.9229L3.1 18.799L6.71 19.6581L8.6 23L12 21.46L15.4 22.9895L17.29 19.6476L20.9 18.7886L20.56 14.9229L23 12ZM10.09 16.9448L6.29 12.9533L7.77 11.4029L10.09 13.8438L15.94 7.69429L17.42 9.24476L10.09 16.9448Z" fill="white" fill-opacity="0.2"/>
-</g>
-<defs>
-<clipPath id="clip0_537_2983">
-<rect width="22" height="22" fill="white" transform="translate(1 1)"/>
-</clipPath>
-</defs>
-</svg>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="profile-block__wrapper">
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Phone Number</p>
-                                      <div class="profile-item__input-item">
-                                        <input value="+1 495 670 78 90">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="settings-grid__item">
-                              <div class="profile-wrapper">
-                                <div class="profile-block profile-wrapper__block">
-                                  <div class="profile-block__title">
-                                    <p class="profile-block__label">Address</p>
-                                  </div>
-                                  <div class="profile-block__wrapper">
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Country</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="United States of America">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">City</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="Choose City">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Address</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="Enter your address">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">ZIP code</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="Enter ZIP code">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="profile-block profile-wrapper__block">
-                                  <div class="profile-block__title">
-                                    <p class="profile-block__label">Documents</p>
-                                  </div>
-                                  <div class="profile-block__wrapper">
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Passport</p>
-                                      <div class="profile-item__input-item">
-                                        <input value="John">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Selfie with Passport</p>
-                                      <div class="profile-item__input-item">
-                                        <input value="Appleseed">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div><a class="btn btn-blue settings-wrapper__btn" href="#">Save all Changes</a>
+                <div class="wallet-block">
+                  <div class="wallet-block__header">
+                    <p class="wallet-block__title">Trade Wallet</p>
+                    <select class="wallet-block__select">
+                      <option>56,789.00 USD</option>
+                      <option>56,789.00 USD</option>
+                    </select>
+                  </div>
+                  <div class="wallet-block__help">
+                    <div class="help-block">
+                      <div class="help-block__wrapper">
+                        <p class="help-block__title">for all operations on the platform</p>
+                        <div class="help-block__icon">
+                          <svg class="icon icon-info ">
+                            <use xlink:href="/img/svg/sprite.svg#info"></use>
+                          </svg>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="tabs-content__item">
-                    <div class="settings-wrapper">
-                      <div class="settings-wrapper__item">
-                        <div class="settings-wrapper__content">
-                          <div class="settings-grid">
-                            <div class="settings-grid__item">
-                              <div class="profile-wrapper">
-                                <div class="profile-block profile-wrapper__block">
-                                  <div class="profile-block__wrapper">
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Password</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="United States of America">
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input">
-                                      <p class="profile-item__input-text">Last Visit</p>
-                                      <div class="profile-item__input-item">
-                                        <input placeholder="12.12.2020" disabled>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="profile-block profile-wrapper__block">
-                                  <div class="profile-block__wrapper">
-                                    <div class="profile-item__input profile-item__input_radio">
-                                      <div class="radio-input">
-                                        <label class="radio-input__label">
-                                          <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA Google</span><span class="radio-input__checkmark"></span>
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input profile-item__input_radio">
-                                      <div class="radio-input">
-                                        <label class="radio-input__label">
-                                          <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA SMS</span><span class="radio-input__checkmark"></span>
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div class="profile-item__input profile-item__input_radio">
-                                      <div class="radio-input">
-                                        <label class="radio-input__label">
-                                          <input class="radio-input__item" type="checkbox"><span class="radio-input__text">2FA Email</span><span class="radio-input__checkmark"></span>
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div><a class="btn btn-blue settings-wrapper__btn" href="#">Save all Changes</a>
+                  <div class="wallet-block__content">
+                    <div class="wallet-grid">
+                      <div class="wallet-card wallet-card_empty popup-trigger" data-popup=".popup-currency">
+                        <div class="wallet-card__wrapper">
+                          <div class="wallet-empty">
+                            <div class="wallet-empty__wrapper">
+                              <div class="wallet-empty__icon"><svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M60 34.2857H34.2857V60H25.7143V34.2857H0V25.7143H25.7143V0H34.2857V25.7143H60V34.2857Z" fill="#114179"/>
+</svg>
+                              </div>
+                              <p class="wallet-empty__title">You don`t have any wallets</p>
+                              <p class="wallet-empty__text">Open a wallet in the desired cryptocurrency</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wallet-block">
+                  <div class="wallet-block__header">
+                    <p class="wallet-block__title">Trade Wallet</p>
+                    <select class="wallet-block__select">
+                      <option>56,789.00 USD</option>
+                      <option>56,789.00 USD</option>
+                    </select>
+                  </div>
+                  <div class="wallet-block__help">
+                    <div class="help-block">
+                      <div class="help-block__wrapper">
+                        <p class="help-block__title">for all operations on the platform</p>
+                        <div class="help-block__icon">
+                          <svg class="icon icon-info ">
+                            <use xlink:href="/img/svg/sprite.svg#info"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wallet-block__content">
+                    <div class="wallet-grid">
+                      <div class="wallet-card wallet-card_empty popup-trigger" data-popup=".popup-currency">
+                        <div class="wallet-card__wrapper">
+                          <div class="wallet-empty">
+                            <div class="wallet-empty__wrapper">
+                              <div class="wallet-empty__icon"><svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M60 34.2857H34.2857V60H25.7143V34.2857H0V25.7143H25.7143V0H34.2857V25.7143H60V34.2857Z" fill="#114179"/>
+</svg>
+                              </div>
+                              <p class="wallet-empty__title">You don`t have any wallets</p>
+                              <p class="wallet-empty__text">Open a wallet in the desired cryptocurrency</p>
                             </div>
                           </div>
                         </div>
