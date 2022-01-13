@@ -90,32 +90,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const tableSlider = new Swiper(".table", {
-        direction: "horizontal",
-        slidesPerView: 'auto',
-        freeMode: true,
-        spaceBetween: 0,
-        mousewheel: true,
-        scrollbar: {
-            el: ".swiper-scrollbar",
-        },
-    });
+            direction: "horizontal",
+            slidesPerView: 'auto',
+            freeMode: true,
+            spaceBetween: 0,
+            mousewheel: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+        }),
+        msgSlider = new Swiper(".chat-wrapper__content", {
+            direction: "vertical",
+            slidesPerView: 'auto',
+            freeMode: true,
+            spaceBetween: 0,
+            mousewheel: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+        });
+
+    customSelect('.sort-item__select')
 
     const gainedChart = document.querySelector('.chart').getContext('2d');
 
-    const gain = [74.699997, 76.580002, 81.349998, 83.000000, 85.879997, 83.120003, 77.989998, 81.279999,83.000000, 85.879997, 83.120003,];
-    const dates = ["Jan 2, 20","Jan 8, 20", "Feb 3, 20","Feb 8, 20","Feb 15, 20","Mar 4, 20", "Apr 5, 20", "May 6, 20", "Jun 9, 20", "Nov 10, 20", "Dec 11, 20", "Dec 14, 20"];
-    const gradient = gainedChart.createLinearGradient(0,0,0,400);
-    gradient.addColorStop(1,"rgba(255,217,0,1)");
-    gradient.addColorStop(0,"rgba(232,111,0,1)");
+    const gain = [74.699997, 76.580002, 81.349998, 83.000000, 85.879997, 83.120003, 77.989998, 81.279999, 83.000000, 85.879997, 83.120003,];
+    const dates = ["Jan 2, 20", "Jan 8, 20", "Feb 3, 20", "Feb 8, 20", "Feb 15, 20", "Mar 4, 20", "Apr 5, 20", "May 6, 20", "Jun 9, 20", "Nov 10, 20", "Dec 11, 20", "Dec 14, 20"];
+    const gradient = gainedChart.createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(1, "rgba(255,217,0,1)");
+    gradient.addColorStop(0, "rgba(232,111,0,1)");
     let gainData = {
         datasets: [{
             data: gain,
-            fill:true,
+            fill: true,
             backgroundColor: gradient,
             pointBackgroundColor: 'rgba(255, 66, 66, 1)',
-            pointBorderColor:'rgba(256,256,256,1)',
-            pointBorderWidth:3,
-            pointRadius:5,
+            pointBorderColor: 'rgba(256,256,256,1)',
+            pointBorderWidth: 3,
+            pointRadius: 5,
             order: 0,
         }]
     };
@@ -126,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             tooltip: {
                 callbacks: {
-                    label: function(tooltipItem, data) {
+                    label: function (tooltipItem, data) {
                         return parseInt(tooltipItem.parsed.y)
                     }
                 }
@@ -136,25 +148,25 @@ document.addEventListener('DOMContentLoaded', () => {
             x: {
                 type: 'time',
                 ticks: {
-                    color:'rgba(41,123,199,255)',
+                    color: 'rgba(41,123,199,255)',
                 },
                 time: {
                     minUnit: 'month'
                 },
-                grid:{
+                grid: {
                     display: false,
                 }
             },
             y: {
                 suggestedMax: 45,
                 ticks: {
-                    display:false,
+                    display: false,
                     stepSize: 5,
                     //max: 100
                 },
-                grid:{
+                grid: {
                     display: false,
-                    color:'transparent',
+                    color: 'transparent',
                 }
             },
         },
@@ -166,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data: gainData,
         options: gainConfig,
         plugins: [{
-            beforeInit: function(lineGainChart) {
+            beforeInit: function (lineGainChart) {
                 for (let c = 0; c < dates.length; c++) {
 
                     let myMoment = moment(dates[c], 'MMM D, YYYY');
@@ -176,5 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }]
     });
+
 
 });

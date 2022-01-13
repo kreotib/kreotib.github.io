@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
     <link rel="stylesheet" href="libs/swiper/swiper.css">
+    <link rel="stylesheet" href="libs/custom-select/custom-select.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -179,26 +180,31 @@
                     <div class="chat">
                       <div class="chat__wrapper">
                         <div class="chat-wrapper">
-                          <div class="chat-wrapper__content">
-                            <div class="chat-msg chat-wrapper__msg">
-                              <div class="chat-msg__wrapper">
-                                <div class="chat-msg__img"><img src="img/chat-profile.png"></div>
-                                <div class="chat-msg__content">
-                                  <p class="chat-msg__text">Good day, pal! How are you? Want to buy some BTC?</p>
-                                  <p class="chat-msg__text">Good day, pal! How are you? Want to buy some BTC?</p>
-                                  <p class="chat-msg__time">09:23</p>
+                          <div class="chat-wrapper__content swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="chat-msg chat-wrapper__msg">
+                                  <div class="chat-msg__wrapper">
+                                    <div class="chat-msg__img"><img src="img/chat-profile.png"></div>
+                                    <div class="chat-msg__content">
+                                      <p class="chat-msg__text">Good day, pal! How are you? Want to buy some BTC?</p>
+                                      <p class="chat-msg__text">Good day, pal! How are you? Want to buy some BTC?</p>
+                                      <p class="chat-msg__time">09:23</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="chat-msg chat-wrapper__msg chat-wrapper__msg_me">
+                                  <div class="chat-msg__wrapper">
+                                    <div class="chat-msg__content chat-msg__content_me">
+                                      <p class="chat-msg__text chat-msg__text_me">Yeah! You right ))))</p>
+                                      <p class="chat-msg__text chat-msg__text_me">I see that you are a reliable guy</p>
+                                      <p class="chat-msg__time">09:23</p>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="chat-msg chat-wrapper__msg chat-wrapper__msg_me">
-                              <div class="chat-msg__wrapper">
-                                <div class="chat-msg__content chat-msg__content_me">
-                                  <p class="chat-msg__text chat-msg__text_me">Yeah! You right ))))</p>
-                                  <p class="chat-msg__text chat-msg__text_me">I see that you are a reliable guy</p>
-                                  <p class="chat-msg__time">09:23</p>
-                                </div>
-                              </div>
-                            </div>
+                            <div class="swiper-scrollbar"></div>
                           </div>
                           <div class="chat-wrapper__footer">
                             <div class="send-msg">
@@ -608,7 +614,7 @@
         </div>
       </div>
     </div>
-    <div class="popup popup-qr">
+    <div class="popup popup-qr active">
       <div class="popup__wrapper">
         <div class="popup__header">
           <p class="popup__title"><span>Receive BTC</span></p>
@@ -635,9 +641,16 @@
                     <div class="wallet-card__address-control"><a class="wallet-card__address-link" href="#">
                         <svg class="icon icon-copy ">
                           <use xlink:href="/img/svg/sprite.svg#copy"></use>
-                        </svg></a><a class="wallet-card__address-link" href="#">
+                        </svg></a><a class="wallet-card__address-link wallet-card__address-link_descktop" href="#">
                         <svg class="icon icon-add ">
                           <use xlink:href="/img/svg/sprite.svg#add"></use>
+                        </svg></a></div>
+                    <div class="wallet-card__address-control wallet-card__address-control_second"><a class="wallet-card__address-link" href="#"><span class="wallet-card__address-link-label">Add address</span>
+                        <svg class="icon icon-add ">
+                          <use xlink:href="/img/svg/sprite.svg#add"></use>
+                        </svg></a><a class="wallet-card__address-link" href="#"><span class="wallet-card__address-link-label">Change address</span>
+                        <svg class="icon icon-arrow-select ">
+                          <use xlink:href="/img/svg/sprite.svg#arrow-select"></use>
                         </svg></a></div>
                   </div>
                 </div>
@@ -650,6 +663,7 @@
     <script src="libs/swiper/swiper.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@^1"></script>
+    <script src="libs/custom-select/custom-select.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
