@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     customSelect('.sort-item__select')
 
+    customSelect('.language-select select')
+
     const gainedChart = document.querySelector('.chart').getContext('2d');
 
     const gain = [74.699997, 76.580002, 81.349998, 83.000000, 85.879997, 83.120003, 77.989998, 81.279999, 83.000000, 85.879997, 83.120003,];
