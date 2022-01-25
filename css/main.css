@@ -242,6 +242,10 @@ select {
   color: #fff;
 }
 
+.currency-select select option {
+  color: #297BC7;
+}
+
 .trigger.active .trigger-block {
   display: block;
   z-index: 9;
@@ -600,6 +604,11 @@ select {
   .page-content__wrapper {
     padding: 48px 15px;
   }
+}
+
+.header {
+  position: relative;
+  z-index: 10;
 }
 
 .header__wrapper {
