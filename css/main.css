@@ -1108,6 +1108,7 @@ body {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(27.08%, #FFAB02), to(rgba(255, 171, 2, 0))), -webkit-gradient(linear, left bottom, left top, color-stop(27.08%, #FFAB02), to(rgba(255, 171, 2, 0))), -webkit-gradient(linear, left bottom, left top, color-stop(27.08%, #FFAB02), to(rgba(255, 171, 2, 0))), -webkit-gradient(linear, left bottom, left top, color-stop(27.08%, #FFAB02), to(rgba(255, 171, 2, 0))), -webkit-gradient(linear, left bottom, left top, color-stop(27.08%, #FFAB02), to(rgba(255, 171, 2, 0)));
   background: -o-linear-gradient(bottom, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), -o-linear-gradient(bottom, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), -o-linear-gradient(bottom, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), -o-linear-gradient(bottom, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), -o-linear-gradient(bottom, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%);
   background: linear-gradient(bottom, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), linear-gradient(0deg, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), linear-gradient(0deg, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), linear-gradient(0deg, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%), linear-gradient(0deg, #FFAB02 27.08%, rgba(255, 171, 2, 0) 100%);
+  display: none;
 }
 
 .first-section__bg-img {
@@ -1154,7 +1155,7 @@ body {
 
 .footer__bg {
   position: absolute;
-  top: -62px;
+  top: -80px;
   left: 0;
   background-image: url("../images/dist/footer__bg.svg");
   background-position: center;
@@ -5652,8 +5653,6 @@ body.test-page{background-image:url("../images/test-first-sec-bg.webp")}
   }
 
   .footer__bg{
-    height: 120%;
-    top: -92px;
+    top: -91px;
   }
 }
-
