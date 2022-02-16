@@ -962,6 +962,7 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  align-items: flex-end;
 }
 
 .hero-demo .hero-img {
@@ -1124,6 +1125,9 @@ select {
   }
   .hero__counter{
     margin-top: 30px;
+  }
+  .hero__counter-title{
+    font-size: 14px;
   }
   .hero__title{
     margin-left: 0;
