@@ -1131,5 +1131,17 @@ select {
   .hero__counter-numbers{
     margin-top: 10px;
   }
+  .hero-demo{
+    position: relative;
+  }
+  .hero-demo::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 130px;
+    display: block;
+    background: url("../images/light-logos.png") center center no-repeat;
+    background-size: contain;
+  }
 }
 /*# sourceMappingURL=style.css.map */
