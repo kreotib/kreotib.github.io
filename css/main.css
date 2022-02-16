@@ -5290,7 +5290,7 @@ b {
   }
 
   .stock__title img {
-    display: none;
+    width: 300px;
   }
 
   .stock {
