@@ -505,6 +505,8 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+
+  background-color:#ffab02;
 }
 
 .main.test {
@@ -3564,7 +3566,7 @@ b {
   }
 
   .footer__bg {
-    top: -63px;
+    top: -70px;
   }
 
   .intro--question {
