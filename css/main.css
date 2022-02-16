@@ -5641,6 +5641,9 @@ body.test-page{background-image:url("../images/test-first-sec-bg.webp")}
 }
 
 @media(max-width: 768px){
+  .main__pic img{
+    height: auto;
+  }
   .main__wrap{
     display: block;
     padding-top: 97px;
