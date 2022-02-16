@@ -1139,6 +1139,8 @@ select {
     position: absolute;
     width: 180px;
     height: 130px;
+    right: 0;
+    top: 0;
     display: block;
     background: url("../images/light-logos.png") center center no-repeat;
     background-size: contain;
