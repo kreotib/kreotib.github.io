@@ -21,17 +21,25 @@ const _timerTextRefactor = (text)=>{
     return text < 10 ? String(`0${text}`) : String(text);
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-    let burger = document.querySelector('.header-burger');
+const showCloseMenu = ()=>{
     let headerNav = document.querySelector('.header-nav');
     let body = document.querySelector('body'),
         heroLogos = document.querySelector('.hero-logos');
+
+    headerNav.classList.toggle('active');
+    body.classList.toggle('overflow');
+    heroLogos.classList.toggle('active');
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+    let burger = document.querySelector('.header-burger');
 
     document
         .querySelectorAll('.header-nav__item[href^="#"]')
         .forEach(trigger => {
             trigger.onclick = function(e) {
                 e.preventDefault();
+                showCloseMenu();
                 let hash = this.getAttribute('href');
                 let target = document.querySelector(hash);
                 let elementPosition = target.offsetTop;
@@ -46,9 +54,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(burger) {
         burger.addEventListener('click', function(){
             this.classList.toggle('active');
-            headerNav.classList.toggle('active');
-            body.classList.toggle('overflow');
-            heroLogos.classList.toggle('active');
+            showCloseMenu();
         })
     }
 
