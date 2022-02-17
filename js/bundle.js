@@ -24,8 +24,10 @@ const _timerTextRefactor = (text)=>{
 const showCloseMenu = ()=>{
     let headerNav = document.querySelector('.header-nav');
     let body = document.querySelector('body'),
-        heroLogos = document.querySelector('.hero-logos');
+        heroLogos = document.querySelector('.hero-logos'),
+        burger = document.querySelector('.header-burger');
 
+    burger.classList.toggle('active');
     headerNav.classList.toggle('active');
     body.classList.toggle('overflow');
     heroLogos.classList.toggle('active');
@@ -53,7 +55,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     if(burger) {
         burger.addEventListener('click', function(){
-            this.classList.toggle('active');
             showCloseMenu();
         })
     }
