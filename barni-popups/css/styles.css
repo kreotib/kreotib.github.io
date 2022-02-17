@@ -30,6 +30,26 @@
     font-style: normal
 }
 
+@font-face {
+    font-family: 'RotondaC';
+    src: url('../fonts/RotondaC/RotondaC.woff2') format('woff2'),
+    url('../fonts/RotondaC/RotondaC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotonda';
+    src: url('../fonts/RotondaBold/RotondaBold.woff2') format('woff2'),
+    url('../fonts/RotondaBold/RotondaBold.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
 a,
 abbr,
 acronym,
@@ -304,6 +324,55 @@ html {
 .popup .product{
     width: 20vw;
     margin: 5rem 0 7rem;
+}
+
+.product-row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.product-row__block_end{
+    align-self: flex-end;
+
+    max-width: 285px;
+    width: 100%;
+    flex-shrink: 0;
+
+    transform: translateY(-50px) translateX(20px);
+}
+
+.product-row__block:nth-child(3){
+    max-width: 350px;
+    width: 100%;
+
+    flex-shrink: 0;
+
+    transform: translateX(-100px);
+}
+
+.product__title{
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+
+    font-family: 'Rotonda', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.product__desc{
+    margin-top: 12px;
+
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+
+    font-family: 'RotondaC', sans-serif;
 }
 
 @media only screen and (max-width:740px) {
@@ -3064,6 +3133,11 @@ p strong[data-v-667b505a] {
     object-fit: contain;
     width: 100%;
 }
+
+.product-row__img{
+    width: 450px;
+}
+
 
 @media only screen and (max-width:740px) {
     .images-row>a[data-v-5452c966] {
