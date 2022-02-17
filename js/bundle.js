@@ -27,6 +27,21 @@ document.addEventListener('DOMContentLoaded',()=>{
     let body = document.querySelector('body'),
         heroLogos = document.querySelector('.hero-logos');
 
+    document
+        .querySelectorAll('.header-nav__item[href^="#"]')
+        .forEach(trigger => {
+            trigger.onclick = function(e) {
+                e.preventDefault();
+                let hash = this.getAttribute('href');
+                let target = document.querySelector(hash);
+                let elementPosition = target.offsetTop;
+
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: "smooth"
+                });
+            };
+        });
 
     if(burger) {
         burger.addEventListener('click', function(){
