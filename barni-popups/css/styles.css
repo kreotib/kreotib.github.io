@@ -3184,6 +3184,15 @@ p strong[data-v-667b505a] {
     top:35px;
 }
 
+@media screen and (max-width: 1100px) {
+    .product-row__img{
+        width: 400px;
+    }
+    .product-row__block:nth-child(3){
+        transform: translateX(-100px) translateY(-20px);
+    }
+}
+
 @media only screen and (max-width:740px) {
     .images-row>a[data-v-5452c966] {
         width: 100%
