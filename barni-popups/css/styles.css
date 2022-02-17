@@ -3138,6 +3138,38 @@ p strong[data-v-667b505a] {
     width: 450px;
 }
 
+.reccomend{
+    position: relative;
+    width: 412px;
+}
+
+.reccomend__img{
+    width: 100% !important;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+.reccomend__text{
+    position: absolute;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    font-family: 'Rotonda', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+
+    max-width: 280px;
+
+    right: 5px;
+
+    top:35px;
+}
 
 @media only screen and (max-width:740px) {
     .images-row>a[data-v-5452c966] {

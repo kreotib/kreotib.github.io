@@ -291,6 +291,11 @@ li {
     left: unset;
   }
 
+  .hero-logos.active{
+    position: fixed;
+    z-index: 99;
+  }
+
   .hero-logos__item-desk{
     display: none;
   }
@@ -896,6 +901,23 @@ li {
   background-size: contain;
 }
 
+.custom-select{
+  position: relative;
+}
+
+.custom-select::after{
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 4px);
+
+  width: 12px;
+  height: 8px;
+
+  background: url("../images/select-arrow.svg") center center no-repeat;
+  background-size: contain;
+}
+
 .calendar-select select{
   padding: 0 40px;
   height: 100%;
@@ -1172,6 +1194,8 @@ select {
 
   background-color: #FFA200;
   color: #fff;
+
+  font-family: 'Akzidenz', sans-serif;
 
   font-size: 21px;
   line-height: 27px;

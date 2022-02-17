@@ -24,7 +24,8 @@ const _timerTextRefactor = (text)=>{
 document.addEventListener('DOMContentLoaded',()=>{
     let burger = document.querySelector('.header-burger');
     let headerNav = document.querySelector('.header-nav');
-    let body = document.querySelector('body');
+    let body = document.querySelector('body'),
+        heroLogos = document.querySelector('.hero-logos');
 
 
     if(burger) {
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             this.classList.toggle('active');
             headerNav.classList.toggle('active');
             body.classList.toggle('overflow');
+            heroLogos.classList.toggle('active');
         })
     }
 
