@@ -228,7 +228,7 @@ li {
 
 .hero {
   width: 100%;
-  background: url("../images/hero-bg.png") center center/cover no-repeat;
+  background: url("../images/hero-bg.jpg") center center/cover no-repeat;
   padding-top: 112px;
   padding-bottom: 510px;
 
@@ -251,11 +251,50 @@ li {
   transform: rotate(0.3deg) translateY(5px);
 }
 
+.hero-logos{
+  position: absolute;
+
+  left: 20px;
+  bottom: 40px;
+
+  width: 250px;
+  height: 115px;
+}
+
+.hero-logos__item{
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.hero-logos__item-m{
+  display: none;
+}
+
 @media (max-width: 495px) {
   .hero {
     background: url("../images/hero-bg-mob.png") center center/cover no-repeat;
     padding-top: 64px;
     padding-bottom: 388px;
+  }
+
+  .hero-logos{
+    width: 120px;
+    height: 60px;
+    top: 5px;
+    right: 15px;
+
+    bottom: unset;
+    left: unset;
+  }
+
+  .hero-logos__item-desk{
+    display: none;
+  }
+
+  .hero-logos__item-m{
+    display: block;
   }
 }
 
@@ -522,6 +561,8 @@ li {
 .prize-all__item p {
   font-size: 21px;
   line-height: 24px;
+
+  white-space: nowrap;
 }
 
 .prize-final {
@@ -728,6 +769,9 @@ li {
 
 .shop-list__item {
   margin-bottom: 24px;
+}
+
+.shop-list__link{
   font-size: 22px;
   line-height: 28px;
   text-decoration: underline;
@@ -737,7 +781,7 @@ li {
 }
 
 @media (max-width: 767px) {
-  .shop-list__item {
+  .shop-list__link {
     font-size: 16px;
     line-height: 1.2;
   }
@@ -994,6 +1038,11 @@ li {
     color:#71829B;
     font-size: 14px;
 
+  }
+
+  .rules__item-desc{
+    font-size: 16px;
+    max-width: 200px;
   }
 }
 
@@ -1301,6 +1350,10 @@ select {
 
 .feedback-form__footer{
   margin: 20px auto 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer{
@@ -1568,6 +1621,7 @@ select {
 }
 
 .widget{
+  display: none;
   position: absolute;
   right: 30px;
   bottom: 20px;
