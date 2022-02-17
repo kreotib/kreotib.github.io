@@ -3138,6 +3138,19 @@ p strong[data-v-667b505a] {
     width: 450px;
 }
 
+.product-title{
+    font-size: 32px;
+    letter-spacing: 0.06em;
+
+    color: #FFF236;
+
+    font-family: 'Rotonda', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
 .reccomend{
     position: relative;
     width: 412px;
