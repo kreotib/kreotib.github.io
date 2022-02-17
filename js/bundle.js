@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded',()=>{
         startTimer();
         timerId = setInterval(startTimer, 1000);
     }
+
+    const productSlider = new Swiper(".product-slider", {
+        slidesPerView: 4,
+        grid: {
+            rows: 4,
+        },
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 });
 
 

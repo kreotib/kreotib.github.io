@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -45,7 +46,7 @@
                         <div class="rules__item">
                             <img src="images/rules-img-1.svg" alt="" class="rules__item-pic">
                             <h3 class="rules__item-title">Купи</h3>
-                            <p class="rules__item-desc">любой Круассан 7DAYS или Сухарики Bake Rolls 7DAYS</p>
+                            <p class="rules__item-desc">любой Круассан 7DAYS <br> или Сухарики Bake Rolls 7DAYS</p>
                         </div>
                         <div class="rules__item">
                             <img src="images/rules-img-2.svg" alt="" class="rules__item-pic">
@@ -56,7 +57,7 @@
                         <div class="rules__item">
                             <img src="images/rules-img-3.svg" alt="" class="rules__item-pic">
                             <h3 class="rules__item-title">выиграй</h3>
-                            <p class="rules__item-desc">поездку на двоих
+                            <p class="rules__item-desc">поездку на двоих <br>
                                 на «Финал четырёх»  
                                 Евролиги и другие призы</p>
                         </div>
@@ -71,7 +72,7 @@
                             <div class="prize-all">
                                 <div class="prize-all__item">
                                     <img src="images/prize-1.png" alt="">
-                                    <p>Bluetooth
+                                    <p>Bluetooth <br>
                                         колонка</p>
                                 </div>
                                 <div class="prize-all__item">
@@ -104,12 +105,48 @@
                 <h2 class="products__title">продукты, участвующие в акции</h2>
                 <div class="products-item">
                     <div class="products-item__title">Круассаны 7DAYS</div>
-                    <div class="products-item__list">
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
+                    <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img src="images/products.png" alt="">
+                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <p class="products-item__weight">65 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img src="images/products.png" alt="">
+                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <p class="products-item__weight">65 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img src="images/products.png" alt="">
+                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <p class="products-item__weight">65 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img src="images/products.png" alt="">
+                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <p class="products-item__weight">65 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img src="images/products.png" alt="">
+                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <p class="products-item__weight">65 г</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <!--
+                    <div class="products-item__list">
+
                         <div class="products-item__element">
                             <img src="images/products.png" alt="">
                             <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
@@ -181,6 +218,7 @@
                             <p class="products-item__weight">65 г</p>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </section>
@@ -431,22 +469,35 @@
                     </div>
                     <div class="feedback-item">
                         <form action="" class="feedback-form">
-                            <div class="form__item col-6">
-                                <input type="text" class="form__input">
-                                <label for=""></label>
+                            <div class="feedback-form__header">
+                                <p class="feedback-form__title">
+                                    НЕ нашелся ответ на вопрос?
+                                </p>
+                                <p class="feedback-form__desc">
+                                    Отправь нам сообщение и мы обязательно ответим!
+                                </p>
                             </div>
-                            <div class="form__item col-6">
-                                <input type="text" class="form__input">
-                                <label for=""></label>
+                            <div class="feedback-form__content">
+                                <div class="form__item">
+                                    <input type="text" class="form__input" placeholder="Твое имя">
+                                    <label for=""></label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="text" class="form__input" placeholder="Твой e-mail">
+                                    <label for=""></label>
+                                </div>
+                                <div class="form__item form__item_big">
+                                    <select name="Выберите тему" id="" class="">
+                                        <option value="">Выберите тему</option>
+                                    </select>
+                                </div>
+                                <div class="form__item form__item_big">
+                                    <textarea name="" id="" cols="30" rows="10" class="form__textarea" placeholder="Текст сообщения"></textarea>
+                                </div>
                             </div>
-                            <select name="Выберите тему" id="" class="col-12">
-                                <option value="">Выберите тему</option>
-                            </select>
-                            <div class="form__item col-12">
-                                <textarea name="" id="" cols="30" rows="10" class="form__textarea"></textarea>
+                            <div class="feedback-form__footer">
+                                <input type="submit" value="Отправить" class="form__button">
                             </div>
-                            <input type="submit" value="Отправить" class="form__button">
-
                         </form>
                     </div>
                 </div>
@@ -454,6 +505,34 @@
             </div>
         </section>
     </main>
-    <script src="/js/bundle.js"></script>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="container">
+                <div class="footer__block">
+                    <ul class="footer-list footer__list">
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">Правила</a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">Политика конфиденциальности</a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">Условия пользования</a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a href="#" class="footer-list__link">Политика использования кукис</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__block">
+                    <p class="footer__text">
+                        Срок регистрации чеков с 01.03.2022 по 30.04.2022 г., общий срок проведения акции с 01.03.2022 г. по 03.06.2022 г. Информацию об организаторе акции, о правилах ее проведения, количестве призов по результатам такой акции, сроках, месте и порядке их получения можно узнать на сайте 7dayspromo.ru. Внешний вид призов может отличаться от изображения на рекламных материалах.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="swiper/swiper.min.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
 </html>
