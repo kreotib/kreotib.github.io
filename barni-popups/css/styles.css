@@ -243,7 +243,7 @@ html {
     max-width: 160rem;
     box-sizing: border-box;
     background-color: #fff;
-    padding: 10rem 15rem;
+    padding: 10rem 0;
     border-radius: 7.5rem;
     left: 50%;
     transform: translateX(-50%);
@@ -256,6 +256,10 @@ html {
     justify-content: center;
     align-content: stretch;
     align-items: center
+}
+
+.popup-container{
+    padding: 0 15rem;
 }
 
 .select-action .popup {
@@ -348,6 +352,10 @@ html {
         margin-top: 0;
         background-color: #fff;
         border-radius: 0
+    }
+
+    .popup-container{
+        padding: 0;
     }
 
     .popup .header {
