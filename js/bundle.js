@@ -21,7 +21,7 @@ const _timerTextRefactor = (text)=>{
     return text < 10 ? String(`0${text}`) : String(text);
 }
 
-const showCloseMenu = ()=>{
+const showCloseMenu = (stopScroll = true)=>{
     let headerNav = document.querySelector('.header-nav');
     let body = document.querySelector('body'),
         heroLogos = document.querySelector('.hero-logos'),
@@ -29,7 +29,7 @@ const showCloseMenu = ()=>{
 
     burger.classList.toggle('active');
     headerNav.classList.toggle('active');
-    body.classList.toggle('overflow');
+    stopScroll ? body.classList.toggle('overflow') : body.classList.remove('overflow');
     heroLogos.classList.toggle('active');
 }
 
@@ -41,10 +41,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         .forEach(trigger => {
             trigger.onclick = function(e) {
                 e.preventDefault();
-                showCloseMenu();
                 let hash = this.getAttribute('href');
                 let target = document.querySelector(hash);
                 let elementPosition = target.offsetTop;
+
+                showCloseMenu(false);
 
                 window.scrollTo({
                     top: elementPosition,

@@ -1005,6 +1005,10 @@ li {
 
 .table-cell__prize img {
   margin-right: 14px;
+
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 .table-row__head .table-cell {
