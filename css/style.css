@@ -577,8 +577,11 @@ li {
           justify-content: center;
 }
 
+.product-slider .swiper-slide{
+  height: calc((100% - 30px) / 5) !important;
+}
+
 .products-item__element {
-  height: 195px;
 }
 
 @media (max-width: 1365px) {
@@ -969,6 +972,8 @@ select {
   padding-top: 135px;
 
   overflow: hidden;
+
+  position: relative;
 }
 
 .hero-demo .hero-cell {
@@ -993,7 +998,7 @@ select {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -5px;
   width: 100%;
   height: 20px;
   display: block;
