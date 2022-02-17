@@ -43,15 +43,49 @@ document.addEventListener('DOMContentLoaded',()=>{
         timerId = setInterval(startTimer, 1000);
     }
 
+    const questionTrigger = document.querySelectorAll('.question-item__content');
+
+    questionTrigger.forEach(el=>{
+       el.addEventListener('click',(e)=>{
+           e.preventDefault();
+
+           el.classList.toggle('active');
+           el.closest('.question-item').querySelector('.answer-item__text').classList.toggle('active');
+       });
+    });
+
     const productSlider = new Swiper(".product-slider", {
-        slidesPerView: 4,
-        grid: {
-            rows: 4,
-        },
+        slidesPerView: 1,
         spaceBetween: 30,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+        breakpoints: {
+            1366: {
+                slidesPerView: 5,
+                grid: {
+                    rows: 3,
+                    fill: 'row',
+                },
+            },
+            991: {
+                slidesPerView: 4,
+                grid: {
+                    rows: 5,
+                    fill: 'row',
+                },
+            },
+            700: {
+                slidesPerView: 3,
+                grid: {
+                    rows: 5,
+                    fill: 'row',
+                },
+                navigation: {
+
+                }
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
     });
 });

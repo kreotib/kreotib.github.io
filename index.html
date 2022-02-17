@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="swiper/swiper.min.css">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -35,6 +38,31 @@
                         <p>Выигрывай призы <span>7DAYS в неделю!</span></p>
                         <p>Получи шанс увидеть игру легенд баскетбола своими глазами!</p>
                     </div>
+                </div>
+            </div>
+            <div class="widget widget-login">
+                <div class="widget__wrapper">
+                    <div class="widget__header">
+                        <p class="widget__title">Зарегистрируй чек тут</p>
+                    </div>
+                    <div class="widget__content">
+                        <div class="login">
+                            <div class="login__wrapper login-wrapper">
+                                <div class="login-wrapper__icon">
+                                    <img class="login-wrapper__icon-item" src="images/login.svg" alt="">
+                                </div>
+                                <div class="login-wrapper___content">
+                                    <p class="login-wrapper__title">личный кабинет</p>
+                                    <p class="login-wrapper__text">Вход и регистрация</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget__footer">
+                    <p class="widget__text">
+                        Срок регистрации чеков с 01.03.2022 по 30.04.2022 г.
+                    </p>
                 </div>
             </div>
         </section>
@@ -109,116 +137,166 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="products-item__element">
-                                    <img src="images/products.png" alt="">
+                                    <img class="products-item__img" src="images/croissants/1.png" alt="">
                                     <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
                                     <p class="products-item__weight">65 г</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="products-item__element">
-                                    <img src="images/products.png" alt="">
-                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <img class="products-item__img" src="images/croissants/2.png" alt="">
+                                    <p class="products-item__desc">c кремом <br>
+                                        «Фундук»</p>
                                     <p class="products-item__weight">65 г</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="products-item__element">
-                                    <img src="images/products.png" alt="">
-                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <img class="products-item__img" src="images/croissants/3.png" alt="">
+                                    <p class="products-item__desc">с кремом <br> «Какао»</p>
                                     <p class="products-item__weight">65 г</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="products-item__element">
-                                    <img src="images/products.png" alt="">
-                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <img class="products-item__img" src="images/croissants/4.png" alt="">
+                                    <p class="products-item__desc">с кремом <br> «Ваниль»</p>
                                     <p class="products-item__weight">65 г</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="products-item__element">
-                                    <img src="images/products.png" alt="">
-                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                    <img class="products-item__img" src="images/croissants/5.png" alt="">
+                                    <p class="products-item__desc">с кремом <br> «Варёная сгущёнка»</p>
                                     <p class="products-item__weight">65 г</p>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/6.png" alt="">
+                                    <p class="products-item__desc">c кремом <br>
+                                        «Фундук» 3+1</p>
+                                    <p class="products-item__weight">65г х 4</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/7.png" alt="">
+                                    <p class="products-item__desc">с кремом <br> «Какао» 3+1</p>
+                                    <p class="products-item__weight">65г х 4</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/8.png" alt="">
+                                    <p class="products-item__desc">с кремом <br> «Ваниль»</p>
+                                    <p class="products-item__weight">65г х 4</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/9.png" alt="">
+                                    <p class="products-item__desc">с кремом <br> «Варёная сгущёнка»</p>
+                                    <p class="products-item__weight">65г х 4</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/10.png" alt="">
+                                    <p class="products-item__desc">с кремом <br> «Какао»</p>
+                                    <p class="products-item__weight">110 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/11.png" alt="">
+                                    <p class="products-item__desc"> с двойной начинкой <br> «Какао-ваниль»</p>
+                                    <p class="products-item__weight">110 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/12.png" alt="">
+                                    <p class="products-item__desc"> с двойной начинкой <br> «Ваниль-вишня»</p>
+                                    <p class="products-item__weight">110 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/13.png" alt="">
+                                    <p class="products-item__desc"> с кремом <br>
+                                        «Какао»</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/14.png" alt="">
+                                    <p class="products-item__desc"> с кремом со вкусом <br>
+                                        «Ваниль»</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img" src="images/croissants/15.png" alt="">
+                                    <p class="products-item__desc"> с начинкой <br>
+                                        «Вишня»</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next product-slider-button-next">
+                        </div>
+                        <div class="swiper-button-prev product-slider-button-prev">
                         </div>
                     </div>
-                    <!--
-                    <div class="products-item__list">
-
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
+                </div>
+                <div class="products-item">
+                    <div class="products-item__title">Сухарики Bake Rolls 7DAYS</div>
+                    <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img products-item__img_big" src="images/rolls/1.png" alt="">
+                                    <p class="products-item__desc">с отрубями, перцем <br> чили и специями</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img products-item__img_big" src="images/rolls/2.png" alt="">
+                                    <p class="products-item__desc"> со вкусом <br> «Грибы со сметаной»</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img products-item__img_big" src="images/rolls/3.png" alt="">
+                                    <p class="products-item__desc"> со приправой <br> «Пицца»</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element ">
+                                    <img class="products-item__img products-item__img_big" src="images/rolls/4.png" alt="">
+                                    <p class="products-item__desc">с пармезаном, чесноком <br> и травами</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="products-item__element">
+                                    <img class="products-item__img products-item__img_big" src="images/rolls/5.png" alt="">
+                                    <p class="products-item__desc"> со вкусом <br>«Сметаны» и лука</p>
+                                    <p class="products-item__weight">80 г</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
+                        <div class="swiper-button-next product-slider-button-next">
                         </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
-                        </div>
-                        <div class="products-item__element">
-                            <img src="images/products.png" alt="">
-                            <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                            <p class="products-item__weight">65 г</p>
+                        <div class="swiper-button-prev product-slider-button-prev">
                         </div>
                     </div>
-                    -->
                 </div>
             </div>
         </section>
@@ -265,20 +343,40 @@
         </section>
         <section class="winner">
             <div class="container">
-                <h2 class="winner__title">
-                    победители
-                </h2>
+                <div class="winner-header">
+                    <div class="winner-header__wrapper">
+                        <h2 class="winner__title">
+                            победители
+                        </h2>
+                        <div class="winner-header__info">
+                            <div class="winner-header__info-block">
+                                <div class="calendar-select">
+                                    <select name="">
+                                        <option value="">6 марта</option>
+                                        <option value="">6 марта</option>
+                                        <option value="">6 марта</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="winner-header__info-block">
+                                <div class="winner-search">
+                                    <input class="winner-search__item" type="text" placeholder="Поиск по e-mail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="winner-table table">
                     <div class="table-row table-row__head">
                         <div class="table-cell">Имя</div>
-                        <div class="table-cell">Дата</div>
-                        <div class="table-cell">E-mail</div>
+                        <div class="table-cell table-cell_date">Дата</div>
+                        <div class="table-cell table-cell_mail">E-mail</div>
                         <div class="table-cell">Приз</div>
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -286,8 +384,8 @@
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -295,8 +393,8 @@
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -304,8 +402,8 @@
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -313,8 +411,8 @@
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -322,8 +420,8 @@
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -331,8 +429,8 @@
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -340,8 +438,8 @@
                     </div>
                     <div class="table-row">
                         <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell">11.09.2021</div>
-                        <div class="table-cell">al***@yandex.ru</div>
+                        <div class="table-cell table-cell_date">11.09.2021</div>
+                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
                         <div class="table-cell table-cell__prize">
                             <img src="images/prize-small.png" alt="">
                             <p>Bluetooth колонка</p>
@@ -483,12 +581,16 @@
                                     <label for=""></label>
                                 </div>
                                 <div class="form__item">
-                                    <input type="text" class="form__input" placeholder="Твой e-mail">
-                                    <label for=""></label>
+                                    <label>
+                                        <input type="email" class="form__input" placeholder="Твой e-mail">
+                                    </label>
                                 </div>
                                 <div class="form__item form__item_big">
                                     <select name="Выберите тему" id="" class="">
-                                        <option value="">Выберите тему</option>
+                                        <option value="" selected hidden>Тема сообщения</option>
+                                        <option value="">Тема сообщения 1</option>
+                                        <option value="">Тема сообщения 1</option>
+                                        <option value="">Тема сообщения 1</option>
                                     </select>
                                 </div>
                                 <div class="form__item form__item_big">
@@ -532,7 +634,8 @@
             </div>
         </div>
     </footer>
-    <script src="swiper/swiper.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 </html>
