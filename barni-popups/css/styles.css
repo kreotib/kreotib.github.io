@@ -358,8 +358,8 @@ html {
 
     color: #FFFFFF;
 
-    font-family: 'Odds', sans-serif;
-    font-weight: 700;
+    font-family: 'Iskra', sans-serif;
+    font-weight: 400;
 }
 
 .product__desc{
@@ -3144,7 +3144,7 @@ p strong[data-v-667b505a] {
     color: #FFF236;
 
     font-family: 'Odds', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 
     margin-bottom: 20px;
 }
@@ -3177,7 +3177,7 @@ p strong[data-v-667b505a] {
 
     right: 5px;
 
-    top:32px;
+    top:38px;
 }
 
 @media screen and (max-width: 1100px) {
