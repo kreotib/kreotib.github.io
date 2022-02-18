@@ -2096,29 +2096,88 @@ select {
   padding-bottom: 5px;
   background: none;
 
-  border-bottom: 1px solid  #405472;
+  border:none;
 }
 
 .qs-month,.qs-year{
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
 
   color: #FFA200;
 }
 
+.qs-month-year:hover{
+  border:none;
+}
+
+.qs-month-year{
+  border: none;
+}
+
 .qs-day{
-  font-size: 14px;
+  font-size: 9px;
   font-weight: 400;
-  color:#405472;
+  color:#FFA200;
+  font-style: normal;
 }
 
 .qs-num{
-  font-size: 10px;
+  font-size: 9px;
   color: #405472;
+  font-style: normal;
+
+  border-radius: 50%;
 }
 
 .qs-current{
   position: relative;
+
+  background: #FFA200;
+  color:#fff;
+
+  text-decoration: none;
+}
+
+.qs-square{
+  height: 17px;
+  width: 17px;
+}
+
+.qs-squares{
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(7,minmax(0,1fr));
+  column-gap: 15px;
+  row-gap: 2px;
+}
+
+.qs-arrow.qs-left:after{
+  width: 10px;
+  height: 10px;
+  display: block;
+
+  background: url("../images/calendar-arrow.svg") center center/contain no-repeat;
+
+  border: none;
+
+  transform: translateY(-4px) translateX(10px);
+}
+
+.qs-arrow.qs-right:after{
+  width: 10px;
+  height: 10px;
+  display: block;
+
+  background: url("../images/calendar-arrow.svg") center center/contain no-repeat;
+
+  border: none;
+
+  transform: rotate(180deg) translateY(4px) translateX(9px);
+}
+
+.qs-arrow:hover{
+  background: none;
 }
 
 
