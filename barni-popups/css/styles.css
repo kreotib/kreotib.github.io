@@ -358,9 +358,8 @@ html {
 
     color: #FFFFFF;
 
-    font-family: 'Odds', serif;
+    font-family: 'Odds', sans-serif;
     font-weight: 700;
-    font-style: italic;
 }
 
 .product__desc{
@@ -3145,7 +3144,6 @@ p strong[data-v-667b505a] {
     color: #FFF236;
 
     font-family: 'Odds', sans-serif;
-    font-style: italic;
     font-weight: 700;
 
     margin-bottom: 20px;
