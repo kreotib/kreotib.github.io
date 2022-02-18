@@ -31,20 +31,21 @@
 }
 
 @font-face {
-    font-family: 'RotondaC';
-    src: url('../fonts/RotondaC/RotondaC.woff2') format('woff2'),
-    url('../fonts/RotondaC/RotondaC.woff') format('woff');
+    font-family: 'Odds';
+    src: url('../fonts/Odds-Regular/Odds-Regular.woff2') format('woff2'),
+    url('../fonts/Odds-Regular/Odds-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rotonda';
-    src: url('../fonts/RotondaBold/RotondaBold.woff2') format('woff2'),
-    url('../fonts/RotondaBold/RotondaBold.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
+    font-family: 'Iskra';
+    src: url('../fonts/IskraCYRMd/IskraCYRMd.woff2') format('woff2'),
+    url('../fonts/IskraCYRMd/IskraCYRMd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
     font-display: swap;
 }
 
@@ -343,7 +344,7 @@ html {
 }
 
 .product-row__block:nth-child(3){
-    max-width: 350px;
+    max-width: 400px;
     width: 100%;
 
     flex-shrink: 0;
@@ -358,7 +359,7 @@ html {
 
     color: #FFFFFF;
 
-    font-family: 'Rotonda', sans-serif;
+    font-family: 'Odds', serif;
     font-weight: 700;
     font-style: italic;
 }
@@ -372,7 +373,7 @@ html {
 
     color: #FFFFFF;
 
-    font-family: 'RotondaC', sans-serif;
+    font-family: 'Iskra', sans-serif;
 }
 
 @media only screen and (max-width:740px) {
@@ -3144,7 +3145,7 @@ p strong[data-v-667b505a] {
 
     color: #FFF236;
 
-    font-family: 'Rotonda', sans-serif;
+    font-family: 'Odds', sans-serif;
     font-style: italic;
     font-weight: 700;
 
@@ -3181,7 +3182,7 @@ p strong[data-v-667b505a] {
 
     right: 5px;
 
-    top:35px;
+    top:32px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -3191,9 +3192,19 @@ p strong[data-v-667b505a] {
     .product-row__block:nth-child(3){
         transform: translateX(-100px) translateY(-20px);
     }
+
+    .images-row_product{
+        transform: translateX(50px);
+    }
+    .reccomend__text{
+        font-size: 9px;
+    }
 }
 
 @media only screen and (max-width:740px) {
+    .images-row_product{
+        transform: translateX(0);
+    }
     .images-row>a[data-v-5452c966] {
         width: 100%
     }
