@@ -21,6 +21,18 @@ const _timerTextRefactor = (text)=>{
     return text < 10 ? String(`0${text}`) : String(text);
 }
 
+const openPopup = (popupSelector) =>{
+    const popup = document.querySelector(`.${popupSelector}`);
+
+    popup.classList.add('active');
+    document.body.classList.add('overflow')
+}
+
+const closePopup = (popup) =>{
+    popup.classList.remove('active');
+    document.body.classList.remove('overflow')
+}
+
 const showCloseMenu = (stopScroll = true)=>{
     let headerNav = document.querySelector('.header-nav');
     let body = document.querySelector('body'),
@@ -34,6 +46,12 @@ const showCloseMenu = (stopScroll = true)=>{
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
+    const header = document.querySelector('.header');
+
+    document.addEventListener('scroll',(e)=>{
+        pageYOffset > header.clientHeight ? header.classList.add('active') : header.classList.remove('active');
+    });
+
     let burger = document.querySelector('.header-burger');
 
     document
@@ -77,6 +95,37 @@ document.addEventListener('DOMContentLoaded',()=>{
            el.classList.toggle('active');
            el.closest('.question-item').querySelector('.answer-item__text').classList.toggle('active');
        });
+    });
+
+    const popupTrigger = document.querySelectorAll('.popup-trigger'),
+        popup = document.querySelectorAll('.popup');
+
+    popupTrigger.forEach(el=>{
+        el.addEventListener('click',(e)=>{
+            e.preventDefault();
+            openPopup(el.dataset.popup);
+        })
+    });
+
+    popup.forEach(el=>{
+        el.addEventListener('click',(e)=>{
+            e.target.classList.contains('popup-close') || e.target.classList.contains('popup__wrapper') ? closePopup(el) : null;
+        });
+    })
+
+    const cookieAlertClose = document.querySelector('.cookie-alert__close'),
+        cookieAlert = document.querySelector('.cookie-alert');
+
+    cookieAlertClose.addEventListener('click',(e)=>{
+       e.preventDefault()
+
+       cookieAlert.classList.add('hidden');
+    });
+
+    const picker = datepicker('.calendar-select__item',{
+        customDays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+        customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        showAllDates: true
     });
 
     const productSlider = new Swiper(".product-slider", {

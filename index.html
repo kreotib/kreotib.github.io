@@ -6,666 +6,779 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
             rel="stylesheet"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+            href="libs/swiper/swiper.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="libs/datepicker/datepicker.min.css"
     />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <div class="header-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="header-nav">
-                <a href="#rules" class="header-nav__item">правила</a>
-                <a href="#prize" class="header-nav__item">Призы</a>
-                <a href="#products" class="header-nav__item">продукты</a>
-                <a href="#shop" class="header-nav__item">где купить</a>
-                <a href="#winner" class="header-nav__item">победители</a>
-                <a href="#feedback" class="header-nav__item">обратная связь</a>
-            </nav>
+<header class="header">
+    <div class="header-container">
+        <div class="header-burger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-cell">
-                    <h1 class="hero__title">Матч всех <span>Звезд</span></h1>
-                    <div class="hero__desc">
-                        <p>Выигрывай призы <span>7DAYS в неделю!</span></p>
-                        <p>Получи шанс увидеть игру легенд баскетбола своими глазами!</p>
-                    </div>
+        <nav class="header-nav">
+            <a href="#rules" class="header-nav__item">правила</a>
+            <a href="#prize" class="header-nav__item">Призы</a>
+            <a href="#products" class="header-nav__item">продукты</a>
+            <a href="#shop" class="header-nav__item">где купить</a>
+            <a href="#winner" class="header-nav__item">победители</a>
+            <a href="#feedback" class="header-nav__item">обратная связь</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-cell">
+                <h1 class="hero__title">Матч всех <span>Звезд</span></h1>
+                <div class="hero__desc">
+                    <p>Выигрывай призы <span>7DAYS в неделю!</span></p>
+                    <p>Получи шанс увидеть игру легенд баскетбола своими глазами!</p>
                 </div>
             </div>
-            <div class="hero-logos">
-                <img class="hero-logos__item hero-logos__item-desk" src="images/hero-logos.png" alt="">
-                <img class="hero-logos__item hero-logos__item-m" src="images/hero-logos-m.png" alt="">
-            </div>
-            <div class="widget widget-login">
-                <div class="widget__wrapper">
-                    <div class="widget__header">
-                        <p class="widget__title">Зарегистрируй чек тут</p>
-                    </div>
-                    <div class="widget__content">
-                        <div class="login">
-                            <div class="login__wrapper login-wrapper">
-                                <div class="login-wrapper__icon">
-                                    <img class="login-wrapper__icon-item" src="images/login.svg" alt="">
-                                </div>
-                                <div class="login-wrapper___content">
-                                    <p class="login-wrapper__title">личный кабинет</p>
-                                    <p class="login-wrapper__text">Вход и регистрация</p>
-                                </div>
+        </div>
+        <div class="hero-logos">
+            <img class="hero-logos__item hero-logos__item-desk" src="images/hero-logos.png" alt="">
+            <img class="hero-logos__item hero-logos__item-m" src="images/hero-logos-m.png" alt="">
+        </div>
+        <div class="widget widget-login">
+            <div class="widget__wrapper">
+                <div class="widget__header">
+                    <p class="widget__title">Зарегистрируй чек тут</p>
+                </div>
+                <div class="widget__content">
+                    <div class="login">
+                        <div class="login__wrapper login-wrapper">
+                            <div class="login-wrapper__icon">
+                                <img class="login-wrapper__icon-item" src="images/login.svg" alt="">
+                            </div>
+                            <div class="login-wrapper___content">
+                                <p class="login-wrapper__title">личный кабинет</p>
+                                <p class="login-wrapper__text">Вход и регистрация</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="widget__footer">
-                    <p class="widget__text">
-                        Срок регистрации чеков с 01.03.2022 по 30.04.2022 г.
-                    </p>
+            </div>
+            <div class="widget__footer">
+                <p class="widget__text">
+                    Срок регистрации чеков с 01.03.2022 по 30.04.2022 г.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="bg">
+        <section id="rules" class="rules">
+            <div class="container">
+                <h2 class="rules__title">Правила акции <a href="#">полные правила</a></h2>
+                <div class="rules-cell">
+                    <div class="rules__item">
+                        <img src="images/rules-img-1.svg" alt="" class="rules__item-pic">
+                        <h3 class="rules__item-title">Купи</h3>
+                        <p class="rules__item-desc">любой Круассан 7DAYS <br> или Сухарики Bake Rolls 7DAYS</p>
+                    </div>
+                    <div class="rules__item">
+                        <img src="images/rules-img-2.svg" alt="" class="rules__item-pic">
+                        <h3 class="rules__item-title">загрузи</h3>
+                        <p class="rules__item-desc">чек от покупки в Личном
+                            кабинете </p>
+                    </div>
+                    <div class="rules__item">
+                        <img src="images/rules-img-3.svg" alt="" class="rules__item-pic">
+                        <h3 class="rules__item-title">выиграй</h3>
+                        <p class="rules__item-desc">поездку на двоих <br>
+                            на «Финал четырёх»
+                            Евролиги и другие призы</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="bg">
-            <section id="rules" class="rules">
-                <div class="container">
-                    <h2 class="rules__title">Правила акции <a href="#">полные правила</a></h2>
-                    <div class="rules-cell">
-                        <div class="rules__item">
-                            <img src="images/rules-img-1.svg" alt="" class="rules__item-pic">
-                            <h3 class="rules__item-title">Купи</h3>
-                            <p class="rules__item-desc">любой Круассан 7DAYS <br> или Сухарики Bake Rolls 7DAYS</p>
-                        </div>
-                        <div class="rules__item">
-                            <img src="images/rules-img-2.svg" alt="" class="rules__item-pic">
-                            <h3 class="rules__item-title">загрузи</h3>
-                            <p class="rules__item-desc">чек от покупки в Личном 
-                                кабинете </p>
-                        </div>
-                        <div class="rules__item">
-                            <img src="images/rules-img-3.svg" alt="" class="rules__item-pic">
-                            <h3 class="rules__item-title">выиграй</h3>
-                            <p class="rules__item-desc">поездку на двоих <br>
-                                на «Финал четырёх»  
-                                Евролиги и другие призы</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="prize" class="prize">
-                <div class="container">
-                    <h2 class="prize__title">Призы</h2>
-                    <div class="prize-content">
-                        <div class="prize-cell">
-                            <div class="prize-all">
-                                <div class="prize-all__item">
-                                    <img src="images/prize-1.png" alt="">
-                                    <p>Bluetooth <br>
-                                        колонка</p>
-                                </div>
-                                <div class="prize-all__item">
-                                    <img src="images/prize-2.png" alt="">
-                                    <p>Рюкзак</p>
-                                </div>
-                                <div class="prize-all__item">
-                                    <img src="images/prize-3.png" alt="">
-                                    <p>Набор продукции <br> 7DAYS</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prize-cell">
-                            <div class="prize-final">
-                                <h3 class="prize-final__title">
-                                    ГЛАВНЫЙ ПРИЗ!
-                                </h3>
-                                <img src="images/tickets.png" alt="" class="prize-final__img">
-                                <p class="prize-final__desc">Поездка на двоих 
-                                    на «Финал четырех»
-                                    Евролиги</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <section id="products" class="products">
+        <section id="prize" class="prize">
             <div class="container">
-                <h2 class="products__title">продукты, участвующие в акции</h2>
-                <div class="products-item">
-                    <div class="products-item__title">Круассаны 7DAYS</div>
-                    <div class="swiper product-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/1.png" alt="">
-                                    <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
-                                    <p class="products-item__weight">65 г</p>
-                                </div>
+                <h2 class="prize__title">Призы</h2>
+                <div class="prize-content">
+                    <div class="prize-cell">
+                        <div class="prize-all">
+                            <div class="prize-all__item">
+                                <img src="images/prize-1.png" alt="">
+                                <p>Bluetooth <br>
+                                    колонка</p>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/2.png" alt="">
-                                    <p class="products-item__desc">c кремом <br>
-                                        «Фундук»</p>
-                                    <p class="products-item__weight">65 г</p>
-                                </div>
+                            <div class="prize-all__item">
+                                <img src="images/prize-2.png" alt="">
+                                <p>Рюкзак</p>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/3.png" alt="">
-                                    <p class="products-item__desc">с кремом <br> «Какао»</p>
-                                    <p class="products-item__weight">65 г</p>
-                                </div>
+                            <div class="prize-all__item">
+                                <img src="images/prize-3.png" alt="">
+                                <p>Набор продукции <br> 7DAYS</p>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/4.png" alt="">
-                                    <p class="products-item__desc">с кремом <br> «Ваниль»</p>
-                                    <p class="products-item__weight">65 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/5.png" alt="">
-                                    <p class="products-item__desc">с кремом <br> «Варёная сгущёнка»</p>
-                                    <p class="products-item__weight">65 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/6.png" alt="">
-                                    <p class="products-item__desc">c кремом <br>
-                                        «Фундук» 3+1</p>
-                                    <p class="products-item__weight">65г х 4</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/7.png" alt="">
-                                    <p class="products-item__desc">с кремом <br> «Какао» 3+1</p>
-                                    <p class="products-item__weight">65г х 4</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/8.png" alt="">
-                                    <p class="products-item__desc">с кремом <br> «Ваниль»</p>
-                                    <p class="products-item__weight">65г х 4</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/9.png" alt="">
-                                    <p class="products-item__desc">с кремом <br> «Варёная сгущёнка»</p>
-                                    <p class="products-item__weight">65г х 4</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/10.png" alt="">
-                                    <p class="products-item__desc">с кремом <br> «Какао»</p>
-                                    <p class="products-item__weight">110 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/11.png" alt="">
-                                    <p class="products-item__desc"> с двойной начинкой <br> «Какао-ваниль»</p>
-                                    <p class="products-item__weight">110 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/12.png" alt="">
-                                    <p class="products-item__desc"> с двойной начинкой <br> «Ваниль-вишня»</p>
-                                    <p class="products-item__weight">110 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/13.png" alt="">
-                                    <p class="products-item__desc"> с кремом <br>
-                                        «Какао»</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/14.png" alt="">
-                                    <p class="products-item__desc"> с кремом со вкусом <br>
-                                        «Ваниль»</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img" src="images/croissants/15.png" alt="">
-                                    <p class="products-item__desc"> с начинкой <br>
-                                        «Вишня»</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next product-slider-button-next">
-                        </div>
-                        <div class="swiper-button-prev product-slider-button-prev">
                         </div>
                     </div>
-                </div>
-                <div class="products-item">
-                    <div class="products-item__title">Сухарики Bake Rolls 7DAYS</div>
-                    <div class="swiper product-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img products-item__img_big" src="images/rolls/1.png" alt="">
-                                    <p class="products-item__desc">с отрубями, перцем <br> чили и специями</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img products-item__img_big" src="images/rolls/2.png" alt="">
-                                    <p class="products-item__desc"> со вкусом <br> «Грибы со сметаной»</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img products-item__img_big" src="images/rolls/3.png" alt="">
-                                    <p class="products-item__desc"> со приправой <br> «Пицца»</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element ">
-                                    <img class="products-item__img products-item__img_big" src="images/rolls/4.png" alt="">
-                                    <p class="products-item__desc">с пармезаном, чесноком <br> и травами</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="products-item__element">
-                                    <img class="products-item__img products-item__img_big" src="images/rolls/5.png" alt="">
-                                    <p class="products-item__desc"> со вкусом <br>«Сметаны» и лука</p>
-                                    <p class="products-item__weight">80 г</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next product-slider-button-next">
-                        </div>
-                        <div class="swiper-button-prev product-slider-button-prev">
+                    <div class="prize-cell">
+                        <div class="prize-final">
+                            <h3 class="prize-final__title">
+                                ГЛАВНЫЙ ПРИЗ!
+                            </h3>
+                            <img src="images/tickets.png" alt="" class="prize-final__img">
+                            <p class="prize-final__desc">Поездка на двоих
+                                на «Финал четырех»
+                                Евролиги</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="shop" class="shop">
-            <div class="container">
-                <h2 class="shop__title">
-                    Где можно купить 7DAYS
-                </h2>
-                <div class="shop-content">
-                    <div class="shop-item">
-                        <h4 class="shop-item__title">На сайтах:</h4>
-                        <div class="shop-cell">
-                            <ul class="shop-list">
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Перекрёсток Впрок</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Карусель</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Лента</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Метро</a>
-                                </li>
-                            </ul>
+    </section>
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="products__title">продукты, участвующие в акции</h2>
+            <div class="products-item">
+                <div class="products-item__title">Круассаны 7DAYS</div>
+                <div class="swiper product-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/1.png" alt="">
+                                <p class="products-item__desc">c начинкой <br> «Ягодное ассорти»</p>
+                                <p class="products-item__weight">65 г</p>
+                            </div>
                         </div>
-                        <div class="shop-cell">
-                            <ul class="shop-list">
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Ашан</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Сбермаркет</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Утконос</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Ozon</a>
-                                </li>
-                            </ul>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/2.png" alt="">
+                                <p class="products-item__desc">c кремом <br>
+                                    «Фундук»</p>
+                                <p class="products-item__weight">65 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/3.png" alt="">
+                                <p class="products-item__desc">с кремом <br> «Какао»</p>
+                                <p class="products-item__weight">65 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/4.png" alt="">
+                                <p class="products-item__desc">с кремом <br> «Ваниль»</p>
+                                <p class="products-item__weight">65 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/5.png" alt="">
+                                <p class="products-item__desc">с кремом <br> «Варёная сгущёнка»</p>
+                                <p class="products-item__weight">65 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/6.png" alt="">
+                                <p class="products-item__desc">c кремом <br>
+                                    «Фундук» 3+1</p>
+                                <p class="products-item__weight">65г х 4</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/7.png" alt="">
+                                <p class="products-item__desc">с кремом <br> «Какао» 3+1</p>
+                                <p class="products-item__weight">65г х 4</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/8.png" alt="">
+                                <p class="products-item__desc">с кремом <br> «Ваниль»</p>
+                                <p class="products-item__weight">65г х 4</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/9.png" alt="">
+                                <p class="products-item__desc">с кремом <br> «Варёная сгущёнка»</p>
+                                <p class="products-item__weight">65г х 4</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/10.png" alt="">
+                                <p class="products-item__desc">с кремом <br> «Какао»</p>
+                                <p class="products-item__weight">110 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/11.png" alt="">
+                                <p class="products-item__desc"> с двойной начинкой <br> «Какао-ваниль»</p>
+                                <p class="products-item__weight">110 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/12.png" alt="">
+                                <p class="products-item__desc"> с двойной начинкой <br> «Ваниль-вишня»</p>
+                                <p class="products-item__weight">110 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/13.png" alt="">
+                                <p class="products-item__desc"> с кремом <br>
+                                    «Какао»</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/14.png" alt="">
+                                <p class="products-item__desc"> с кремом со вкусом <br>
+                                    «Ваниль»</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img" src="images/croissants/15.png" alt="">
+                                <p class="products-item__desc"> с начинкой <br>
+                                    «Вишня»</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="shop-item">
-                        <h4 class="shop-item__title">В приложениях:</h4>
-                        <div class="shop-cell">
-                        
-                            <ul class="shop-list">
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Пятёрочка</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Магнит</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Самокат</a>
-                                </li>
-                                <li class="shop-list__item">
-                                    <a class="shop-list__link" href="#">Igoods</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="swiper-button-next product-slider-button-next">
                     </div>
-                    
+                    <div class="swiper-button-prev product-slider-button-prev">
+                    </div>
                 </div>
             </div>
-        </section>
-        <section id="winner" class="winner">
-            <div class="container">
-                <div class="winner-header">
-                    <div class="winner-header__wrapper">
-                        <h2 class="winner__title">
-                            победители
-                        </h2>
-                        <div class="winner-header__info">
-                            <div class="winner-header__info-block">
-                                <div class="calendar-select">
-                                    <select name="">
-                                        <option value="">6 марта</option>
-                                        <option value="">6 марта</option>
-                                        <option value="">6 марта</option>
+            <div class="products-item">
+                <div class="products-item__title">Сухарики Bake Rolls 7DAYS</div>
+                <div class="swiper product-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img products-item__img_big" src="images/rolls/1.png" alt="">
+                                <p class="products-item__desc">с отрубями, перцем <br> чили и специями</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img products-item__img_big" src="images/rolls/2.png" alt="">
+                                <p class="products-item__desc"> со вкусом <br> «Грибы со сметаной»</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img products-item__img_big" src="images/rolls/3.png" alt="">
+                                <p class="products-item__desc"> со приправой <br> «Пицца»</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element ">
+                                <img class="products-item__img products-item__img_big" src="images/rolls/4.png" alt="">
+                                <p class="products-item__desc">с пармезаном, чесноком <br> и травами</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="products-item__element">
+                                <img class="products-item__img products-item__img_big" src="images/rolls/5.png" alt="">
+                                <p class="products-item__desc"> со вкусом <br>«Сметаны» и лука</p>
+                                <p class="products-item__weight">80 г</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next product-slider-button-next">
+                    </div>
+                    <div class="swiper-button-prev product-slider-button-prev">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2 class="shop__title">
+                Где можно купить 7DAYS
+            </h2>
+            <div class="shop-content">
+                <div class="shop-item">
+                    <h4 class="shop-item__title">На сайтах:</h4>
+                    <div class="shop-cell">
+                        <ul class="shop-list">
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Перекрёсток Впрок</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Карусель</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Лента</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Метро</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shop-cell">
+                        <ul class="shop-list">
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Ашан</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Сбермаркет</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Утконос</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Ozon</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <h4 class="shop-item__title">В приложениях:</h4>
+                    <div class="shop-cell">
+
+                        <ul class="shop-list">
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Пятёрочка</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Магнит</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Самокат</a>
+                            </li>
+                            <li class="shop-list__item">
+                                <a class="shop-list__link" href="#">Igoods</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="winner" class="winner">
+        <div class="container">
+            <div class="winner-header">
+                <div class="winner-header__wrapper">
+                    <h2 class="winner__title">
+                        победители
+                    </h2>
+                    <div class="winner-header__info">
+                        <div class="winner-header__info-block">
+                            <div class="calendar-select">
+                                <input type="text" class="calendar-select__item" placeholder="6 марта">
+                            </div>
+                        </div>
+                        <div class="winner-header__info-block">
+                            <div class="winner-search">
+                                <input class="winner-search__item" type="email" placeholder="Поиск по e-mail"
+                                       autocomplete="true" name="email">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="winner-table table">
+                <div class="table-row table-row__head">
+                    <div class="table-cell">Имя</div>
+                    <div class="table-cell table-cell_date">Дата</div>
+                    <div class="table-cell table-cell_mail">E-mail</div>
+                    <div class="table-cell">Приз</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/price-small-2.png" alt="">
+                        <p>Рюкзак</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/price-small-3.png" alt="">
+                        <p>Набор продукции 7DAYS</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/prize-small.png" alt="">
+                        <p>Bluetooth колонка</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/prize-small.png" alt="">
+                        <p>Bluetooth колонка</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/prize-small.png" alt="">
+                        <p>Bluetooth колонка</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/prize-small.png" alt="">
+                        <p>Bluetooth колонка</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/prize-small.png" alt="">
+                        <p>Bluetooth колонка</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Александр Р.</div>
+                    <div class="table-cell table-cell_date">11.09.2021</div>
+                    <div class="table-cell table-cell_mail">al***@yandex.ru</div>
+                    <div class="table-cell table-cell__prize">
+                        <img src="images/prize-small.png" alt="">
+                        <p>Bluetooth колонка</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="winner" class="winner">
+        <div class="container">
+            <div class="winner-header">
+                <div class="winner-header__wrapper">
+                    <h2 class="winner__title">
+                        победители
+                    </h2>
+                </div>
+            </div>
+            <div class="empty-winner">
+                <div class="empty-winner__wrapper">
+                    <div class="empty-winner__img">
+                        <img src="images/empty-winner.svg" alt="">
+                    </div>
+                    <div class="empty-winner__content">
+                        <p class="empty-winner__title">
+                            здесь появятся <br> победители розыгрышей
+                        </p>
+                        <p class="empty-winner__text">
+                            Первый розыгрыш призов состоится XX марта. Загружай чеки, чтобы получить шанс оказаться среди победителей!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback" class="feedback">
+        <div class="container">
+            <h2 class="feedback__title">обратная связь</h2>
+            <div class="feedback-content">
+                <div class="feedback-item">
+                    <div class="feedback-questions">
+                        <div class="question-item">
+                            <div class="question-item__content active">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text active">Lorem ipsum — классический текст-«рыба». Является
+                                искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и
+                                зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства
+                                приписывается Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                        <div class="question-item">
+
+                            <div class="question-item__content ">
+                                <div class="question-item__btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="question-item__text">Кто является организатором акции?</div>
+                            </div>
+                            <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым
+                                отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла»,
+                                написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается
+                                Ричарду МакКлинтоку.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-item">
+                    <form action="" class="feedback-form">
+                        <div class="feedback-form__header">
+                            <p class="feedback-form__title">
+                                НЕ нашелся ответ на вопрос?
+                            </p>
+                            <p class="feedback-form__desc">
+                                Отправь нам сообщение и мы обязательно ответим!
+                            </p>
+                        </div>
+                        <div class="feedback-form__content">
+                            <div class="form__item">
+                                <input name="name" type="text" class="form__input" placeholder="Твое имя"
+                                       autocomplete="true">
+                                <label for=""></label>
+                            </div>
+                            <div class="form__item">
+                                <label>
+                                    <input name="email" type="email" class="form__input" placeholder="Твой e-mail"
+                                           autocomplete="true">
+                                </label>
+                            </div>
+                            <div class="form__item form__item_big">
+                                <div class="custom-select">
+                                    <select name="Выберите тему" id="" class="">
+                                        <option value="" selected hidden>Тема сообщения</option>
+                                        <option value="">Тема сообщения 1</option>
+                                        <option value="">Тема сообщения 1</option>
+                                        <option value="">Тема сообщения 1</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="winner-header__info-block">
-                                <div class="winner-search">
-                                    <input class="winner-search__item" type="email" placeholder="Поиск по e-mail" autocomplete="true" name="email">
-                                </div>
+                            <div class="form__item form__item_big">
+                                <textarea name="" id="" cols="30" rows="10" class="form__textarea"
+                                          placeholder="Текст сообщения"></textarea>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="winner-table table">
-                    <div class="table-row table-row__head">
-                        <div class="table-cell">Имя</div>
-                        <div class="table-cell table-cell_date">Дата</div>
-                        <div class="table-cell table-cell_mail">E-mail</div>
-                        <div class="table-cell">Приз</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/price-small-2.png" alt="">
-                            <p>Рюкзак</p>
+                        <div class="feedback-form__footer">
+                            <input type="submit" value="Отправить" class="form__button popup-trigger"
+                                   data-popup="popup-thanks">
                         </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/price-small-3.png" alt="">
-                            <p>Набор продукции 7DAYS</p>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/prize-small.png" alt="">
-                            <p>Bluetooth колонка</p>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/prize-small.png" alt="">
-                            <p>Bluetooth колонка</p>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/prize-small.png" alt="">
-                            <p>Bluetooth колонка</p>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/prize-small.png" alt="">
-                            <p>Bluetooth колонка</p>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/prize-small.png" alt="">
-                            <p>Bluetooth колонка</p>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Александр Р.</div>
-                        <div class="table-cell table-cell_date">11.09.2021</div>
-                        <div class="table-cell table-cell_mail">al***@yandex.ru</div>
-                        <div class="table-cell table-cell__prize">
-                            <img src="images/prize-small.png" alt="">
-                            <p>Bluetooth колонка</p>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </section>
-        <section id="feedback" class="feedback">
-            <div class="container">
-                <h2 class="feedback__title">обратная связь</h2>
-                <div class="feedback-content">
-                    <div class="feedback-item">
-                        <div class="feedback-questions">
-                            <div class="question-item">
-                                    <div class="question-item__content active">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text active">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                            <div class="question-item">
-                               
-                                    <div class="question-item__content ">
-                                        <div class="question-item__btn">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="question-item__text">Кто является организатором акции?</div>
-                                    </div>
-                                <div class="answer-item__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feedback-item">
-                        <form action="" class="feedback-form">
-                            <div class="feedback-form__header">
-                                <p class="feedback-form__title">
-                                    НЕ нашелся ответ на вопрос?
-                                </p>
-                                <p class="feedback-form__desc">
-                                    Отправь нам сообщение и мы обязательно ответим!
-                                </p>
-                            </div>
-                            <div class="feedback-form__content">
-                                <div class="form__item">
-                                    <input name="name" type="text" class="form__input" placeholder="Твое имя" autocomplete="true">
-                                    <label for=""></label>
-                                </div>
-                                <div class="form__item">
-                                    <label>
-                                        <input name="email" type="email" class="form__input" placeholder="Твой e-mail" autocomplete="true">
-                                    </label>
-                                </div>
-                                <div class="form__item form__item_big">
-                                    <div class="custom-select">
-                                        <select name="Выберите тему" id="" class="">
-                                            <option value="" selected hidden>Тема сообщения</option>
-                                            <option value="">Тема сообщения 1</option>
-                                            <option value="">Тема сообщения 1</option>
-                                            <option value="">Тема сообщения 1</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form__item form__item_big">
-                                    <textarea name="" id="" cols="30" rows="10" class="form__textarea" placeholder="Текст сообщения"></textarea>
-                                </div>
-                            </div>
-                            <div class="feedback-form__footer">
-                                <input type="submit" value="Отправить" class="form__button">
-                            </div>
-                        </form>
-                    </div>
-                </div>
 
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer__wrapper">
+        <div class="container">
+            <div class="footer__block">
+                <ul class="footer-list footer__list">
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Правила</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Политика конфиденциальности</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Условия пользования</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Политика использования кукис</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__wrapper">
-            <div class="container">
-                <div class="footer__block">
-                    <ul class="footer-list footer__list">
-                        <li class="footer-list__item">
-                            <a href="#" class="footer-list__link">Правила</a>
-                        </li>
-                        <li class="footer-list__item">
-                            <a href="#" class="footer-list__link">Политика конфиденциальности</a>
-                        </li>
-                        <li class="footer-list__item">
-                            <a href="#" class="footer-list__link">Условия пользования</a>
-                        </li>
-                        <li class="footer-list__item">
-                            <a href="#" class="footer-list__link">Политика использования кукис</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__block">
-                    <p class="footer__text">
-                        Срок регистрации чеков с 01.03.2022 по 30.04.2022 г., общий срок проведения акции с 01.03.2022 г. по 03.06.2022 г. Информацию об организаторе акции, о правилах ее проведения, количестве призов по результатам такой акции, сроках, месте и порядке их получения можно узнать на сайте 7dayspromo.ru. Внешний вид призов может отличаться от изображения на рекламных материалах.
-                    </p>
-                </div>
+            <div class="footer__block">
+                <p class="footer__text">
+                    Срок регистрации чеков с 01.03.2022 по 30.04.2022 г., общий срок проведения акции с 01.03.2022 г.
+                    по 03.06.2022 г. Информацию об организаторе акции, о правилах ее проведения, количестве призов
+                    по результатам такой акции, сроках, месте и порядке их получения можно узнать на сайте
+                    7dayspromo.ru. Внешний вид призов может отличаться от изображения на рекламных материалах.
+                </p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/bundle.js"></script>
+
+<div class="cookie-alert">
+    <div class="cookie-alert__wrapper">
+        <div class="cookie-alert__content">
+            <p class="cookie-alert__text">
+                Мы используем файлы cookies для обработки статистических данных использования сайта.
+                Нажимая кнопку «СОГЛАСЕН», вы даете согласие на обработку ваших cookies файлов.
+            </p>
+            <a href="#" class="cookie-alert__close">
+                СОГЛАСЕН
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="popup popup-thanks">
+    <div class="popup__wrapper">
+        <div class="popup__container">
+            <div class="popup__header popup-header">
+                <p class="popup__title">
+                    Обращение принято
+                </p>
+                <div class="popup-close popup__close">
+                </div>
+            </div>
+            <div class="popup__content">
+                <p class="popup__text">
+                    Спасибо за сообщение! Мы ответим на него в ближайшее время.
+                </p>
+                <button class="popup__btn popup-thanks__btn popup-close">
+                    Понятно
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="libs/swiper/swiper.min.js"></script>
+<script src="libs/datepicker/datepicker.min.js"></script>
+<script src="js/bundle.js"></script>
 </body>
 </html>
