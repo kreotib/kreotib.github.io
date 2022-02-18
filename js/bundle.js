@@ -125,7 +125,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     const picker = datepicker('.calendar-select__item',{
         customDays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
         customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-        showAllDates: true
+        showAllDates: true,
+        formatter: (input, date, instance) => {
+            const options = { month: 'long', day: 'numeric' };
+            const value = date.toLocaleDateString('ru-RU', options)
+            input.value = value // => '1/1/2099'
+        }
     });
 
     const productSlider = new Swiper(".product-slider", {

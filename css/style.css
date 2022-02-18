@@ -7,6 +7,13 @@
 
 @font-face {
   font-family: 'Akzidenz';
+  src: url("../fonts/akzidenzgroteskpro-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Akzidenz';
   src: url("../fonts/AkzidenzGroteskPro-BoldExIt.ttf") format("truetype");
   font-style: italic;
   font-weight: 700;
@@ -970,6 +977,11 @@ li {
   outline: none;
 
   border-radius: 60px;
+
+  font-style: italic;
+  color:#405472;
+
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2089,6 +2101,8 @@ select {
   width: 100%;
 
   padding: 10px 15px;
+
+  font-family: 'Akzidenz', sans-serif;
 }
 
 .qs-controls{
@@ -2101,8 +2115,6 @@ select {
 
 .qs-month,.qs-year{
   font-size: 12px;
-  text-transform: uppercase;
-
   color: #FFA200;
 }
 
@@ -2134,6 +2146,7 @@ select {
 
   background: #FFA200;
   color:#fff;
+  font-weight: 400;
 
   text-decoration: none;
 }
@@ -2161,7 +2174,7 @@ select {
 
   border: none;
 
-  transform: translateY(-4px) translateX(10px);
+  transform: translateY(-3px) translateX(5px);
 }
 
 .qs-arrow.qs-right:after{
@@ -2173,7 +2186,7 @@ select {
 
   border: none;
 
-  transform: rotate(180deg) translateY(4px) translateX(9px);
+  transform: rotate(180deg) translateY(4px) translateX(5px);
 }
 
 .qs-arrow:hover{
