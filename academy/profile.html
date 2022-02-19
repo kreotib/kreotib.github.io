@@ -83,99 +83,123 @@
         <section class="section-home">
           <div class="container">
             <div class="content-page__content">
-              <p class="content-page__title">Полезные карточки</p>
-              <div class="content-page__search">
-                <div class="page-search">
-                  <input class="page-search__input" type="search" placeholder="Поиск">
-                </div>
-              </div>
-              <div class="content-page__grid">
-                <div class="content-page__grid-item">
-                  <div class="card-grid">
-                    <div class="card-grid__item">
-                      <div class="card-item">
-                        <div class="card-item__img"><img class="card-item__img-item" src="img/card.jpg"></div>
-                        <div class="card-item__wrapper">
-                          <div class="card-item__content">
-                            <p class="card-item__title">Название совета длиной в две строки</p>
-                            <p class="card-item__desc">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования.</p>
-                            <div class="card-item__category">
-                              <div class="card-item__category-item">
-                                <p class="card-item__category-label">📽️ Фильмы</p>
+              <p class="content-page__title">Мой профиль</p>
+              <div class="content-page__wrapper">
+                <div class="profile-content">
+                  <div class="profile-content">
+                    <div class="profile-info">
+                      <div class="profile-info__wrapper">
+                        <div class="profile-info__img"><img class="profile-info__img-item" src="img/profile.jpg"></div>
+                        <p class="profile-info__name">Константин <br> Константинопольский</p>
+                      </div>
+                    </div>
+                    <div class="profile-content__tabs">
+                      <div class="tabs profile-tabs">
+                        <div class="tabs-nav profile-tabs__nav">
+                          <div class="tabs-nav__item profile-tabs__nav-item"><a class="tabs-nav__link profile-tabs__nav-link active" href="#">О себе</a></div>
+                          <div class="tabs-nav__item profile-tabs__nav-item"><a class="tabs-nav__link profile-tabs__nav-link" href="#">Пароль</a></div>
+                          <div class="tabs-nav__item profile-tabs__nav-item"><a class="tabs-nav__link profile-tabs__nav-link" href="#">Покупки</a></div>
+                          <div class="tabs-nav__item profile-tabs__nav-item"><a class="tabs-nav__link profile-tabs__nav-link" href="#">Сертификаты</a></div>
+                        </div>
+                        <div class="tabs-content profile-tabs__content">
+                          <div class="tabs-content__item">
+                            <form class="form profile-form">
+                              <div class="form__input profile-form__input">
+                                <p class="form__input-label">Имя</p>
+                                <input class="form__input-item" type="text" placeholder="Пароль">
                               </div>
-                              <div class="card-item__category-item">
-                                <p class="card-item__category-label">📖 Книги</p>
+                              <div class="form__input profile-form__input">
+                                <p class="form__input-label">Фамилия</p>
+                                <input class="form__input-item" type="text" placeholder="Повторите ваш пароль">
+                              </div>
+                              <div class="form__input profile-form__input">
+                                <div class="form__input-img">
+                                  <div class="form__input-img-block"><img class="form__input-img-item" src="img/profile.jpg"></div>
+                                  <div class="form__input-img-block">
+                                    <label class="form__input-img-input">
+                                      <input type="file" value="Загрузить фото"><span class="form__btn form__input-img-btn">Загрузить фото</span>
+                                    </label>
+                                  </div>
+                                  <div class="form__input-img-block">
+                                    <p class="form__input-img-label">Удалить фото</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__input profile-form__input">
+                                <p class="form__input-label">Телефон</p>
+                                <input class="form__input-item" type="text" placeholder="+7 (916) 645-99-45">
+                              </div>
+                              <div class="form__input profile-form__input">
+                                <p class="form__input-label">Почта</p>
+                                <input class="form__input-item" type="text" placeholder="Введите вашу почту">
+                              </div>
+                              <div class="form__input profile-form__input">
+                                <p class="form__input-label">Дата рождения</p>
+                                <input class="form__input-item" type="text" placeholder="01.01.1990">
+                              </div>
+                              <div class="form__input profile-form__input">
+                                <p class="form__input-label">Город</p>
+                                <input class="form__input-item" type="text" placeholder="Введите ваш город">
+                              </div>
+                              <div class="form__input profile-form__input">
+                                <p class="form__input-label">Пол</p>
+                                <input class="form__input-item" type="text" placeholder="Выберите ваш пол">
+                              </div>
+                              <input class="form__btn profile-form__btn" type="submit" value="Сохранить и войти">
+                            </form>
+                          </div>
+                          <div class="tabs-content__item">
+                            <form class="form profile-form">
+                              <div class="form__input profile-form__input form__input-password">
+                                <p class="form__input-label">Старый пароль</p>
+                                <input class="form__input-item" type="password" placeholder="••••••••••••••••••"><span class="form__input-password-icon password-view-trigger">
+                                  <svg class="icon icon-view ">
+                                    <use xlink:href="img/svg/sprite.svg#view"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="form__input profile-form__input form__input-password">
+                                <p class="form__input-label">Новый пароль</p>
+                                <input class="form__input-item" type="password" placeholder="••••••••••••••••••"><span class="form__input-password-icon password-view-trigger">
+                                  <svg class="icon icon-view ">
+                                    <use xlink:href="img/svg/sprite.svg#view"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="form__input profile-form__input form__input-password">
+                                <p class="form__input-label">Повторите новый пароль</p>
+                                <input class="form__input-item" type="password" placeholder="••••••••••••••••••"><span class="form__input-password-icon password-view-trigger">
+                                  <svg class="icon icon-view ">
+                                    <use xlink:href="img/svg/sprite.svg#view"></use>
+                                  </svg></span>
+                              </div>
+                              <input class="form__btn profile-form__btn" type="submit" value="Сохранить пароль">
+                            </form>
+                          </div>
+                          <div class="tabs-content__item active">
+                            <div class="swiper buy-slider">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="buy-grid">
+                                    <div class="buy-grid__row">
+                                      <div class="buy-grid__item">
+                                        <p class="buy-grid__date">15.05.22 в 18:00</p>
+                                      </div>
+                                      <div class="buy-grid__item">
+                                        <p class="buy-grid__text">Название подписки</p>
+                                      </div>
+                                      <div class="buy-grid__item buy-grid__item_end">
+                                        <p class="buy-grid__text">Робокасса</p>
+                                      </div>
+                                      <div class="buy-grid__item buy-grid__item_end">
+                                        <p class="buy-grid__text">9 900 ₽</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div class="card-item__footer"><a class="card-item__btn" href="#">Подробнее</a></div>
                         </div>
                       </div>
-                    </div>
-                    <div class="card-grid__item">
-                      <div class="card-item">
-                        <div class="card-item__img"><img class="card-item__img-item" src="img/card.jpg"></div>
-                        <div class="card-item__wrapper">
-                          <div class="card-item__content">
-                            <p class="card-item__title">Название совета длиной в две строки</p>
-                            <p class="card-item__desc">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования.</p>
-                            <div class="card-item__category">
-                              <div class="card-item__category-item">
-                                <p class="card-item__category-label">📽️ Фильмы</p>
-                              </div>
-                              <div class="card-item__category-item">
-                                <p class="card-item__category-label">📖 Книги</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card-item__footer"><a class="card-item__btn" href="#">Подробнее</a></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-grid__item">
-                      <div class="card-item">
-                        <div class="card-item__img"><img class="card-item__img-item" src="img/card.jpg"></div>
-                        <div class="card-item__wrapper">
-                          <div class="card-item__content">
-                            <p class="card-item__title">Название совета длиной в две строки</p>
-                            <p class="card-item__desc">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования.</p>
-                            <div class="card-item__category">
-                              <div class="card-item__category-item">
-                                <p class="card-item__category-label">📽️ Фильмы</p>
-                              </div>
-                              <div class="card-item__category-item">
-                                <p class="card-item__category-label">📖 Книги</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card-item__footer"><a class="card-item__btn" href="#">Подробнее</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="content-page__grid-item">
-                  <div class="category-wrapper">
-                    <p class="category-wrapper__title"></p>
-                    <div class="category-wrapper__content">
-                      <ul class="category-list">
-                        <li class="category-list__item"><a class="category-list__link" href="#">📽️ Фильмы</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">📖 Книги</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🎞️ Видео</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">📈 Финансы</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🎧 Подкасты</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">‍⚕️ Здоровье</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🎮 Хобби</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🎤Интервью</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">💌 Любовь и отношения</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">👔 Работа</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🤝 Дружба</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🎭️️ Эмоциональный интеллект</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🗨️ Ораторское искусство</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">🤺 Упражнения</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">📱 Приложения</a></li>
-                        <li class="category-list__item"><a class="category-list__link" href="#">‍💼‍ Лидерство</a></li>
-                      </ul>
                     </div>
                   </div>
                 </div>
