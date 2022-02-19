@@ -16,25 +16,88 @@
               <div class="header__block">
                 <div class="logo"><img class="logo__img" src="img/logo.svg"></div>
               </div>
-              <div class="header__block header__block-btn"><a class="header__btn popup-trigger" href="#" data-popup="popup-login">Войти</a></div>
+              <div class="header__block header__block-nav">
+                <nav class="nav">
+                  <ul class="nav-list nav__list">
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Мои программы</a></li>
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Все программы</a></li>
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Карточки</a></li>
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Сертификаты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__block header__block-profile">
+                <div class="header-profile">
+                  <div class="header-profile__wrapper">
+                    <div class="header-profile__subscribe trigger-block">
+                      <p class="header-profile__subscribe-label trigger-link">Подписка на 30 дней</p>
+                      <div class="header-profile__subscribe-term trigger-content">до 09.05.2022</div>
+                    </div>
+                    <div class="header-profile__info trigger-block">
+                      <div class="header-profile__img trigger-link"><img class="header-profile__img-item" src="img/profile.jpg"><span class="header-profile__img-icon">
+                          <svg class="icon icon-profile-arrow ">
+                            <use xlink:href="img/svg/sprite.svg#profile-arrow"></use>
+                          </svg></span></div>
+                      <div class="header-profile__nav trigger-content">
+                        <div class="profile-term">
+                          <div class="profile-term__wrapper">
+                            <p class="profile-term__text">Подписка до 09.05.2022</p>
+                          </div>
+                        </div>
+                        <ul class="profile-nav">
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-myPrograms ">
+                                  <use xlink:href="img/svg/sprite.svg#myPrograms"></use>
+                                </svg></span><span class="profile-nav__link-label">Мои программы</span></a></li>
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-allPrograms ">
+                                  <use xlink:href="img/svg/sprite.svg#allPrograms"></use>
+                                </svg></span><span class="profile-nav__link-label">Все программы</span></a></li>
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-card ">
+                                  <use xlink:href="img/svg/sprite.svg#card"></use>
+                                </svg></span><span class="profile-nav__link-label">Карточки</span></a></li>
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-certificate ">
+                                  <use xlink:href="img/svg/sprite.svg#certificate"></use>
+                                </svg></span><span class="profile-nav__link-label">Сертификаты</span></a></li>
+                          <li class="profile-nav__item"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-profile ">
+                                  <use xlink:href="img/svg/sprite.svg#profile"></use>
+                                </svg></span><span class="profile-nav__link-label">Мой профиль</span></a></li>
+                          <li class="profile-nav__item"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-leave ">
+                                  <use xlink:href="img/svg/sprite.svg#leave"></use>
+                                </svg></span><span class="profile-nav__link-label">Выход</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </header>
-      <main class="content content-login" style="align-items:flex-start;">
-        <section class="section-login">
+      <main class="content content-page">
+        <section class="section-home">
           <div class="container">
-            <ul>
-              <li><a href="login.html">login</a></li>
-              <li><a href="login-2.html">login-second</a></li>
-              <li><a href="home.html">home</a></li>
-              <li><a href="home-auth.html">home-auth</a></li>
-              <li><a href="card-useful.html">card-useful</a></li>
-              <li><a href="profile.html">profile</a></li>
-              <li><a href="programs.html">programs</a></li>
-              <li><a href="article.html">article</a></li>
-              <li><a href="rate.html">rate</a></li>
-            </ul>
+            <div class="content-page__content"><a class="back-link" href="#">← Назад</a>
+              <div class="content-page__wrapper">
+                <div class="rate">
+                  <div class="rate__wrapper">
+                    <p class="rate__title">Поздравляем, <br> вы завершили курс!</p>
+                    <div class="rate__img"><img class="rate__img-item" src="img/check-accent.svg"></div>
+                    <div class="rate__content">
+                      <p class="rate__content-title">Насколько вам понравился курс?</p>
+                      <div class="rate__content-stars">
+                        <div class="stars-block"></div>
+                      </div>
+                    </div><a class="rate__btn" href="#">Поставить оценку и открыть сертификат</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
