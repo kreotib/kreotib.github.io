@@ -18,7 +18,7 @@ const popupClose = () =>{
     body.classList.remove('no-scroll');
 };
 
-const changeTab = (block, newIndex = 0) => {
+const changeTab = (block, newIndex = 1) => {
     const tabsNavArray = block.querySelector('.tabs-nav'),
         tabsContentArray = block.querySelector('.tabs-content'),
         tabsNavItemArray = tabsNavArray.querySelectorAll('.tabs-nav__item'),
@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
     triggerLinks.forEach(el=>{
         el.addEventListener('click',()=>{
            el.closest('.trigger-block').querySelector('.trigger-content').classList.toggle('active');
+           el.closest('.trigger-block').classList.toggle('active');
+           el.classList.toggle('active');
         });
     });
 
@@ -141,5 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 changeStar(starsArray.indexOf(e.target.closest('.stars-block__item')), el);
             }
         });
+    });
+
+    const courseProgressBar = document.querySelectorAll('.course-progress__bar-line');
+
+    courseProgressBar.forEach(el=>{
+       el.style.width = el.dataset.count;
     });
 });
