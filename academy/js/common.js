@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /*
+
     const tabs = document.querySelectorAll('.tabs'),
         tabsNavLinkArray = document.querySelectorAll('.tabs-nav__link');
 
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             changeTab(el.closest('.tabs'), findTabIndex(el));
         })
-    });*/
+    });
 
     const passwordViewTriggers = document.querySelectorAll('.password-view-trigger');
 
@@ -95,5 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
            showHidePassword(el);
        })
+    });
+
+    const buySlider = new Swiper(".buy-slider", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        freeMode: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+        mousewheel: true,
     });
 });
