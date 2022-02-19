@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             el.append(createStars());
         }
 
-        el.addEventListener('click',(e)=>{
+        el.addEventListener('mouseover',(e)=>{
             const starsArray = [...el.querySelectorAll('.stars-block__item')];
             if(e.target.classList.contains('stars-block__item')){
                 changeStar(starsArray.indexOf(e.target), el);
