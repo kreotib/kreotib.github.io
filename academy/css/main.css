@@ -1128,6 +1128,8 @@ body.no-scroll {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: top center;
+       object-position: top center;
   }
   .page-banner__img_not-full {
     padding-top: 25px;
