@@ -570,6 +570,10 @@ body.no-scroll {
 }
 
 @media screen and (max-width: 550px) {
+  .header__wrapper {
+    height: 100px;
+    padding: 10px 0;
+  }
   .header-profile__subscribe {
     display: none;
   }
