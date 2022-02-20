@@ -18,7 +18,7 @@ const popupClose = () =>{
     body.classList.remove('no-scroll');
 };
 
-const changeTab = (block, newIndex = 1) => {
+const changeTab = (block, newIndex = 0) => {
     const tabsNavArray = block.querySelector('.tabs-nav'),
         tabsContentArray = block.querySelector('.tabs-content'),
         tabsNavItemArray = tabsNavArray.querySelectorAll('.tabs-nav__item'),
@@ -42,7 +42,7 @@ const findTabIndex = (el) => {
 
 const showHidePassword = (target) =>{
     const input = target.closest('.form__input').querySelector('input');
-    input.getAttribute('type') === 'password' ? input.setAttribute('type','text') : input.setAttribute('type','password')
+    input.getAttribute('type') === 'password' ? (input.setAttribute('type','text'), target.classList.add('active')) : (input.setAttribute('type','password'), target.classList.remove('active'));
 }
 
 const createStars = () =>{
@@ -67,7 +67,8 @@ const changeStar = (index,block) =>{
 
 document.addEventListener('DOMContentLoaded', () => {
     const popupTrigger = document.querySelectorAll('.popup-trigger'),
-        popupArray = document.querySelectorAll('.popup');
+        popupArray = document.querySelectorAll('.popup'),
+        popupCloseBtns = document.querySelectorAll('.popup-close');
 
     popupTrigger.forEach(el=>{
         el.addEventListener('click',(e)=>{
@@ -81,6 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('click',(e)=>{
             e.target.classList.contains('popup__wrapper') ? popupClose() : null;
         });
+    });
+
+    popupCloseBtns.forEach(el=>{
+       el.addEventListener('click',()=>{
+          popupClose();
+       });
     });
 
     const triggerLinks = document.querySelectorAll('.trigger-link');
