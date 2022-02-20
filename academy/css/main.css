@@ -289,6 +289,10 @@ body.no-scroll {
   background-color: #FD4172;
 }
 
+.iti {
+  width: 100%;
+}
+
 @media screen and (min-width: 960px) {
   html {
     margin-left: calc(100vw - 100%);
@@ -878,6 +882,20 @@ body.no-scroll {
   cursor: pointer;
 }
 
+.form__input {
+  position: relative;
+}
+
+.form__input-error {
+  position: absolute;
+  left: 25px;
+  bottom: -25px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FF7C7C;
+}
+
 .form__input-label {
   font-weight: 500;
   font-size: 18px;
@@ -925,6 +943,10 @@ body.no-scroll {
 
 .form__input-item:focus {
   border-color: #232B3F;
+}
+
+.form__input-item.error {
+  border-color: #FF7C7C;
 }
 
 .form__input-img {
@@ -992,6 +1014,58 @@ body.no-scroll {
 
 .form__input-password .form__input-item {
   padding-right: 40px;
+}
+
+.form__select .custom-select-container.is-open .custom-select-opener::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.form__select .custom-select-container.is-open .custom-select-panel {
+  display: block;
+}
+
+.form__select .custom-select-opener {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form__select .custom-select-opener::after {
+  content: '';
+  width: 7px;
+  height: 11px;
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: url("../img/select-arrow.svg") center center/contain no-repeat;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+
+.form__select .custom-select-option.is-selected::before {
+  display: none;
+}
+
+.form__select .custom-select-panel {
+  border: 1px solid #CCD7EA;
+  border-radius: 4px;
+  background-color: #fff;
+  display: none;
 }
 
 .form__footer {

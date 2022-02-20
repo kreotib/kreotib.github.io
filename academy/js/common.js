@@ -7,7 +7,6 @@ const popupOpen = (popupSelector) =>{
   popup.classList.add('active');
   body.classList.add('no-scroll');
 };
-
 const popupClose = () =>{
     const popupsArray = document.querySelectorAll('.popup'),
         body = document.body;
@@ -27,13 +26,11 @@ const changeTab = (block, newIndex = 0) => {
     changeIndex(tabsNavItemArray, newIndex);
     changeIndex(tabsContentItemArray, newIndex);
 };
-
 const changeIndex = (array, newIndex) => {
     array.forEach((el, index) => {
         index === newIndex ? el.classList.add('active') : el.classList.remove('active')
     });
 }
-
 const findTabIndex = (el) => {
     const tabsItemArray = [...el.closest('.tabs').querySelectorAll('.tabs-nav__item')];
 
@@ -54,7 +51,6 @@ const createStars = () =>{
 
     return div
 };
-
 const changeStar = (index,block) =>{
   const arrayStar = block.querySelectorAll('.stars-block__item');
 
@@ -65,6 +61,28 @@ const changeStar = (index,block) =>{
   block.dataset.count = index + 1;
 };
 
+
+const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+};
+
+const createError = (text) =>{
+    const errorBlock = document.createElement('div');
+    errorBlock.classList.add('form__input-error');
+    errorBlock.innerHTML = text;
+
+    return errorBlock;
+};
+
+const inputValidation = (typeInput, errorText, input) => {
+    if(typeInput === 'email'){
+        !validateEmail(input.value) ? (input.closest('.form__input').append(createError(errorText)), input.classList.add('error')) : console.log('2');
+    }
+};
 document.addEventListener('DOMContentLoaded', () => {
     const popupTrigger = document.querySelectorAll('.popup-trigger'),
         popupArray = document.querySelectorAll('.popup'),
@@ -156,5 +174,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     courseProgressBar.forEach(el=>{
        el.style.width = el.dataset.count;
+    });
+
+    customSelect('.form__select-item');
+
+
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+            return "e.g. " + selectedCountryPlaceholder;
+        },
+    });
+
+    const emailInput = document.querySelectorAll('input[type="email"]');
+
+    emailInput.forEach(el=>{
+       el.addEventListener('change',()=>{
+           const inputWrapper = el.closest('.form__input'),
+                errorArray =  inputWrapper.querySelectorAll('.form__input-error');
+           el.classList.remove('error');
+           errorArray.forEach(el=>{el.remove()});
+           inputValidation('email', 'Некорретный email', el);
+       });
     });
 });

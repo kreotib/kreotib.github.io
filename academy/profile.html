@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
     <link rel="stylesheet" href="libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="libs/custom-select/custom-select.css">
+    <link rel="stylesheet" href="libs/intl-tel/intlTelInput.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -124,11 +126,11 @@
                               </div>
                               <div class="form__input profile-form__input">
                                 <p class="form__input-label">Телефон</p>
-                                <input class="form__input-item" type="text" placeholder="+7 (916) 645-99-45">
+                                <input class="form__input-item" id="phone" type="tel" placeholder="+7 (916) 645-99-45">
                               </div>
                               <div class="form__input profile-form__input">
                                 <p class="form__input-label">Почта</p>
-                                <input class="form__input-item" type="text" placeholder="Введите вашу почту">
+                                <input class="form__input-item" type="email" placeholder="Введите вашу почту">
                               </div>
                               <div class="form__input profile-form__input">
                                 <p class="form__input-label">Дата рождения</p>
@@ -140,7 +142,15 @@
                               </div>
                               <div class="form__input profile-form__input">
                                 <p class="form__input-label">Пол</p>
-                                <input class="form__input-item" type="text" placeholder="Выберите ваш пол">
+                                <div class="form__input-item">
+                                  <div class="form__select">
+                                    <select class="form__select-item">
+                                      <option disabled selected>Выберите ваш пол</option>
+                                      <option>Мужской</option>
+                                      <option>Женский</option>
+                                    </select>
+                                  </div>
+                                </div>
                               </div>
                               <input class="form__btn profile-form__btn btn-accent" type="submit" value="Сохранить и войти">
                             </form>
@@ -444,6 +454,8 @@
           </div>
         </div>
       </div>
+      <script src="libs/custom-select/custom-select.min.js"></script>
+      <script src="libs/intl-tel/intlTelInput.js"></script>
       <script src="libs/swiper/swiper.min.js"></script>
       <script src="js/common.js"></script>
     </div>
