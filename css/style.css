@@ -2205,5 +2205,18 @@ select {
   background: none;
 }
 
+.promotion-period{
+  position: fixed;
+  z-index: 99;
+  right: 35px;
+  bottom: 17px;
+}
+
+.promotion-period__text{
+  font-size: 12px;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
 
 /*# sourceMappingURL=style.css.map */
