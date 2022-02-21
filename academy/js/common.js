@@ -180,11 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-            return "e.g. " + selectedCountryPlaceholder;
-        },
-    });
+
+    if(input){
+        window.intlTelInput(input, {
+            customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+                return "e.g. " + selectedCountryPlaceholder;
+            },
+        });
+    }
 
     const emailInput = document.querySelectorAll('input[type="email"]');
 

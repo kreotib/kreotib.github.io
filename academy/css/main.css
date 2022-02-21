@@ -107,6 +107,7 @@ body {
 
 body.no-scroll {
   overflow: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 .page-wrapper {
@@ -1844,6 +1845,15 @@ body.no-scroll {
       flex-wrap: wrap;
 }
 
+.card-item__category-text {
+  color: rgba(35, 43, 63, 0.5);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 136%;
+  margin-top: 5px;
+  display: none;
+}
+
 .card-item__category-item {
   margin: 5px;
   background: rgba(35, 43, 63, 0.1);
@@ -1968,6 +1978,27 @@ body.no-scroll {
   .card-item__title {
     font-size: 20px;
     line-height: 24px;
+  }
+  .card-item__category {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .card-item__category-item {
+    display: none;
+  }
+  .card-item__category-item:nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .card-item__category-text {
+    display: block;
+    margin: 0 5px;
   }
   .card-item__footer {
     display: none;
