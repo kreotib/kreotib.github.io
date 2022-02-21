@@ -1194,6 +1194,13 @@ body.no-scroll {
   height: 100%;
 }
 
+.form-popup__input .form__input-error {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 767px) {
   .form__wrapper_small {
     padding: 40px 20px;
