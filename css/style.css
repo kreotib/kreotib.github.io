@@ -2026,7 +2026,19 @@ select {
   color: #FFFFFF;
 }
 
+.e-root{
+  right: 0!important;
+  left: unset!important;
+}
+
 @media screen and (max-width: 700px) {
+  .e-root{
+    left: 0!important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .cookie-alert__wrapper{
     padding: 20px 0;
   }
