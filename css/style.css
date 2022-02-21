@@ -2208,8 +2208,8 @@ select {
 .promotion-period{
   position: fixed;
   z-index: 99;
-  right: 35px;
-  bottom: 17px;
+  right: 15px;
+  bottom: 5px;
 }
 
 .promotion-period__text{
