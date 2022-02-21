@@ -2218,5 +2218,17 @@ select {
   color: #FFFFFF;
 }
 
+@media screen and(max-width: 767px) {
+  .promotion-period{
+    right: 0;
+    left: 0;
+
+    width: 100%;
+
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
 
 /*# sourceMappingURL=style.css.map */
