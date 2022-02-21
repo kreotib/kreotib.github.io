@@ -197,4 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
            inputValidation('email', 'Некорретный email', el);
        });
     });
+
+    const image = document.querySelector('.cropp__img img');
+    const cropper = new Cropper(image, {
+        aspectRatio: 16 / 9,
+        crop(event) {
+
+        },
+    });
 });
