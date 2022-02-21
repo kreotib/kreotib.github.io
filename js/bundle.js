@@ -167,11 +167,13 @@ document.addEventListener('DOMContentLoaded',()=>{
             prevEl: ".swiper-button-prev",
         },
     });
+});
 
+document.addEventListener('load',()=>{
     const widgetStyle = document.querySelector('.scan-button__wrapper');
 
     console.log(widgetStyle);
-});
+})
 
 
 
