@@ -54,6 +54,8 @@ body{
     font-weight: 400;
 
     color:#000;
+
+    background: #fff;
 }
 
 .container{
@@ -65,6 +67,7 @@ body{
 }
 
 .search-input__item{
+    -webkit-appearance: none;
     background: #F2F0F3;
 }
 
