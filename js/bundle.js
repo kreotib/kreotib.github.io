@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 e.preventDefault();
                 let hash = this.getAttribute('href');
                 let target = document.querySelector(hash);
-                let elementPosition = target.offsetTop;
+                let elementPosition = target.offsetTop - 30;
 
                 showCloseMenu(false);
 
@@ -168,12 +168,5 @@ document.addEventListener('DOMContentLoaded',()=>{
         },
     });
 });
-
-document.addEventListener('load',()=>{
-    const widgetStyle = document.querySelector('.scan-button__wrapper');
-
-    console.log(widgetStyle);
-})
-
 
 
