@@ -1110,6 +1110,10 @@ li {
   flex-shrink: 0;
 }
 
+.table-cell_mobile{
+  display: none;
+}
+
 .table-row__head .table-cell {
   margin-bottom: 20px;
   font-size: 14px;
@@ -1150,6 +1154,16 @@ li {
   }
   .table-cell_date, .table-cell_mail{
     display: none;
+  }
+
+
+  .table-cell_mobile{
+    display: block;
+  }
+
+  .table-cell_gray{
+    color:#71829B;
+    font-size: 11px;
   }
 
   .table-row{
@@ -2126,7 +2140,6 @@ select {
 
 @media screen and (max-width: 700px) {
   .hint{
-
     display: flex;
     align-items: center;
     justify-content: center;
