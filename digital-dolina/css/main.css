@@ -35,6 +35,18 @@
 }
 
 
+@font-face {
+    font-family: 'PP Pangram Sans Compact';
+    src: url('../fonts/PPPangramSans-CompactRegular/PPPangramSans-CompactRegular.woff2') format('woff2'),
+    url('../fonts/PPPangramSans-CompactRegular/PPPangramSans-CompactRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
 
 
 body{
@@ -64,8 +76,16 @@ body{
     border-color:#6A40E9;
 }
 
-.profile-card__post{
+.profile-card__post,.profile__post, .profile__desc-label,.profile-block__title{
     font-family: 'PP Pangram Sans', sans-serif;
+}
+
+.profile-block__title{
+    color:#C4C4C4;
+}
+
+.profile-text{
+    font-family: 'PP Pangram Sans Compact', sans-serif;
 }
 
 .profile-social__item{
@@ -95,13 +115,45 @@ body{
     flex-shrink: 0;
     display: block;
 
-    background: url("../img/arrow.svg") center center/contain no-repeat;
+    background: url("../img/arrow-purple.svg") center center/contain no-repeat;
 
     margin-left: 5px;
+
+    transition: 0.3s all;
+}
+
+.tags-list__item.active .tags-list__link{
+    color:#000;
+}
+
+.tags-list__item.active::after{
+    transform: rotate(180deg);
+
+    background: url("../img/arrow-black.svg") center center/contain no-repeat;
 }
 
 .tags-list__link{
     color:#6A40E9;
+
+    transition: .3s color;
+}
+
+.tags-block{
+    display: none;
+
+    opacity: 0;
+    transition: .3s all;
+}
+
+.tags-block.active{
+    display: block;
+
+    opacity: 1;
+}
+
+.tag-item{
+    background: rgba(241, 240, 242, 0.5);
+    color: rgba(113, 61, 242, 0.5);
 }
 
 @media screen and (max-width: 767px) {
