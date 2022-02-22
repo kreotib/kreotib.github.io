@@ -2104,6 +2104,12 @@ select {
   position: fixed;
   right: 25px;
   bottom: 130px;
+  transition: 0.3s all;
+}
+
+.hint.hidden{
+  opacity: 0;
+  z-index: -1;
 }
 
 .hint__img{
@@ -2137,6 +2143,18 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .e-root__buttons{
+    align-items: center!important;
+  width: 100% !important;
+    justify-content: center!important;
+  }
+  .info-button__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px!important;
+    width: 100% !important;
   }
   .cookie-alert__wrapper{
     padding: 20px 0 110px 0;

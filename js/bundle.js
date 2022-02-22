@@ -46,10 +46,14 @@ const showCloseMenu = (stopScroll = true)=>{
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-    const header = document.querySelector('.header');
+    const header = document.querySelector('.header'),
+        hint = document.querySelector('.hint'),
+        hero = document.querySelector('.hero');
+
 
     document.addEventListener('scroll',(e)=>{
         pageYOffset > header.clientHeight ? header.classList.add('active') : header.classList.remove('active');
+        pageYOffset > hero.clientHeight ? hint.classList.add('hidden') : hint.classList.remove('hidden');
     });
 
     let burger = document.querySelector('.header-burger');
