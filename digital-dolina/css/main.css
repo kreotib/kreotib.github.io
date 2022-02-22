@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat-Medium/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Pangram Sans';
+    src: url('../fonts/PPPangramSans-Semibold/PPPangramSans-Semibold.woff2') format('woff2'),
+    url('../fonts/PPPangramSans-Semibold/PPPangramSans-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+    color:#000;
+}
+
+.container{
+    max-width: 1110px;
+}
+
+.banner{
+    background: #E8F1F6;
+}
+
+.search-input__item{
+    background: #F2F0F3;
+}
+
+.profile-card{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card:hover .profile-card__content{
+    border-color:#6A40E9;
+}
+
+.profile-card__post{
+    font-family: 'PP Pangram Sans', sans-serif;
+}
+
+.profile-social__item{
+    background: url("../img/social-sprite.svg") no-repeat;
+}
+
+.profile-social__item_tg{
+    background-position:4px center;
+}
+
+.profile-social__item_wa{
+    background-position:-20px center;
+}
+
+.profile-social__item_inst{
+    background-position:-45px center;
+}
+
+.profile-social__item_fb{
+    background-position:-69px center;
+}
+
+.tags-list__item::after{
+    content: '';
+    width: 14px;
+    height: 8px;
+    flex-shrink: 0;
+    display: block;
+
+    background: url("../img/arrow.svg") center center/contain no-repeat;
+
+    margin-left: 5px;
+}
+
+.tags-list__link{
+    color:#6A40E9;
+}
+
+@media screen and (max-width: 767px) {
+    .tags-list__item::after{
+        width: 10px;
+        height: 6px;
+    }
+}
