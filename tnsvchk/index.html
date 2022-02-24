@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tnsvchk</title>
+
+    <link rel="stylesheet" href="swiper/swiper.min.css">
+
+    <link rel="stylesheet" href="style/fonts.css">
+
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <div class="header__block header__burger">
+                <div class="burger">
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                </div>
+            </div>
+            <div class="header__block header__nav main-nav">
+                <nav class="nav">
+                    <ul class="nav__list nav-list">
+                        <li class="nav-list__item"><a data-scroll class="nav-list__link" href="#about">О нас</a></li>
+                        <li class="nav-list__item"><a data-scroll class="nav-list__link" href="#gallery">Галерея</a></li>
+                        <li class="nav-list__item"><a data-scroll class="nav-list__link" href="#how">Как заказать</a></li>
+                        <li class="nav-list__item"><a data-scroll class="nav-list__link" href="#reviews">Отзывы</a></li>
+                        <li class="nav-list__item"><a data-scroll class="nav-list__link" href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__block">
+                <ul class="header-social header__social">
+                    <li class="header-social__item">
+                        <a href="#" class="header-social__link">
+                            <span class="header-social__icon">
+                                <svg class="header-social__icon-item" width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.384 19.779C18.706 20.007 19.121 20.064 19.491 19.924C19.861 19.783 20.133 19.467 20.215 19.084C21.084 15 23.192 4.663 23.983 0.947996C24.043 0.667996 23.943 0.376996 23.723 0.189996C23.503 0.0029957 23.198 -0.0510044 22.926 0.0499956C18.733 1.602 5.82 6.44699 0.542001 8.39999C0.207001 8.52399 -0.0109989 8.846 1.12521e-06 9.199C0.0120011 9.553 0.250001 9.86 0.593001 9.963C2.96 10.671 6.067 11.656 6.067 11.656C6.067 11.656 7.519 16.041 8.276 18.271C8.371 18.551 8.59 18.771 8.879 18.847C9.167 18.922 9.475 18.843 9.69 18.64C10.906 17.492 12.786 15.717 12.786 15.717C12.786 15.717 16.358 18.336 18.384 19.779V19.779ZM7.374 11.102L9.053 16.64L9.426 13.133C9.426 13.133 15.913 7.282 19.611 3.947C19.719 3.849 19.734 3.685 19.644 3.57C19.555 3.455 19.391 3.428 19.268 3.506C14.982 6.243 7.374 11.102 7.374 11.102Z" fill="black"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-social__item">
+                        <a href="#" class="header-social__link">
+                            <span class="header-social__icon">
+                                <svg class="header-social__icon-item" width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.162 13.994C13.771 13.994 14.02 13.588 14.013 13.079C13.982 11.162 14.727 10.13 16.072 11.475C17.56 12.963 17.868 13.994 19.675 13.994H22.875C23.683 13.994 24.001 13.734 24.001 13.326C24.001 12.463 22.58 10.94 21.376 9.822C19.69 8.257 19.611 8.22 21.063 6.336C22.864 3.997 25.22 1 23.136 1H19.155C18.383 1 18.327 1.435 18.052 2.083C17.057 4.43 15.166 7.47 14.448 7.005C13.697 6.52 14.041 4.599 14.098 1.744C14.113 0.99 14.109 0.473 12.957 0.205C12.328 0.0599999 11.716 0 11.148 0C8.875 0 7.307 0.953 8.198 1.119C9.769 1.412 9.618 4.811 9.252 6.279C8.614 8.835 6.216 4.255 5.217 1.974C4.976 1.426 4.902 1 4.042 1H0.787C0.295 1 0 1.16 0 1.516C0 2.118 2.96 8.236 5.786 11.286C8.542 14.261 11.266 13.994 13.162 13.994Z" fill="black"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-social__item">
+                        <a href="#" class="header-social__link">
+                            <span class="header-social__icon">
+                                <svg class="header-social__icon-item" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.53757C15.204 2.53757 15.584 2.54957 16.85 2.60757C20.102 2.75557 21.621 4.29857 21.769 7.52657C21.827 8.79157 21.838 9.17157 21.838 12.3756C21.838 15.5806 21.826 15.9596 21.769 17.2246C21.62 20.4496 20.105 21.9956 16.85 22.1436C15.584 22.2016 15.206 22.2136 12 22.2136C8.796 22.2136 8.416 22.2016 7.151 22.1436C3.891 21.9946 2.38 20.4446 2.232 17.2236C2.174 15.9586 2.162 15.5796 2.162 12.3746C2.162 9.17057 2.175 8.79157 2.232 7.52557C2.381 4.29857 3.896 2.75457 7.151 2.60657C8.417 2.54957 8.796 2.53757 12 2.53757ZM12 0.374573C8.741 0.374573 8.333 0.388573 7.053 0.446573C2.695 0.646573 0.273 3.06457 0.073 7.42657C0.014 8.70757 0 9.11557 0 12.3746C0 15.6336 0.014 16.0426 0.072 17.3226C0.272 21.6806 2.69 24.1026 7.052 24.3026C8.333 24.3606 8.741 24.3746 12 24.3746C15.259 24.3746 15.668 24.3606 16.948 24.3026C21.302 24.1026 23.73 21.6846 23.927 17.3226C23.986 16.0426 24 15.6336 24 12.3746C24 9.11557 23.986 8.70757 23.928 7.42757C23.732 3.07357 21.311 0.647573 16.949 0.447573C15.668 0.388573 15.259 0.374573 12 0.374573V0.374573ZM12 6.21257C8.597 6.21257 5.838 8.97157 5.838 12.3746C5.838 15.7776 8.597 18.5376 12 18.5376C15.403 18.5376 18.162 15.7786 18.162 12.3746C18.162 8.97157 15.403 6.21257 12 6.21257ZM12 16.3746C9.791 16.3746 8 14.5846 8 12.3746C8 10.1656 9.791 8.37457 12 8.37457C14.209 8.37457 16 10.1656 16 12.3746C16 14.5846 14.209 16.3746 12 16.3746ZM18.406 4.52957C17.61 4.52957 16.965 5.17457 16.965 5.96957C16.965 6.76457 17.61 7.40957 18.406 7.40957C19.201 7.40957 19.845 6.76457 19.845 5.96957C19.845 5.17457 19.201 4.52957 18.406 4.52957Z" fill="black"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="content">
+    <section id="about" class="hero section">
+        <div class="section-hero__container">
+            <div class="container">
+                <div class="section-hero__wrapper">
+                    <div class="section-hero__content">
+                        <div class="hero">
+                            <div class="hero__wrapper">
+                                <div class="hero__logo">
+                                    <p class="hero__logo-text">
+                                        <span class="hero__logo-text-bold animate-title animate-block">TNSVCHK</span> <span class="animate-title animate-block">BENTO</span> <span class="animate-title animate-block">CAKES</span>
+                                    </p>
+                                    <p class="hero__logo-text-sub animate-title animate-block">
+                                        lugansk
+                                    </p>
+                                </div>
+                                <div class="hero__img animate-block animate-img">
+                                    <img class="hero__img-item" src="img/photo.jpg" alt="">
+                                </div>
+                                <div class="hero__content animate-block">
+                                    <p class="hero__content-text animate-block__item">
+                                        Привет, меня зовут Таня <br> Я самая красивая мышка 🐁
+                                    </p>
+                                </div>
+                                <div class="hero__footer">
+                                    <div class="social">
+                                        <ul class="social__list social-list">
+                                            <li class="social-list__item animate-block animate-social">
+                                                <a href="#" class="social-list__link">
+                                                    <span class="social-list__icon">
+                                                        <svg class="social-list__icon-item" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M18 3.2445C22.806 3.2445 23.376 3.2625 25.275 3.3495C30.153 3.5715 32.4315 5.886 32.6535 10.728C32.7405 12.6255 32.757 13.1955 32.757 18.0015C32.757 22.809 32.739 23.3775 32.6535 25.275C32.43 30.1125 30.1575 32.4315 25.275 32.6535C23.376 32.7405 22.809 32.7585 18 32.7585C13.194 32.7585 12.624 32.7405 10.7265 32.6535C5.8365 32.43 3.57 30.105 3.348 25.2735C3.261 23.376 3.243 22.8075 3.243 18C3.243 13.194 3.2625 12.6255 3.348 10.7265C3.5715 5.886 5.844 3.57 10.7265 3.348C12.6255 3.2625 13.194 3.2445 18 3.2445ZM18 0C13.1115 0 12.4995 0.021 10.5795 0.108C4.0425 0.408 0.4095 4.035 0.1095 10.578C0.021 12.4995 0 13.1115 0 18C0 22.8885 0.021 23.502 0.108 25.422C0.408 31.959 4.035 35.592 10.578 35.892C12.4995 35.979 13.1115 36 18 36C22.8885 36 23.502 35.979 25.422 35.892C31.953 35.592 35.595 31.965 35.8905 25.422C35.979 23.502 36 22.8885 36 18C36 13.1115 35.979 12.4995 35.892 10.5795C35.598 4.0485 31.9665 0.4095 25.4235 0.1095C23.502 0.021 22.8885 0 18 0V0ZM18 8.757C12.8955 8.757 8.757 12.8955 8.757 18C8.757 23.1045 12.8955 27.2445 18 27.2445C23.1045 27.2445 27.243 23.106 27.243 18C27.243 12.8955 23.1045 8.757 18 8.757ZM18 24C14.6865 24 12 21.315 12 18C12 14.6865 14.6865 12 18 12C21.3135 12 24 14.6865 24 18C24 21.315 21.3135 24 18 24ZM27.609 6.2325C26.415 6.2325 25.4475 7.2 25.4475 8.3925C25.4475 9.585 26.415 10.5525 27.609 10.5525C28.8015 10.5525 29.7675 9.585 29.7675 8.3925C29.7675 7.2 28.8015 6.2325 27.609 6.2325Z" fill="#8E24AA"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="social-list__text">@tnsvck</span>
+                                                </a>
+                                            </li>
+                                            <li class="social-list__item animate-block animate-social">
+                                                <a href="#" class="social-list__link">
+                                                    <span class="social-list__icon">
+                                                        <svg class="social-list__icon-item" width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.576 30.1685C28.059 30.5105 28.6815 30.596 29.2365 30.386C29.7915 30.1745 30.1995 29.7005 30.3225 29.126C31.626 23 34.788 7.49451 35.9745 1.92201C36.0645 1.50201 35.9145 1.06551 35.5845 0.785009C35.2545 0.504509 34.797 0.423509 34.389 0.575009C28.0995 2.90301 8.73 10.1705 0.813002 13.1C0.310502 13.286 -0.0164983 13.769 1.68779e-06 14.2985C0.0180017 14.8295 0.375002 15.29 0.889502 15.4445C4.44 16.5065 9.1005 17.984 9.1005 17.984C9.1005 17.984 11.2785 24.5615 12.414 27.9065C12.5565 28.3265 12.885 28.6565 13.3185 28.7705C13.7505 28.883 14.2125 28.7645 14.535 28.46C16.359 26.738 19.179 24.0755 19.179 24.0755C19.179 24.0755 24.537 28.004 27.576 30.1685ZM11.061 17.153L13.5795 25.46L14.139 20.1995C14.139 20.1995 23.8695 11.423 29.4165 6.42051C29.5785 6.27351 29.601 6.02751 29.466 5.85501C29.3325 5.68251 29.0865 5.64201 28.902 5.75901C22.473 9.86451 11.061 17.153 11.061 17.153Z" fill="#8E24AA"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="social-list__text">@tnsvck</span>
+                                                </a>
+                                            </li>
+                                            <li class="social-list__item animate-block animate-social">
+                                                <a href="#" class="social-list__link">
+                                                    <span class="social-list__icon">
+                                                        <svg class="social-list__icon-item" width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.743 21.491C20.6565 21.491 21.03 20.882 21.0195 20.1185C20.973 17.243 22.0905 15.695 24.108 17.7125C26.34 19.9445 26.802 21.491 29.5125 21.491H34.3125C35.5245 21.491 36.0015 21.101 36.0015 20.489C36.0015 19.1945 33.87 16.91 32.064 15.233C29.535 12.8855 29.4165 12.83 31.5945 10.004C34.296 6.4955 37.83 2 34.704 2H28.7325C27.5745 2 27.4905 2.6525 27.078 3.6245C25.5855 7.145 22.749 11.705 21.672 11.0075C20.5455 10.28 21.0615 7.3985 21.147 3.116C21.1695 1.985 21.1635 1.2095 19.4355 0.8075C18.492 0.59 17.574 0.5 16.722 0.5C13.3125 0.5 10.9605 1.9295 12.297 2.1785C14.6535 2.618 14.427 7.7165 13.878 9.9185C12.921 13.7525 9.324 6.8825 7.8255 3.461C7.464 2.639 7.353 2 6.063 2H1.1805C0.4425 2 0 2.24 0 2.774C0 3.677 4.44 12.854 8.679 17.429C12.813 21.8915 16.899 21.491 19.743 21.491Z" fill="#8E24AA"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="social-list__text">@tnsvck</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-hero__footer animate-block">
+                        <a class="section-hero__link" href="#gallery">
+                            <svg class="section-hero__link-icon" width="48" height="30" viewBox="0 0 48 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.66L5.658 0L24.008 18.678L42.342 0L48 5.66L24.008 30L0 5.66Z" fill="#8E24AA"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="content__gradient">
+        <section id="gallery" class="gallery section">
+            <div class="work-gallery">
+                <div class="work-gallery__wrapper">
+                    <div class="work-gallery__grid">
+                        <div class="work-gallery__grid-item work-gallery__grid-item_medium work-item animate-block animate-img">
+                            <img src="img/work-2.jpg" alt="" class="work-item__img">
+                        </div>
+                        <div class="work-gallery__grid-item work-gallery__grid-item_big work-item animate-block animate-img">
+                            <img src="img/work.jpg" alt="" class="work-item__img">
+                        </div>
+                        <div class="work-gallery__grid-item work-gallery__grid-item_medium work-item animate-block animate-img">
+                            <img src="img/work-3.jpg" alt="" class="work-item__img">
+                        </div>
+                        <div class="work-gallery__grid-item work-gallery__grid-item_small work-gallery__grid-item_mobile-big work-item animate-block animate-img">
+                            <img src="img/work-4.jpg" alt="" class="work-item__img">
+                        </div>
+                        <div class="work-gallery__grid-item work-gallery__grid-item_small work-gallery__grid-item_mobile-medium  work-item animate-block animate-img">
+                            <img src="img/work-5.jpg" alt="" class="work-item__img">
+                        </div>
+                        <div class="work-gallery__grid-item work-gallery__grid-item_medium work-item animate-block animate-img">
+                            <img src="img/work-6.jpg" alt="" class="work-item__img">
+                        </div>
+                    </div>
+                    <div class="work-gallery__footer animate-block animate-fade-to-top">
+                        <a class="btn btn-pink work-gallery__btn" href="#" target="_blank">больше работ в инстграмм</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="how" class="how section">
+            <div class="section__wrapper">
+                <div class="container">
+                    <h2 class="section__title">
+                        <span class="animate-title animate-block">Как</span>
+                        <span class="animate-title animate-block">сделать</span>
+                        <span class="animate-title animate-block">заказ</span>
+                    </h2>
+                    <div class="section__content">
+                        <div class="container">
+                            <div class="how-step">
+                                <div class="how-step__wrapper">
+                                    <div class="how-step__row animate-block">
+                                        <div class="how-step__item"></div>
+                                        <div class="how-step__item">
+                                            <div class="how-step__number">
+                                        <span class="how-step__number-label">
+                                            1
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="how-step__item animate-block animate-fade-to-left">
+                                            <p class="how-step__text">
+                                                Напишите мне в удобную вам социальную сеть
+                                                <span class="how-step__text-bold">Intsagram, Vk, Telegram, Viber, What`s App</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="how-step__row animate-block">
+                                        <div class="how-step__item animate-block animate-fade-to-right">
+                                            <p class="how-step__text">
+                                                Напишите мне в удобную вам социальную сеть
+                                                <span class="how-step__text-bold">Intsagram, Vk, Telegram, Viber, What`s App</span>
+                                            </p>
+                                        </div>
+                                        <div class="how-step__item">
+                                            <div class="how-step__number">
+                                        <span class="how-step__number-label">
+                                            2
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="how-step__item"></div>
+                                    </div>
+                                    <div class="how-step__row animate-block">
+                                        <div class="how-step__item"></div>
+                                        <div class="how-step__item">
+                                            <div class="how-step__number">
+                                        <span class="how-step__number-label">
+                                            3
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="how-step__item animate-block animate-fade-to-left">
+                                            <p class="how-step__text">
+                                                Напишите мне в удобную вам социальную сеть
+                                                <span class="how-step__text-bold">Intsagram, Vk, Telegram, Viber, What`s App</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="how-step__row animate-block">
+                                        <div class="how-step__item animate-block animate-fade-to-right">
+                                            <p class="how-step__text">
+                                                Напишите мне в удобную вам социальную сеть
+                                                <span class="how-step__text-bold">Intsagram, Vk, Telegram, Viber, What`s App</span>
+                                            </p>
+                                        </div>
+                                        <div class="how-step__item">
+                                            <div class="how-step__number">
+                                        <span class="how-step__number-label">
+                                            4
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="how-step__item"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reviews" class="reviews section">
+            <div class="section__wrapper">
+                <h2 class="section__title">
+                    <span class="animate-title animate-block">отзывы</span>
+                </h2>
+                <div class="section__content">
+                    <div class="swiper reviews-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide reviews-slider__item animate-block animate-fade-to-top">
+                                <img class="reviews-slider__item-img" src="img/reviews.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide reviews-slider__item animate-block animate-fade-to-top">
+                                <img class="reviews-slider__item-img" src="img/reviews.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide reviews-slider__item animate-block animate-fade-to-top">
+                                <img class="reviews-slider__item-img" src="img/reviews.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide reviews-slider__item animate-block animate-fade-to-top">
+                                <img class="reviews-slider__item-img" src="img/reviews.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide reviews-slider__item animate-block animate-fade-to-top">
+                                <img class="reviews-slider__item-img" src="img/reviews.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide reviews-slider__item animate-block animate-fade-to-top">
+                                <img class="reviews-slider__item-img" src="img/reviews.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer section">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__row">
+                        <div class="social">
+                            <ul class="social__list social-list">
+                                <li class="social-list__item animate-block animate-social">
+                                    <a href="#" class="social-list__link">
+                                                    <span class="social-list__icon">
+                                                        <svg class="social-list__icon-item social-list__icon-item_white" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M18 3.2445C22.806 3.2445 23.376 3.2625 25.275 3.3495C30.153 3.5715 32.4315 5.886 32.6535 10.728C32.7405 12.6255 32.757 13.1955 32.757 18.0015C32.757 22.809 32.739 23.3775 32.6535 25.275C32.43 30.1125 30.1575 32.4315 25.275 32.6535C23.376 32.7405 22.809 32.7585 18 32.7585C13.194 32.7585 12.624 32.7405 10.7265 32.6535C5.8365 32.43 3.57 30.105 3.348 25.2735C3.261 23.376 3.243 22.8075 3.243 18C3.243 13.194 3.2625 12.6255 3.348 10.7265C3.5715 5.886 5.844 3.57 10.7265 3.348C12.6255 3.2625 13.194 3.2445 18 3.2445ZM18 0C13.1115 0 12.4995 0.021 10.5795 0.108C4.0425 0.408 0.4095 4.035 0.1095 10.578C0.021 12.4995 0 13.1115 0 18C0 22.8885 0.021 23.502 0.108 25.422C0.408 31.959 4.035 35.592 10.578 35.892C12.4995 35.979 13.1115 36 18 36C22.8885 36 23.502 35.979 25.422 35.892C31.953 35.592 35.595 31.965 35.8905 25.422C35.979 23.502 36 22.8885 36 18C36 13.1115 35.979 12.4995 35.892 10.5795C35.598 4.0485 31.9665 0.4095 25.4235 0.1095C23.502 0.021 22.8885 0 18 0V0ZM18 8.757C12.8955 8.757 8.757 12.8955 8.757 18C8.757 23.1045 12.8955 27.2445 18 27.2445C23.1045 27.2445 27.243 23.106 27.243 18C27.243 12.8955 23.1045 8.757 18 8.757ZM18 24C14.6865 24 12 21.315 12 18C12 14.6865 14.6865 12 18 12C21.3135 12 24 14.6865 24 18C24 21.315 21.3135 24 18 24ZM27.609 6.2325C26.415 6.2325 25.4475 7.2 25.4475 8.3925C25.4475 9.585 26.415 10.5525 27.609 10.5525C28.8015 10.5525 29.7675 9.585 29.7675 8.3925C29.7675 7.2 28.8015 6.2325 27.609 6.2325Z" fill="#8E24AA"/>
+                                                        </svg>
+                                                    </span>
+                                        <span class="social-list__text social-list__text_white">@tnsvck</span>
+                                    </a>
+                                </li>
+                                <li class="social-list__item animate-block animate-social">
+                                    <a href="#" class="social-list__link">
+                                                    <span class="social-list__icon">
+                                                        <svg class="social-list__icon-item social-list__icon-item_white" width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.576 30.1685C28.059 30.5105 28.6815 30.596 29.2365 30.386C29.7915 30.1745 30.1995 29.7005 30.3225 29.126C31.626 23 34.788 7.49451 35.9745 1.92201C36.0645 1.50201 35.9145 1.06551 35.5845 0.785009C35.2545 0.504509 34.797 0.423509 34.389 0.575009C28.0995 2.90301 8.73 10.1705 0.813002 13.1C0.310502 13.286 -0.0164983 13.769 1.68779e-06 14.2985C0.0180017 14.8295 0.375002 15.29 0.889502 15.4445C4.44 16.5065 9.1005 17.984 9.1005 17.984C9.1005 17.984 11.2785 24.5615 12.414 27.9065C12.5565 28.3265 12.885 28.6565 13.3185 28.7705C13.7505 28.883 14.2125 28.7645 14.535 28.46C16.359 26.738 19.179 24.0755 19.179 24.0755C19.179 24.0755 24.537 28.004 27.576 30.1685ZM11.061 17.153L13.5795 25.46L14.139 20.1995C14.139 20.1995 23.8695 11.423 29.4165 6.42051C29.5785 6.27351 29.601 6.02751 29.466 5.85501C29.3325 5.68251 29.0865 5.64201 28.902 5.75901C22.473 9.86451 11.061 17.153 11.061 17.153Z" fill="#8E24AA"/>
+                                                        </svg>
+                                                    </span>
+                                        <span class="social-list__text social-list__text_white">@tnsvck</span>
+                                    </a>
+                                </li>
+                                <li class="social-list__item animate-block animate-social">
+                                    <a href="#" class="social-list__link">
+                                                    <span class="social-list__icon">
+                                                        <svg class="social-list__icon-item social-list__icon-item_white" width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.743 21.491C20.6565 21.491 21.03 20.882 21.0195 20.1185C20.973 17.243 22.0905 15.695 24.108 17.7125C26.34 19.9445 26.802 21.491 29.5125 21.491H34.3125C35.5245 21.491 36.0015 21.101 36.0015 20.489C36.0015 19.1945 33.87 16.91 32.064 15.233C29.535 12.8855 29.4165 12.83 31.5945 10.004C34.296 6.4955 37.83 2 34.704 2H28.7325C27.5745 2 27.4905 2.6525 27.078 3.6245C25.5855 7.145 22.749 11.705 21.672 11.0075C20.5455 10.28 21.0615 7.3985 21.147 3.116C21.1695 1.985 21.1635 1.2095 19.4355 0.8075C18.492 0.59 17.574 0.5 16.722 0.5C13.3125 0.5 10.9605 1.9295 12.297 2.1785C14.6535 2.618 14.427 7.7165 13.878 9.9185C12.921 13.7525 9.324 6.8825 7.8255 3.461C7.464 2.639 7.353 2 6.063 2H1.1805C0.4425 2 0 2.24 0 2.774C0 3.677 4.44 12.854 8.679 17.429C12.813 21.8915 16.899 21.491 19.743 21.491Z" fill="#8E24AA"/>
+                                                        </svg>
+                                                    </span>
+                                        <span class="social-list__text social-list__text_white">@tnsvck</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__row">
+                        <div class="social">
+                            <ul class="social__list social-list">
+                                <li class="social-list__item animate-block animate-social">
+                                    <a href="#" class="social-list__link">
+                                        <span class="social-list__icon">
+                                            <svg class="social-list__icon-item social-list__icon-item_white" width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M24 27.6263L18.7185 19.4198C18.7065 19.4246 15.7575 20.5913 15.6225 20.6408C12.2625 21.9524 5.424 11.1964 8.709 9.77857L11.8335 8.53944L6.594 0.306396L3.435 1.56122C-7.368 6.09622 9.7845 32.9403 20.835 28.8739C21.0165 28.8074 23.988 27.6311 24 27.6263Z" fill="white"/>
+                                            </svg>
+                                        </span>
+                                        <span class="social-list__text social-list__text_white social-list__text_mobile">+38 (072) 185 46 64 <br> <span class="social-list__text_bold social-list__text_small">( viber & what`s app )</span></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</main>
+
+<script src="swiper/swiper.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
