@@ -1429,6 +1429,35 @@ select {
   _display: none;
 }
 
+.answer-item__text a{
+  color: #71829B;
+  text-decoration: underline;
+}
+
+.answer-item__text ul{
+  padding-left: 15px;
+}
+
+.answer-item__text ul li{
+  list-style: disc;
+}
+
+.answer-item__text ol{
+  padding-left: 15px;
+}
+
+.answer-item__text ol li{
+  list-style: decimal;
+}
+
+.answer-item__text ul.list-style-none li{
+  list-style: none;
+}
+
+.answer-item__text ul.list-empty-circle li{
+  list-style: circle;
+}
+
 .answer-item__text.active {
   display: block;
   height: 100%;
@@ -1437,6 +1466,10 @@ select {
 
   opacity: 1;
   _display: block;
+}
+
+.text-underline{
+  text-decoration: underline;
 }
 
 .hero-demo {
