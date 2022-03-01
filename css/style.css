@@ -326,6 +326,10 @@ li {
   min-height: 800px;
 }
 
+.hero-main.hero-demo .hero-cell{
+  align-items: center;
+}
+
 @media screen and (max-width: 1100px) {
   .hero-demo.hero-main{
     height: auto;
@@ -393,8 +397,8 @@ li {
 
 .hero__title {
   margin-left: 154px;
-  margin-right: 45px;
-  font-size: 40px;
+  margin-right: 70px;
+  font-size: 24px;
   line-height: 1.1;
   text-transform: uppercase;
   font-family: 'Akzidenz';
@@ -408,13 +412,18 @@ li {
   font-size: 100px;
   line-height: 0.8;
   display: block;
-  margin-left: 10px;
+}
+
+.hero__title span:nth-child(2) {
+  font-size: 53px;
+  line-height: 1;
+  display: block;
 }
 
 .hero__desc {
-  max-width: 314px;
-  margin-top: 45px;
+  max-width: 330px;
 }
+
 .hero__desc p {
   margin: 0 0 11px 0;
   color: #FFA200;
@@ -435,11 +444,20 @@ li {
 
 @media (max-width: 767px) {
   .hero__title {
-    font-size: 21px;
+    font-size: 16px;
     line-height: 1.2;
+
+    text-align: center;
+
+    margin-right: 0;
   }
   .hero__title span {
     font-size: 50px;
+    line-height: 1;
+  }
+
+  .hero__title span:nth-child(2) {
+    font-size: 30px;
     line-height: 1;
   }
 
@@ -461,7 +479,6 @@ li {
   }
   .hero__desc{
     margin-top: 15px;
-    padding-left: 30px;
   }
 
   .hero__desc p{
