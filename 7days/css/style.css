@@ -506,10 +506,21 @@ li {
   .hero__desc{
     margin-top: 15px;
     text-align: center;
+
+    max-width: 240px;
+  }
+
+  .x2-block::before{
+    right: -15px;
+    top: -10px;
+    z-index: 1;
   }
 
   .hero__desc p{
     font-size: 14px;
+
+    position: relative;
+    z-index: 2;
   }
 }
 
