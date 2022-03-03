@@ -797,11 +797,11 @@ li {
 .prize-final__content::before{
   content: '';
   position: absolute;
-  top: -5%;
-  left: -5%;
+  top: 2%;
+  left: -1%;
 
-  width: 110%;
-  height: 110%;
+  width: 102%;
+  height: 102%;
   display: block;
   z-index: 0;
 
