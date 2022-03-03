@@ -1,0 +1,26 @@
+@import "import/reset";
+// General
+
+@import "import/common/fonts";
+@import 'import/common/variables';
+@import "import/general";
+
+//Parts
+
+@import "import/parts/header";
+@import "import/parts/footer";
+
+// Sections
+
+@import "import/sections/general";
+@import "import/sections/hero";
+@import "import/sections/poster";
+@import "import/sections/news";
+@import "import/sections/object";
+@import "import/sections/kids-pages";
+@import "import/sections/articles";
+//Components
+
+//Media
+
+@import "import/media";

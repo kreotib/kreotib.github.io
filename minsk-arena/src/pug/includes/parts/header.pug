@@ -1,0 +1,44 @@
+header.header
+    .header__wrapper
+        .header__row.header__row_first
+            .header__social
+                p.header__social-title МЫ В СОЦИАЛЬНЫХ СЕТЯХ
+                ul.social-list.header__social-list
+                    each el in ['img/fb.png','img/insta.png','img/vk.png']
+                        li.social-list__item.social-item
+                            a(href='#').social-item__link
+                                img(src=el)
+            a(href='#').visually-impaired
+                img(src='img/eye_icon.png').visually-impaired__img
+                p.visually-impaired__link ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ
+            .header__language
+                ul.language-list
+                    li.language-list__item.language-item
+                        a(href='#').language-item__link.language-item__link_active рус
+                    li.language-list__item.language-item
+                        a(href='#').language-item__link бел
+        .header__row.header__row_second
+            .header__logo
+                img(src='img/logo.svg')
+            .header__nav
+                nav.nav
+                    ul.nav__list.nav-list
+                        li.nav-list__item.nav-item.nav-list__item_burger
+                            a(href='#').nav-item__link
+                                span.nav-burger
+                                    span.nav-burger__item
+                                    span.nav-burger__item
+                                    span.nav-burger__item
+                        each el in ['УСЛУГИ','ДЕТЯМ','БИЗНЕСУ','О НАС']
+                            li.nav-list__item.nav-item
+                                a(href='#').nav-item__link=el
+            .header__search
+                .search
+                    button.search__trigger.search-trigger
+                        img(src='img/search.png').search__trigger-img
+                    .search__block.search-block
+                       input(type='search' placeholder="Поиск").search-block__item
+                       .search-block-close
+                           .search-close.search-block__close
+            .header__btn
+               a(href='#').header__buy купить

@@ -1,0 +1,252 @@
+.footer{
+  background: #232323;
+  &__wrapper{
+    padding: 50px 0;
+    display: flex;
+    align-items: stretch;
+  }
+  &__nav{
+    margin-left: 70px;
+    margin-right: auto;
+
+  }
+  &__social{
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn + &__btn{
+    margin-top: 30px;
+  }
+  &__btn{
+    height: 46px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Visby CF Extra", sans-serif;
+    font-weight: 700;
+
+    box-shadow: 0px 5px 10px rgba(35, 35, 35, 0.18);
+    border-radius: 8px;
+
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    &_white{
+      background: #F9F9F9;
+
+      transition: .3s background-color;
+      &:hover{
+        background: #EBEBEB;
+      }
+    }
+    &_black{
+      background: #232323;
+      border: 1px solid #F9F9F9;
+
+      color: #F9F9F9;
+
+      transition: .3s background-color, .3s color;
+
+      &:hover{
+        background: #F9F9F9;
+        color: #232323;
+      }
+    }
+  }
+  &__socials{
+    margin-top: auto;
+  }
+  &-logo{
+    flex-direction: column;
+    &__img{
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    &__text{
+      font-size: 32px;
+    }
+  }
+  &-contacts{
+    margin-top: 20px;
+    &__item + &__item{
+      margin-top: 10px;
+    }
+    &__item{
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #F9F9F9;
+      display: flex;
+      align-items: center;
+      &::before{
+        content: '';
+        width: 18px;
+        height: 18px;
+        display: block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        margin-right: 13px;
+      }
+      &_email{
+        &::before{
+          background-image: url("../img/email.svg");
+        }
+      }
+      &_phone{
+        &::before{
+          background-image: url("../img/phone.svg");
+        }
+      }
+    }
+  }
+  &-nav{
+    display: flex;
+    align-items: stretch;
+
+    height: 100%;
+    &__item + &__item{
+      margin-left: 20px;
+    }
+    &__item{
+      flex-shrink: 0;
+      max-width: 130px;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+    }
+    &__title{
+      font-family: 'Visby CF Extra', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-size: 14px;
+
+      color: #F9F9F9;
+
+      position: relative;
+
+      padding-bottom: 11px;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 1px;
+        background:#fff;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    &__list{
+      margin-top: 10px;
+
+      flex: 1 0 auto;
+
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &-list{
+    &__item + &__item{
+      margin-top: 10px;
+    }
+    &__item + &__item_bottom{
+      margin-top: auto;
+    }
+    &__link{
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+
+      color: #F9F9F9;
+
+      transition: 0.3s all;
+
+      &:hover{
+        font-family: 'Visby CF Demi', sans-serif;
+        font-weight: 600;
+        color:#fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .footer{
+    &__wrapper{
+      padding: 30px 20px;
+    }
+    &-nav{
+      flex-wrap: wrap;
+      &__item + &__item{
+        margin-left: 0;
+      }
+      &__item{
+        margin: 10px;
+        &:nth-child(1){
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer{
+    &__wrapper{
+      flex-direction: column;
+    }
+    &__nav{
+      margin: 30px auto 0 auto;
+    }
+    &__social{
+      margin-top: 40px;
+    }
+    &__btns{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__btn + &__btn{
+      margin-top: 20px;
+    }
+    &__socials{
+      margin-top: 30px;
+    }
+    &-nav{
+      align-items: center;
+      justify-content: space-evenly;
+      &__item{
+        margin: 0;
+      }
+      &__list{
+        display: none;
+      }
+      &__title{
+        text-align: center;
+        padding-bottom: 14px;
+        &::before{
+          display: none;
+        }
+      }
+    }
+    &-logo{
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      &__text{
+        margin-left: 10px;
+      }
+    }
+    &-contacts{
+      &__item{
+        justify-content: center;
+      }
+    }
+  }
+}

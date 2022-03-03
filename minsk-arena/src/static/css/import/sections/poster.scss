@@ -1,0 +1,335 @@
+$min_width: 320px;
+$max_width: 1140px;
+
+
+.poster{
+  &-grid{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    grid-auto-rows: calc(100vw / 5);
+    &_placard{
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      grid-auto-rows: calc(100vw / 4);
+    }
+    &__item{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-group{
+    &__wrapper{
+      display: flex;
+      align-items: center;
+    }
+    &__title{
+      font-size: 16px;
+      font-weight: 700;
+
+      color:#d22d2c;
+      margin-bottom: 24px;
+    }
+  }
+  &-item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:hover{
+      .poster-item__wrapper{
+        &::before{
+          background-color: rgba(0,0,0,0.2);
+        }
+      }
+    }
+    &__wrapper{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: .3s all linear;
+      }
+      &_grid{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-auto-rows: calc(100vw / 4);
+        .poster-item__img{
+          position: relative;
+        }
+      }
+    }
+    &__img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__content{
+      position: relative;
+      z-index: 3;
+      height: 100%;
+
+      padding: 27px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_center{
+        justify-content: center;
+        padding: 27px 55px;
+      }
+    }
+    &__day{
+      @include fluid-type($min_width, $max_width, 26px, 40px);
+      font-weight: 700;
+      color:#fff;
+    }
+    &__desc{
+      font-size: 16px;
+      font-family: "Lora", sans-serif;
+      color:#afafaf;
+      margin-top: 8px;
+      line-height: 25px;
+    }
+    &__link{
+      font-size: 14px;
+      color: #d22d2c;
+
+      margin-top: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      transition: .3s color;
+      &:hover{
+        color: #EA504F;
+      }
+    }
+    &__date{
+      &_row{
+        display: flex;
+        align-items: flex-end;
+        .poster-item{
+          &__day{
+            line-height: 1;
+          }
+          &__mounth{
+            margin: 0 10px 0 10px;
+          }
+        }
+      }
+    }
+    &__mounth{
+      margin-top: 5px;
+    }
+    &__mounth,&__year{
+      color:#fff;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &__type{
+      position: absolute;
+      left: 0;
+      bottom: 40%;
+
+      width: 150px;
+      height: 26px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: url("../img/type-rectangle.svg") center center no-repeat;
+      background-size: contain;
+      color:#fff;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+
+      &_top{
+        top: 25px;
+      }
+    }
+    &__label{
+      @include fluid-type($min_width, $max_width, 18px, 26px);
+      letter-spacing: -.3px;
+      text-transform: uppercase;
+      color:#fff;
+      font-weight: 700;
+
+      height: 60px;
+      display: flex;
+      align-items: flex-start;
+
+      max-width: 40%;
+    }
+  }
+}
+
+.archive{
+  &-slider{
+    &__wrapper{
+      display: flex;
+      align-items: center;
+      padding: 35px 0 20px;
+      .poster-item__wrapper{
+        width: 255px;
+        height: 300px;
+        transition: .3s all;
+        &:hover{
+          z-index: 5;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.gallery-slider{
+  .swiper-slide{
+    height: calc(100% - 10px / 3);
+  }
+  &__img + &__img{
+    margin-top: 10px;
+  }
+  &__img{
+    position: relative;
+    transition: .3s all;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: .3s all;
+    }
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      z-index: 2;
+      &::before{
+        background-color: transparent;
+      }
+    }
+  }
+  .swiper-pagination{
+    position: relative;
+    margin-top: 60px;
+    &-bullet{
+      width: 9px;
+      height: 9px;
+      border: solid 1px #e0e0e0;
+      opacity: 1;
+      transition: 0.3s all;
+      &-active{
+        background-color: #d22d2c;
+        border-color: #d22d2c;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .poster{
+    &-item{
+      &__content{
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .poster{
+    &-grid{
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      grid-auto-rows: calc(100vw / 4);
+    }
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .poster{
+    &-grid{
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      grid-auto-rows: calc(100vw / 3);
+      &_placard{
+        grid-template-columns: minmax(0,1fr);
+        grid-auto-rows: calc(100vw / 2);
+      }
+    }
+    &-item{
+      &__wrapper{
+        &_grid{
+          grid-auto-rows: calc(100vw / 2);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .poster{
+    &-grid{
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      grid-auto-rows: calc(100vw / 2);
+      &_placard{
+        grid-template-columns: minmax(0,1fr);
+        grid-auto-rows:auto;
+      }
+    }
+    &-item{
+      &__label{
+        align-items: flex-end;
+        max-width: 100%;
+      }
+      &__type{
+        bottom: 35%;
+      }
+      &__wrapper{
+        &_grid{
+          grid-template-columns: minmax(0,1fr);
+          grid-auto-rows: calc(100vw / 1);
+          .poster-item{
+            &__img{
+              order: 1;
+            }
+            &__content{
+              order: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .poster{
+    &-grid{
+      grid-auto-rows: 200px;
+      &_placard{
+        grid-auto-rows: auto;
+      }
+    }
+  }
+}
