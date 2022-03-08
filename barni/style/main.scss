@@ -1,0 +1,1421 @@
+
+@font-face {
+  font-family: 'Odds';
+  src: url('../fonts/Odds/Odds-Regular.woff2') format('woff2'),
+  url('../fonts/Odds/Odds-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Iskra CYR Md';
+  src: url('../fonts/Iskra/IskraCYRMd.woff2') format('woff2'),
+  url('../fonts/Iskra/IskraCYRMd.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body{
+  background: url("../images/stock-bg.png") center center/cover no-repeat;
+}
+
+
+.container{
+  max-width: 1310px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 0 15px;
+  &-small{
+    max-width: 940px;
+  }
+  &-medium{
+    max-width: 1130px;
+  }
+}
+
+.hero{
+  position: relative;
+
+  background: url("../images/hero-bg.jpg") center center/cover no-repeat;
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+
+    width: 700px;
+    height: 200px;
+
+    background: url("../images/hero-footer.png") center center/contain no-repeat;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    bottom: 100px;
+    left: 95px;
+
+    width: 150px;
+    height: 150px;
+
+    display: block;
+
+    background: url("../images/shild.png") center center/contain no-repeat;
+  }
+  &__wrapper{
+    display: flex;
+    align-items: flex-start;
+
+    position: relative;
+  }
+  &__img{
+    height: 100%;
+    width: 100%;
+    max-width: 525px;
+
+    align-self: flex-end;
+    z-index: 2;
+    &-item{
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+  }
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 60px 0 160px 0;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    &-img{
+      height: 100px;
+      object-fit: contain;
+      &_small{
+        width: 82px;
+        height: 82px;
+      }
+      &-m{
+        display: none;
+      }
+    }
+    &-block{
+      display: flex;
+      align-items: center;
+    }
+    &-block + &-block{
+      &::before{
+        content: '';
+        position: relative;
+        width: 2px;
+        height: 64px;
+
+        margin: 0 30px;
+
+        display: block;
+        background: #fff;
+      }
+    }
+  }
+  &__desc{
+    margin-top: 33px;
+    &-text{
+      text-align: center;
+
+      font-family: 'Iskra CYR Md', sans-serif;
+      font-size: 26px;
+      line-height: 28px;
+      color: #003595;
+
+      text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff, -2px 0px 0 #ffffff, 0px -2px 0 #ffffff;
+    }
+  }
+  &__title{
+    margin-top: 30px;
+    &-img{
+      width: 100%;
+      max-height: 280px;
+
+      object-fit: contain;
+    }
+  }
+  &__footer{
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 250px;
+    height: 50px;
+
+
+    background: #FECF0A;
+    box-shadow: inset 0px -3px 0px #E2B703;
+    border-radius: 30px;
+
+    font-family: 'Iskra CYR Md', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #003595;
+    text-decoration: none;
+  }
+}
+
+
+.section{
+  &-stock{
+    padding-top: 55px;
+
+    position: relative;
+    &__container{
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        left: 225px;
+        bottom: -120px;
+
+        width: 125px;
+        height: 85px;
+
+        background: url("../images/cloud.png") center center/contain no-repeat;
+      }
+      &::before{
+        content: '';
+        width: 222px;
+        height: 145px;
+
+        position: absolute;
+        bottom: -150px;
+        right: 230px;
+
+        background: url("../images/cloud.png") center center/contain no-repeat;
+      }
+    }
+  }
+  &__title{
+    color: #003595;
+
+
+    font-size: 42px;
+    line-height: 49px;
+    text-align: center;
+
+    font-family: 'Odds', sans-serif;
+
+    text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff, -2px 0px 0 #ffffff, 0px -2px 0 #ffffff;
+  }
+  &__desc{
+    font-family: 'Iskra CYR Md', sans-serif;
+
+    font-size: 20px;
+    line-height: 28px;
+
+    text-align: center;
+    color: #003595;
+
+    max-width: 455px;
+    width: 100%;
+
+    margin: 18px auto 0 auto;
+  }
+  &__content{
+    margin-top: 18px;
+  }
+}
+
+.stock {
+  &-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+    &__item {
+      width: calc(50% - 20px);
+      height: 245px;
+
+      margin: 0 0 20px 0;
+
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+  &-item{
+    height: 100%;
+    &__wrapper{
+      position: relative;
+      height: 100%;
+
+      overflow: hidden;
+    }
+    &__img{
+      position: absolute;
+      top: 0;
+      left: 30px;
+      z-index: 2;
+
+      height: 100%;
+      width: 260px;
+
+      &-item{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    &__content{
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+
+      padding-left: 320px;
+
+      background: #AFE0FC;
+      box-shadow: 0px 0px 27px rgba(45, 96, 172, 0.2);
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 13px;
+        bottom: 25px;
+        z-index: 0;
+
+        width: 100%;
+        height: 106px;
+
+        background: url("../images/cloud-stock.png") center center/contain no-repeat;
+      }
+
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 256px;
+        z-index: 0;
+
+        width: 235px;
+        height: 45px;
+
+        background: url("../images/branch.svg") center center/contain no-repeat;
+      }
+
+    }
+    &__desc{
+      position: relative;
+      z-index: 2;
+
+      font-family: "Iskra CYR Md", sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      color: #003595;
+      
+      max-width: 250px;
+    }
+    &__btn{
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 175px;
+      height: 50px;
+
+      margin-top: 20px;
+
+      background: #FECF0A;
+      box-shadow: inset 0px -3px 0px #E2B703;
+      border-radius: 30px;
+
+      font-family: 'Iskra CYR Md', sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #003595;
+    }
+  }
+}
+
+.banner{
+  background: linear-gradient(180deg, #A2CF5F -10.99%, #598B0E 92.45%);
+  border-radius: 30px;
+
+  position: relative;
+  z-index: 3;
+  &__box{
+     max-width: 400px;
+    width: 100%;
+  }
+  &__bear,&__box{
+    height: 120%;
+    transform: translateY(-8.5%);
+    &-img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__wrapper{
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: url("../images/bg-banner.png") center center/cover no-repeat;
+    border-radius: 30px;
+
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      right: -88px;
+      bottom: -58px;
+
+      width: 176px;
+      height: 116px;
+      display: block;
+
+      background: url("../images/cloud.png") center center/contain no-repeat;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: calc(50% - 51px);
+      left: -80px;
+
+      width: 102px;
+      height: 68px;
+      display: block;
+
+      background: url("../images/cloud.png") center center/contain no-repeat;
+    }
+  }
+  &__text{
+    font-family: 'Iskra CYR Md', sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+  &__content{
+    margin-left: 30px;
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8px;
+
+    background: #FECF0A;
+    box-shadow: inset 0px -3px 0px #E2B703;
+    border-radius: 30px;
+
+    width: 130px;
+    height: 48px;
+
+    font-size: 16px;
+    font-family: "Iskra CYR Md", sans-serif;
+    text-transform: uppercase;
+    color: #003595;
+
+    text-decoration: none;
+  }
+}
+
+.section{
+  &-banner{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      z-index: 5;
+      right: 65px;
+      top: -14vw;
+
+      width: 185px;
+      height: 195px;
+      display: block;
+
+      background: url("../images/sun.png") center center/contain no-repeat;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      z-index: 5;
+
+      left: 80px;
+      bottom: 0;
+
+      width: 175px;
+      height: 110px;
+
+      background: url("../images/bird.png") center center/contain no-repeat;
+    }
+    &__wrapper{
+      position: relative;
+      z-index: 4;
+      padding: 4vw 0 5vw 0;
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -10vw;
+        z-index: 2;
+
+
+        width: 100%;
+        height: 40vw;
+        display: block;
+
+        background: url("../images/banner-bg.png") center center/cover no-repeat;
+      }
+    }
+  }
+}
+
+
+.footer{
+  background: url("../images/footer-bg.png") bottom center/contain no-repeat;
+  &-second{
+    background: url("../images/footer-bg-second.png") bottom center/contain no-repeat;
+
+    position: relative;
+
+    margin-top: 60px;
+
+    .footer__wrapper{
+      position: relative;
+      &::before{
+        content: '';
+
+        position: absolute;
+        top: 100px;
+        left: 0;
+
+        width: 85px;
+        height: 85px;
+        display: block;
+
+        background: url("../images/butterfly.png") center center/contain no-repeat;
+      }
+    }
+  }
+  &__wrapper{
+    display: flex;
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding: 80px 0 30px 0;
+
+    height: 20vw;
+    &_second{
+      height: 25vw;
+    }
+    &-block{
+      width: 280px;
+      flex-shrink: 0;
+      &_center{
+        flex-shrink: 1;
+        width: 100%;
+      }
+      &_social{
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+  &__social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    &-item + &-item{
+      margin-left: 8px;
+    }
+    &-link{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      width: 30px;
+      height: 30px;
+
+      border:1px solid #fff;
+      border-radius: 50%;
+    }
+    &-img{
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+  }
+  &__text{
+    font-family: "Iskra CYR Md", sans-serif;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    color:#fff;
+  }
+  &__phone{
+    font-size: 26px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+  }
+  &__mail{
+    font-size: 16px;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-img{
+      height: 50px;
+      width: auto;
+
+      object-fit: contain;
+    }
+  }
+  &__copyright{
+    margin-top: 20px;
+    &-text{
+      text-align: center;
+    }
+  }
+}
+
+
+.catalog{
+  &-page{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 120vh;
+
+      background: url("../images/hero-bg.png") center center/contain no-repeat;
+    }
+  }
+  &-hero{
+    position: relative;
+
+    margin-bottom: 50px;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -75px;
+
+      width: 180px;
+      height: 255px;
+      display: block;
+
+      background: url("../images/cloud-hero.png") center center/contain no-repeat;
+    }
+
+    &__container{
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+
+        width: 225px;
+        height: 150px;
+        display: block;
+
+        background: url("../images/cloud.png") center center/contain no-repeat;
+      }
+    }
+  }
+  &-wrapper{
+    padding-top: 27px;
+    position: relative;
+
+    &::before{
+      content:'';
+      position: absolute;
+      top: 27px;
+      left: 65px;
+
+      width: 265px;
+      height: 175px;
+      display: block;
+
+      background:url("../images/cloud.png") center center/contain no-repeat;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 77px;
+      right: 115px;
+
+      width: 350px;
+      height: 200px;
+
+      background: url("../images/cloud-and-bird.png") center center/contain no-repeat;
+    }
+    &__logo{
+      width: 155px;
+      height: 90px;
+
+      margin: 0 auto;
+      &-img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__header{
+      position: relative;
+
+      margin-bottom: 18px;
+      &-link{
+        position: absolute;
+        top: calc(50% - 9px);
+        right: -102px;
+      }
+      &-container{
+        position: relative;
+      }
+    }
+    &__block + &__block{
+      margin-top: 20px;
+    }
+    &__footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 20px;
+    }
+    &__link{
+      display: flex;
+      align-items: center;
+
+      font-family: 'Iskra CYR Md', sans-serif;
+      font-size: 16px;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #003595;
+      width: max-content;
+      &::before{
+        content: '';
+
+        width: 9px;
+        height:9px;
+        display: block;
+
+        margin-right: 6px;
+
+        background: url("../images/arrow.svg") center center/contain no-repeat;
+      }
+    }
+  }
+  &-block{
+    position: relative;
+    z-index: 3;
+    &__content{
+      margin-top: 30px;
+    }
+    &__wrapper{
+      position: relative;
+      &_birds{
+        position: relative;
+
+        &::before{
+          content: '';
+          position: absolute;
+          left: -100px;
+          bottom: 50px;
+
+          width: 200px;
+          height: 130px;
+          display: block;
+
+          background: url("../images/bird.png") center center/contain no-repeat;
+        }
+
+        &::after{
+          content: '';
+          position: absolute;
+          right: -100px;
+          top: -50px;
+
+          width: 200px;
+          height: 145px;
+          display: block;
+
+          background: url("../images/birds.png") center center/contain no-repeat;
+        }
+      }
+
+    }
+  }
+  &-grid{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &__item{
+      width: 300px;
+      margin-bottom: 30px;
+    }
+  }
+  &-item{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &__img{
+      width: 100%;
+      height: auto;
+      &-item{
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+      }
+    }
+    &__content{
+      margin-top: 25px;
+    }
+    &__label{
+      max-width: 285px;
+      margin: 0 auto;
+
+      text-align: center;
+
+      font-family: 'Iskra CYR Md', sans-serif;
+
+      font-size: 14px;
+      line-height: 16px;
+      color: #003595;
+    }
+    &__weight{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 8px;
+      &-label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 50px;
+        height: 20px;
+        background: #003595;
+        border-radius: 10px;
+
+        font-family: "Iskra CYR Md", sans-serif;
+        font-size: 14px;
+
+        color: #FECF0A;
+      }
+    }
+    &__footer{
+      padding-top: 20px;
+
+      margin-top: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__link{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 110px;
+      height: 50px;
+
+      background: #FECF0A;
+      box-shadow: inset 0px -3px 0px #E2B703;
+      border-radius: 30px;
+
+      font-family: 'Iskra CYR Md', sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #003595;
+
+      text-decoration: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1366px) {
+  .hero{
+    &::after{
+      left: -30px;
+    }
+  }
+  .footer{
+    &__wrapper{
+      padding-left: 70px;
+      padding-right: 50px;
+    }
+  }
+  .catalog{
+    &-wrapper{
+      &__header{
+        &-link{
+          right: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1139px) {
+  .stock{
+    &-grid{
+      flex-direction: column;
+      &__item{
+        width: 100%;
+      }
+    }
+    &-item{
+      &__content{
+        align-items: flex-end;
+        padding: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .images-row.images-row_reccomend[data-v-5452c966] img{
+    width: 100% !important;
+  }
+  .hero{
+    &::before{
+      width: 100%;
+      height: 105px;
+      top: 0;
+      left: 0;
+      bottom: unset;
+
+      background: url("../images/hero-clouds.svg") right center/cover no-repeat;
+    }
+    &::after{
+      bottom: 350px;
+      left: unset;
+      right: 30px;
+    }
+    &__wrapper{
+      flex-direction: column-reverse;
+    }
+    &__content{
+      padding: 20px 0 8px 0;
+    }
+    &__img{
+      align-self: center;
+    }
+    &__desc{
+      margin-top: 20px;
+      &-text{
+        font-size: 24px;
+      }
+    }
+    &__title{
+      margin-top: 15px;
+    }
+    &__link{
+      width: 176px;
+      span{
+        display: none;
+      }
+    }
+    &__logo{
+      flex-direction: column;
+      &-img{
+        height: 75px;
+        &_small{
+          height: 40px;
+          width: 200px;
+        }
+        &-m{
+          display: block;
+        }
+        &-d{
+          display: none;
+        }
+      }
+      &-block + &-block{
+        margin-top: 25px;
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
+  .section{
+    &-banner{
+      &::after,&::before{
+        display: none;
+      }
+      &__container{
+        padding: 0;
+      }
+      &__wrapper{
+        padding-top: 50px;
+        &::after{
+          top: -22vw;
+          background: url("../images/banner-bg-m.png") top center/cover no-repeat;
+        }
+      }
+    }
+  }
+  .catalog{
+    &-page{
+      &::after{
+        display: none;
+      }
+    }
+    &-hero{
+      &::before{
+        display: none;
+      }
+      &__container{
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+  .banner{
+    &__wrapper{
+      flex-direction: column;
+      padding-top: 95px;
+      &::before,&::after{
+        display: none;
+      }
+    }
+    &__box{
+      height: 170px;
+      position: absolute;
+
+      top: -85px;
+
+      transform: translateY(0);
+    }
+    &__content{
+      max-width: 220px;
+      margin-left: 0;
+      text-align: center;
+    }
+    &__link{
+      margin: 24px auto 0 auto;
+    }
+    &__bear{
+      display: none;
+    }
+  }
+  .footer{
+    &-second{
+      .footer__wrapper{
+        &::before{
+          display: none;
+        }
+      }
+    }
+    &__wrapper{
+    }
+  }
+  .footer{
+    background: url("../images/footer-bg-m.png") center center/cover no-repeat;
+    &__wrapper{
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 400px;
+      padding: 0 0 25px 0;
+      &-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(1){
+          order: 2;
+        }
+        &:nth-child(2){
+          order: 1;
+        }
+        &:nth-child(3){
+          order: 3;
+        }
+        &_phone{
+          margin: 14px 0;
+        }
+      }
+    }
+    &__copyright{
+      max-width: 275px;
+    }
+  }
+
+  .catalog{
+    &-block{
+      &__wrapper{
+        &_birds{
+          &::after,&::before{
+            display: none;
+          }
+        }
+      }
+    }
+    &-wrapper{
+      &::before{
+        width: 70px;
+        height: 45px;
+
+        top: 50px;
+        left: 30px;
+      }
+      &::after{
+        width: 102px;
+        height: 65px;
+
+        top: 24px;
+        right: 15px;
+
+        background: url("../images/cloud.png") center center/contain no-repeat;
+      }
+      &__header{
+        margin-bottom: 50px;
+        &-link{
+          position: relative;
+          top: 0;
+          right: 0;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section{
+    &__title{
+      font-size: 32px;
+      line-height: 37px;
+    }
+    &__desc{
+      margin-top: 8px;
+
+      font-size: 18px;
+      line-height: 24px;
+
+      color:#fff;
+
+      max-width: 300px;
+    }
+  }
+  .stock{
+    &-grid{
+      &__item{
+        height: auto;
+      }
+    }
+    &-item{
+      &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      &__content{
+        position: relative;
+        z-index: 2;
+        &::after{
+          display: none;
+        }
+      }
+      &__img{
+        position: relative;
+        z-index: 1;
+        height: 150px;
+        width: auto;
+
+        top: 0;
+        left: 0;
+
+        &::before{
+          content: '';
+          position: absolute;
+          left: calc(50% - 103px);
+          bottom: -103px;
+          width: 206px;
+          height: 206px;
+          display: block;
+
+          background: #003595;
+
+          z-index: 0;
+
+          border-radius: 50%;
+        }
+        &-item{
+          position: relative;
+          z-index: 2;
+        }
+      }
+      &__desc{
+        text-align: center;
+        font-size: 18px;
+        line-height: 24px;
+
+        margin: 0 auto;
+      }
+      &__btn{
+        margin: 20px auto 0 auto;
+      }
+    }
+  }
+
+  .hero{
+    &::after{
+      width: 130px;
+      height: 130px;
+
+      right: 0;
+      bottom: 230px;
+    }
+  }
+}
+
+
+.product-row{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product-row__block_end{
+  align-self: flex-end;
+
+  max-width: 285px;
+  width: 100%;
+  flex-shrink: 0;
+
+  transform: translateY(-50px) translateX(20px);
+}
+
+.product-row__block:nth-child(3){
+  max-width: 400px;
+  width: 100%;
+
+  flex-shrink: 0;
+
+  transform: translateX(-100px);
+}
+
+
+.images-row_product{
+  width: 100%;
+}
+
+.images-row[data-v-5452c966] {
+  position: relative;
+  width: 76%;
+  margin-left: 12%;
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /*justify-content: space-between;*/
+  justify-content: center;
+  align-content: stretch;
+  align-items: flex-start
+}
+
+.images-row.images-row_product[data-v-5452c966]{
+  width: 100%;
+  margin-left: 0;
+}
+
+.images-row.images-row_reccomend[data-v-5452c966] img{
+  width: 60%;
+  margin-left: 0;
+}
+
+.images-row[data-v-5452c966]:last-child {
+  margin-bottom: 0
+}
+
+.product-img{
+  object-fit: contain;
+  width: 100%;
+}
+
+.product-row__img{
+  width: 450px;
+}
+
+.product__title{
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.06em;
+
+  color: #003595;
+
+  font-family: 'Iskra CYR Md', sans-serif;
+  font-weight: 400;
+}
+
+.product__desc{
+  margin-top: 12px;
+
+  font-size: 10px;
+  line-height: 11px;
+  letter-spacing: 0.06em;
+
+  color: #003595;
+
+  font-family: 'Iskra CYR Md', sans-serif;
+}
+
+.reccomend{
+  position: relative;
+  width: 450px;
+}
+
+.reccomend__img{
+  width: 100% !important;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+.reccomend__text{
+  position: absolute;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+  font-family: 'Iskra CYR Md', sans-serif;
+
+  max-width: 285px;
+
+  right: 25px;
+
+  top:45px;
+}
+
+@media screen and (max-width: 1100px) {
+  .product-row__img{
+    width: 400px;
+  }
+  .product-row__block:nth-child(3){
+    transform: translateX(-100px) translateY(-20px);
+  }
+
+  .images-row_product{
+    transform: translateX(50px);
+  }
+  .reccomend__text{
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width:740px) {
+  .images-row_product{
+    transform: translateX(0);
+  }
+  .images-row>a[data-v-5452c966] {
+    width: 100%
+  }
+
+  .images-row>a[data-v-5452c966]:first-child {
+    z-index: 1
+  }
+
+  .images-row>a[data-v-5452c966]:nth-child(2) {
+    /*margin-top: -4vw;*/
+    margin-top: 4vw;
+    z-index: 2
+  }
+
+  .images-row>a[data-v-5452c966]:nth-child(3) {
+    /*margin-top: -4vw;*/
+    margin-top: 4vw;
+    z-index: 3
+  }
+}
+
+
+.mobile-visible {
+  display: none !important;
+}
+
+@media only screen and (max-width:740px) {
+  .desktop-visible {
+    display: none !important;
+  }
+
+  .mobile-visible {
+    display: block !important;
+  }
+}
