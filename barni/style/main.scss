@@ -1157,9 +1157,15 @@ body{
       max-width: 220px;
       margin-left: 0;
       text-align: center;
+
+      padding-bottom: 50px;
     }
     &__link{
-      margin: 24px auto 0 auto;
+      position: absolute;
+      bottom: -20px;
+      left: calc(50% - 65px);
+      &_no-promo{
+      }
     }
     &__bear{
       display: none;
