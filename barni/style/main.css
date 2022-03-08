@@ -35,6 +35,20 @@ body {
   max-width: 1130px;
 }
 
+.page-wrapper_gradient {
+  position: relative;
+}
+.page-wrapper_gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 120vh;
+  background: url("../images/hero-bg.png") center center/contain no-repeat;
+}
+
 .hero {
   position: relative;
   background: url("../images/hero-bg.jpg") center center/cover no-repeat;
@@ -153,9 +167,14 @@ body {
   text-decoration: none;
 }
 
+.section {
+  position: relative;
+  z-index: 2;
+}
 .section-stock {
   padding-top: 55px;
   position: relative;
+  margin-bottom: 50px;
 }
 .section-stock__container {
   position: relative;
@@ -302,8 +321,7 @@ body {
   z-index: 3;
 }
 .banner__box {
-  max-width: 400px;
-  width: 100%;
+  width: auto;
 }
 .banner__bear, .banner__box {
   height: 120%;
@@ -311,7 +329,7 @@ body {
 }
 .banner__bear-img, .banner__box-img {
   height: 100%;
-  width: 100%;
+  width: auto;
   object-fit: contain;
 }
 .banner__wrapper {
@@ -343,6 +361,23 @@ body {
   display: block;
   background: url("../images/cloud.png") center center/contain no-repeat;
 }
+.banner__wrapper_no-promo {
+  height: 240px;
+  justify-content: flex-start;
+  padding-right: 90px;
+}
+.banner__wrapper_no-promo::before {
+  width: 240px;
+  height: 155px;
+  right: -120px;
+}
+.banner__wrapper_no-promo::after {
+  width: 140px;
+  height: 90px;
+  right: 64px;
+  left: unset;
+  top: -45px;
+}
 .banner__text {
   font-family: "Iskra CYR Md", sans-serif;
   font-size: 22px;
@@ -351,6 +386,10 @@ body {
 }
 .banner__content {
   margin-left: 30px;
+}
+.banner__content_no-promo {
+  max-width: 300px;
+  margin-left: auto;
 }
 .banner__link {
   display: flex;
@@ -393,6 +432,16 @@ body {
   height: 110px;
   background: url("../images/bird.png") center center/contain no-repeat;
 }
+.section-banner_no-promo::before {
+  right: calc(50% - 360px);
+}
+.section-banner_no-promo::after {
+  width: 230px;
+  height: 200px;
+  bottom: -150px;
+  left: 220px;
+  background: url("../images/butterfly-and-bird.png") center center/contain no-repeat;
+}
 .section-banner__wrapper {
   position: relative;
   z-index: 4;
@@ -409,6 +458,9 @@ body {
   display: block;
   background: url("../images/banner-bg.png") center center/cover no-repeat;
 }
+.section-banner__wrapper_no-promo::after {
+  display: none;
+}
 
 .footer {
   background: url("../images/footer-bg.png") bottom center/contain no-repeat;
@@ -420,6 +472,7 @@ body {
 }
 .footer-second .footer__wrapper {
   position: relative;
+  height: 25vw;
 }
 .footer-second .footer__wrapper::before {
   content: "";
@@ -440,6 +493,15 @@ body {
 }
 .footer__wrapper_second {
   height: 25vw;
+}
+.footer__wrapper_no-promo::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 100px;
+  right: -130px;
+  top: 0px;
+  background: url("../images/butterfly-and-birds.png") center center/contain no-repeat;
 }
 .footer__wrapper-block {
   width: 280px;
@@ -508,18 +570,6 @@ body {
   text-align: center;
 }
 
-.catalog-page {
-  position: relative;
-}
-.catalog-page::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 120vh;
-  background: url("../images/hero-bg.png") center center/contain no-repeat;
-}
 .catalog-hero {
   position: relative;
   margin-bottom: 50px;
@@ -569,6 +619,15 @@ body {
   width: 350px;
   height: 200px;
   background: url("../images/cloud-and-bird.png") center center/contain no-repeat;
+}
+.catalog-wrapper_no-promo::after {
+  display: none;
+}
+.catalog-wrapper_no-promo::before {
+  width: 135px;
+  height: 90px;
+  left: 10px;
+  top: 20px;
 }
 .catalog-wrapper__logo {
   width: 155px;
@@ -833,6 +892,9 @@ body {
     top: -22vw;
     background: url("../images/banner-bg-m.png") top center/cover no-repeat;
   }
+  .section-stock__container::after, .section-stock__container::before {
+    display: none;
+  }
 
   .catalog-page::after {
     display: none;
@@ -843,10 +905,16 @@ body {
   .catalog-hero__container::after {
     display: none;
   }
+  .catalog-wrapper_no-promo::after {
+    display: block;
+  }
 
   .banner__wrapper {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-top: 95px;
+    padding-right: 0;
   }
   .banner__wrapper::before, .banner__wrapper::after {
     display: none;
@@ -855,7 +923,11 @@ body {
     height: 170px;
     position: absolute;
     top: -85px;
+    width: 100%;
     transform: translateY(0);
+  }
+  .banner__box-img {
+    width: 100%;
   }
   .banner__content {
     max-width: 220px;
@@ -869,6 +941,9 @@ body {
     display: none;
   }
 
+  .footer-second .footer__wrapper {
+    height: 400px;
+  }
   .footer-second .footer__wrapper::before {
     display: none;
   }
@@ -899,6 +974,9 @@ body {
   }
   .footer__wrapper-block_phone {
     margin: 14px 0;
+  }
+  .footer__wrapper_no-promo::after {
+    display: none;
   }
   .footer__copyright {
     max-width: 275px;
