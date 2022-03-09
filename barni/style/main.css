@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Odds";
   src: url("../fonts/Odds/Odds-Regular.woff2") format("woff2"), url("../fonts/Odds/Odds-Regular.woff") format("woff");
@@ -19,7 +20,7 @@
 }
 
 body {
-  background: url("../images/stock-bg.png") center center/cover no-repeat;
+  background: url("../images/stock-bg.jpg") center center/contain repeat-y;
 }
 
 .container {
@@ -65,7 +66,7 @@ body {
 .hero::after {
   content: "";
   position: absolute;
-  z-index: 0;
+  z-index: 2;
   bottom: 100px;
   left: 95px;
   width: 150px;
@@ -165,6 +166,10 @@ body {
   text-transform: uppercase;
   color: #003595;
   text-decoration: none;
+}
+.hero__link span {
+  margin-right: 5px;
+  display: block;
 }
 
 .section {
@@ -322,6 +327,10 @@ body {
 }
 .banner__box {
   width: auto;
+  max-width: 400px;
+}
+.banner__box-img {
+  max-width: 400px;
 }
 .banner__bear, .banner__box {
   height: 120%;
@@ -331,6 +340,7 @@ body {
   height: 100%;
   width: auto;
   object-fit: contain;
+  border-bottom-left-radius: 30px;
 }
 .banner__wrapper {
   height: 200px;
@@ -340,6 +350,8 @@ body {
   background: url("../images/bg-banner.jpg") center center/cover no-repeat;
   border-radius: 30px;
   position: relative;
+  padding-right: 30px;
+  padding-left: 15px;
 }
 .banner__wrapper::before {
   content: "";
@@ -726,6 +738,27 @@ body {
   flex-direction: column;
   height: 100%;
 }
+.catalog-item_hit {
+  position: relative;
+}
+.catalog-item_hit::before {
+  content: "ограниченная серия";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/hit-bg.png") center center/cover no-repeat;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-family: "Iskra CYR Md", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
 .catalog-item__img {
   width: 100%;
   height: auto;
@@ -788,6 +821,11 @@ body {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1440px) {
+  .catalog-wrapper__header-link {
+    right: 0;
+  }
+}
 @media screen and (max-width: 1366px) {
   .hero::after {
     left: -30px;
@@ -802,6 +840,94 @@ body {
     right: 15px;
   }
 }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+}
+.popup__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+.popup__container {
+  max-width: 340px;
+  background: #AFE0FC;
+  border-radius: 30px;
+  position: relative;
+}
+.popup__content {
+  padding: 30px 42px 35px 42px;
+}
+.popup__title {
+  font-family: "Iskra CYR Md", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #003595;
+}
+.popup__list {
+  margin: 35px auto 0 auto;
+  max-width: 170px;
+  list-style: none;
+}
+.popup__list-item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup__list-item + .popup__list-item {
+  margin-top: 20px;
+}
+.popup__list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 12px 15px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+.popup__list-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.popup__close {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  height: 17px;
+  width: 17px;
+}
+.popup__close::before, .popup__close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background: #003595;
+  border-radius: 5px;
+}
+.popup__close::before {
+  transform: rotate(45deg);
+}
+.popup__close::after {
+  transform: rotate(-45deg);
+}
+
 @media screen and (max-width: 1139px) {
   .stock-grid {
     flex-direction: column;
@@ -821,7 +947,7 @@ body {
 
   .hero::before {
     width: 100%;
-    height: 105px;
+    height: 185px;
     top: 0;
     left: 0;
     bottom: unset;
@@ -842,7 +968,7 @@ body {
     align-self: center;
   }
   .hero__desc {
-    margin-top: 20px;
+    margin-top: 48px;
   }
   .hero__desc-text {
     font-size: 24px;
@@ -857,26 +983,13 @@ body {
     display: none;
   }
   .hero__logo {
-    flex-direction: column;
+    padding-top: 30px;
   }
   .hero__logo-img {
     height: 75px;
   }
   .hero__logo-img_small {
-    height: 40px;
-    width: 200px;
-  }
-  .hero__logo-img-m {
-    display: block;
-  }
-  .hero__logo-img-d {
-    display: none;
-  }
-  .hero__logo-block + .hero__logo-block {
-    margin-top: 25px;
-  }
-  .hero__logo-block + .hero__logo-block::before {
-    display: none;
+    height: 60px;
   }
 
   .section-banner::after, .section-banner::before {
@@ -1015,6 +1128,14 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
+  .footer-second {
+    margin-top: 0;
+  }
+
+  .section-stock {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
   .section__title {
     font-size: 32px;
     line-height: 37px;
@@ -1080,8 +1201,12 @@ body {
   .hero::after {
     width: 130px;
     height: 130px;
-    right: 0;
-    bottom: 230px;
+    right: 10px;
+    bottom: 220px;
+    transform: rotate(60deg);
+  }
+  .hero__img {
+    max-width: 302px;
   }
 }
 .product-row {
