@@ -848,6 +848,11 @@ body {
   height: 100%;
   z-index: 0;
   opacity: 0;
+  transition: 0.3s all;
+}
+.popup.open {
+  z-index: 99;
+  opacity: 1;
 }
 .popup__wrapper {
   width: 100%;
@@ -910,6 +915,9 @@ body {
   top: -40px;
   height: 17px;
   width: 17px;
+}
+.popup__close:hover {
+  cursor: pointer;
 }
 .popup__close::before, .popup__close::after {
   content: "";
