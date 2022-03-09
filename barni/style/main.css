@@ -106,6 +106,8 @@ body {
 .hero__logo-img {
   height: 100px;
   object-fit: contain;
+  image-rendering: optimizequality;
+  image-rendering: -webkit-optimize-contrast;
 }
 .hero__logo-img_small {
   width: 82px;
@@ -140,6 +142,8 @@ body {
 }
 .hero__title {
   margin-top: 30px;
+  image-rendering: optimizequality;
+  image-rendering: -webkit-optimize-contrast;
 }
 .hero__title-img {
   width: 100%;
@@ -252,6 +256,8 @@ body {
   z-index: 2;
   height: 100%;
   width: 260px;
+  image-rendering: optimizequality;
+  image-rendering: -webkit-optimize-contrast;
 }
 .stock-item__img-item {
   height: 100%;
@@ -659,6 +665,7 @@ body {
   position: absolute;
   top: calc(50% - 9px);
   right: -102px;
+  z-index: 3;
 }
 .catalog-wrapper__header-container {
   position: relative;
@@ -762,6 +769,8 @@ body {
 .catalog-item__img {
   width: 100%;
   height: auto;
+  image-rendering: optimizequality;
+  image-rendering: -webkit-optimize-contrast;
 }
 .catalog-item__img-item {
   width: 100%;
@@ -846,7 +855,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -1;
   opacity: 0;
   transition: 0.3s all;
 }
