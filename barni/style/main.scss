@@ -209,6 +209,8 @@ body{
     color: #003595;
     text-decoration: none;
 
+    position: relative;
+    z-index: 3;
     span{
       margin-right: 5px;
       display: block;
@@ -1024,14 +1026,6 @@ body{
   }
 }
 
-
-@media screen and (min-width: 1440px) {
-  .hero{
-    &__wrapper{
-      min-height: 75vh;
-    }
-  }
-}
 
 @media screen and (max-width: 1440px) {
   .catalog{
