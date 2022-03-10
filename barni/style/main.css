@@ -830,6 +830,11 @@ body {
   text-decoration: none;
 }
 
+@media screen and (min-width: 1440px) {
+  .hero__wrapper {
+    min-height: 75vh;
+  }
+}
 @media screen and (max-width: 1440px) {
   .catalog-wrapper__header-link {
     right: 0;
