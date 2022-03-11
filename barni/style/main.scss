@@ -112,6 +112,9 @@ body{
       height: 100%;
 
       object-fit: contain;
+      &.hidden{
+        display: none;
+      }
     }
   }
   &__content{
@@ -1622,6 +1625,7 @@ body{
   color: #003595;
 
   font-family: 'Iskra CYR Md', sans-serif;
+
 }
 
 .reccomend{

@@ -10,9 +10,16 @@ const closePopup = () =>{
     popup.classList.remove('open');
 };
 
+const detectBrowserAgent = (browserName) =>{
+    return navigator.userAgent.indexOf(browserName) !== -1
+}
+
 document.addEventListener('DOMContentLoaded',()=>{
     const popupTrigger = document.querySelectorAll('.popup-trigger'),
-        popupClose = document.querySelectorAll('.popup-close');
+        popupClose = document.querySelectorAll('.popup-close'),
+        heroImgItems = document.querySelectorAll('.hero__img-item'),
+        heroImgItemVideo = document.querySelector('.hero__img-item_video'),
+        heroImgItemImg = document.querySelector('.hero__img-item_img');
 
     if(popupTrigger){
         popupTrigger.forEach(el=>{
@@ -34,53 +41,13 @@ document.addEventListener('DOMContentLoaded',()=>{
         });
     }
 
-        var lazyloadImages;
+    if(heroImgItems){
+        heroImgItems.forEach(el=>{
+            console.log(detectBrowserAgent('Safari'));
+            !detectBrowserAgent('Chrome') || !detectBrowserAgent('Safari') ? heroImgItemVideo.classList.add('hidden') : heroImgItemImg.classList.add('hidden');
+        });
+    }
 
-        if ("IntersectionObserver" in window) {
-            lazyloadImages = document.querySelectorAll(".lazy");
-            var imageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        var image = entry.target;
-                        image.src = image.dataset.src;
-                        image.classList.remove("lazy");
-                        imageObserver.unobserve(image);
-                    }
-                });
-            });
-
-            lazyloadImages.forEach(function(image) {
-                imageObserver.observe(image);
-            });
-        } else {
-            var lazyloadThrottleTimeout;
-            lazyloadImages = document.querySelectorAll(".lazy");
-
-            function lazyload () {
-                if(lazyloadThrottleTimeout) {
-                    clearTimeout(lazyloadThrottleTimeout);
-                }
-
-                lazyloadThrottleTimeout = setTimeout(function() {
-                    var scrollTop = window.pageYOffset;
-                    lazyloadImages.forEach(function(img) {
-                        if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                        }
-                    });
-                    if(lazyloadImages.length == 0) {
-                        document.removeEventListener("scroll", lazyload);
-                        window.removeEventListener("resize", lazyload);
-                        window.removeEventListener("orientationChange", lazyload);
-                    }
-                }, 20);
-            }
-
-            document.addEventListener("scroll", lazyload);
-            window.addEventListener("resize", lazyload);
-            window.addEventListener("orientationChange", lazyload);
-        }
 });
 
 
