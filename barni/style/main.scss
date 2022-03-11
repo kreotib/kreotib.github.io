@@ -1029,6 +1029,16 @@ body{
   }
 }
 
+@media screen and (min-width: 991px) and (max-width: 1440px) {
+  .hero{
+    &__img{
+      &-item{
+        transform: translateX(150px);
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 1440px) {
   .catalog{
@@ -1046,7 +1056,7 @@ body{
 @media screen and (max-width: 1366px) {
   .hero{
     &::after{
-      left: -30px;
+      left: 50px;
     }
   }
   .footer{
