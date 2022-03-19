@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+        }
+        .page-wrapper{
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+        }
+        .page-wrapper::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background: url("bg.png") center center/cover repeat-x;
+            z-index: 2;
+        }
+        .mouseCircle{
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #f2f1f6;
+            filter: blur(30px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="mouseCircle"></div>
+</div>
+
+<script>
+    const mouseCircle = document.querySelector('.mouseCircle');
+    var X = Y = 0;
+    function move() {
+        mouseCircle.style.left = X - 125 + 'px';
+        mouseCircle.style.top = Y - 125 + 'px';
+    }
+    document.addEventListener("mousemove", function (e) {
+        X = e.clientX;
+        Y = e.clientY;
+    }, false);
+
+    setInterval(move, 50);
+</script>
+</body>
+</html>
