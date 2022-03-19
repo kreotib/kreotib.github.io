@@ -65,18 +65,18 @@
         Y = e.clientY;
     }, false);
     document.addEventListener("touchstart", function (e) {
-        X = e.clientX;
-        Y = e.clientY;
+        X = e.touches[0].pageX;
+        Y = e.touches[0].pageY;
     }, false);
 
     document.addEventListener("touchmove", function (e) {
-        X = e.clientX;
-        Y = e.clientY;
+        X = e.touches[0].pageX;
+        Y = e.touches[0].pageY;
     }, false);
 
     document.addEventListener("touchend", function (e) {
-        X = e.clientX;
-        Y = e.clientY;
+        X = e.touches[0].pageX;
+        Y = e.touches[0].pageY;
     }, false);
 
     setInterval(move, 50);
