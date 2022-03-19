@@ -69,6 +69,16 @@
         Y = e.clientY;
     }, false);
 
+    document.addEventListener("touchmove", function (e) {
+        X = e.clientX;
+        Y = e.clientY;
+    }, false);
+
+    document.addEventListener("touchend", function (e) {
+        X = e.clientX;
+        Y = e.clientY;
+    }, false);
+
     setInterval(move, 50);
 </script>
 </body>
