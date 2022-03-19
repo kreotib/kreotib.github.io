@@ -13,15 +13,15 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body{
-        }
         .page-wrapper{
-            position: relative;
+            position: absolute;
 
             width: 100%;
-            height: 100vh;
+            height: 200vh;
+            background: url("bg.png") center center/cover repeat-x;
+            z-index: 2;
         }
-        .page-wrapper::before{
+        body::before{
             content: '';
             width: 100%;
             height: 100%;
@@ -29,11 +29,10 @@
             top: 0;
             left: 0;
 
-            background: url("bg.png") center center/cover repeat-x;
-            z-index: 2;
+
         }
         .mouseCircle{
-            position: absolute;
+            position: fixed;
             z-index: 1;
             left: 0;
             top: 0;
@@ -48,8 +47,12 @@
 <body>
 
 <div class="page-wrapper">
-    <div class="mouseCircle"></div>
+    <div class="page-wrapper__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur cupiditate est, hic itaque nesciunt officia quasi ut veritatis voluptas. Ab amet assumenda at consequatur fugiat ipsam minima modi quia, sapiente sunt? Corporis ducimus incidunt laboriosam magnam saepe sunt tempore. Ab architecto blanditiis cum, dolor, earum eligendi laboriosam molestiae quae quam ratione repellat reprehenderit tempora veniam vero voluptas. Accusantium assumenda at blanditiis dolores eius expedita fugiat illo, ipsam laudantium maxime nobis porro possimus, quas quidem quos soluta sunt unde voluptatibus! Inventore laudantium minus molestiae nesciunt possimus, ut voluptate? Commodi consectetur dolorum est eveniet impedit iusto laboriosam libero modi, mollitia voluptas!</p>
+    </div>
 </div>
+<div class="mouseCircle"></div>
+
 
 <script>
     const mouseCircle = document.querySelector('.mouseCircle');
@@ -59,6 +62,10 @@
         mouseCircle.style.top = Y - 125 + 'px';
     }
     document.addEventListener("mousemove", function (e) {
+        X = e.clientX;
+        Y = e.clientY;
+    }, false);
+    document.addEventListener("touchmove", function (e) {
         X = e.clientX;
         Y = e.clientY;
     }, false);
