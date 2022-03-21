@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /*
     const burger = document.querySelector('.burger'),
-        mainNav = document.querySelector('.main-nav');
+        mainNav = document.querySelector('.aside');
 
     burger.addEventListener('click', function () {
         this.classList.contains('active') ? (this.classList.remove('active'), mainNav.classList.remove('active'), document.body.classList.remove('no-scroll')) : (this.classList.add('active'), mainNav.classList.add('active'), document.body.classList.add('no-scroll'));
     });
-    */
 
      /* NAVIGATION */
     const asideNav = document.querySelector('.aside-nav'),
