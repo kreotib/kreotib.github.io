@@ -205,8 +205,7 @@ textarea {
   height: 100%;
   padding: 30px 25px 50px 25px;
   overflow-y: auto;
-  background: -o-linear-gradient(270.65deg, #64B2D8 8.38%, #4D93EC 76.66%);
-  background: linear-gradient(179.35deg, #64B2D8 8.38%, #4D93EC 76.66%);
+  background: #fff;
 }
 
 .aside__wrapper-block {
@@ -258,6 +257,13 @@ textarea {
      object-fit: contain;
 }
 
+.aside-logo__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #4060FA;
+  font-size: 22px;
+}
+
 .aside-nav__item-has-child {
   position: relative;
 }
@@ -275,14 +281,14 @@ textarea {
   height: 10px;
   display: block;
   margin-left: 10px;
-  background: url("../img/arrow-white.svg") center center/contain no-repeat;
+  background: url("../img/arrow-gray.svg") center center/contain no-repeat;
   -webkit-transition: .3s all linear;
   -o-transition: .3s all linear;
   transition: .3s all linear;
 }
 
 .aside-nav__item-has-child > .aside-nav__link.active::after {
-  background: url("../img/arrow-blue.svg") center center/contain no-repeat;
+  background: url("../img/arrow-gray.svg") center center/contain no-repeat;
 }
 
 .aside-nav__item.active > .aside-nav__list {
@@ -298,10 +304,6 @@ textarea {
   padding-left: 12px;
 }
 
-.aside-nav__list .aside-nav__list .aside-nav__list .aside-nav__link {
-  color: #CDEEFF;
-}
-
 .aside-nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,7 +311,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
+  color: #59677B;
   padding: 6.5px 0;
 }
 
@@ -332,18 +334,38 @@ textarea {
   height: 100%;
 }
 
+.aside-nav__link-icon svg path {
+  fill: #126DE9;
+}
+
 .page-list__item + .page-list__item {
   margin-top: 8px;
 }
 
 .page-list__link {
   padding: 10px 12px;
+  position: relative;
+}
+
+.page-list__link::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #126DE9;
+  opacity: 0;
 }
 
 .page-list__link.active {
   background: #fff;
   border-radius: 8px;
   color: #126DE9;
+}
+
+.page-list__link.active::before {
+  opacity: 1;
 }
 
 .page-list__link.active svg path {
@@ -381,7 +403,7 @@ textarea {
   width: 100%;
   height: 1.5px;
   border-radius: 3px;
-  background: #FFFFFF;
+  background: #126DE9;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: 0.5s all;
@@ -422,9 +444,12 @@ textarea {
 }
 
 @media screen and (max-width: 991px) {
+  .aside {
+    -webkit-box-shadow: 0px 1px 19px rgba(113, 128, 168, 0.16);
+            box-shadow: 0px 1px 19px rgba(113, 128, 168, 0.16);
+  }
   .aside.active .aside__wrapper-block {
-    background: -o-linear-gradient(258.62deg, #64B2D8 -11.98%, #4D93EC 63.92%);
-    background: linear-gradient(191.38deg, #64B2D8 -11.98%, #4D93EC 63.92%);
+    background: #fff;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
@@ -458,14 +483,13 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 100%;
     position: relative;
     padding: 0 15px;
-    background: -o-linear-gradient(270.65deg, #64B2D8 8.38%, #4D93EC 76.66%);
-    background: linear-gradient(179.35deg, #64B2D8 8.38%, #4D93EC 76.66%);
+    background: #fff;
   }
   .aside__burger {
     display: block;
@@ -482,6 +506,9 @@ textarea {
   .aside__btn {
     margin: 0 auto;
     max-width: 230px;
+  }
+  .page-list__link::before {
+    display: none;
   }
 }
 
