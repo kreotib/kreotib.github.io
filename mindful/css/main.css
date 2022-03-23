@@ -301,7 +301,7 @@ textarea {
 }
 
 .aside-nav__list .aside-nav__list .aside-nav__list {
-  padding-left: 12px;
+  padding-left: 0px;
 }
 
 .aside-nav__link {
@@ -311,13 +311,14 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #59677B;
+  color: #4F5D71;
   padding: 6.5px 0;
 }
 
 .aside-nav__link-text {
   font-family: 'Acrom', sans-serif;
   font-size: 14px;
+  font-weight: 500;
   letter-spacing: -0.01em;
   color: inherit;
 }
