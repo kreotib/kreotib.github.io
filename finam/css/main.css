@@ -284,6 +284,14 @@ body {
   color: #FF8E5F;
 }
 
+.delete-list li + li {
+  margin-top: 15px;
+}
+
+.delete-list li a {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 500px) {
   .page-tabs__nav {
     display: grid;
@@ -755,10 +763,147 @@ body {
   height: 60px;
 }
 
+.certificate-single__wrapper {
+  height: 1100px;
+  padding: 60px 75px 55px 75px;
+  background: url("../img/certificate-bg.svg") center center/cover no-repeat, #fff;
+  -webkit-box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.certificate-single__logo {
+  width: 250px;
+  height: 70px;
+}
+
+.certificate-single__logo-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.certificate-single__title {
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 1;
+  color: #020203;
+  text-transform: uppercase;
+}
+
+.certificate-single__text {
+  margin-top: 35px;
+  font-size: 25px;
+  line-height: 30px;
+  color: #020203;
+  letter-spacing: -0.2px;
+}
+
+.certificate-single__name {
+  margin-top: 35px;
+}
+
+.certificate-single__name-text {
+  color: #FF7940;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.certificate-single__course-text {
+  font-size: 24px;
+  line-height: 33px;
+  color: #020203;
+}
+
+.certificate-single__course-text-title {
+  color: #FF7940;
+  font-weight: 700;
+}
+
+.certificate-single__date-text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #020203;
+}
+
+.certificate-single__date-item {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #020203;
+}
+
+.certificate-single__footer, .certificate-single__content, .certificate-single__course {
+  margin-top: auto;
+}
+
 .certificate__grid {
   display: grid;
   grid-template-columns: 275px auto;
   gap: 125px;
+}
+
+@media screen and (max-width: 1100px) {
+  .certificate-single__wrapper {
+    height: 520px;
+    padding: 35px 30px;
+  }
+  .certificate-single__logo {
+    width: 120px;
+    height: 32px;
+  }
+  .certificate-single__title {
+    font-size: 33px;
+    line-height: 41px;
+  }
+  .certificate-single__text {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.01px;
+  }
+  .certificate-single__name {
+    margin-top: 15px;
+  }
+  .certificate-single__name-text {
+    font-size: 19px;
+    line-height: 23px;
+  }
+  .certificate-single__course-text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .certificate-single__date-text, .certificate-single__date-item {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .certificate__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  .certificate__grid-item:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .certificate__grid-item:nth-child(1) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -967,6 +1112,10 @@ body {
     margin-top: 30px;
     padding: 0;
   }
+}
+
+.filter {
+  margin-bottom: 30px;
 }
 
 .filter-wrapper {
