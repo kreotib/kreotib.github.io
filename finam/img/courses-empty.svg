@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol fill="none" viewBox="0 0 14 9" id="arrow-accent" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M.293.793a1 1 0 011.414 0L7 6.086 12.293.793a1 1 0 111.414 1.414L8.414 7.5a2 2 0 01-2.828 0L.293 2.207a1 1 0 010-1.414z"
+              fill="#FF7940"/>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 30 35" id="bell" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 34.467a5.32 5.32 0 005.204-4.25H9.794A5.323 5.323 0 0015 34.467z" fill="#020203"/>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M25.198 19.462a9.491 9.491 0 003.09 4.964c.563.485.88 1.171.88 1.896a2.483 2.483 0 01-2.48 2.48H3.313A2.478 2.478 0 011.7 24.439a9.502 9.502 0 003.383-7.272v-3.95c0-4.985 3.702-9.112 8.5-9.803v-1.53a1.417 1.417 0 112.835 0v1.53a9.86 9.86 0 011.811.439A9.462 9.462 0 0016 9.967a9.5 9.5 0 009.198 9.495z"
+              fill="#020203"/>
+    </symbol>
+</svg>
