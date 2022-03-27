@@ -11,39 +11,82 @@
 <body>
 
 <div class="page-wrapper">
-    <section class="hero">
-        <div class="container">
-            <div class="hero__wrapper">
-                <div class="hero__img">
-                    <video class="hero__img-item hero__img-item_video" poster="images/barni-second.png" loop autoplay muted playsinline >
-                        <source src="images/BB-2.webm" type="video/webm">
-                    </video>
-                    <img src="images/barni-second.png" alt="bear" class="hero__img-item hero__img-item_img">
+    <section class="section section-hero">
+        <div class="container section-hero__container">
+            <div class="section-hero__logo">
+                <img src="images/logo-new.png" alt="" class="section-hero__logo-img">
+            </div>
+            <div class="section-hero__wrapper">
+                <div class="section-hero__img">
+                    <img src="images/hero-person-2.png" alt="" class="section-hero__img-item">
                 </div>
-                <div class="hero__content">
-                    <div class="hero__logo">
-                        <div class="hero__logo-block">
-                            <img src="images/logo.png" alt="" class="hero__logo-img lazy">
-                        </div>
-                        <div class="hero__logo-block">
-                            <img src="images/magnit.png" alt="" class="hero__logo-img hero__logo-img_small hero__logo-img-d lazy">
-                        </div>
-                    </div>
-                    <div class="hero__desc">
-                        <p class="hero__desc-text">
-                            с 10.03 по 06.04. 2022г.
+                <div class="section-hero__content">
+                    <div class="section-hero__date">
+                        <p class="section-hero__date-text">
+                            с 1.04 по 30.06.2022г.
                         </p>
                     </div>
-                    <div class="hero__title">
-                        <img src="images/hero-title.png" alt="" class="hero__title-img">
+                    <div class="section-hero__title">
+                        <img src="images/hero-title.png" alt="" class="section-hero__title-img">
                     </div>
-                    <div class="hero__footer">
-                        <a href="" class="hero__link"><span>перейти</span> на сайт акции</a>
+                    <div class="section-hero__btn">
+                        <a href="#" class="btn btn-orange"><span>перейти</span> на сайт акции</a>
+                    </div>
+                </div>
+                <div class="section-hero__img">
+                    <img src="images/hero-person.png" alt="" class="section-hero__img-item">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-video" id="video-block">
+        <div class="section-video__wrapper section__wrapper">
+            <div class="container container-small">
+                <a href="#video-block" class="section-video__link">Посмотрите видео!</a>
+                <div class="video-wrapper">
+                    <div class="video-container video-block">
+                        <button class="video-container__btn video-btn">
+                            <img class="video-container__btn-img" src="images/play-btn.svg" alt="">
+                        </button>
+                        <video class="video video-item" src="" poster="images/video-preview.jpg"></video>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="container stock-container">
+            <section class="stock">
+                <div class="stock__wrapper">
+                    <div class="stock__img">
+                        <video class="stock__img-item stock__img-item_video" poster="images/barni-second.png" loop autoplay muted playsinline >
+                            <source src="images/BB-2.webm" type="video/webm">
+                        </video>
+                        <img src="images/barni-second.png" alt="bear" class="stock__img-item stock__img-item_img">
+                    </div>
+                    <div class="stock__content">
+                        <div class="stock__logo">
+                            <div class="stock__logo-block">
+                                <img src="images/logo.png" alt="" class="stock__logo-img lazy">
+                            </div>
+                            <div class="stock__logo-block">
+                                <img src="images/magnit.png" alt="" class="stock__logo-img stock__logo-img_small stock__logo-img-d lazy">
+                            </div>
+                        </div>
+                        <div class="stock__desc">
+                            <p class="stock__desc-text">
+                                с 10.03 по 06.04. 2022г.
+                            </p>
+                        </div>
+                        <div class="stock__title">
+                            <img src="images/stock-title.png" alt="" class="stock__title-img">
+                        </div>
+                        <div class="stock__footer">
+                            <a href="" class="stock__link"><span>перейти</span> на сайт акции</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     <section class="section section-banner">
         <div class="section__wrapper section-banner__wrapper">
             <div class="container container-small section-banner__container">
@@ -60,42 +103,6 @@
                         </div>
                         <div class="banner__bear">
                             <img class="banner__bear-img lazy" src="images/bear.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section section-stock">
-        <div class="section__wrapper">
-            <div class="container section-stock__container">
-                <div class="section__header">
-                    <h2 class="section__title">
-                        Завершённые акции
-                    </h2>
-                    <p class="section__desc">
-                        Эти акции уже закончились, но вы можете зайти на сайт, чтобы посмотреть победителей
-                    </p>
-                </div>
-                <div class="section__content">
-                    <div class="stock-grid">
-                        <div class="stock-grid__item">
-                            <div class="stock-item">
-                                <div class="stock-item__wrapper">
-                                    <div class="stock-item__img">
-                                        <img class="stock-item__img-item lazy" src="images/stock.png" alt="">
-                                    </div>
-                                    <div class="stock-item__content">
-                                        <p class="stock-item__desc">
-                                            Все динозавры пойманы! Заходите посмотреть
-                                            на&nbsp;наших победителей
-                                        </p>
-                                        <a href="#" class="stock-item__btn">
-                                            на сайт акции
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,6 +147,15 @@
         </div>
     </footer>
 </div>
+
+<section class="location">
+    <div class="location-wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</section>
 
 <script src="script/main.js"></script>
 </body>
