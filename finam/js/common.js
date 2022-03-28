@@ -43,4 +43,19 @@ document.addEventListener('DOMContentLoaded',()=>{
 
        progressBarCurrent.style.width = `${el.dataset.number}%`;
     });
+
+
+    const triggerLinksArray = document.querySelectorAll('.trigger-link');
+
+    if(triggerLinksArray.length !== 0){
+        triggerLinksArray.forEach(element=>{
+            element.addEventListener('click',(e)=>{
+                e.preventDefault();
+
+                element.classList.toggle('active');
+                element.closest('.trigger-wrapper').querySelector('.trigger-block').classList.toggle('active');
+            });
+        });
+    }
+
 });
