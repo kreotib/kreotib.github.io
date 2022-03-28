@@ -1625,9 +1625,9 @@ body {
 }
 
 .course-module__header.active .course-module__title::before {
-  -webkit-transform: rotate(0);
-      -ms-transform: rotate(0);
-          transform: rotate(0);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .course-module__title {
