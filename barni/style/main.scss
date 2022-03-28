@@ -1537,14 +1537,8 @@ body {
   .section {
     &-hero {
       &__content {
-        padding-top: 100px;
+        padding-top: 140px;
         padding-bottom: 50px;
-      }
-
-      &__container {
-        &::after {
-          display: none;
-        }
       }
 
       &__wrapper {
@@ -1730,6 +1724,15 @@ body {
 }
 
 @media screen and (max-width: 991px) {
+  .section{
+    &-hero{
+      &__container {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
   .images-row.images-row_reccomend[data-v-5452c966] img {
     width: 100% !important;
   }
@@ -1913,6 +1916,7 @@ body {
       justify-content: center;
       padding-top: 95px;
       padding-right: 0;
+      padding-left: 0;
 
       &::before, &::after {
         display: none;
@@ -2079,6 +2083,11 @@ body {
     }
   }
   .section {
+    &-hero{
+      &__content{
+        padding-top: 90px;
+      }
+    }
     &-video {
       &__wrapper {
         padding: 50px 0 40px 0;
