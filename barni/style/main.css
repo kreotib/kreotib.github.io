@@ -238,6 +238,10 @@ body {
   position: relative;
   z-index: 2;
 }
+.section img {
+  image-rendering: optimizequality;
+  image-rendering: -webkit-optimize-contrast;
+}
 .section-hero {
   background: url("../images/hero-bg.png") center center/cover no-repeat;
 }
@@ -350,6 +354,9 @@ body {
   justify-content: center;
   position: relative;
   z-index: 2;
+}
+.section-hero__btn span {
+  margin-right: 5px;
 }
 .section-stock {
   padding-top: 55px;
@@ -1303,7 +1310,7 @@ body {
   .stock__wrapper::after {
     width: 100px;
     height: 100px;
-    top: -130px;
+    top: -140px;
     right: 50px;
     left: unset;
     transform: rotate(50deg);
