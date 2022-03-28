@@ -34,4 +34,13 @@ document.addEventListener('DOMContentLoaded',()=>{
             })
         });
     }
+
+
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    progressBars.forEach(el=>{
+       const progressBarCurrent = el.querySelector('.progress-bar-current');
+
+       progressBarCurrent.style.width = `${el.dataset.number}%`;
+    });
 });
