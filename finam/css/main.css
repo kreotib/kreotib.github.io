@@ -121,8 +121,12 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding: 80px 0;
+  padding: 50px 0;
   background-color: #F9F9F9;
+}
+
+.page-wrapper__content_big {
+  padding: 80px 0;
 }
 
 .page-content__header {
@@ -377,9 +381,6 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  .page-wrapper__content {
-    padding: 50px 0;
-  }
   .page-content__header-back {
     position: relative;
     top: unset;
