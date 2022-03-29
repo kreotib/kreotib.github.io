@@ -1762,11 +1762,15 @@ body {
   max-width: 670px;
 }
 
-.course-single__description ul li + li {
-  margin-top: 30px;
+.course-single__description ul {
+  list-style: disc inside;
 }
 
-.course-single__description ul h4 {
+.course-single__description ul li + li {
+  margin-top: 15px;
+}
+
+.course-single__description-title {
   font-weight: 600;
   font-size: 21px;
   line-height: 25px;
@@ -1775,10 +1779,22 @@ body {
   margin-bottom: 30px;
 }
 
-.course-single__description ul p {
+.course-single__description p {
   font-size: 18px;
   line-height: 24px;
   color: #020203;
+}
+
+.course-single__description p + p {
+  margin-top: 30px;
+}
+
+.course-single__description p + ul {
+  margin-top: 30px;
+}
+
+.course-single__description ul + p {
+  margin-top: 30px;
 }
 
 .course-single__modules-item + .course-single__modules-item {
