@@ -18,6 +18,22 @@ const findTabIndex = (el) => {
     return tabsItemArray.indexOf(el.closest('.tabs-nav__item'));
 }
 
+const popupOpen = (selector) =>{
+    const popup = document.querySelector(`.${selector}`);
+
+    popupClose();
+
+    popup.classList.add('active');
+}
+
+const popupClose = ()=>{
+    const popups = document.querySelectorAll('.popup');
+
+    popups.forEach(el=>{
+        el.classList.remove('active');
+    });
+}
+
 document.addEventListener('DOMContentLoaded',()=>{
     const tabs = document.querySelectorAll('.tabs'),
         tabsNavLinkArray = document.querySelectorAll('.tabs-nav__link');
@@ -69,10 +85,19 @@ document.addEventListener('DOMContentLoaded',()=>{
                 filterLinkArray.forEach(el=>{
                     element.dataset.name === el.dataset.name && !(el.classList.contains('active')) ? el.classList.add('active') : el.classList.remove('active');
                 });
+
+                const elementWithout = [...filterLinkArray].filter((el)=> el !== element);
+                element.classList.contains('active') ? elementWithout.forEach(el=>el.classList.add('not-active')) : filterLinkArray.forEach(el=>el.classList.remove('not-active'));
+
+                console.log(element);
+
+                element.classList.contains('active') ? console.log('1') : console.log('2');
+
                 filterBlockArray.forEach(blockElement=>{
                     element.dataset.name === blockElement.dataset.name && !(blockElement.classList.contains('active')) ? blockElement.classList.add('active') : blockElement.classList.remove('active');
                 });
             });
         });
     }
+    
 });
