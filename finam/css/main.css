@@ -376,7 +376,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .page-wrapper__content {
     padding: 50px 0;
   }
