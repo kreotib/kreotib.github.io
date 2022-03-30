@@ -100,6 +100,14 @@ textarea {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 .btn {
   -webkit-appearance: none;
   display: -webkit-box;
@@ -121,7 +129,7 @@ textarea {
   font-family: 'Acrom', sans-serif;
   font-size: 14px;
   letter-spacing: -0.01em;
-  color: #003BB7;
+  color: #858585;
 }
 
 .btn-blue {
@@ -157,7 +165,7 @@ textarea {
 }
 
 .page-wrapper__banner {
-  margin: 30px 0 40px 0;
+  margin: 50px 0 50px 0;
 }
 
 .page-wrapper__block + .page-wrapper__block {
@@ -251,8 +259,8 @@ textarea {
 }
 
 .aside-logo__img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -260,7 +268,7 @@ textarea {
 .aside-logo__text {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #4060FA;
+  color: #1b1b1b;
   font-size: 22px;
 }
 
@@ -311,7 +319,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #4F5D71;
+  color: #1b1b1b;
   padding: 6.5px 0;
 }
 
@@ -336,7 +344,7 @@ textarea {
 }
 
 .aside-nav__link-icon svg path {
-  fill: #126DE9;
+  fill: #1b1b1b;
 }
 
 .page-list__item + .page-list__item {
@@ -352,17 +360,17 @@ textarea {
   content: '';
   position: absolute;
   left: -20px;
-  top: 0;
+  top: 25%;
   width: 4px;
-  height: 100%;
-  background: #126DE9;
+  height: 50%;
+  background: #1b1b1b;
   opacity: 0;
 }
 
 .page-list__link.active {
   background: #fff;
   border-radius: 8px;
-  color: #126DE9;
+  color: #1b1b1b;
 }
 
 .page-list__link.active::before {
@@ -370,7 +378,7 @@ textarea {
 }
 
 .page-list__link.active svg path {
-  fill: #126DE9;
+  fill: #1b1b1b;
 }
 
 .page-list__link-text {
@@ -404,7 +412,7 @@ textarea {
   width: 100%;
   height: 1.5px;
   border-radius: 3px;
-  background: #126DE9;
+  background: #1b1b1b;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: 0.5s all;
@@ -459,6 +467,9 @@ textarea {
   .aside.active .aside__content, .aside.active .aside__footer {
     display: block;
   }
+  .aside-logo__img {
+    height: 30px;
+  }
   .aside__wrapper {
     padding: 0;
     background: none;
@@ -487,6 +498,10 @@ textarea {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     width: 100%;
     position: relative;
     padding: 0 15px;
@@ -495,7 +510,7 @@ textarea {
   .aside__burger {
     display: block;
     position: absolute;
-    left: 15px;
+    right: 15px;
     top: calc(50% - 8px);
   }
   .aside__content, .aside__footer {
@@ -532,32 +547,49 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 155px;
-  padding: 0 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 200px;
+  padding: 0 60px 0 0;
   background: #FFFFFF;
   border-radius: 8px;
 }
 
+.banner__wrapper-mobile {
+  display: none;
+}
+
 .banner__img {
+  max-width: 400px;
   max-height: 180px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .banner__img img {
-  height: 100%;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 .banner__content {
-  max-width: 410px;
+  max-width: 550px;
   margin: 0 15px;
 }
 
 .banner__title {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 31px;
   line-height: 1.2;
   color: #23222F;
@@ -577,8 +609,9 @@ textarea {
 }
 
 .banner__btn {
-  width: 90px;
+  width: 150px;
   height: 42px;
+  padding: 0 15px;
   border: 1px solid #23222F;
   border-radius: 10px;
 }
@@ -622,15 +655,50 @@ textarea {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .banner__wrapper {
+    padding: 10px;
+    background-color: #ba90ff;
+  }
+  .banner__wrapper-descktop {
+    display: none;
+  }
+  .banner__wrapper-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner__img {
+    height: 50px;
+    width: 50px;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .banner__img img {
+    width: 50px;
+    height: 50px;
+  }
+  .banner__text {
+    font-family: 'Acrom', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .banner__desc {
+    margin-left: 15px;
+  }
+}
+
 .card-grid__wrapper {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 40px 25px;
-  grid-auto-rows: 230px;
-}
-
-.card-grid__wrapper_small {
-  grid-auto-rows: 200px;
 }
 
 .card-grid__item_column-medium {
@@ -660,11 +728,16 @@ textarea {
           justify-content: center;
 }
 
+.card-grid__footer-img {
+  width: 100%;
+}
+
 .card-grid__link {
   font-family: 'Acrom', sans-serif;
   font-size: 14px;
+  font-weight: 500;
   letter-spacing: -0.01em;
-  color: #126DE9;
+  color: #1b1b1b;
 }
 
 .card-grid__btn {
@@ -674,9 +747,38 @@ textarea {
 
 .card-item__wrapper {
   position: relative;
-  height: 100%;
   background: #fff;
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.card-item__wrapper_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 15px;
 }
 
 .card-item__header {
@@ -684,9 +786,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -697,9 +800,9 @@ textarea {
 }
 
 .card-item__header_size-small {
-  padding-top: 10px;
-  height: 115px;
-  border-bottom: 1px solid #F5F5FB;
+  height: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .card-item__header-stars {
@@ -709,15 +812,19 @@ textarea {
 }
 
 .card-item__header-footer {
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
 }
 
 .card-item__stars {
@@ -739,8 +846,8 @@ textarea {
 }
 
 .card-item__category {
-  width: 32px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,12 +857,19 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #9EC6F7;
 }
 
 .card-item__category-icon {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
+}
+
+.card-item__date {
+  margin-left: auto;
+  font-family: 'Acrom', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6a6a6a;
 }
 
 .card-item__tags {
@@ -782,49 +896,67 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40px;
-  height: 18px;
+  height: 20px;
   border-radius: 10px;
+  margin-left: 15px;
 }
 
-.card-item__tag_color-yellow {
-  background: #F7ECD1;
+.card-item__tag-item + .card-item__tag-item {
+  margin-left: 5px;
 }
 
-.card-item__tag_color-purple {
-  background: #F9D1EF;
+.card-item__tag-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid #6a6a6a;
 }
 
 .card-item__tag-text {
   font-family: 'Acrom', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: -0.01em;
   color: #4F4F4F;
 }
 
 .card-item__img {
-  width: 100%;
-  height: 100%;
+  width: 80px;
+  height: 80px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 .card-item__img_size-full {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .card-item__content {
-  padding: 15px 15px 20px 15px;
+  padding: 0px 15px 20px 15px;
 }
 
 .card-item__content_size-small {
-  padding: 8px 10px 0px 10px;
+  margin-left: 15px;
+  padding: 0;
 }
 
 .card-item__title {
-  font-family: "Merriweather", sans-serif;
-  font-weight: 700;
+  font-family: "Acrom", sans-serif;
+  font-weight: 500;
   color: #2A2A2A;
   line-height: 1.2;
 }
@@ -847,6 +979,13 @@ textarea {
 
 .card-item__title_position-center {
   text-align: center;
+}
+
+.card-item__text {
+  font-family: 'Acrom', sans-serif;
+  color: #858585;
+  margin-top: 10px;
+  max-width: 180px;
 }
 
 .card-item__btn {
