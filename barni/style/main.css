@@ -1040,11 +1040,16 @@ body {
 
 .video {
   width: 100%;
-  height: 11.1111111111%;
+  height: 100%;
+  position: absolute;
   border-radius: 30px;
 }
+.video-wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+}
 .video-container {
-  height: 11.1111111111%;
+  height: 494px;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -1081,10 +1086,10 @@ body {
   content: "";
   position: absolute;
   z-index: 1;
-  left: calc(50% - 525px);
-  top: calc(50% - 300px);
-  width: 1050px;
-  height: 586px;
+  left: -4%;
+  top: -14%;
+  width: 115%;
+  height: 125%;
   display: block;
   background: url("../images/bg-video.png") center center/contain no-repeat;
 }
@@ -1102,6 +1107,11 @@ body {
 @media screen and (min-width: 1600px) {
   .section-hero__wrapper {
     height: 33.3333333333vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .video-container {
+    height: 54vw;
   }
 }
 @media screen and (min-width: 992px) {
