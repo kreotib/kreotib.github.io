@@ -129,6 +129,10 @@ body {
   padding: 80px 0;
 }
 
+.page-wrapper__content_banner {
+  padding: 160px 0 115px 0;
+}
+
 .page-content__header {
   position: relative;
 }
