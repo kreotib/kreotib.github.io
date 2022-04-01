@@ -740,6 +740,11 @@ body.no-scroll {
   }
 }
 
+.card-grid.material-grid .card-item__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
 .card-grid__wrapper {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
