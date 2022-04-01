@@ -187,6 +187,13 @@ body.no-scroll {
   margin-top: 30px;
 }
 
+.page-wrapper__block-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Acrom', sans-serif;
+}
+
 @media screen and (max-width: 991px) {
   .page-wrapper {
     padding-top: 60px;
