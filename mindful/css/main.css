@@ -301,6 +301,10 @@ body.no-scroll {
   font-size: 22px;
 }
 
+.aside-nav__item + .aside-nav__item {
+  margin-top: 8px;
+}
+
 .aside-nav__item-has-child {
   position: relative;
 }
@@ -330,6 +334,7 @@ body.no-scroll {
 
 .aside-nav__item.active > .aside-nav__list {
   display: block;
+  margin-top: 8px;
 }
 
 .aside-nav__list .aside-nav__list {
@@ -505,7 +510,8 @@ body.no-scroll {
     height: 30px;
   }
   .aside-nav__link-text {
-    font-size: 19px;
+    font-size: 17px;
+    font-weight: 400;
   }
   .aside__wrapper {
     padding: 0;
@@ -651,8 +657,6 @@ body.no-scroll {
   padding: 0 15px;
   border: 1px solid #23222F;
   border-radius: 10px;
-  -webkit-box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
-          box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
   -webkit-transition: .5s all ease;
   -o-transition: .5s all ease;
   transition: .5s all ease;
