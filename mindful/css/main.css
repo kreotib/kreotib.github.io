@@ -398,9 +398,6 @@ body.no-scroll {
   width: 4px;
   height: 0%;
   background: #1b1b1b;
-  -webkit-transition: .5s height linear;
-  -o-transition: .5s height linear;
-  transition: .5s height linear;
 }
 
 .page-list__link:hover::before {
@@ -657,9 +654,6 @@ body.no-scroll {
   padding: 0 15px;
   border: 1px solid #23222F;
   border-radius: 10px;
-  -webkit-transition: .5s all ease;
-  -o-transition: .5s all ease;
-  transition: .5s all ease;
 }
 
 .banner__btn:hover {
