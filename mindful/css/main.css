@@ -212,6 +212,12 @@ body.no-scroll {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .page-wrapper__block-title {
+    display: none;
+  }
+}
+
 .aside {
   height: 100%;
   width: 100%;
