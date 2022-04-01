@@ -108,6 +108,10 @@ textarea {
   font-display: swap;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .btn {
   -webkit-appearance: none;
   display: -webkit-box;
@@ -172,6 +176,7 @@ textarea {
 .page-wrapper__content {
   padding: 30px 40px 45px 40px;
   width: 100%;
+  max-width: 1200px;
 }
 
 .page-wrapper__banner {
@@ -331,7 +336,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   color: #1b1b1b;
-  padding: 6.5px 0;
+  padding: 10px 12px 10px 0;
 }
 
 .aside-nav__link-text {
@@ -485,6 +490,9 @@ textarea {
   }
   .aside-logo__img {
     height: 30px;
+  }
+  .aside-nav__link-text {
+    font-size: 19px;
   }
   .aside__wrapper {
     padding: 0;
@@ -727,6 +735,10 @@ textarea {
   gap: 40px 25px;
 }
 
+.card-grid__wrapper_small {
+  gap: 15px;
+}
+
 .card-grid__item_column-medium {
   grid-column-end: span 2;
 }
@@ -736,9 +748,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -905,7 +917,7 @@ textarea {
 .card-item__date {
   margin-left: auto;
   font-family: 'Acrom', sans-serif;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   color: #6a6a6a;
 }
@@ -989,6 +1001,17 @@ textarea {
 .card-item__content_size-small {
   margin-left: 15px;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
 }
 
 .card-item__title {
@@ -1004,13 +1027,13 @@ textarea {
 
 @media screen and (min-width: 375px) {
   .card-item__title {
-    font-size: calc(14px + 4 * ((100vw - 375px) / 1545));
+    font-size: calc(14px + 1 * ((100vw - 375px) / 1545));
   }
 }
 
 @media screen and (min-width: 1920px) {
   .card-item__title {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
@@ -1021,8 +1044,8 @@ textarea {
 .card-item__text {
   font-family: 'Acrom', sans-serif;
   color: #858585;
-  font-size: 15px;
-  margin-top: 10px;
+  font-size: 11px;
+  margin-top: 5px;
 }
 
 .card-item__btn {
@@ -1057,6 +1080,12 @@ textarea {
 }
 
 @media screen and (max-width: 475px) {
+  .test-grid .card-grid__item {
+    display: none;
+  }
+  .test-grid .card-grid__item:nth-child(1), .test-grid .card-grid__item:nth-child(2), .test-grid .card-grid__item:nth-child(3) {
+    display: block;
+  }
   .card-grid__wrapper {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;

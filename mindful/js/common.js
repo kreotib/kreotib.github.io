@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNav = document.querySelector('.aside');
 
     burger.addEventListener('click', function () {
-        this.classList.contains('active') ? (this.classList.remove('active'), mainNav.classList.remove('active'), document.body.classList.remove('no-scroll')) : (this.classList.add('active'), mainNav.classList.add('active'), document.body.classList.add('no-scroll'));
+        this.classList.contains('active') ? (document.body.classList.remove('.no-scroll'),this.classList.remove('active'), mainNav.classList.remove('active'), document.body.classList.remove('no-scroll')) : (document.body.classList.remove('.no-scroll'),this.classList.add('active'), mainNav.classList.add('active'), document.body.classList.add('no-scroll'));
     });
 
      /* NAVIGATION */
@@ -27,18 +27,3 @@ document.addEventListener('DOMContentLoaded', () => {
         navItem.classList.toggle('active');
     });
 });
-
-    $("a").on('click', function(event) {
-
-        if (this.hash !== "") {
-            event.preventDefault();
-
-            var hash = this.hash;
-
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
-                window.location.hash = hash;
-            });
-        }
-    });
