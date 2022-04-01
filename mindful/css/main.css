@@ -112,6 +112,15 @@ body.no-scroll, html.no-scroll {
   overflow: hidden;
 }
 
+body {
+  position: relative;
+}
+
+body.no-scroll {
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
 .btn {
   -webkit-appearance: none;
   display: -webkit-box;
