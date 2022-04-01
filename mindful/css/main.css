@@ -119,6 +119,8 @@ body {
 body.no-scroll {
   touch-action: none;
   -ms-touch-action: none;
+  height: 100%;
+  position: fixed;
 }
 
 .btn {
