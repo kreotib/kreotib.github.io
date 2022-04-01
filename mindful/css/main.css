@@ -108,7 +108,7 @@ textarea {
   font-display: swap;
 }
 
-body.no-scroll {
+body.no-scroll, html.no-scroll {
   overflow: hidden;
 }
 
