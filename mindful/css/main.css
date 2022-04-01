@@ -646,6 +646,7 @@ body.no-scroll {
 
 .banner__img img {
   height: auto;
+  max-height: 200px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -770,7 +771,7 @@ body.no-scroll {
     font-weight: 600;
   }
   .banner__desc {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 }
 
@@ -778,11 +779,14 @@ body.no-scroll {
   .banner {
     margin: 20px 0 35px 0;
   }
+  .banner__text {
+    margin-top: 0;
+  }
 }
 
 .card-grid.material-grid .card-item__title {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .card-grid__wrapper {
@@ -1072,7 +1076,7 @@ body.no-scroll {
 
 .card-item__title {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: #2A2A2A;
   font-size: 15px;
   line-height: 1.2;
