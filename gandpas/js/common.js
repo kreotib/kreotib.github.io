@@ -83,7 +83,7 @@ const inputValidation = (typeInput, errorText, input) => {
         !validateEmail(input.value) ? (input.closest('.form__input').append(createError(errorText)), input.classList.add('error')) : null;
     }
     if(typeInput === 'promo'){
-        !validateEmail(input.value) ? (input.closest('.form__input').append(createError(errorText)), input.classList.add('error')) : null;
+        !validateEmail(input.value) ? (input.closest('.form__input').append(createError(errorText)), input.classList.add('error')) : input.classList.add('success');
     }
 };
 document.addEventListener('DOMContentLoaded', () => {
