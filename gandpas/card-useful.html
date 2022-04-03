@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="libs/custom-select/custom-select.css">
+    <link rel="stylesheet" href="libs/intl-tel/intlTelInput.css">
+    <link rel="stylesheet" href="libs/cropper/cropper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="container">
+            <div class="header__content">
+              <div class="header__block">
+                <div class="logo"><img class="logo__img" src="img/logo.svg"></div>
+              </div>
+              <div class="header__block header__block-nav">
+                <nav class="nav">
+                  <ul class="nav-list nav__list">
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Мои программы</a></li>
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Все программы</a></li>
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Карточки</a></li>
+                    <li class="nav-list__item nav-item"><a class="nav-item__link" href="#">Сертификаты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__block header__block-profile">
+                <div class="header-profile">
+                  <div class="header-profile__wrapper">
+                    <div class="header-profile__subscribe trigger-block">
+                      <p class="header-profile__subscribe-label trigger-link">Подписка на 30 дней</p>
+                      <div class="header-profile__subscribe-term trigger-content">до 09.05.2022</div>
+                    </div>
+                    <div class="header-profile__info trigger-block">
+                      <div class="header-profile__img trigger-link"><img class="header-profile__img-item" src="img/profile.jpg"><span class="header-profile__img-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.2925 8.62085L6 9.95283L11.5 15.6208L17 9.95283L15.7075 8.62085L11.5 12.9474L7.2925 8.62085Z" fill="white"/>
+</svg></span></div>
+                      <div class="header-profile__nav trigger-content">
+                        <div class="profile-term">
+                          <div class="profile-term__wrapper">
+                            <p class="profile-term__text">Подписка до 09.05.2022</p>
+                          </div>
+                        </div>
+                        <ul class="profile-nav">
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-myPrograms ">
+                                  <use xlink:href="img/svg/sprite.svg#myPrograms"></use>
+                                </svg></span><span class="profile-nav__link-label">Мои программы</span></a></li>
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-allPrograms ">
+                                  <use xlink:href="img/svg/sprite.svg#allPrograms"></use>
+                                </svg></span><span class="profile-nav__link-label">Все программы</span></a></li>
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-card ">
+                                  <use xlink:href="img/svg/sprite.svg#card"></use>
+                                </svg></span><span class="profile-nav__link-label">Карточки</span></a></li>
+                          <li class="profile-nav__item profile-nav__item_mobile"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-certificate ">
+                                  <use xlink:href="img/svg/sprite.svg#certificate"></use>
+                                </svg></span><span class="profile-nav__link-label">Сертификаты</span></a></li>
+                          <li class="profile-nav__item"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-profile ">
+                                  <use xlink:href="img/svg/sprite.svg#profile"></use>
+                                </svg></span><span class="profile-nav__link-label">Мой профиль</span></a></li>
+                          <li class="profile-nav__item"><a class="profile-nav__link" href="#"><span class="profile-nav__link-icon">
+                                <svg class="icon icon-leave ">
+                                  <use xlink:href="img/svg/sprite.svg#leave"></use>
+                                </svg></span><span class="profile-nav__link-label">Выход</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="content content-page">
+        <section class="section-home">
+          <div class="container">
+            <div class="content-page__content">
+              <p class="content-page__title">Полезные карточки</p>
+              <div class="content-page__search">
+                <div class="page-search">
+                  <input class="page-search__input" type="search" placeholder="Поиск">
+                </div>
+              </div>
+              <div class="content-page__grid">
+                <div class="content-page__grid-item">
+                  <div class="card-grid">
+                    <div class="card-grid__item">
+                      <div class="card-item">
+                        <a href="#" class="card-item__img"><img class="card-item__img-item" src="img/card.jpg"></a>
+                        <div class="card-item__wrapper">
+                          <div class="card-item__content">
+                            <p class="card-item__title">Название совета длиной в две строки</p>
+                            <p class="card-item__desc">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования.</p>
+                            <div class="card-item__category">
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📽️ Фильмы</p>
+                              </div>
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📖 Книг</p>
+                              </div>
+                              <p class="card-item__category-text">и ещё <span>3</span> тега</p>
+                            </div>
+                          </div>
+                          <div class="card-item__footer"><a class="card-item__btn btn-accent" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-grid__item">
+                      <div class="card-item">
+                        <a href="#" class="card-item__img"><img class="card-item__img-item" src="img/card.jpg"></a>
+                        <div class="card-item__wrapper">
+                          <div class="card-item__content">
+                            <p class="card-item__title">Название совета длиной в две строки</p>
+                            <p class="card-item__desc">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования.</p>
+                            <div class="card-item__category">
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📽️ Фильмы</p>
+                              </div>
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📖 Книги</p>
+                              </div>
+                              <p class="card-item__category-text">и ещё <span>3</span> тега</p>
+                            </div>
+                          </div>
+                          <div class="card-item__footer"><a class="card-item__btn btn-accent" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-grid__item">
+                      <div class="card-item">
+                        <div class="card-item__wrapper">
+                          <div class="card-item__content">
+                            <p class="card-item__title">Название совета длиной в две строки</p>
+                            <p class="card-item__desc">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования.</p>
+                            <div class="card-item__category">
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📽️ Фильмы</p>
+                              </div>
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📖 Книги</p>
+                              </div>
+                              <p class="card-item__category-text">и ещё <span>3</span> тега</p>
+                            </div>
+                          </div>
+                          <div class="card-item__footer"><a class="card-item__btn btn-accent" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-grid__item">
+                      <div class="card-item">
+                        <div class="card-item__wrapper">
+                          <div class="card-item__content">
+                            <p class="card-item__title">Название совета длиной в две строки</p>
+                            <p class="card-item__desc">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования.</p>
+                            <div class="card-item__category">
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📽️ Фильмы</p>
+                              </div>
+                              <div class="card-item__category-item">
+                                <p class="card-item__category-label">📖 Книги</p>
+                              </div>
+                              <p class="card-item__category-text">и ещё <span>3</span> тега</p>
+                            </div>
+                          </div>
+                          <div class="card-item__footer"><a class="card-item__btn btn-accent" href="#">Подробнее</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-grid__item">
+                      <div class="card-item card-item_not-loaded"></div>
+                    </div>
+                    <div class="card-grid__item">
+                      <div class="card-item card-item_not-loaded"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-page__grid-item">
+                  <div class="category-wrapper">
+                    <p class="category-wrapper__title"></p>
+                    <div class="category-wrapper__content">
+                      <ul class="category-list">
+                        <li class="category-list__item"><a class="category-list__link" href="#">📽️ Фильмы</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">📖 Книги</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🎞️ Видео</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">📈 Финансы</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🎧 Подкасты</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">‍⚕️ Здоровье</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🎮 Хобби</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🎤Интервью</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">💌 Любовь и отношения</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">👔 Работа</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🤝 Дружба</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🎭️️ Эмоциональный интеллект</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🗨️ Ораторское искусство</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">🤺 Упражнения</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">📱 Приложения</a></li>
+                        <li class="category-list__item"><a class="category-list__link" href="#">‍💼‍ Лидерство</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="container">
+            <div class="footer__content">
+              <div class="footer__row">
+                <div class="footer__block">
+                  <div class="logo footer__logo"><img class="logo__img" src="img/logo.svg"></div>
+                </div>
+                <div class="footer__block footer__block_social">
+                  <div class="footer__block-header">
+                    <p class="footer__block-title">Присоединяйтесь к нам в социальных сетях</p>
+                  </div>
+                  <div class="footer__block-content">
+                    <ul class="social-list footer__social">
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-linkedin ">
+                            <use xlink:href="img/svg/sprite.svg#linkedin"></use>
+                          </svg></a></li>
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-telegram ">
+                            <use xlink:href="img/svg/sprite.svg#telegram"></use>
+                          </svg></a></li>
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-facebook ">
+                            <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                          </svg></a></li>
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-twitter ">
+                            <use xlink:href="img/svg/sprite.svg#twitter"></use>
+                          </svg></a></li>
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-youtube ">
+                            <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                          </svg></a></li>
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-tiktok ">
+                            <use xlink:href="img/svg/sprite.svg#tiktok"></use>
+                          </svg></a></li>
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-instagram ">
+                            <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                          </svg></a></li>
+                      <li class="social-list__item"><a class="social-list__link" href="#">
+                          <svg class="icon icon-ok ">
+                            <use xlink:href="img/svg/sprite.svg#ok"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__row">
+                <div class="footer__block">
+                  <p class="footer__block-title">© Радислав Гандапас, 2022</p>
+                </div>
+                <div class="footer__block"><a class="footer__block-title" href="#">Политика конфиденциальности</a></div>
+                <div class="footer__block"><a class="footer__block-link" href="www.radislavgandapas.com" target="_blank">www.radislavgandapas.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="popup popup-login">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <form class="form">
+              <div class="form__wrapper form__wrapper_small">
+                <div class="form__header">
+                  <h2 class="form__title">Вход</h2><a class="form__header-link popup-trigger" href="#" data-popup="popup-register"><span class="form__header-link__text">Регистрация</span><span class="form__header-link__icon">
+                      <svg class="icon icon-register ">
+                        <use xlink:href="img/svg/sprite.svg#register"></use>
+                      </svg></span></a>
+                </div>
+                <div class="form__content">
+                  <div class="form__input">
+                    <input class="form__input-item" type="text" placeholder="Телефон или Email">
+                  </div>
+                  <div class="form__input">
+                    <input class="form__input-item" type="text" placeholder="Пароль">
+                  </div><a class="form__btn" href="#">Войти</a>
+                </div>
+                <div class="form__footer">
+                  <div class="form__footer-block">
+                    <p class="form__footer-text">Или войти с помощью</p>
+                  </div>
+                  <div class="form__footer-block form__footer-block_social">
+                    <div class="form__social form-social"><a class="form-social__item" href="#"><span class="form-social__item-icon">
+                          <svg class="icon icon-vk-bg ">
+                            <use xlink:href="img/svg/sprite.svg#vk-bg"></use>
+                          </svg></span></a><a class="form-social__item" href="#"><span class="form-social__item-icon">
+                          <svg class="icon icon-fb-bg ">
+                            <use xlink:href="img/svg/sprite.svg#fb-bg"></use>
+                          </svg></span></a><a class="form-social__item" href="#"><span class="form-social__item-icon">
+                          <svg class="icon icon-gm-bg ">
+                            <use xlink:href="img/svg/sprite.svg#gm-bg"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="form__footer-block"><a class="form__footer-text popup-trigger" href="#" data-popup="popup-forgot">Забыли пароль?</a></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-forgot">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <form class="form">
+              <div class="form__wrapper form__wrapper_small">
+                <div class="form__header">
+                  <h2 class="form__title">Восстановление пароля</h2>
+                </div>
+                <div class="form__content">
+                  <div class="form__input">
+                    <input class="form__input-item" type="text" placeholder="Телефон или Email">
+                  </div><a class="form__btn" href="#">Сбросить пароль</a>
+                </div>
+                <div class="form__footer">
+                  <div class="form__footer-block">
+                    <p class="form__footer-text popup-trigger" data-popup="popup-login">Назад</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-register">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <form class="form form-popup">
+              <div class="form__wrapper form__wrapper_small">
+                <div class="form__header">
+                  <h2 class="form__title">Регистрация</h2><a class="form__header-link popup-trigger" href="#" data-popup="popup-login"><span class="form__header-link__text">Вход</span><span class="form__header-link__icon">
+                      <svg class="icon icon-enter ">
+                        <use xlink:href="img/svg/sprite.svg#enter"></use>
+                      </svg></span></a>
+                </div>
+                <div class="form__content">
+                  <div class="form__input">
+                    <input class="form__input-item" type="text" placeholder="Имя">
+                  </div>
+                  <div class="form__input">
+                    <input class="form__input-item" type="text" placeholder="Фамилия">
+                  </div>
+                  <div class="form__input form-popup__input">
+                    <input class="form__input-item" type="email" placeholder="Email">
+                  </div>
+                  <div class="form__input">
+                    <input class="form__input-item" type="text" placeholder="Телефон">
+                  </div>
+                  <div class="form__input">
+                    <input class="form__input-item" type="text" placeholder="Пароль">
+                  </div>
+                  <div class="form__checkbox">
+                    <label class="form-checkbox">
+                      <input class="form-checkbox__item" type="checkbox"><span class="form-checkbox__checkmark"></span><span class="form-checkbox__label form__text">Создавая аккаунт, я принимаю <a href='#' class="form__text-dark">условия политики</a> и <a href='#' class="form__text-dark">пользовательского соглашения</a></span>
+                    </label>
+                  </div><a class="form__btn" href="#">Зарегистрироваться</a>
+                </div>
+                <div class="form__footer">
+                  <div class="form__footer-block">
+                    <p class="form__footer-text">Или зарегистрироваться с помощью</p>
+                  </div>
+                  <div class="form__footer-block form__footer-block_social">
+                    <div class="form__social form-social"><a class="form-social__item" href="#"><span class="form-social__item-icon">
+                          <svg class="icon icon-vk-bg ">
+                            <use xlink:href="img/svg/sprite.svg#vk-bg"></use>
+                          </svg></span></a><a class="form-social__item" href="#"><span class="form-social__item-icon">
+                          <svg class="icon icon-fb-bg ">
+                            <use xlink:href="img/svg/sprite.svg#fb-bg"></use>
+                          </svg></span></a><a class="form-social__item" href="#"><span class="form-social__item-icon">
+                          <svg class="icon icon-gm-bg ">
+                            <use xlink:href="img/svg/sprite.svg#gm-bg"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-photo">
+        <div class="popup__wrapper">
+          <div class="popup__content popup__content_small">
+            <form class="form">
+              <div class="form__wrapper form__wrapper_photo">
+                <div class="form__header">
+                  <h2 class="form__title form__title_small">Загрузка фотографии</h2>
+                  <div class="popup-close popup__close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#E5134A"/>
+</svg>
+                  </div>
+                </div>
+                <div class="form__content">
+                  <p class="form__text form__text_small">Выберите область фотографии, которая будет отображаться в профиле.</p>
+                  <div class="popup-photo__cropp">
+                    <div class="cropp">
+                      <div class="cropp__img"><img src="img/card.jpg"></div>
+                    </div>
+                  </div><a class="form__btn btn-accent form__btn_small" href="#">Загрузить фото</a><a class="form__btn form__btn_transparent form__btn_small" href="#">Удалить</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="libs/custom-select/custom-select.min.js"></script>
+      <script src="libs/intl-tel/intlTelInput.js"></script>
+      <script src="libs/swiper/swiper.min.js"></script>
+      <script src="libs/cropper/cropper.min.js"></script>
+      <script src="js/common.js"></script>
+    </div>
+  </body>
+</html>
