@@ -121,7 +121,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding: 50px 0;
+  padding: 70px 0;
   background-color: #F9F9F9;
 }
 
@@ -289,6 +289,10 @@ body {
   transition: .5s background-color;
 }
 
+.btn-accent-light:hover {
+  background: #FFE6DA;
+}
+
 .back-link {
   width: 100px;
   height: 40px;
@@ -409,6 +413,10 @@ body {
   right: 40px;
   width: 20px;
   height: 20px;
+}
+
+.popup__close:hover {
+  cursor: pointer;
 }
 
 .popup__close-img {
@@ -563,6 +571,9 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .page-wrapper__content_big {
+    padding: 40px 0;
+  }
   .page-content__header-back {
     position: relative;
     top: unset;
@@ -570,6 +581,12 @@ body {
   }
   .page-content__header-back + .page-content__header-block {
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .page-wrapper__content_big {
+    padding: 40px 0;
   }
 }
 
@@ -598,7 +615,7 @@ body {
 }
 
 .header__wrapper {
-  height: 110px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,6 +890,10 @@ body {
   margin-left: 10px;
 }
 
+.notification-item__content a {
+  color: #FF7940;
+}
+
 .notification-item__text {
   color: #020203;
   font-size: 18px;
@@ -944,12 +965,30 @@ body {
   color: #232B3F;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 992px) {
+  .header__logo {
+    max-width: 150px;
+  }
+  .header__block {
+    max-width: 220px;
+  }
+  .header-list__item + .header-list__item {
+    margin-left: 15px;
+  }
+  .header-list__link {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .header__nav {
     display: none;
   }
   .page-nav__item {
     display: block;
+  }
+  .page-nav__item_mobile {
+    display: none;
   }
 }
 
@@ -961,9 +1000,12 @@ body {
     max-width: 100px;
   }
   .notification-block {
-    width: 100vw;
+    width: calc(100vw - 25px);
     right: 0;
     top: 150px;
+  }
+  .page-nav__item_mobile {
+    display: block;
   }
 }
 
@@ -1080,6 +1122,12 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 991px) {
+  .footer-social__text {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer__row {
     -webkit-box-align: center;
@@ -1088,9 +1136,6 @@ body {
   }
   .footer-social__list {
     margin-top: 0;
-  }
-  .footer-social__text {
-    display: none;
   }
 }
 
@@ -1501,8 +1546,9 @@ body {
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: 580px;
+  grid-auto-rows: 430px;
   gap: 45px 30px;
+  padding-bottom: 30px;
 }
 
 .courses-card {
@@ -1534,7 +1580,7 @@ body {
 }
 
 .courses-card__header {
-  height: 250px;
+  height: 170px;
   position: relative;
 }
 
@@ -1559,7 +1605,7 @@ body {
 }
 
 .courses-card__wrapper {
-  padding: 30px 20px 20px 20px;
+  padding: 20px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1579,8 +1625,8 @@ body {
 }
 
 .courses-card__text {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 1.36;
   color: #020203;
   margin-top: 10px;
 }
@@ -1675,23 +1721,39 @@ body {
   color: #020203;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1150px) {
   .courses-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .courses-grid {
     grid-template-columns: minmax(0, 1fr);
     grid-auto-rows: auto;
+    gap: 25px;
   }
   .courses-card__header {
     height: 160px;
   }
+  .courses-card__text {
+    font-size: 14px;
+  }
   .courses-card__footer {
     margin-top: 30px;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .courses-card__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .courses-card__time {
+    margin-top: 10px;
   }
 }
 
@@ -1861,6 +1923,14 @@ body {
   background: rgba(235, 235, 235, 0.5);
   border-radius: 24px;
   color: rgba(2, 2, 3, 0.5);
+  max-width: 320px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   -webkit-transition: 0.3s color, .3s background-color;
   -o-transition: 0.3s color, .3s background-color;
   transition: 0.3s color, .3s background-color;
@@ -1891,7 +1961,7 @@ body {
   margin-top: 30px;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1200px) {
   .filter-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
