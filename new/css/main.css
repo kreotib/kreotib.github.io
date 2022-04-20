@@ -382,7 +382,7 @@ body.no-scroll {
 
 .aside {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   width: 220px;
   background: #fff;
@@ -391,7 +391,7 @@ body.no-scroll {
 }
 
 .aside.active {
-  z-index: 99;
+  z-index: 8;
   display: block;
 }
 
@@ -478,9 +478,11 @@ body.no-scroll {
 }
 
 .burger.active {
-  -webkit-transform: translateY(8px);
-      -ms-transform: translateY(8px);
-          transform: translateY(8px);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+  position: fixed;
+  z-index: 9;
 }
 
 .burger.active .burger__item {
@@ -983,6 +985,7 @@ body.no-scroll {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
   position: relative;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
@@ -990,6 +993,7 @@ body.no-scroll {
 }
 
 .card-item__header_size-small {
+  width: auto;
   height: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
