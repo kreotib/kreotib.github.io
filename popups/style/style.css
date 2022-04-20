@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Light/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 15px;
+  background: url("../img/bg.jpg") center center/cover no-repeat;
+}
+
+.form-container {
+  max-width: 550px;
+  width: 100%;
+}
+.form__wrapper {
+  margin: 0 auto;
+  padding: 50px 60px 30px 60px;
+  background: #fff;
+  border-radius: 15px;
+}
+.form__wrapper-small {
+  padding: 50px 90px 30px 90px;
+}
+.form__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2a2a2a;
+}
+.form__title-center {
+  text-align: center;
+}
+.form__content {
+  margin-top: 40px;
+}
+.form__content-small {
+  margin-top: 20px;
+}
+.form__text {
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 300;
+  color: #292929;
+}
+.form__discount {
+  margin: 20px auto 0 auto;
+  max-width: 400px;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+}
+.form__input + .form__input {
+  margin-top: 20px;
+}
+.form__input-title {
+  padding-left: 15px;
+  display: block;
+}
+.form__input-item {
+  -webkit-appearance: none;
+  margin-top: 10px;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #7b7b7b;
+  border-radius: 30px;
+  font-size: 20px;
+  color: #2a2a2a;
+}
+.form__footer {
+  margin-top: 20px;
+}
+.form__footer-big {
+  margin-top: 40px;
+}
+.form__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3d57fb;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 30px;
+}
+.form__btn-small {
+  height: 50px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.form__btn-full {
+  height: 40px;
+  width: 100%;
+}
+.form__checkbox {
+  margin-top: 20px;
+}
+.form__checkbox-label {
+  display: flex;
+}
+.form__checkbox-label:hover {
+  cursor: pointer;
+}
+.form__checkbox-item {
+  display: none;
+}
+.form__checkbox-item:checked ~ .form__checkbox-checkmark::before {
+  content: "✓";
+}
+.form__checkbox-checkmark {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 2px solid #d0d0d0;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.form__links {
+  padding-left: 15px;
+  margin-top: 20px;
+}
+.form__links-item + .form__links-item {
+  margin-top: 10px;
+}
+.form-adv {
+  display: flex;
+  flex-direction: column;
+}
+.form-adv__item {
+  padding: 15px 30px;
+  box-shadow: 0 0 15px 0 #dadada;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.form-adv__item + .form-adv__item {
+  margin-top: 20px;
+}
+.form-adv__text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #292929;
+}
+
+.text-underline {
+  text-decoration: line-through;
+  text-decoration-color: #ff0000;
+  text-decoration-thickness: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .page-wrapper {
+    padding: 30px 15px;
+  }
+
+  .form__wrapper {
+    padding: 30px 30px 15px 30px;
+  }
+  .form__title {
+    font-size: 20px;
+  }
+  .form__content {
+    margin-top: 20px;
+  }
+  .form__input + .form__input {
+    margin-top: 15px;
+  }
+  .form__footer-big {
+    margin-top: 30px;
+  }
+  .form__btn-full {
+    height: 50px;
+  }
+  .form-adv__item {
+    padding: 15px;
+  }
+  .form-adv__text {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

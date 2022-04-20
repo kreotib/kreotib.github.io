@@ -1,0 +1,271 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light/Montserrat-Light.woff2') format('woff2'),
+  url('../fonts/Montserrat-Light/Montserrat-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular/Montserrat-Regular.woff2') format('woff2'),
+  url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+*{
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.page-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+
+  padding: 100px 15px;
+
+  background: url("../img/bg.jpg") center center/cover no-repeat;
+}
+
+.form{
+  &-container{
+    max-width: 550px;
+    width: 100%;
+  }
+  &__wrapper {
+    margin: 0 auto;
+    padding: 50px 60px 30px 60px;
+
+    background: #fff;
+    border-radius: 15px;
+
+    &-small{
+      padding: 50px 90px 30px 90px;
+    }
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 800;
+    color:#2a2a2a;
+    &-center{
+      text-align: center;
+    }
+  }
+  &__content{
+    margin-top: 40px;
+
+    &-small{
+      margin-top: 20px;
+    }
+  }
+  &__text{
+    text-decoration: none;
+
+    font-size: 13px;
+    line-height: 16px;
+
+    font-weight: 300;
+    color:#292929;
+  }
+  &__discount{
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+  }
+  &__input{
+    display: flex;
+    flex-direction: column;
+    & + &{
+      margin-top: 20px;
+    }
+    &-title{
+      padding-left: 15px;
+      display: block;
+    }
+    &-item{
+      -webkit-appearance: none;
+      margin-top: 10px;
+
+      outline: none;
+
+      height: 40px;
+      width: 100%;
+
+      padding: 15px;
+
+      border: 2px solid #7b7b7b;
+
+      border-radius: 30px;
+
+      font-size: 20px;
+      color:#2a2a2a;
+
+    }
+  }
+  &__footer{
+    margin-top: 20px;
+    &-big{
+      margin-top: 40px;
+    }
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #3d57fb;
+
+    color:#fff;
+    font-size: 20px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    border-radius: 30px ;
+
+    &-small{
+      height: 50px;
+      max-width: 200px;
+
+      margin: 0 auto;
+    }
+
+    &-full{
+      height: 40px;
+      width: 100%;
+    }
+  }
+  &__checkbox{
+    margin-top: 20px;
+    &-label{
+      display: flex;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    &-item{
+      display: none;
+      &:checked ~ .form__checkbox-checkmark{
+        &::before{
+          content: '✓';
+        }
+      }
+    }
+    &-checkmark{
+      position: relative;
+
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      flex-shrink: 0;
+
+      border: 2px solid #d0d0d0;
+
+      border-radius: 5px;
+
+      margin-right: 20px;
+    }
+  }
+  &__links{
+    padding-left: 15px;
+    margin-top: 20px;
+    &-item{
+      & + &{
+        margin-top: 10px;
+      }
+    }
+  }
+  &-adv{
+    display: flex;
+    flex-direction: column;
+    &__item{
+      padding: 15px 30px;
+
+      box-shadow: 0 0 15px 0 #dadada;
+      background-color: #fff;
+
+      border-radius: 15px;
+      & + &{
+        margin-top: 20px;
+      }
+    }
+    &__text{
+      font-weight: 400;
+      font-size: 18px;
+
+      color:#292929;
+    }
+  }
+}
+
+.text-underline{
+  text-decoration: line-through;
+  text-decoration-color: #ff0000;
+  text-decoration-thickness: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .page-wrapper{
+    padding: 30px 15px;
+  }
+  .form{
+    &__wrapper{
+      padding: 30px 30px 15px 30px;
+    }
+    &__title{
+      font-size: 20px;
+    }
+    &__content{
+      margin-top: 20px;
+    }
+    &__input{
+      &+ &{
+        margin-top: 15px;
+      }
+    }
+    &__footer{
+      &-big{
+        margin-top: 30px;
+      }
+    }
+    &__btn{
+      &-full{
+        height: 50px;
+      }
+    }
+    &-adv{
+      &__item{
+        padding: 15px;
+      }
+      &__text{
+        font-size: 15px;
+      }
+    }
+  }
+}
