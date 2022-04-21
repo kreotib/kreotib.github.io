@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
      /* NAVIGATION */
     const asideNav = document.querySelector('.header-nav'),
         pageList = asideNav.querySelector('.header-list'),
-        navListArray = pageList.querySelectorAll('.header-list__item');
+        navListArray = document.querySelectorAll('.header-list__item');
 
     navListArray.forEach(el=>{
         const elNavList = el.querySelector('.header-nav__list');
