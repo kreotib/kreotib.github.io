@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
      /* NAVIGATION */
-    const asideNav = document.querySelector('.header-nav'),
-        pageList = asideNav.querySelector('.header-list'),
+    const asideNav = document.querySelectorAll('.header-nav'),
         navListArray = document.querySelectorAll('.header-list__item');
 
     navListArray.forEach(el=>{
@@ -18,15 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
         elNavList ? el.classList.add('header-list__item-has-child') : null;
     });
 
-    asideNav.addEventListener('click',(event)=>{
-        let navItem = event.target.closest('.header-list__item-has-child'); // (1)
+    asideNav.forEach(el=>{
+        el.addEventListener('click',(event)=>{
+            let navItem = event.target.closest('.header-list__item-has-child'); // (1)
 
-        if (!navItem) return;
+            if (!navItem) return;
 
-        if (!asideNav.contains(navItem)) return;
+            if (!el.contains(navItem)) return;
 
-        navItem.classList.toggle('active');
-    });
+            navItem.classList.toggle('active');
+        });
+    })
 
 
     const triggerLinks = document.querySelectorAll('.trigger-link');
