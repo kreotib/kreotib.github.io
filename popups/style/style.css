@@ -138,8 +138,16 @@
 .form__checkbox-item {
   display: none;
 }
+.form__checkbox-item:checked ~ .form__checkbox-checkmark {
+  position: relative;
+}
 .form__checkbox-item:checked ~ .form__checkbox-checkmark::before {
   content: "✓";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 2px;
+  top: 0;
 }
 .form__checkbox-checkmark {
   position: relative;

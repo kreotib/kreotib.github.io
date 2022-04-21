@@ -175,8 +175,15 @@
     &-item{
       display: none;
       &:checked ~ .form__checkbox-checkmark{
+        position: relative;
         &::before{
           content: '✓';
+          width: 100%;
+          height: 100%;
+
+          position: absolute;
+          left: 2px;
+          top:0;
         }
       }
     }
