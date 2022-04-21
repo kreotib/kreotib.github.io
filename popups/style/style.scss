@@ -91,6 +91,10 @@
 
     font-weight: 300;
     color:#292929;
+
+    &-bold{
+      font-weight: 800;
+    }
   }
   &__discount{
     margin: 20px auto 0 auto;
