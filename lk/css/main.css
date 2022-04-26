@@ -150,6 +150,15 @@ body.no-scroll {
   height: 100%;
 }
 
+.btn-purple {
+  border-radius: 5px;
+  background-color: #ff8c82;
+  font-family: 'Acrom', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fefefe;
+}
+
 .btn-light-blue {
   background: #D8E9FE;
   border-radius: 8px;
@@ -674,7 +683,7 @@ body.no-scroll {
 
 .profile-block__content-text {
   color: #202020;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .profile-block__content-text + .profile-block__content-text {
@@ -774,7 +783,7 @@ body.no-scroll {
 }
 
 .profile-table__column {
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 15px;
   border-left: 2px solid #dddddd;
 }
@@ -807,5 +816,13 @@ body.no-scroll {
     width: 10px;
     height: 10px;
     margin-right: 5px;
+  }
+  .profile-table__row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .profile-table__column {
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
   }
 }
