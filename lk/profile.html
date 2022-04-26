@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__block">
+            <div class="logo">
+              <p class="logo__text">Логотип</p>
+            </div>
+          </div>
+          <div class="header__block header__nav">
+            <nav class="header-nav">
+              <ul class="header-nav__list header-list">
+                <li class="header-list__item"><a class="header-list__link" href="#">Главная</a></li>
+                <li class="header-list__item"><a class="header-list__link" href="#">Тесты</a></li>
+                <li class="header-list__item"><a class="header-list__link" href="#">Консультация</a></li>
+                <li class="header-list__item"><a class="header-list__link" href="#">Медиа</a>
+                  <ul class="header-nav__list header-list">
+                    <li class="header-list__item"><a class="header-list__link" href="#">Медиа</a></li>
+                    <li class="header-list__item"><a class="header-list__link" href="#">Медиа</a></li>
+                    <li class="header-list__item"><a class="header-list__link" href="#">Медиа</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__burger header__block">
+            <div class="burger">
+              <div class="burger__item"></div>
+              <div class="burger__item"></div>
+              <div class="burger__item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="aside">
+      <div class="aside__wrapper">
+        <div class="aside__nav">
+          <nav class="aside-nav header-nav">
+            <ul class="aside-nav__list aside-list header-nav__list">
+              <li class="aside-list__item header-list__item"><a class="aside-list__link header-list__link" href="#">Главная</a></li>
+              <li class="aside-list__item header-list__item"><a class="aside-list__link header-list__link" href="#">Тесты</a></li>
+              <li class="aside-list__item header-list__item"><a class="aside-list__link header-list__link" href="#">Консультация</a></li>
+              <li class="aside-list__item header-list__item"><a class="aside-list__link header-list__link" href="#">Медиа</a>
+                <ul class="aside-nav__list aside-list header-nav__list">
+                  <li class="aside-list__item header-list__item"><a class="aside-list__link header-list__link" href="#">Медиа</a></li>
+                  <li class="aside-list__item header-list__item"><a class="aside-list__link header-list__link" href="#">Медиа</a></li>
+                  <li class="aside-list__item header-list__item"><a class="aside-list__link header-list__link" href="#">Медиа</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="aside__footer"><a class="btn aside__btn" href="#">Личный кабинет</a></div>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="page-wrapper__content">
+        <div class="page-wrapper__block">
+          <div class="profile">
+            <div class="profile__wrapper profile-wrapper">
+              <div class="profile-wrapper__block">
+                <div class="profile-block">
+                  <div class="profile-block__header">
+                    <p class="profile-block__header-title">Данные аккаунта</p>
+                  </div>
+                  <div class="profile-block__content">
+                    <div class="profile-block__content-block">
+                      <p class="profile-block__content-text">Email: polzovatel@mail.ru</p>
+                      <p class="profile-block__content-text">Cтатус: <span class="premium-text">Premium</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-wrapper__block">
+                <div class="profile-block trigger-wrapper">
+                  <div class="profile-block__header trigger-link">
+                    <p class="profile-block__header-title">Смена пароля</p>
+                  </div>
+                  <div class="profile-block__content trigger-block">
+                    <div class="profile-block__content-block">
+                      <div class="profile-block__input">
+                        <p class="profile-block__content-text">Введите новый пароль</p>
+                        <div class="profile-block__input-content">
+                          <input class="profile-block__input-item">
+                          <p class="profile-block__input-status profile-block__input-status_success">отличный пароль</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile-block__content-block">
+                      <div class="profile-block__input">
+                        <p class="profile-block__content-text">Введите новый пароль</p>
+                        <div class="profile-block__input-content">
+                          <input class="profile-block__input-item">
+                          <p class="profile-block__input-status profile-block__input-status_error">неверный пароль</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile-block__content-block"><a class="profile-block__content-btn btn btn-light-blue" href="#">сменить пароль</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-wrapper__block">
+                <div class="profile-block trigger-wrapper">
+                  <div class="profile-block__header trigger-link">
+                    <p class="profile-block__header-title">Платежные данные</p>
+                  </div>
+                  <div class="profile-block__content trigger-block">
+                    <div class="profile-block__content-block">
+                      <p class="profile-block__content-text">Email аккаунта: polzovatel@mail.ru</p>
+                      <p class="profile-block__content-text">Статус подписки: Оплачена</p>
+                      <p class="profile-block__content-text">Дата начала: 08.04.2022</p>
+                      <p class="profile-block__content-text">Дата последнего платежа: 08.03.2022</p>
+                      <p class="profile-block__content-text">Конец пробного периода: 08.05.2022</p>
+                      <p class="profile-block__content-text">Следующий платеж: 08.05.2022</p>
+                    </div>
+                    <div class="profile-block__content-block">
+                      <p class="profile-block__content-title">Подписка</p>
+                      <p class="profile-block__content-text">899 ₽  - 1 месяц</p><a class="profile-block__content-btn btn btn-purple" href="#">отменить подписку</a>
+                      <p class="profile-block__content-text">Банковская карта: 4444 44** **** 4444</p>
+                    </div>
+                    <div class="profile-block__content-block">
+                      <div class="profile-table">
+                        <div class="profile-table__row">
+                          <div class="profile-table__column">
+                            <p class="profile-table__title">Заказ</p>
+                          </div>
+                          <div class="profile-table__column">
+                            <p class="profile-table__title">Дата и время</p>
+                          </div>
+                          <div class="profile-table__column">
+                            <p class="profile-table__title">Статус</p>
+                          </div>
+                          <div class="profile-table__column">
+                            <p class="profile-table__title">Сумма</p>
+                          </div>
+                        </div>
+                        <div class="profile-table__row">
+                          <div class="profile-table__column">
+                            <p class="profile-table__text">№123456</p>
+                          </div>
+                          <div class="profile-table__column">
+                            <p class="profile-table__text">08.04.2022 - 15:55:56</p>
+                          </div>
+                          <div class="profile-table__column">
+                            <p class="profile-table__text">Успешно</p>
+                          </div>
+                          <div class="profile-table__column">
+                            <p class="profile-table__text">10 ₽</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-register">
+      <div class="popup__wrapper">
+        <div class="popup-box popup__box">
+          <div class="popup__plug"><img src="img/popup-plug.png"></div>
+          <div class="popup__content">
+            <p class="popup__title">Ваш аккаунт создан и&nbsp;готов к&nbsp;работе! Осталось оплатить доступ за&nbsp;99&nbsp;рублей</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/common.js"></script>
+  </body>
+</html>
