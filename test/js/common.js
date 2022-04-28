@@ -324,9 +324,11 @@ const testInit = (testSelector, index = 0) => {
     const testBlock = document.querySelector(`.${testSelector}`),
         testAnswers = testBlock.querySelector('.test-wrapper-answer'),
         testResult = testBlock.querySelector('.test-result'),
+        testInfo = testBlock.querySelector('.test-wrapper-info'),
         testContentStepMaxBlock = testBlock.querySelector('.test-steps__max');
 
-    testAnswers.classList.remove('hidden');
+    testAnswers.classList.add('hidden');
+    testInfo.classList.remove('hidden');
     testResult.classList.remove('active');
 
     const testName = testBlock.dataset.test,
@@ -338,6 +340,15 @@ const testInit = (testSelector, index = 0) => {
     testBlock.dataset.count = 0;
 
     testChange(testSelector, 0)
+}
+
+const testStart = (testSelector) => {
+    const testBlock = document.querySelector(`.${testSelector}`),
+        testAnswers = testBlock.querySelector('.test-wrapper-answer'),
+        testInfo = testBlock.querySelector('.test-wrapper-info');
+
+    testAnswers.classList.remove('hidden');
+    testInfo.classList.add('hidden');
 }
 
 const testChange = (testSelector, index = 0) => {
@@ -473,7 +484,14 @@ document.addEventListener('DOMContentLoaded', () => {
         testInit('testType');
 
         const testBtn = document.querySelector('.test__btn'),
-            testRefresh = document.querySelector('.test-refresh');
+            testRefresh = document.querySelector('.test-refresh'),
+            testStartBtn = document.querySelector('.test-start');
+
+        testStartBtn.addEventListener('click',(e)=>{
+            e.preventDefault();
+            const testName = testRefresh.closest('.test').dataset.test;
+            testStart(testName);
+        });
 
         testBtn.addEventListener('click', (e) => {
             e.preventDefault();
