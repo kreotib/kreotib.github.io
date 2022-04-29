@@ -339,7 +339,7 @@ const testInit = (testSelector, index = 0) => {
 
     testBlock.dataset.count = 0;
 
-    testChange(testSelector, 0)
+    testChange(testSelector, 39)
 }
 
 const testStart = (testSelector) => {
@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 testInputs = testBlock.querySelectorAll('.test-input input'),
                 testInputChecked = testBlock.querySelector('.test-input input:checked'),
                 testAnswers = testBlock.querySelector('.test-wrapper-answer'),
-                testResult = testBlock.querySelector('.test-content__result'),
+                testResult = testBlock.querySelector('.test-wrapper-result'),
                 testName = testBlock.dataset.test,
                 testStep = testBlock.dataset.step,
                 testStepMax = testBlock.dataset.maxStep;

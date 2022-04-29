@@ -1902,6 +1902,15 @@ body.no-scroll {
   .test-result__description-blockquote {
     padding: 20px 30px;
   }
+  .test-result__description img {
+    height: 150px;
+  }
+  .test-result__header-img {
+    height: 150px;
+  }
+  .test-info__header-img {
+    height: 150px;
+  }
   .test-content__steps {
     margin-left: 10px;
   }
