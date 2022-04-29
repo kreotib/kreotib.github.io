@@ -339,7 +339,7 @@ const testInit = (testSelector, index = 0) => {
 
     testBlock.dataset.count = 0;
 
-    testChange(testSelector, 39)
+    testChange(testSelector, 0)
 }
 
 const testStart = (testSelector) => {
