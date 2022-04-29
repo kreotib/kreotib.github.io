@@ -1903,13 +1903,17 @@ body.no-scroll {
     padding: 20px 30px;
   }
   .test-result__description img {
-    height: 150px;
+    height: auto;
   }
   .test-result__header-img {
-    height: 150px;
+    height: auto;
+  }
+  .test-info__title {
+    font-size: 30px;
+    line-height: 1.1;
   }
   .test-info__header-img {
-    height: 150px;
+    height: auto;
   }
   .test-content__steps {
     margin-left: 10px;
@@ -1931,6 +1935,10 @@ body.no-scroll {
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 10px;
+  }
+  .test-result__title {
+    font-size: 30px;
+    line-height: 1.1;
   }
   .test-result__footer {
     -webkit-box-align: center;
