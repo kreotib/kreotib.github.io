@@ -1,0 +1,227 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+  .content {
+    padding-top: 10px;
+  }
+}
+
+.kv-block {
+  position: relative;
+  height: 353px;
+}
+
+@media (max-width: 768px) {
+  .kv-block {
+    height: 462px;
+  }
+}
+
+.kv {
+  position: absolute;
+  top: -30px;
+  left: -500px;
+  right: -500px;
+  margin: auto;
+  width: 1344px;
+  height: 449px;
+  background: url(../img/kv.png) center 0 no-repeat;
+  background-size: 1344px;
+}
+
+@media (max-width: 1160px) {
+  .kv {
+    left: -650px;
+  }
+}
+
+@media (max-width: 960px) {
+  .kv {
+    left: -700px;
+    background-size: 1134px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kv {
+    top: 0;
+    left: -550px;
+    right: -300px;
+    width: 660px;
+    height: 324px;
+    background: url(../img/kv-mob.png) center 0 no-repeat;
+    background-size: 660px;
+  }
+
+  .kv-block .btn-wrapper {
+    margin-top: 360px;
+  }
+}
+
+.steps-block {
+  position: relative;
+  height: 305px;
+  padding: 46px 0;
+  background: url(../img/steps-bg.png) center 0 no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.steps-block::before {
+  content: '';
+  position: absolute;
+  top: 190px;
+  left: -950px;
+  right: 0;
+  margin: auto;
+  width: 206px;
+  height: 98px;
+  background: url(../img/steps-bats.png) center no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .steps-block {
+    height: 661px;
+    padding: 68px 0 112px;
+    background: url(../img/steps-bg-mob.png) center 0 no-repeat;
+    background-size: auto;
+  }
+
+  .steps-block::before {
+    top: 541px;
+    left: -96px;
+    right: -198px;
+  }
+
+  .steps-block::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -150px;
+    right: 0;
+    margin: auto;
+    width: 60px;
+    height: 27px;
+    background: url(../img/steps-bat.png) center no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .steps-block {
+    background-size: 500px;
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.step {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .step {
+    max-width: 280px;
+    margin-bottom: 50px;
+  }
+
+  .step:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.step-num {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 55px;
+  height: 64px;
+}
+
+.step-title {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 62px;
+  margin-bottom: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .step-title {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+}
+
+.step-text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+  margin-left: 62px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .step-text {
+    font-size: 21px;
+    margin-bottom: 0;
+  }
+}
+
+.step .btn {
+  margin: 0 auto;
+  background: #fff;
+  font-size: 24px;
+  color: #E6000E;
+}
+
+.step .btn::after {
+  display: none;
+}
+
+.step .btn:hover {
+  color: #fff;
+  background: #020204;
+}
+
+.steps-cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 222px;
+  width: 100%;
+  margin-left: 52px;
+}
+
+@media screen and (max-width: 768px) {
+  .steps-cards {
+    margin: 30px auto 0;
+  }
+}

@@ -1,0 +1,76 @@
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    padding-top: 100px;
+  }
+}
+.content__error-code {
+  position: relative;
+  margin-bottom: -50px;
+  font-size: 370px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .content__error-code {
+    margin-bottom: -30px;
+    font-size: 200px;
+  }
+}
+.content__error-code::before {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  right: -170px;
+  margin: auto;
+  width: 677px;
+  height: 231px;
+  background: url(../img/bats-error.svg) center no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .content__error-code::before {
+    top: -32px;
+    left: 0;
+    right: -150px;
+    width: 98px;
+    height: 64px;
+    background: url(../img/bats-error-mob.svg) center no-repeat;
+    background-size: contain;
+  }
+}
+.content__title {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .content__title {
+    font-size: 26px;
+  }
+}
+.content__description {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .content__description {
+    font-size: 21px;
+  }
+}
+.content__btn-home {
+  margin: 0 auto;
+  font-size: 24px;
+}
