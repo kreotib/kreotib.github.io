@@ -483,7 +483,7 @@
 }
 
 .datepicker--cell.-selected-.-focus- {
-  background: #FCE7A7;
+  background: transparent;
 }
 
 .datepicker--cell.-selected-::before {
