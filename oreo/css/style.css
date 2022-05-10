@@ -6414,7 +6414,6 @@ img{
 
 @media screen and (max-width: 992px) {
   .nav__item.active:after{
-    display: none;
   }
 
   body.no-scroll{
