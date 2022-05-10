@@ -404,39 +404,47 @@ select::-ms-expand {
   transition: all .3s ease;
 }
 
-.nav__item:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  -webkit-transform: translateX(-50%) scale(0);
-  -ms-transform: translateX(-50%) scale(0);
-  transform: translateX(-50%) scale(0);
-  height: 1px;
-  background-color: #ffffff;
-  -webkit-transition: width .2s ease, -webkit-transform .4s ease;
-  transition: width .2s ease, -webkit-transform .4s ease;
-  transition: width .2s ease, transform .4s ease;
-  transition: width .2s ease, transform .4s ease, -webkit-transform .4s ease;
-}
 
 .nav__item-actions::after {
   display: none;
 }
 
-.nav__item:hover:after {
-  width: 100%;
-  -webkit-transform: translateX(-50%) scale(1);
-  -ms-transform: translateX(-50%) scale(1);
-  transform: translateX(-50%) scale(1);
+.nav__item{
+  display: flex;
+  position: relative;
 }
 
 .nav__item.active:after {
-  width: 100%;
-  -webkit-transform: translateX(-50%) scale(1);
-  -ms-transform: translateX(-50%) scale(1);
-  transform: translateX(-50%) scale(1);
+  content:'';
+  position: absolute;
+  left: calc(50% - 60px);
+  top: calc(50% - 62px);
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+
+  background: url("../img/oreo-new/menu-active.svg") center center/contain no-repeat;
+
+  transition: .3s all;
+}
+
+.nav__item.active:hover::after{
+  opacity: .8;
+
+  transform: scale(1.08);
+}
+
+.nav__item.active:hover{
+  color: #7ADCFF;
+}
+
+.nav__item:hover{
+  color: #7ADCFF;
+}
+
+.nav__item.active span{
+  position: relative;
+  z-index: 3;
 }
 
 .nav__item:nth-child(n+2) {
@@ -4601,6 +4609,8 @@ body {
   .logo {
     -webkit-flex-shrink: 1;
     flex-shrink: 1;
+
+    z-index: 101;
   }
   .logo img {
     max-height: 60px;
@@ -4660,6 +4670,10 @@ body {
     text-align: center;
 
     width: 100% !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .nav__item:nth-child(n+2) {
     margin-left: 0;
@@ -6177,7 +6191,7 @@ body {
 }
 
 .cashback-modal{
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   z-index: 99;
@@ -6401,5 +6415,17 @@ img{
 @media screen and (max-width: 992px) {
   .nav__item.active:after{
     display: none;
+  }
+
+  body.no-scroll{
+    overflow: hidden;
+  }
+
+  .cashback-modal.hidden{
+    display: none;
+  }
+
+  .section-main__recipes{
+    margin-top: 5px!important;
   }
 }

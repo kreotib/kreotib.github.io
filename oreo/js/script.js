@@ -4,6 +4,14 @@
 
 $(document).ready(function () {
 
+  const path = document.location.href,
+      pathNameArr = path.split("/"),
+      pathName = pathNameArr[pathNameArr.length - 1];
+
+  const headerLinkArr = document.querySelectorAll('.nav__item');
+  headerLinkArr.forEach(el=>{
+    el.getAttribute('href') === pathName ? el.classList.add('active') : el.classList.remove('active');
+  });
   // Mobile-menu ----------------
   function initMobMenu() {
     var btn = $('#mob-menu');
@@ -11,6 +19,8 @@ $(document).ready(function () {
     btn.on('click', function (e) {
       e.preventDefault();
       var $this = $(this);
+      $('body').toggleClass('no-scroll');
+      $('.cashback-modal').toggleClass('hidden');
       $this.siblings('#menu').
       toggleClass('active').
       end().
