@@ -131,12 +131,18 @@
 }
 .form__checkbox-label {
   display: flex;
+  position: relative;
 }
 .form__checkbox-label:hover {
   cursor: pointer;
 }
 .form__checkbox-item {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
 }
 .form__checkbox-item:checked ~ .form__checkbox-checkmark {
   position: relative;
