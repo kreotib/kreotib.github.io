@@ -169,6 +169,10 @@ body.no-scroll {
   border-radius: 8px;
 }
 
+.btn-blue-dark {
+  background: #0000ff;
+}
+
 .btn-refresh {
   border: 1px solid #7272F2;
   color: #7272F2;
@@ -589,7 +593,7 @@ body.no-scroll {
     top: 45px;
   }
   .aside__wrapper {
-    padding: 50px 0 75px 0;
+    padding: 50px 0 200px 0;
   }
   .aside-list {
     display: -webkit-box;
@@ -1790,18 +1794,26 @@ body.no-scroll {
   padding: 22px 42px;
 }
 
-.test-result__description-blockquote-first {
+.test-result__description-blockquote_purple {
   background: #E7DFFF;
   border-radius: 10px;
 }
 
-.test-result__description-blockquote-second {
+.test-result__description-blockquote_pink {
   background: #FFEBFF;
   border-radius: 10px;
 }
 
 .test-result__description-blockquote p {
   font-weight: 500;
+}
+
+.test-result__description-blockquote .bold {
+  font-weight: 700;
+}
+
+.test-result__description-blockquote .regular {
+  font-weight: 400;
 }
 
 .test-result__footer {
