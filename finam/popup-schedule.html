@@ -156,47 +156,43 @@
             <div class="popup__content">
               <div class="popup-close popup__close"><img class="popup__close-img" src="img/close.svg"></div>
               <div class="popup__block">
-                <p class="popup__title">Оплатить обучение</p>
+                <p class="popup__title">Напомнить о занятии</p>
               </div>
               <div class="popup__block">
-                <div class="popup__row">
-                  <div class="popup__row-block">
-                    <p class="popup__text">Курс «Название курса в две строки», тариф 3 месяца</p>
+                <div class="schedule-popup__list">
+                  <div class="schedule-popup__list-item">
+                    <label class="checkbox">
+                      <input class="checkbox__item" type="checkbox" name="name[]"><span class="checkbox__label">за 24 часа</span><span class="checkbox__checkmark"></span>
+                    </label>
                   </div>
-                  <div class="popup__row-block">
-                    <p class="popup__text popup__text-bold">30 000 ₽</p>
+                  <div class="schedule-popup__list-item">
+                    <label class="checkbox">
+                      <input class="checkbox__item" type="checkbox" name="name[]"><span class="checkbox__label">за 2 часа</span><span class="checkbox__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="schedule-popup__list-item">
+                    <label class="checkbox">
+                      <input class="checkbox__item" type="checkbox" name="name[]"><span class="checkbox__label">за 1 час</span><span class="checkbox__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="schedule-popup__list-item">
+                    <label class="checkbox">
+                      <input class="checkbox__item" type="checkbox" name="name[]"><span class="checkbox__label">за 15 минут</span><span class="checkbox__checkmark"></span>
+                    </label>
                   </div>
                 </div>
               </div>
               <div class="popup__block">
-                <div class="popup__row">
-                  <div class="popup__row-block">
-                    <p class="popup__text">Промокод ФИНАМ420</p>
-                  </div>
-                  <div class="popup__row-block">
-                    <p class="popup__text popup__text-bold">-500 ₽</p>
-                  </div>
+                <div class="popup__input">
+                  <input class="popup__input-item" placeholder="pochta@mail.ru">
                 </div>
               </div>
               <div class="popup__block">
-                <div class="popup__row">
-                  <div class="popup__row-block">
-                    <p class="popup__text popup__text-bold">Итого</p>
-                  </div>
-                  <div class="popup__row-block">
-                    <p class="popup__text popup__text-bold popup__text-accent">29 500 ₽</p>
-                  </div>
-                </div>
+                <p class="popup__text popup__text-small popup__text-grey">Напоминание о приближающемся занятии придёт на указанную электронную почту</p>
               </div>
+              <div class="popup__block"><a class="btn btn-accent popup__btn" href="#">Перейти к оплате</a></div>
               <div class="popup__block">
-                <div class="popup__input succes">
-                  <input class="popup__input-item" placeholder="ФИНАМ420">
-                  <p class="popup__input-text">Промокод применен!</p>
-                </div>
-              </div>
-              <div class="popup__block popup__footer"><a class="btn btn-accent popup__btn" href="#">Перейти к оплате</a></div>
-              <div class="popup__block">
-                <p class="popup__text popup__text-grey">После оплаты курс будет добавлен в «Мои курсы»</p>
+                <p class="popup__text popup__text-small popup__text-center popup__text-grey">Сохранено!</p>
               </div>
             </div>
           </div>

@@ -56,8 +56,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     progressBars.forEach(el=>{
        const progressBarCurrent = el.querySelector('.progress-bar-current');
+       let dataMax;
 
-       progressBarCurrent.style.width = `${el.dataset.number}%`;
+       !el.dataset.max ?  dataMax = 100 : dataMax = el.dataset.max;
+
+       progressBarCurrent.style.width = `${el.dataset.number / dataMax * 100}%`;
     });
 
 
@@ -99,5 +102,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             });
         });
     }
-    
+
+
+    customSelect('.custom-select')
 });

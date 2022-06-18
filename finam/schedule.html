@@ -222,47 +222,151 @@
           <div class="container">
             <div class="page-content__header">
               <div class="page-content__header-block">
-                <h1 class="page-content__title">Мой профиль</h1>
-              </div>
-              <div class="page-content__header-block">
-                <div class="profile-info">
-                  <div class="profile-info__wrapper">
-                    <div class="profile-info__img"><img class="profile-info__img-item" src="img/profile.jpg"></div>
-                    <div class="profile-info__content">
-                      <p class="profile-info__text">Константина Константинопольская</p>
-                    </div>
-                  </div>
-                </div>
+                <h1 class="page-content__title">Расписание</h1>
               </div>
             </div>
             <div class="page-content__wrapper">
               <div class="tabs page-tabs">
                 <div class="tabs-nav">
                   <ul class="page-tabs__nav">
-                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">О себе</a></li>
-                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">Сертификаты</a></li>
-                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">Рейтинг</a></li>
+                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">Будущие</a></li>
+                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">Прошедшие</a></li>
                   </ul>
                 </div>
                 <div class="tabs-content page-tabs__content">
                   <div class="tabs-content__item">
-                    <div class="profile-content">
-                      <div class="profile-content__block">
-                        <p class="profile-content__text">Изменить данные можно в&nbsp;<a class='profile-content__text-link' href='#'>личном кабинете</a> Финам</p>
-                      </div>
-                      <div class="profile-content__block">
-                        <div class="profile-content__input input">
-                          <input class="profile-content__input-item input__item" type="text" placeholder="Константина">
+                    <div class="schedule-wrapper">
+                      <div class="schedule-wrapper__filter">
+                        <div class="schedule-filter">
+                          <div class="schedule-filter__header">
+                            <p class="schedule-filter__title"></p>
+                          </div>
+                          <div class="schedule-filter__content">
+                            <div class="filter-choises">
+                              <div class="filter-choises__block">
+                                <div class="filter-checkbox">
+                                  <label class="filter-checkbox__label">
+                                    <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark filter-checkbox__checkmark_small">Уроки внутри курса</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="filter-choises__block">
+                                <div class="filter-checkbox">
+                                  <label class="filter-checkbox__label">
+                                    <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark filter-checkbox__checkmark_small">Домашние задания</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="filter-choises__block">
+                                <div class="filter-checkbox">
+                                  <label class="filter-checkbox__label">
+                                    <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark filter-checkbox__checkmark_small">Вебинары</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="filter-choises__block"><a class="filter-choises__btn" href="#"><span class="filter-choises__btn-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 18L6 6" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 6L6 18" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span><span class="filter-choises__btn-text">Снять выбор</span></a></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="profile-content__block">
-                        <div class="profile-content__input input">
-                          <input class="profile-content__input-item input__item" type="text" placeholder="Константинопольская">
-                        </div>
-                      </div>
-                      <div class="profile-content__block">
-                        <div class="profile-content__input input">
-                          <input class="profile-content__input-item input__item" type="text" placeholder="r.gibadullin@coreapp.ai">
+                      <div class="schedule-wrapper__content">
+                        <div class="schedule-wrapper__block">
+                          <div class="schedule-block trigger-wrapper">
+                            <div class="schedule-block__header trigger-link">
+                              <p class="schedule-block__title">Июнь 2022</p>
+                            </div>
+                            <div class="schedule-block__content trigger-block">
+                              <div class="schedule-grid">
+                                <div class="schedule-grid__item">
+                                  <div class="schedule-item">
+                                    <div class="schedule-item__wrapper">
+                                      <div class="schedule-item__header">
+                                        <p class="schedule-item__time">1 июня в 11:00</p><a class="schedule-item__icon" href="#"><img src="img/notification.svg"></a>
+                                      </div>
+                                      <div class="schedule-item__content">
+                                        <p class="schedule-item__title">Урок 1</p>
+                                        <p class="schedule-item__subtitle">Курс «Название курса»</p>
+                                      </div>
+                                      <div class="schedule-item__footer"><a class="schedule-item__link" href="#">Добавить в календарь</a></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="schedule-grid__item">
+                                  <div class="schedule-item">
+                                    <div class="schedule-item__wrapper">
+                                      <div class="schedule-item__header">
+                                        <p class="schedule-item__time">1 июня в 11:00</p><a class="schedule-item__icon" href="#"><img src="img/notification.svg"></a>
+                                      </div>
+                                      <div class="schedule-item__content">
+                                        <p class="schedule-item__title">Урок 1</p>
+                                        <p class="schedule-item__subtitle">Курс «Название курса»</p>
+                                      </div>
+                                      <div class="schedule-item__footer"><a class="schedule-item__link" href="#">Добавить в календарь</a></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="schedule-grid__item">
+                                  <div class="schedule-item">
+                                    <div class="schedule-item__wrapper">
+                                      <div class="schedule-item__header">
+                                        <p class="schedule-item__time">1 июня в 11:00</p><a class="schedule-item__icon" href="#"><img src="img/notification.svg"></a>
+                                      </div>
+                                      <div class="schedule-item__content">
+                                        <p class="schedule-item__title">Урок 1</p>
+                                        <p class="schedule-item__subtitle">Курс «Название курса»</p>
+                                      </div>
+                                      <div class="schedule-item__footer"><a class="schedule-item__link" href="#">Добавить в календарь</a></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="schedule-grid__item">
+                                  <div class="schedule-item">
+                                    <div class="schedule-item__wrapper">
+                                      <div class="schedule-item__header">
+                                        <p class="schedule-item__time">1 июня в 11:00</p><a class="schedule-item__icon" href="#"><img src="img/notification.svg"></a>
+                                      </div>
+                                      <div class="schedule-item__content">
+                                        <p class="schedule-item__title">Урок 1</p>
+                                        <p class="schedule-item__subtitle">Курс «Название курса»</p>
+                                      </div>
+                                      <div class="schedule-item__footer"><a class="schedule-item__link" href="#">Добавить в календарь</a></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="schedule-grid__item">
+                                  <div class="schedule-item">
+                                    <div class="schedule-item__wrapper">
+                                      <div class="schedule-item__header">
+                                        <p class="schedule-item__time">Прошло 25 февраля в 11:00</p>
+                                      </div>
+                                      <div class="schedule-item__content">
+                                        <p class="schedule-item__title">Вебинар <br> «Название вебинара»</p>
+                                        <p class="schedule-item__subtitle">Курс «Название курса»</p>
+                                      </div>
+                                      <div class="schedule-item__footer"><a class="schedule-item__link" href="#">Добавить в календарь</a></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="schedule-grid__item">
+                                  <div class="schedule-item">
+                                    <div class="schedule-item__wrapper">
+                                      <div class="schedule-item__header">
+                                        <p class="schedule-item__time">1 июня в 11:00</p><a class="schedule-item__icon" href="#"><img src="img/notification.svg"></a>
+                                      </div>
+                                      <div class="schedule-item__content">
+                                        <p class="schedule-item__title">Урок 1</p>
+                                        <p class="schedule-item__subtitle">Курс «Название курса»</p>
+                                      </div>
+                                      <div class="schedule-item__footer"><a class="schedule-item__link" href="#">Добавить в календарь</a></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -270,124 +374,7 @@
                   <div class="tabs-content__item">
                     <div class="profile-content">
                       <div class="profile-content__block">
-                        <p class="profile-content__text profile-content__text_center-mobile">Вы ещё не прошли ни одного курса, перейдите в <a href='#' class="profile-content__text-link">каталог</a>, <br> чтобы выбрать новый курс для прохождения</p>
-                      </div>
-                      <div class="profile-content__block">
-                        <p class="profile-content__text">Ваши сертификаты за пройденные курсы</p>
-                      </div>
-                      <div class="profile-content__block">
-                        <div class="certificate-card">
-                          <div class="certificate-card__wrapper">
-                            <div class="certificate-card__header">
-                              <p class="certificate-card__text">Сертификат</p>
-                            </div>
-                            <div class="certificate-card__content">
-                              <p class="certificate-card__text">24.02.2022</p>
-                              <p class="certificate-card__name">Курс «Название курса»</p>
-                            </div>
-                            <div class="certificate-card__footer"><a class="btn btn-accent certificate-card__btn" href="#">Скачать (.pdf)</a></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="profile-content__block">
-                        <div class="certificate-card">
-                          <div class="certificate-card__wrapper">
-                            <div class="certificate-card__header">
-                              <p class="certificate-card__text">Сертификат</p>
-                            </div>
-                            <div class="certificate-card__content">
-                              <p class="certificate-card__text">24.02.2022</p>
-                              <p class="certificate-card__name">Курс «Название курса»</p>
-                            </div>
-                            <div class="certificate-card__footer"><a class="btn btn-accent certificate-card__btn" href="#">Скачать (.pdf)</a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tabs-content__item">
-                    <div class="profile-content">
-                      <div class="profile-content__block">
-                        <p class="profile-content__text">Чтобы посмотреть своё место в рейтинге, перейдите в <a href='#' class='profile-content__text-link'>каталог</a>, <br> выберите курс и начните получать баллы</p>
-                      </div>
-                      <div class="profile-content__block">
-                        <p class="profile-content__title">Выберите курс</p>
-                        <div class="profile-content__box">
-                          <select class="custom-select">
-                            <option>Курс «Название курса курса курса»</option>
-                            <option>Курс «Название курса курса курса курса»</option>
-                            <option>Курс «Название курса курса курса»</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="profile-content__block">
-                        <p class="profile-content__title">Участники</p>
-                        <div class="profile-content__box">
-                          <p class="profile-content__desc">На этом курсе можно получить максимум 800 баллов</p>
-                        </div>
-                        <div class="profile-content__box">
-                          <div class="course-table">
-                            <div class="course-table__row">
-                              <div class="course-table__column">
-                                <p class="course-table__title">№</p>
-                              </div>
-                              <div class="course-table__column">
-                                <p class="course-table__title">Имя</p>
-                              </div>
-                              <div class="course-table__column">
-                                <p class="course-table__title">Баллы</p>
-                              </div>
-                            </div>
-                            <div class="course-table__row">
-                              <div class="course-table__column">
-                                <p class="course-table__title">1</p>
-                              </div>
-                              <div class="course-table__column">
-                                <p class="course-table__text">Константина К.</p>
-                              </div>
-                              <div class="course-table__column course-table__column-progress">
-                                <p class="course-table__text course-table__count">550</p>
-                                <div class="course-table__progress">
-                                  <div class="progress-bar course-table__progress-bar" data-number="550" data-max="800">
-                                    <div class="progress-bar-current"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="course-table__row">
-                              <div class="course-table__column">
-                                <p class="course-table__title">2</p>
-                              </div>
-                              <div class="course-table__column">
-                                <p class="course-table__text">Константина К.</p>
-                              </div>
-                              <div class="course-table__column course-table__column-progress">
-                                <p class="course-table__text course-table__count">450</p>
-                                <div class="course-table__progress">
-                                  <div class="progress-bar course-table__progress-bar" data-number="450" data-max="800">
-                                    <div class="progress-bar-current"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="course-table__row">
-                              <div class="course-table__column">
-                                <p class="course-table__title">3</p>
-                              </div>
-                              <div class="course-table__column">
-                                <p class="course-table__text">Константина К.</p>
-                              </div>
-                              <div class="course-table__column course-table__column-progress">
-                                <p class="course-table__text course-table__count">80</p>
-                                <div class="course-table__progress">
-                                  <div class="progress-bar course-table__progress-bar" data-number="80" data-max="800">
-                                    <div class="progress-bar-current"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <p class="profile-content__text">Вы пока не прошли ни одного курса, перейдите в <a href='#' class='profile-content__text-link'>каталог</a>, <br> выберите курс для прохождения</p>
                       </div>
                     </div>
                   </div>
