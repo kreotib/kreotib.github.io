@@ -104,5 +104,16 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
 
 
-    customSelect('.custom-select')
+    customSelect('.custom-select');
+
+    const starBlock = document.querySelector('.star-block'),
+        starBlockItems = starBlock.querySelectorAll('.star-block__item');
+
+    starBlockItems.forEach((element,index)=>{
+       element.addEventListener('click',()=>{
+           starBlockItems.forEach((el,idx)=>{
+              idx <= index ? el.classList.add('active') : el.classList.remove('active');
+           });
+       });
+    });
 });
