@@ -424,11 +424,19 @@ body {
   cursor: pointer;
 }
 
+.popup__close:hover .popup__close-img {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
 .popup__close-img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: .5s all linear;
+  -o-transition: .5s all linear;
+  transition: .5s all linear;
 }
 
 .popup__btn {
@@ -1499,7 +1507,7 @@ body {
 
 .certificate-info__title {
   color: #FF7940;
-  text-align: center;
+  text-align: left;
 }
 
 .certificate-info__date {
@@ -1695,6 +1703,9 @@ body {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .certificate-info__title {
+    text-align: center;
   }
 }
 
@@ -1978,6 +1989,9 @@ body {
 
 .filter {
   margin-bottom: 30px;
+  -webkit-transform: translateY(-40px);
+      -ms-transform: translateY(-40px);
+          transform: translateY(-40px);
 }
 
 .filter-wrapper {
@@ -2907,7 +2921,7 @@ body {
   display: block;
   margin-left: 10px;
   font-size: 16px;
-  color: #95929C;
+  color: #020203;
   -webkit-transition: .3s color linear;
   -o-transition: .3s color linear;
   transition: .3s color linear;
@@ -3174,7 +3188,6 @@ body {
 }
 
 .box-404__title, .box-404__desc {
-  font-weight: 600;
   line-height: 1;
   color: #071013;
   text-align: center;
@@ -3182,6 +3195,7 @@ body {
 
 .box-404__title {
   font-size: 90px;
+  font-weight: 600;
 }
 
 .box-404__desc {
@@ -3432,6 +3446,7 @@ body {
   font-size: 21px;
   font-weight: 600;
   letter-spacing: -0.2px;
+  word-break: break-all;
 }
 
 .promocode-item__footer {
