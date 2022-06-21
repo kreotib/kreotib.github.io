@@ -1518,7 +1518,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: #95929C;
-  text-align: center;
+  text-align: left;
 }
 
 .certificate-info__download {
@@ -1705,6 +1705,9 @@ body {
             order: 2;
   }
   .certificate-info__title {
+    text-align: center;
+  }
+  .certificate-info__text {
     text-align: center;
   }
 }
@@ -2927,6 +2930,14 @@ body {
   transition: .3s color linear;
 }
 
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.checkbox:hover .checkbox__checkmark {
+  border-color: #95929C;
+}
+
 .checkbox__item:checked ~ .checkbox__checkmark {
   background-color: #FF7940;
   border-color: #FF7940;
@@ -2969,6 +2980,14 @@ body {
   transition: .3s opacity linear;
 }
 
+.radio:hover {
+  cursor: pointer;
+}
+
+.radio:hover .radio__checkmark {
+  border-color: #95929C;
+}
+
 .radio__item:checked ~ .radio__checkmark {
   background-color: #FF7940;
   border-color: #FF7940;
@@ -2988,7 +3007,7 @@ body {
   height: 16px;
   border-radius: 50%;
   display: block;
-  border: 2px solid #95929C;
+  border: 2px solid #D2D2D2;
   -webkit-transition: .3s background-color linear, .3s border-color linear;
   -o-transition: .3s background-color linear, .3s border-color linear;
   transition: .3s background-color linear, .3s border-color linear;
@@ -3199,7 +3218,7 @@ body {
 }
 
 .box-404__desc {
-  font-size: 30px;
+  font-size: 21px;
   margin-top: 30px;
 }
 
