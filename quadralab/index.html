@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container">
+      <div class="container">
         <div class="header__row">
           <div class="header__row-block">
             <div class="header__block header__logo">
@@ -43,12 +43,48 @@
         </div>
       </div>
     </header>
+    <div class="header-mobile main-nav">
+      <div class="header-mobile__wrapper">
+        <div class="header-mobile__header">
+          <div class="header-mobile__header-block">
+            <div class="header-mobile__logo">
+              <div class="logo"><img class="logo__img" src="img/logo.svg"></div>
+            </div>
+          </div>
+          <div class="header-mobile__header-block">
+            <div class="header-mobile__close main-nav-close"><img class="header-mobile__close-img" src="img/poup-close.svg"></div>
+          </div>
+        </div>
+        <div class="header-mobile__content">
+          <div class="header-mobile__content-block">
+            <nav class="header-nav">
+              <ul class="header-nav__list">
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Наши услуги</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Проекты</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-mobile__content-block">
+            <div class="header-mobile__block">
+              <p class="header-mobile__block-title">Email</p>
+              <p class="header-mobile__block-content">info@quadralab.ru</p>
+            </div>
+            <div class="header-mobile__block">
+              <p class="header-mobile__block-title">Адрес</p>
+              <p class="header-mobile__block-content">г. Белгород, Народный бульвар 70, офис 307.</p>
+            </div>
+          </div>
+        </div>
+        <div class="header-mobile__footer"><a class="button button-transparent header-mobile__button" href="#">Отправить заявку</a></div>
+      </div>
+    </div>
     <div class="home-page">
       <div class="home-page__wrapper">
         <!-- Hero section-->
         <section class="section section-hero">
           <div class="section__wrapper section-hero__wrapper">
-            <div class="container">
+            <div class="container-left">
               <div class="section-hero__grid">
                 <div class="section-hero__content">
                   <h2 class="section-hero__title section__title">Разработка веб-приложений средней и высокой нагрузки</h2>
@@ -88,6 +124,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="container">
               <div class="section-hero__footer">
                 <div class="hero-slider__navigation">
                   <div class="hero-slider__navigation-current">1</div>

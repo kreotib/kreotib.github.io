@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="libs/swiper/swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <div class="header__row-block">
+            <div class="header__block header__logo">
+              <div class="logo"><img class="logo__img" src="img/logo.svg"></div>
+            </div>
+            <div class="header__block header__nav">
+              <nav class="header-nav">
+                <ul class="header-nav__list">
+                  <li class="header-nav__item"><a class="header-nav__link" href="#">Наши услуги</a></li>
+                  <li class="header-nav__item"><a class="header-nav__link" href="#">Проекты</a></li>
+                  <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="header__row-block">
+            <div class="header__block header__language">
+              <ul class="language-list">
+                <li class="language-list__item active"><a class="language-list__link" href="#">ru</a></li>
+                <li class="language-list__item"><a class="language-list__link" href="#">en</a></li>
+              </ul>
+            </div>
+            <div class="header__block header__phone"><a class="phone" href="tel:+79242409074">+ 7 (924) 240-90-74</a></div>
+            <div class="header__block header__burger">
+              <div class="burger">
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile main-nav">
+      <div class="header-mobile__wrapper">
+        <div class="header-mobile__header">
+          <div class="header-mobile__header-block">
+            <div class="header-mobile__logo">
+              <div class="logo"><img class="logo__img" src="img/logo.svg"></div>
+            </div>
+          </div>
+          <div class="header-mobile__header-block">
+            <div class="header-mobile__close main-nav-close"><img class="header-mobile__close-img" src="img/poup-close.svg"></div>
+          </div>
+        </div>
+        <div class="header-mobile__content">
+          <div class="header-mobile__content-block">
+            <nav class="header-nav">
+              <ul class="header-nav__list">
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Наши услуги</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Проекты</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-mobile__content-block">
+            <div class="header-mobile__block">
+              <p class="header-mobile__block-title">Email</p>
+              <p class="header-mobile__block-content">info@quadralab.ru</p>
+            </div>
+            <div class="header-mobile__block">
+              <p class="header-mobile__block-title">Адрес</p>
+              <p class="header-mobile__block-content">г. Белгород, Народный бульвар 70, офис 307.</p>
+            </div>
+          </div>
+        </div>
+        <div class="header-mobile__footer"><a class="button button-transparent header-mobile__button" href="#">Отправить заявку</a></div>
+      </div>
+    </div>
+    <div class="popup popup-form">
+      <div class="popup-form__wrapper">
+        <div class="popup-form__header">
+          <div class="popup__logo">
+            <div class="logo"><img class="logo__img" src="img/logo.svg"></div>
+          </div>
+          <div class="popup__title">
+            <p class="popup__title-text">Мы реализуем ваш проект в лучшем виде</p>
+          </div>
+          <div class="popup__close"><svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="45" cy="45" r="44.5" stroke="#F2F2F2"/>
+<path d="M45.5195 45.4701L61.5239 29.4657L61.4237 29.3654L61.524 29.4656C61.7972 29.1923 61.7972 28.7492 61.524 28.4759L61.5239 28.4758C61.2506 28.2026 60.8075 28.2026 60.5342 28.4758L60.5341 28.4759L44.5297 44.4803L28.5253 28.4759L28.5253 28.4758L28.5234 28.474C28.2453 28.2055 27.8022 28.2132 27.5336 28.4912L27.5336 28.4913C27.2717 28.7625 27.2717 29.1926 27.5336 29.4638L27.5336 29.4638L27.5355 29.4657L43.5399 45.4701L27.5373 61.4727C27.537 61.4731 27.5366 61.4734 27.5363 61.4737C27.2592 61.7424 27.2519 62.1848 27.5202 62.4625C27.7888 62.7405 28.2319 62.7483 28.5099 62.4796L28.4057 62.3717M45.5195 45.4701L43.646 45.5762L27.6415 61.5806C27.423 61.7917 27.417 62.1398 27.6281 62.3583C27.8391 62.5768 28.1872 62.5828 28.4057 62.3717M45.5195 45.4701L61.5239 61.4745L61.5258 61.4764C61.7878 61.7476 61.7878 62.1778 61.5258 62.449C61.2572 62.7271 60.8141 62.7348 60.536 62.4662L60.5341 62.4644L44.5297 46.4599M45.5195 45.4701L44.6358 46.3538M28.4057 62.3717C28.4103 62.3674 28.4148 62.3628 28.4192 62.3583M28.4057 62.3717L28.5093 62.4802C28.5156 62.4742 28.5214 62.4684 28.5261 62.4635L28.5253 62.4643L28.4192 62.3583M28.4192 62.3583L28.5269 62.4627L44.5297 46.4599M28.4192 62.3583L44.4236 46.3538L44.5297 46.4599M44.5297 46.4599L44.6358 46.3538M44.6358 46.3538L60.6402 62.3583C60.8587 62.5693 61.2068 62.5633 61.4179 62.3448C61.6238 62.1317 61.6238 61.7937 61.4179 61.5806L44.6358 46.3538Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="0.3"/>
+</svg>
+          </div>
+        </div>
+        <div class="popup-form__content">
+          <form class="popup-form">
+            <div class="popup-form__grid">
+              <div class="popup-form__grid-item">
+                <div class="popup-form__block">
+                  <div class="popup-form__block-header">
+                    <p class="popup-form__block-title">Ваше имя</p>
+                  </div>
+                  <div class="popup-form__block-content">
+                    <input class="popup-form__input" type="text" placeholder="Ваше имя">
+                  </div>
+                </div>
+              </div>
+              <div class="popup-form__grid-item">
+                <div class="popup-form__block">
+                  <div class="popup-form__block-header">
+                    <p class="popup-form__block-title">Ваша почта</p>
+                  </div>
+                  <div class="popup-form__block-content">
+                    <input class="popup-form__input email-input" type="text" placeholder="Ваша почта">
+                  </div>
+                </div>
+              </div>
+              <div class="popup-form__grid-item">
+                <div class="popup-form__block">
+                  <div class="popup-form__block-header">
+                    <p class="popup-form__block-title">Опишите вашу задачу</p>
+                  </div>
+                  <div class="popup-form__block-content">
+                    <textarea class="popup-form__input popup-form__input-textarea" placeholder="Опишите вашу задачу">Проведение технического аудита и предоставление отчета с рекомендациями по улучшению</textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-form__grid-item">
+                <div class="popup-form__block">
+                  <div class="popup-form__block-header"></div>
+                  <div class="popup-form__block-content">
+                    <div class="popup-form__file">
+                      <label class="popup-form__file-label file-input-label">
+                        <input class="popup-form__file-input file-input" type="file"><span class="popup-form__file-text file-input-text">Прикрепить файл</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-form__grid-item">
+                <div class="popup-form__block">
+                  <div class="checkbox">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__text">Вы соглашаетесь с условиями <a href='#'>политики конфиденциальности</a></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-form__grid-item">
+                <div class="popup-form__block">
+                  <input class="button button-transparent popup-form__button" type="submit" value="Отправить заявку">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row footer__row_reverse">
+          <div class="footer__row-block footer__row-block_social">
+            <div class="logo footer__logo"><img class="logo__img" src="img/logo.svg"></div>
+          </div>
+          <div class="footer__row-block footer__row-block_full">
+            <p class="footer__row-block__title">Email</p>
+            <p class="footer__row-block__text">info@quadralab.ru</p>
+          </div>
+          <div class="footer__row-block footer__row-block_full">
+            <p class="footer__row-block__title">Адрес</p>
+            <p class="footer__row-block__text">г. Белгород, Народный бульвар 70, офис 307.</p>
+          </div>
+          <div class="footer__row-block footer__row-block_social">
+            <ul class="social-list">
+              <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__img" src="img/wa-icon.svg"></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__img" src="img/tg-icon.svg"></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__img" src="img/viber-icon.svg"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__row-block footer__row-block_full">
+            <p class="footer__row-block__title">ИП Алявин А.В, 2020</p>
+          </div>
+          <div class="footer__row-block footer__row-block_full"><a class="footer__row-block__title footer__row-block__link" href="#">Политика конфиденциальности</a></div>
+          <div class="footer__row-block footer__row-block_full">
+            <p class="footer__row-block__title">Дизайн сайта -<a class="footer__row-block__title footer__row-block__link" href="#">HQ</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="libs/swiper/swiper.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
