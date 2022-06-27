@@ -12,6 +12,26 @@ const createError = (text) =>{
     return error;
 }
 
+const animateBlock = (block) =>{
+    let blockAnimationDelay;
+
+    block.dataset.delay ? blockAnimationDelay = block.dataset.delay : blockAnimationDelay = 0;
+
+    block.style.animationDelay = `${blockAnimationDelay}s`;
+    block.classList.add('animated');
+
+};
+
+const addObserver = (element) =>{
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            entry.isIntersecting ? (animateBlock(entry.target)) : null;
+        });
+    },{rootMargin:'-100px'});
+
+    element.classList.contains('animated') ? observer.disconnect(elementz   ) : observer.observe(element);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const burger = document.querySelector('.burger'),
@@ -121,4 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
            validateEmail(el.value) ? (el.classList.remove('error')) : (el.classList.add('error'), el.after(createError('Неверный формат почтового адреса')));
        });
     });
+
+
+    const sectionWithAnimation = document.querySelectorAll('[data-animate]'),
+        animationSection = [];
+
+    if(sectionWithAnimation.length > 0){
+        sectionWithAnimation.forEach(el=>{
+            addObserver(el);
+        });
+    }
 });

@@ -116,6 +116,10 @@ textarea {
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000;
   color: #fff;
@@ -218,6 +222,8 @@ body {
 
 .home-page__works {
   margin-top: 130px;
+  position: relative;
+  z-index: 2;
 }
 
 .checkbox__label {
@@ -295,6 +301,78 @@ body {
 .checkbox__text a {
   text-decoration: underline;
   text-underline-position: under;
+}
+
+*[data-animate] {
+  opacity: 0;
+  -webkit-transition: .5s opacity linear, .75s all linear;
+  -o-transition: .5s opacity linear, .75s all linear;
+  transition: .5s opacity linear, .75s all linear;
+}
+
+*[data-animate='fade-right'] {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+*[data-animate='fade-right'].animated {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+*[data-animate='fade-left'] {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+*[data-animate='fade-left'].animated {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+*[data-animate='fade-top'].animated {
+  -webkit-animation: animateFadeTop .75s forwards;
+          animation: animateFadeTop .75s forwards;
+}
+
+*[data-animate='fade-bottom'] {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+*[data-animate='fade-bottom'].animated {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@-webkit-keyframes animateFadeTop {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateFadeTop {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -1524,6 +1602,12 @@ body {
   color: #EFF0FF;
 }
 
+@media screen and (max-width: 1500px) {
+  .project-card__img {
+    height: 70vh;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .section-project__grid {
     gap: 50px;
@@ -1648,10 +1732,10 @@ body {
 
 .work-item__img {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 500px;
+  top: 10%;
+  right: calc(50% - 750px);
+  height: 80%;
+  width: 333px;
   border-radius: 20px;
   overflow: hidden;
   opacity: 0;
@@ -1683,6 +1767,12 @@ body {
 
 .work-list__item:last-child .work-item__content {
   border-bottom: 1px solid #414048;
+}
+
+@media screen and (max-width: 1500px) {
+  .work-item__img {
+    right: 30px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -2014,6 +2104,21 @@ body {
           box-shadow: 0px 4px 9px rgba(67, 69, 128, 0.1);
   border-radius: 36px;
   background: url("../img/banner-bg.jpg") center center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner__wrapper::before {
+  content: '';
+  position: absolute;
+  top: -250px;
+  left: -150px;
+  width: 626px;
+  height: 626px;
+  display: block;
+  -webkit-animation: fragment backwards 10s ease-in-out infinite;
+          animation: fragment backwards 10s ease-in-out infinite;
+  background: url("../img/banner-coub.png") center center/contain no-repeat;
 }
 
 .banner__img {
@@ -2060,6 +2165,12 @@ body {
     height: 434px;
     background: url("../img/banner-bg-m.jpg") center center/cover no-repeat;
   }
+  .banner__wrapper::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
   .banner__img {
     width: 130px;
     height: 130px;
@@ -2090,6 +2201,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 10;
+  overflow: hidden;
 }
 
 .popup-form__wrapper {
@@ -2108,6 +2220,7 @@ body {
   height: 100%;
   background-color: #000000;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
 }
 
