@@ -163,15 +163,30 @@ body {
   font-size: 20px;
   color: #F8FAFE;
   background-color: transparent;
+  -webkit-transition: .3s background-color, .3s color;
+  -o-transition: .3s background-color, .3s color;
+  transition: .3s background-color, .3s color;
+}
+
+.button-transparent:hover {
+  color: #010102;
+  background-color: #F8FAFE;
 }
 
 .button-purple {
-  background: #6640FF;
+  background-color: #6640FF;
   border-radius: 10px;
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #F8FAFE;
+  -webkit-transition: .3s background-color linear;
+  -o-transition: .3s background-color linear;
+  transition: .3s background-color linear;
+}
+
+.button-purple:hover {
+  background-color: #482BBE;
 }
 
 .button-big {
@@ -490,6 +505,13 @@ body {
   font-weight: 500;
   font-size: 21px;
   color: #F8FAFE;
+  -webkit-transition: .3s color;
+  -o-transition: .3s color;
+  transition: .3s color;
+}
+
+.header-nav__link:hover {
+  color: #8A66FF;
 }
 
 .header-mobile {
@@ -625,6 +647,17 @@ body {
 .logo {
   height: 100%;
   width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .logo__img {
@@ -742,6 +775,7 @@ body {
   }
   .header__logo {
     height: 60px;
+    width: 60px;
   }
   .header__burger {
     display: block;
