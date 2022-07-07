@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+  }
+}
+
+.copy {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &-button {
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 50px;
+
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.logo {
+  &__img {
+    animation: translateLogo 1s 5s forwards;
+
+    path {
+      stroke-dasharray: 820;
+      stroke-dashoffset: 820;
+
+      fill: transparent;
+      stroke: #AC835E;
+      stroke-width: 1px;
+
+      animation: draw 5s forwards, fillPathLogo 1s 5s forwards;
+    }
+  }
+
+  &__text {
+    transform: translateX(-200px);
+
+    animation: translateLogo 1s 5s forwards;
+    path{
+      fill:transparent;
+
+      animation: fillPathText 1s 5s forwards
+    }
+  }
+}
+
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillPathLogo {
+  100% {
+    fill: #AC835E;
+    stroke: transparent;
+  }
+}
+
+@keyframes fillPathText {
+  100% {
+    fill: #fff;
+    stroke: transparent;
+  }
+}
+
+@keyframes translateLogo {
+  100% {
+    transform: translateX(-125px);
+  }
+}
+
+@keyframes translateText {
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
