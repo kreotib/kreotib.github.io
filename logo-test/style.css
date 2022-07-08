@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   background-color: #000;
@@ -29,10 +30,25 @@
   color: #fff;
 }
 
-.logo__img {
-  animation: translateLogo 1s 5s forwards;
+.logo-first .logo__img path {
+  stroke-dasharray: 230;
+  stroke-dashoffset: 230;
 }
-.logo__img path {
+.logo-first .logo__img path:nth-child(1) {
+  animation: draw 1s forwards;
+}
+.logo-first .logo__img path:nth-child(2) {
+  animation: draw 2s 0.5s forwards;
+}
+.logo-first .logo__img path:nth-child(3) {
+  animation: draw 2s 2.5s forwards;
+}
+.logo-second .logo__img path {
+  stroke-dasharray: 230;
+  stroke-dashoffset: 230;
+  animation: draw 5s forwards;
+}
+.logo-third .logo__img path {
   stroke-dasharray: 820;
   stroke-dashoffset: 820;
   fill: transparent;
@@ -40,18 +56,48 @@
   stroke-width: 1px;
   animation: draw 5s forwards, fillPathLogo 1s 5s forwards;
 }
+.logo__img {
+  animation: translateLogo 1s 4s forwards;
+}
 .logo__text {
   transform: translateX(-200px);
-  animation: translateLogo 1s 5s forwards;
+  animation: translateText 1s 4s forwards;
 }
 .logo__text path {
-  fill: transparent;
-  animation: fillPathText 1s 5s forwards;
+  fill: #ffffff;
+  opacity: 0;
+  animation: drawText 1s 4s forwards;
+}
+
+.swiper {
+  height: 100vh;
+  width: 100%;
+}
+.swiper-slide {
+  height: 100vh;
+  width: 80%;
+}
+.swiper-slide-black {
+  background-color: brown;
+}
+.swiper-slide-blue {
+  background-color: #AC835E;
+}
+.swiper-slide-red {
+  background-color: red;
+}
+.swiper-slide-yellow {
+  background-color: tan;
 }
 
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+@keyframes drawText {
+  to {
+    opacity: 1;
   }
 }
 @keyframes fillPathLogo {
@@ -68,12 +114,12 @@
 }
 @keyframes translateLogo {
   100% {
-    transform: translateX(-125px);
+    transform: translateX(-100px);
   }
 }
 @keyframes translateText {
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-125px);
   }
 }
 
