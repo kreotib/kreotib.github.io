@@ -60,8 +60,8 @@
   animation: translateLogoBig 1s 6s forwards;
 }
 .logo-second .logo__img path {
-  stroke-dasharray: 450;
-  stroke-dashoffset: 450;
+  stroke-dasharray: 480;
+  stroke-dashoffset: 480;
   fill: transparent;
   stroke: #AC835E;
   stroke-width: 1px;
@@ -88,6 +88,23 @@
   animation: translateText 1s 6s forwards;
 }
 .logo-third .logo__text path {
+  animation: drawText 1s 6s forwards;
+}
+.logo-fifth .logo__img {
+  animation: translateLogoBig 1s 6s forwards;
+}
+.logo-fifth .logo__img path {
+  stroke-dasharray: 480;
+  stroke-dashoffset: 480;
+  fill: transparent;
+  stroke: #AC835E;
+  stroke-width: 1px;
+  animation: draw 5s forwards, fillPathLogo 1s 5s forwards;
+}
+.logo-fifth .logo__text {
+  animation: translateText 1s 6s forwards;
+}
+.logo-fifth .logo__text path {
   animation: drawText 1s 6s forwards;
 }
 .logo__img {
