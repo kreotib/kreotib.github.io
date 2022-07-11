@@ -56,10 +56,22 @@
 .logo-first .logo__img path:nth-child(1) {
   animation: draw 2s 2.5s forwards;
 }
+.logo-second .logo__img {
+  animation: translateLogoBig 1s 6s forwards;
+}
 .logo-second .logo__img path {
-  stroke-dasharray: 230;
-  stroke-dashoffset: 230;
-  animation: draw 5s forwards;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  fill: transparent;
+  stroke: #AC835E;
+  stroke-width: 1px;
+  animation: draw 5s forwards, fillPathLogo 1s 5s forwards;
+}
+.logo-second .logo__text {
+  animation: translateText 1s 6s forwards;
+}
+.logo-second .logo__text path {
+  animation: drawText 1s 6s forwards;
 }
 .logo-third .logo__img path {
   stroke-dasharray: 820;
