@@ -70,7 +70,13 @@
   animation: draw 5s forwards, fillPathLogo 1s 5s forwards;
 }
 .logo-third .logo__img {
-  animation: translateLogoBig 1s 4s forwards;
+  animation: translateLogoBig 1s 6s forwards;
+}
+.logo-third .logo__text {
+  animation: translateText 1s 6s forwards;
+}
+.logo-third .logo__text path {
+  animation: drawText 1s 6s forwards;
 }
 .logo__img {
   animation: translateLogo 1s 4s forwards;
