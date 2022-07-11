@@ -107,6 +107,28 @@
 .logo-fifth .logo__text path {
   animation: drawText 1s 6s forwards;
 }
+.logo-six .logo__img {
+  animation: translateLogoBig 1s 6s forwards;
+}
+.logo-six .logo__img path {
+  stroke-dasharray: 480;
+  stroke-dashoffset: 480;
+  fill: transparent;
+  stroke: #AC835E;
+  stroke-width: 1px;
+}
+.logo-six .logo__img path:nth-child(1), .logo-six .logo__img path:nth-child(3) {
+  animation: draw 4s forwards, fillPathLogo 1s 5s forwards;
+}
+.logo-six .logo__img path:nth-child(2), .logo-six .logo__img path:nth-child(4) {
+  animation: draw 4s 0.5s forwards, fillPathLogo 1s 5s forwards;
+}
+.logo-six .logo__text {
+  animation: translateText 1s 6s forwards;
+}
+.logo-six .logo__text path {
+  animation: drawText 1s 6s forwards;
+}
 .logo__img {
   animation: translateLogo 1s 4s forwards;
 }
