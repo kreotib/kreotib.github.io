@@ -52,4 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+
+    const toggleLinks = document.querySelectorAll('.toggle-link');
+
+    toggleLinks.forEach(element=>{
+       element.addEventListener('click',(e)=>{
+           e.preventDefault();
+           const toggleBlock = element.closest('.toggle-wrapper').querySelector('.toggle-block');
+
+           element.classList.toggle('active');
+           toggleBlock.classList.toggle('active');
+       })
+    });
 });
