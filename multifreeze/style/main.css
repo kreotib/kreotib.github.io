@@ -174,11 +174,18 @@
 .info__text {
   margin: 40px 0 0 0;
 }
-.info__label-text {
+.info__label-text + .info__label-text {
+  margin-left: 5px;
+}
+.info__label-wrapper {
   width: 100%;
   padding: 10px 40px 14px 40px;
   background: linear-gradient(86.27deg, #A400CD 0%, #D33883 100%);
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -188,6 +195,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s all linear;
 }
 .button_color-purple {
   background: linear-gradient(86.27deg, #A400CD 0%, #D33883 100%);
@@ -212,7 +220,7 @@
   background: url("../images/eye.svg") center center/contain no-repeat;
 }
 .button_style-eye:hover::before {
-  background: url("../images/eye-open.svg") center center/contain no-repeat;
+  background: url("../images/eye-open.png") center center/contain no-repeat;
 }
 
 .boxes__wrapper {
@@ -285,6 +293,25 @@
   background: linear-gradient(86.27deg, #A400CD 0%, #D33883 100%);
   box-shadow: 0px 40px 110px rgba(181, 21, 179, 0.3);
   transform: rotate(-4.32deg);
+  display: flex;
+  align-items: center;
+}
+.ribbon__text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 38px;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+.ribbon__text + .ribbon__text {
+  margin-left: 10px;
+}
+.ribbon__text-bordered {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
 
 .box-item {
@@ -298,7 +325,7 @@
   box-shadow: 0 0 transparent;
 }
 .box-item:hover .box-item__img {
-  display: block;
+  animation: showHide 1s linear forwards;
 }
 .box-item:hover .box-item__text-label {
   background: linear-gradient(86.27deg, #A400CD 0%, #D33883 100%);
@@ -307,12 +334,27 @@
   background-clip: text;
   text-fill-color: transparent;
 }
-.box-item:hover .box-item__link {
+.box-item:hover .box-item__link-desktop {
+  opacity: 1;
+}
+.box-item__mark {
+  position: absolute;
+  width: 41px;
+  height: 41px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FBEAFF;
+  border-radius: 40px;
+  top: -40px;
+  left: 0;
 }
 .box-item__text {
   max-width: 295px;
   position: relative;
+}
+.box-item__text-label {
+  transition: 0.5s background linear;
 }
 .box-item__link {
   position: absolute;
@@ -322,8 +364,10 @@
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
-  display: none;
+  display: flex;
   align-items: center;
+  opacity: 0;
+  transition: 0.5s all linear;
 }
 .box-item__link::after {
   content: "";
@@ -335,7 +379,8 @@
 }
 .box-item__img {
   position: absolute;
-  display: none;
+  transition: 0.5s all;
+  visibility: hidden;
 }
 .box-item__img_position-bottom {
   bottom: calc(-100% - 100px);
@@ -426,17 +471,39 @@
   height: 50px;
   display: block;
   background: url("../images/ozon-logo.svg") center center/contain no-repeat;
+  transition: 0.5s all linear;
 }
 .ozon-btn:hover .ozon-btn__img {
   background: url("../images/ozon-logo-second.svg") center center/contain no-repeat;
 }
 
+@media screen and (max-width: 1270px) and (min-width: 991px) {
+  .info__label-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    background: none;
+    padding: 0;
+  }
+  .info__label-text {
+    background: linear-gradient(86.27deg, #A400CD 0%, #D33883 100%);
+    width: max-content;
+    padding: 10px 20px 14px 20px;
+    border-radius: 10px 10px 10px 0px;
+  }
+  .info__label-text + .info__label-text {
+    margin-left: 0;
+    border-radius: 0px 0px 10px 10px;
+  }
+}
 @media screen and (max-width: 1270px) {
   .box-item__text + .box-item__icon {
     margin-left: 30px;
   }
   .box-item__icon + .box-item__text {
     margin-left: 30px;
+  }
+  .box-item__mark {
+    display: none;
   }
 
   .boxes__img {
@@ -461,10 +528,28 @@
   .hero__wrapper {
     background: url("../images/hero-bg-tablet.jpg") center center/cover no-repeat;
   }
+
+  .info__grid {
+    grid-template-columns: 530px auto;
+    gap: 28px;
+  }
+  .info__label-wrapper {
+    width: max-content;
+  }
 }
 @media screen and (max-width: 991px) {
+  .info__label-wrapper {
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    padding: 0 28px;
+  }
+
   .hero__wrapper {
     height: 960px;
+    background: url("../images/hero-bg-tablet-small.jpg") center center/cover no-repeat;
   }
 
   .info__wrapper {
@@ -474,6 +559,18 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 40px;
     text-align: center;
+  }
+
+  .boxes__grid_position-bottom {
+    margin-top: 20px;
+  }
+
+  .boxes__grid-item {
+    transition: 0.5s border-color;
+  }
+
+  .boxes__grid-item:hover {
+    border-color: #A400CD;
   }
 
   .text_size-big {
@@ -519,6 +616,26 @@
   .box-item:hover .box-item__link {
     display: none;
   }
+  .box-item:hover .box-item__link-mobile {
+    display: block;
+  }
+  .box-item__link-desktop {
+    display: none;
+  }
+  .box-item__link-mobile {
+    display: block;
+    position: relative;
+    top: 0;
+    opacity: 1;
+    padding: 5px 20px;
+    background: linear-gradient(86.27deg, #A400CD 0%, #D33883 100%);
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 20px;
+  }
+  .box-item__link-mobile::after {
+    display: none;
+  }
   .box-item__wrapper {
     flex-direction: column;
     padding: 20px;
@@ -556,6 +673,11 @@
     width: 90px;
     height: 20px;
     background: url("../images/ozon-logo-third.svg") center center/contain no-repeat;
+  }
+}
+@media screen and (max-width: 450px) {
+  .info__label-wrapper {
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -684,7 +806,7 @@
     line-height: 90px;
   }
 
-  .info__label-text {
+  .info__label-wrapper {
     padding: 10px 20px 14px 20px;
   }
 
@@ -712,6 +834,22 @@
   }
   .ozon-btn__text span {
     display: none;
+  }
+}
+@keyframes showHide {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
