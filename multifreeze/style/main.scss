@@ -468,9 +468,8 @@ body{
       }
 
       .box-item__link {
-        &-desktop{
+        &-descktop{
           opacity: 1;
-
         }
       }
     }
@@ -669,14 +668,28 @@ body{
       display: block;
       background: url("../images/ozon-logo.svg") center center/contain no-repeat;
 
-      transition: .5s all linear;
+
+      transition: .5s background linear;
     }
 
     &:hover {
       .ozon-btn__img {
-        background: url("../images/ozon-logo-second.svg") center center/contain no-repeat;
+        animation: animationBtn .5s forwards;
       }
     }
+  }
+}
+
+@keyframes animationBtn {
+  0%{
+    background: url("../images/ozon-logo.svg") center center/contain no-repeat;
+  }
+  50%{
+    transform: scale(.7);
+  }
+  100%{
+    background: url("../images/ozon-logo-second.svg") center center/contain no-repeat;
+    transform: scale(1);
   }
 }
 
