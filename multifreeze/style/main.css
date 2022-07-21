@@ -517,7 +517,7 @@ body.hidden {
     background: url("../images/ozon-logo-second.svg") center center/contain no-repeat;
   }
   50% {
-    transform: scale(0.5);
+    transform: scale(1);
   }
   100% {
     background: url("../images/ozon-logo.svg") center center/contain no-repeat;
@@ -538,6 +538,9 @@ body.hidden {
   opacity: 1;
   z-index: 99;
 }
+.popup.active .popup__wrapper {
+  transform: translateX(0);
+}
 .popup-wrapper {
   display: flex;
   align-items: flex-end;
@@ -557,6 +560,8 @@ body.hidden {
   display: flex;
   flex-direction: column;
   position: relative;
+  transform: translateX(100%);
+  transition: 0.5s all linear;
 }
 .popup__content {
   padding: 80px 80px 20px 80px;
