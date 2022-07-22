@@ -628,10 +628,18 @@ body.hidden {
 }
 .advantages-item__wrapper {
   background: radial-gradient(65.8% 52.74% at 0% 100.1%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: -30px 0px 120px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -30px 0px 120px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -30px 0px 120px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: -30px 0px 120px 0px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 40px;
   transition: 0.5s background-color;
+}
+.advantages-item__wrapper-second {
+  background: radial-gradient(60.81% 40.52% at 100% 100.09%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: 60px 0px 120px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 60px 0px 120px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 60px 0px 120px 0px rgba(0, 0, 0, 0.1);
 }
 .advantages-item__text {
   transition: 0.5s color;
@@ -682,6 +690,10 @@ body.hidden {
   }
   .info__label-wrapper {
     width: max-content;
+  }
+
+  .advantages-item__wrapper-second {
+    box-shadow: 60px 0px 120px 0px rgba(0, 0, 0, 0.01);
   }
 }
 @media screen and (max-width: 991px) {
