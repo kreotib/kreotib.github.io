@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 'auto',
             freeMode:true,
         }),
+        navSliderFifth = new Swiper('.zone-tabs__nav', {
+            slidesPerView: 'auto',
+            freeMode:true,
+        }),
         navSliderFourth = new Swiper('.faq-tags', {
             slidesPerView: 'auto',
             freeMode:true,
