@@ -33,7 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }),
         navSlider = new Swiper('.plan-tabs__nav', {
             slidesPerView: 'auto',
+            freeMode:true,
+        }),
+        navSliderSecond = new Swiper('.regulation-tabs__nav', {
+            slidesPerView: 'auto',
+            freeMode:true,
+        }),
+        navSliderThird = new Swiper('.delivery-tabs__nav', {
+            slidesPerView: 'auto',
+            freeMode:true,
+        }),
+        navSliderFourth = new Swiper('.faq-tags', {
+            slidesPerView: 'auto',
+            freeMode:true,
+            spaceBetween: 8
         });
+
 
     customSelect('select');
 
