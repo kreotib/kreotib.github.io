@@ -15,6 +15,14 @@ function SVS_B(eAmt, where) {
         window.scrollBy(0, eAmt);
 }
 
+const showPopup = (selector) => {
+
+    const popup = document.querySelector(`.${selector}`);
+
+    document.body.classList.add('hidden');
+    popup.classList.add('active');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const popupTriggers = document.querySelectorAll('*[data-popup]'),
         popups = document.querySelectorAll('.popup'),
@@ -24,12 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
         popupTriggers.forEach(el => {
             el.addEventListener('click', (e) => {
                 e.preventDefault();
-
-                const popup = document.querySelector(`.${el.dataset.popup}`);
-
-                document.body.classList.add('hidden');
-                popup.classList.add('active');
             });
+            el.addEventListener('click',()=>showPopup(el.dataset.popup));
         });
     };
 
@@ -56,6 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.boxes-btn').addEventListener('click',(e)=>{
        e.preventDefault();
 
-        SmoothVerticalScrolling(document.querySelector('.boxes'),500, 'top')
+        SmoothVerticalScrolling(document.querySelector('.boxes'),500, 'top');
     });
+
+    const pdfButton = document.querySelector('.pdf-mobile');
+
+    if(window.innerWidth < 767){
+        if(popupTriggers.length > 0){
+            popupTriggers.forEach(trigger=>{
+                trigger.addEventListener('click',(e)=>{
+                    window.location.href = trigger.href;
+                });
+            });
+        }
+    }
 });

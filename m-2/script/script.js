@@ -56,6 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.boxes-btn').addEventListener('click',(e)=>{
        e.preventDefault();
 
-        SmoothVerticalScrolling(document.querySelector('.boxes'),500, 'top')
+        SmoothVerticalScrolling(document.querySelector('.boxes__footer'),500, 'top');
     });
+
+    if(window.innerWidth < 767){
+        if(popupTriggers.length > 0){
+            popupTriggers.forEach(trigger=>{
+                trigger.addEventListener('click',(e)=>{
+                    window.location.href = trigger.href;
+                });
+            });
+        }
+    }
 });

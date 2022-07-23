@@ -946,7 +946,14 @@ body.hidden {
     margin: 0 0 0 20px;
     width: 90px;
     height: 20px;
+  }
+  .ozon-btn__img::before {
     background: url("../images/ozon-logo-third.svg") center center/contain no-repeat;
+  }
+}
+@media screen and (max-width: 767px) {
+  .popup.active {
+    display: none;
   }
 }
 @media screen and (max-width: 450px) {
