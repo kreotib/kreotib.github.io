@@ -729,6 +729,10 @@ body.no-scroll-m {
   margin: 8px 0 0 0;
 }
 
+.section-event__list {
+  display: none;
+}
+
 .section-event__footer {
   margin: 40px 0 0 0;
   display: -webkit-box;
