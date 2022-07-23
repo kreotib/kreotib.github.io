@@ -1,20 +1,3 @@
-function SmoothVerticalScrolling(e, time, where) {
-    var eTop = e.getBoundingClientRect().top;
-    var eAmt = eTop / 100;
-    var curTime = 0;
-    while (curTime <= time) {
-        window.setTimeout(SVS_B, curTime, eAmt, where);
-        curTime += time / 100;
-    }
-}
-
-function SVS_B(eAmt, where) {
-    if(where == "center" || where == "")
-        window.scrollBy(0, eAmt / 2);
-    if (where == "top")
-        window.scrollBy(0, eAmt);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const popupTriggers = document.querySelectorAll('*[data-popup]'),
         popups = document.querySelectorAll('.popup'),
@@ -55,15 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.boxes-btn').addEventListener('click',(e)=>{
        e.preventDefault();
-
-        SmoothVerticalScrolling(document.querySelector('.boxes__footer'),500, 'top');
+        document.querySelector('.content').scrollIntoView({
+            behavior: 'smooth',
+            block: 'end'
+        })
     });
 
     if(window.innerWidth < 767){
         if(popupTriggers.length > 0){
             popupTriggers.forEach(trigger=>{
                 trigger.addEventListener('click',(e)=>{
-                    window.location.href = trigger.href;
+                    window.open(trigger.href)
                 });
             });
         }

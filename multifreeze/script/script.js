@@ -60,7 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.boxes-btn').addEventListener('click',(e)=>{
        e.preventDefault();
 
-        SmoothVerticalScrolling(document.querySelector('.boxes'),500, 'top');
+        document.querySelector('.content').scrollIntoView({
+            behavior: 'smooth',
+            block: 'end'
+        })
     });
 
     const pdfButton = document.querySelector('.pdf-mobile');
