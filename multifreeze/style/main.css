@@ -493,7 +493,7 @@ body.hidden {
   display: block;
   position: relative;
 }
-.ozon-btn__img::before, .ozon-btn__img::after {
+.ozon-btn__img::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -505,59 +505,11 @@ body.hidden {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.ozon-btn__img::before {
-  background-image: url("../images/ozon-logo.svg");
-  animation: animationBtnReverse 1s forwards;
-}
 .ozon-btn__img::after {
   background-image: url("../images/ozon-logo-second.svg");
-  opacity: 0;
-}
-.ozon-btn:hover .ozon-btn__img::before {
-  animation: animationBtn 1s forwards;
-}
-.ozon-btn:hover .ozon-btn__img::after {
-  animation: animationBtnSecond 1.5s forwards;
+  opacity: 1;
 }
 
-@keyframes animationBtn {
-  100% {
-    transform: scale(0.6);
-    opacity: 0;
-  }
-}
-@keyframes animationBtnReverse {
-  0% {
-    transform: scale(0.6);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes animationBtnSecond {
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes animationBtnThird {
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes animationBtnForward {
-  0% {
-    background: url("../images/ozon-logo-second.svg") center center/contain no-repeat;
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    background: url("../images/ozon-logo.svg") center center/contain no-repeat;
-    transform: scale(1);
-  }
-}
 .popup {
   position: fixed;
   top: 0;
@@ -947,8 +899,9 @@ body.hidden {
     width: 90px;
     height: 20px;
   }
-  .ozon-btn__img::before {
+  .ozon-btn__img::after {
     background: url("../images/ozon-logo-third.svg") center center/contain no-repeat;
+    transform: scale(1.1);
   }
 }
 @media screen and (max-width: 767px) {

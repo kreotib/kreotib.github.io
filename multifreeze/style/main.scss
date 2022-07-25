@@ -675,7 +675,7 @@ body{
       display: block;
 
       position: relative;
-      &::before,&::after{
+      &::after{
         content: '';
         position: absolute;
         width: 100%;
@@ -688,69 +688,11 @@ body{
         background-size: contain;
         background-repeat: no-repeat;
       }
-      &::before{
-        background-image: url("../images/ozon-logo.svg");
-        animation: animationBtnReverse 1s forwards;
-
-      }
       &::after{
         background-image: url("../images/ozon-logo-second.svg");
-        opacity: 0;
+        opacity: 1;
       }
     }
-    &:hover {
-      .ozon-btn__img {
-        &::before{
-          animation: animationBtn 1s forwards;
-        }
-        &::after{
-          animation: animationBtnSecond 1.5s forwards;
-        }
-      }
-    }
-  }
-}
-
-@keyframes animationBtn {
- 100%{
-   transform: scale(.6);
-   opacity: 0;
- }
-}
-
-@keyframes animationBtnReverse {
-  0%{
-    transform: scale(.6);
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes animationBtnSecond {
-  100%{
-    opacity: 1;
-  }
-}
-
-@keyframes animationBtnThird {
-  100%{
-    opacity: 0;
-  }
-}
-
-@keyframes animationBtnForward {
-  0%{
-    background: url("../images/ozon-logo-second.svg") center center/contain no-repeat;
-  }
-  50%{
-    transform: scale(1);
-  }
-  100%{
-    background: url("../images/ozon-logo.svg") center center/contain no-repeat;
-    transform: scale(1);
   }
 }
 
@@ -1247,17 +1189,15 @@ body{
         &::before {
           background: url("../images/basket-white.svg") center center/contain no-repeat;
         }
-
-        span {
-        }
       }
 
       &__img {
         margin: 0 0 0 20px;
         width: 90px;
         height: 20px;
-        &::before{
+        &::after{
           background: url("../images/ozon-logo-third.svg") center center/contain no-repeat;
+          transform: scale(1.1);
         }
       }
     }
