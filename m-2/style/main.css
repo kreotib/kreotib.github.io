@@ -95,6 +95,7 @@ body.hidden {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  color: #A400CD;
 }
 
 .link-arrow {
@@ -800,6 +801,11 @@ body.hidden {
     height: 110px;
     align-items: center;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .popup {
+    display: none !important;
   }
 }
 @media screen and (max-width: 600px) {

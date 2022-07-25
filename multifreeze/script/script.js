@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.boxes-btn').addEventListener('click',(e)=>{
        e.preventDefault();
 
-        document.querySelector('.content').scrollIntoView({
+        document.querySelector('.boxes').scrollIntoView({
             behavior: 'smooth',
-            block: 'end'
+            block: 'start'
         })
     });
 
