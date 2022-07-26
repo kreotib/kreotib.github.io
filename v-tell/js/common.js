@@ -53,12 +53,55 @@ const faqInit = (faqNameStart = 'all') => {
 
 };
 
+const animateBlock = (section) => {
+    const animationBlock = section.querySelectorAll('*[data-animate]');
+
+    animationBlock.forEach((element, index) => {
+        element.style.transitionDelay = `${index * .3}s`;
+        element.classList.add('animated');
+    });
+};
+
+const addObserver = (element) => {
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            entry.isIntersecting ? (animateBlock(entry.target)) : null;
+        });
+    }, {rootMargin: '-100px'});
+
+    observer.observe(element);
+};
 
 document.addEventListener('DOMContentLoaded', () => {
+    const mapLines = document.querySelectorAll('.map-line');
+
+    if(mapLines.length > 0){
+        mapLines.forEach((element,index)=>{
+            element.style.animationDelay = `${index*0.3}s`
+        });
+    }
+
     const faq = document.querySelector('.faq');
     if(faq){
         faqInit();
     }
+    const sectionWithAnimation = document.querySelectorAll('[data-animate]'),
+        animationSection = [];
+
+    if(sectionWithAnimation.length > 0){
+        sectionWithAnimation.forEach(el => {
+            animationSection.push(el.closest('section'))
+        });
+
+        const animationSectionFiltred = animationSection.filter(function (item, pos) {
+            return animationSection.indexOf(item) == pos;
+        });
+
+        animationSectionFiltred.forEach(el => {
+            addObserver(el);
+        });
+    }
+
     const heroSlider = new Swiper('.hero-slider', {
             loop: true,
             slidesPerView: 1,
