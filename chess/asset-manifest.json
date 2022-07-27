@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.3f522de6.css",
-    "main.js": "/static/js/main.48354d48.js",
+    "main.js": "/static/js/main.74c0acd7.js",
     "static/js/787.497f1025.chunk.js": "/static/js/787.497f1025.chunk.js",
-    "static/media/bishop-black.jpg": "/static/media/bishop-black.38f5b983096c8be94305.jpg",
-    "static/media/king-black.jpg": "/static/media/king-black.6edba89632e2752f8cca.jpg",
-    "static/media/king-white.jpg": "/static/media/king-white.6edba89632e2752f8cca.jpg",
-    "static/media/bishop-white.jpg": "/static/media/bishop-white.ac99132cd5e460bcb9e6.jpg",
-    "static/media/pawn-black.jpg": "/static/media/pawn-black.7ba87a0fa2fa6a49b02a.jpg",
-    "static/media/rook-black.jpg": "/static/media/rook-black.360174a31512686679e1.jpg",
-    "static/media/knight-black.jpg": "/static/media/knight-black.88451c378ef2ef68b314.jpg",
+    "static/media/bishop-white.jpg": "/static/media/bishop-white.5d3b6b792ce52170fe52.jpg",
+    "static/media/king-black.jpg": "/static/media/king-black.a0f7d48e8c8341354cff.jpg",
+    "static/media/king-white.jpg": "/static/media/king-white.a0f7d48e8c8341354cff.jpg",
+    "static/media/bishop-black.jpg": "/static/media/bishop-black.fd678991898cafd7595e.jpg",
+    "static/media/rook-black.jpg": "/static/media/rook-black.a18d4f75aebf1614cb63.jpg",
+    "static/media/pawn-black.jpg": "/static/media/pawn-black.03b26d06527c9c28e5d5.jpg",
+    "static/media/knight-black.jpg": "/static/media/knight-black.34feff31a617b6292352.jpg",
     "static/media/pawn-white.png": "/static/media/pawn-white.4906d0766718be0e4ee8.png",
-    "static/media/knight-white.jpg": "/static/media/knight-white.bf9306a453f036e6f8f5.jpg",
-    "static/media/rook-white.jpg": "/static/media/rook-white.40813f34ff389e7cda0f.jpg",
-    "static/media/queen-black.jpg": "/static/media/queen-black.76f1c285e3d48b6d3411.jpg",
-    "static/media/queen-white.jpg": "/static/media/queen-white.76f1c285e3d48b6d3411.jpg",
+    "static/media/knight-white.jpg": "/static/media/knight-white.e58ebbcbf132334918ab.jpg",
+    "static/media/rook-white.jpg": "/static/media/rook-white.8967a42aee0645d9f0df.jpg",
+    "static/media/queen-black.jpg": "/static/media/queen-black.573502428a697c463f2b.jpg",
+    "static/media/queen-white.jpg": "/static/media/queen-white.573502428a697c463f2b.jpg",
     "static/media/Philosopher-Italic.woff": "/static/media/Philosopher-Italic.3a239b6a7c5ef43ae6b3.woff",
     "static/media/Philosopher-Regular.woff": "/static/media/Philosopher-Regular.250254a2fb7c785ebb74.woff",
     "static/media/Philosopher-Bold.woff": "/static/media/Philosopher-Bold.1d1aa29240c7498cc338.woff",
@@ -23,11 +23,11 @@
     "static/media/Philosopher-Bold.woff2": "/static/media/Philosopher-Bold.59e9c8e4237fdeae25ed.woff2",
     "index.html": "/index.html",
     "main.3f522de6.css.map": "/static/css/main.3f522de6.css.map",
-    "main.48354d48.js.map": "/static/js/main.48354d48.js.map",
+    "main.74c0acd7.js.map": "/static/js/main.74c0acd7.js.map",
     "787.497f1025.chunk.js.map": "/static/js/787.497f1025.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3f522de6.css",
-    "static/js/main.48354d48.js"
+    "static/js/main.74c0acd7.js"
   ]
 }
