@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f522de6.css",
-    "main.js": "/static/js/main.74c0acd7.js",
+    "main.js": "/static/js/main.53ddb60d.js",
     "static/js/787.497f1025.chunk.js": "/static/js/787.497f1025.chunk.js",
     "static/media/bishop-white.jpg": "/static/media/bishop-white.5d3b6b792ce52170fe52.jpg",
     "static/media/king-black.jpg": "/static/media/king-black.a0f7d48e8c8341354cff.jpg",
@@ -23,11 +23,11 @@
     "static/media/Philosopher-Bold.woff2": "/static/media/Philosopher-Bold.59e9c8e4237fdeae25ed.woff2",
     "index.html": "/index.html",
     "main.3f522de6.css.map": "/static/css/main.3f522de6.css.map",
-    "main.74c0acd7.js.map": "/static/js/main.74c0acd7.js.map",
+    "main.53ddb60d.js.map": "/static/js/main.53ddb60d.js.map",
     "787.497f1025.chunk.js.map": "/static/js/787.497f1025.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3f522de6.css",
-    "static/js/main.74c0acd7.js"
+    "static/js/main.53ddb60d.js"
   ]
 }
