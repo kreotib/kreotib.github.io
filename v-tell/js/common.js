@@ -30,20 +30,20 @@ const faqInit = (faqNameStart = 'all') => {
         });
     });
 
-    const faqChange = (faqName, faqTagsItems) =>{
+    const faqChange = (faqName, faqTagsItems) => {
         const faqWrapper = document.querySelector('.faq-wrapper'),
             faqItems = faqWrapper.querySelectorAll('.faq-wrapper__item');
 
-        faqTagsItems.forEach(faqElement =>{
+        faqTagsItems.forEach(faqElement => {
             faqName === faqElement.dataset.name ? faqElement.classList.add('active') : faqElement.classList.remove('active');
         });
 
-        if(faqName === 'all'){
-            faqItems.forEach(faqElement =>{
+        if (faqName === 'all') {
+            faqItems.forEach(faqElement => {
                 faqElement.classList.remove('hidden');
             });
-        }else{
-            faqItems.forEach(faqElement =>{
+        } else {
+            faqItems.forEach(faqElement => {
                 faqName === faqElement.dataset.name ? faqElement.classList.remove('hidden') : faqElement.classList.add('hidden');
             });
         }
@@ -73,22 +73,33 @@ const addObserver = (element) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger'),
+        mainNav = document.querySelector('.main-nav');
+
+    burger.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        burger.classList.toggle('active');
+        mainNav.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
+    });
+
     const mapLines = document.querySelectorAll('.map-line');
 
-    if(mapLines.length > 0){
-        mapLines.forEach((element,index)=>{
-            element.style.animationDelay = `${index*0.3}s`
+    if (mapLines.length > 0) {
+        mapLines.forEach((element, index) => {
+            element.style.animationDelay = `${index * 0.3}s`
         });
     }
 
     const faq = document.querySelector('.faq');
-    if(faq){
+    if (faq) {
         faqInit();
     }
     const sectionWithAnimation = document.querySelectorAll('[data-animate]'),
         animationSection = [];
 
-    if(sectionWithAnimation.length > 0){
+    if (sectionWithAnimation.length > 0) {
         sectionWithAnimation.forEach(el => {
             animationSection.push(el.closest('section'))
         });

@@ -195,9 +195,7 @@ textarea {
 }
 
 .button-accent:hover {
-  -webkit-box-shadow: 0px 0px 10px #310f0f inset;
-          box-shadow: 0px 0px 10px #310f0f inset;
-  background: rgba(230, 55, 57, 0.7);
+  background-color: #d01a1c;
 }
 
 .button-grey {
@@ -625,6 +623,10 @@ textarea {
   color: #FFFFFF;
 }
 
+.nav-item-mobile {
+  display: none;
+}
+
 .nav-item__link {
   font-family: 'PF BeauSans Pro', sans-serif;
   font-weight: 300;
@@ -672,6 +674,32 @@ textarea {
           justify-content: space-between;
   width: 32px;
   height: 24px;
+  position: relative;
+}
+
+.burger.active .burger__item {
+  width: 100%;
+  position: absolute;
+}
+
+.burger.active .burger__item:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .burger__item:nth-child(1) {
+  left: 0;
+  top: 12px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger.active .burger__item:nth-child(3) {
+  right: 0;
+  top: 12px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .burger__item {
@@ -679,6 +707,9 @@ textarea {
   height: 2px;
   background: #E63739;
   border-radius: 36px;
+  -webkit-transition: .5s all linear;
+  -o-transition: .5s all linear;
+  transition: .5s all linear;
 }
 
 .burger__item:nth-child(1), .burger__item:nth-child(3) {
@@ -692,6 +723,9 @@ textarea {
 }
 
 @media screen and (max-width: 991px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
   .header__wrapper {
     padding: 12px 0;
   }
@@ -700,6 +734,15 @@ textarea {
   }
   .header-wrapper__block-settings {
     margin-left: auto;
+  }
+  .header-nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .header-settings__block + .header-settings__block {
     margin-left: 55px;
@@ -712,13 +755,87 @@ textarea {
   }
   .header__row-nav {
     position: fixed;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 117px);
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #0B0B0B;
+    padding: 0 30px;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: .5s all linear;
+    -o-transition: .5s all linear;
+    transition: .5s all linear;
+  }
+  .header__row-nav.active {
+    opacity: 1;
+    z-index: 99;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav-list__sub {
+    position: relative;
+    display: block;
+    top: unset;
+    border: none;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 10px 0 10px 15px;
+  }
+  .nav-list__sub + .nav-item__link {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .nav-list__sub + .nav-item__link::after {
     display: none;
+  }
+  .nav-list__sub-link {
+    padding: 0;
+    text-align: right;
+  }
+  .nav-list__sub-item + .nav-list__sub-item {
+    border-top: unset;
+    margin: 5px 0 0 0;
+  }
+  .nav-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-list__item + .nav-list__item {
+    margin: 10px 0 0 0;
+  }
+  .nav-item-mobile {
+    display: block;
+  }
+  .nav-item:hover::before {
+    display: none;
+  }
+  .nav-item__link {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
 @media screen and (max-width: 600px) {
   .header-settings__block + .header-settings__block {
     margin-left: 40px;
+  }
+  .header__row-nav {
+    height: calc(100% - 76px);
   }
   .logo__header {
     width: 77px;

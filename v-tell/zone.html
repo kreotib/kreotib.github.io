@@ -76,7 +76,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="header__row header__row-nav">
+                <div class="header__row header__row-nav main-nav">
                   <nav class="header-nav">
                     <ul class="header-nav__list nav-list">
                       <li class="nav-list__item nav-item"><a class="nav-item__link" href="plans.html"><span class="nav-item__link-text">Plans</span></a></li>
@@ -100,6 +100,28 @@
                       </li>
                       <li class="nav-list__item nav-item"><a class="nav-item__link nav-item__link-bold" href="partner.html"><span class="nav-item__link-text">Partnerships</span></a></li>
                       <li class="nav-list__item nav-item"><a class="nav-item__link nav-item__link-bold" href="contact.html"><span class="nav-item__link-text">Contact</span></a></li>
+                      <li class="nav-list__item nav-item nav-item-mobile">
+                        <div class="profile-link"><a class="profile-link__wrapper" href="#">
+                            <div class="profile-link__icon">
+                              <svg class="icon icon-user ">
+                                <use xlink:href="img/svg/sprite.svg#user"></use>
+                              </svg>
+                            </div>
+                            <div class="profile-link__content">
+                              <p class="profile-link__text">My V-Tell</p>
+                            </div></a></div>
+                      </li>
+                      <li class="nav-list__item nav-item nav-item-mobile">
+                        <div class="profile-link"><a class="profile-link__wrapper" href="add-funds.html">
+                            <div class="profile-link__icon">
+                              <svg class="icon icon-coin ">
+                                <use xlink:href="img/svg/sprite.svg#coin"></use>
+                              </svg>
+                            </div>
+                            <div class="profile-link__content">
+                              <p class="profile-link__text">Add Funds</p>
+                            </div></a></div>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -166,13 +188,279 @@
                     </div>
                     <div class="country-block__content">
                       <ul class="country-block__list country-list">
-                        <li class="country-list__item"><a class="country-list__link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Africa</span>(33)</span></a></li>
-                        <li class="country-list__item"><a class="country-list__link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Africa</span>(33)</span></a></li>
-                        <li class="country-list__item"><a class="country-list__link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Asia</span>(21)</span></a></li>
-                        <li class="country-list__item"><a class="country-list__link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Europe</span>(24)</span></a></li>
-                        <li class="country-list__item"><a class="country-list__link" href="#"><span class="country-list__label"><span class="country-list__label-bold">North America</span>(12)</span></a></li>
-                        <li class="country-list__item"><a class="country-list__link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Oceania</span>(5)</span></a></li>
-                        <li class="country-list__item"><a class="country-list__link" href="#"><span class="country-list__label"><span class="country-list__label-bold">South America</span>(13)</span></a></li>
+                        <li class="country-list__item toggle-wrapper"><a class="country-list__link toggle-link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Africa</span>(33)</span></a>
+                          <div class="toggle-block">
+                            <ul class="country-list country-list__sub">
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 17</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="country-list__item toggle-wrapper"><a class="country-list__link toggle-link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Africa</span>(33)</span></a>
+                          <div class="toggle-block">
+                            <ul class="country-list country-list__sub">
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 17</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="country-list__item toggle-wrapper"><a class="country-list__link toggle-link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Asia</span>(21)</span></a>
+                          <div class="toggle-block">
+                            <ul class="country-list country-list__sub">
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 17</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="country-list__item toggle-wrapper"><a class="country-list__link toggle-link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Europe</span>(24)</span></a>
+                          <div class="toggle-block">
+                            <ul class="country-list country-list__sub">
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 17</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="country-list__item toggle-wrapper"><a class="country-list__link toggle-link" href="#"><span class="country-list__label"><span class="country-list__label-bold">North America</span>(12)</span></a>
+                          <div class="toggle-block">
+                            <ul class="country-list country-list__sub">
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 17</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="country-list__item toggle-wrapper"><a class="country-list__link toggle-link" href="#"><span class="country-list__label"><span class="country-list__label-bold">Oceania</span>(5)</span></a>
+                          <div class="toggle-block">
+                            <ul class="country-list country-list__sub">
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 17</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="country-list__item toggle-wrapper"><a class="country-list__link toggle-link" href="#"><span class="country-list__label"><span class="country-list__label-bold">South America</span>(13)</span></a>
+                          <div class="toggle-block">
+                            <ul class="country-list country-list__sub">
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 1</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 2</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 3</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 4</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 5</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 6</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 7</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 8</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 9</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 10</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 11</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 12</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 13</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 14</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 15</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 16</span></li>
+                              <li class="country-list__block"><span class="country-list__label">Country 17</span></li>
+                            </ul>
+                          </div>
+                        </li>
                       </ul>
                     </div>
                   </div>
