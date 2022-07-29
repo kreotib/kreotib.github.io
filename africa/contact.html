@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="page-wrapper__header">
+        <header class="header">
+            <div class="header__wrapper">
+                <div class="container">
+                    <div class="header__content">
+                        <div class="nav">
+                            <ul class="nav__list nav-list">
+                                <li class="nav-list__item nav-item"><a href="index.html" class="nav-item__link">main</a></li>
+                                <li class="nav-list__item nav-item"><a href="index.html#prayers" class="nav-item__link anchor">prayers</a></li>
+                                <li class="nav-list__item nav-item"><a href="contact.html" class="nav-item__link">contact us</a></li>
+                                <li class="nav-list__item nav-item"><a href="join-us.html" class="nav-item__link">join us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="page-wrapper__content">
+       <section class="contact">
+           <div class="container">
+               <div class="contact__grid">
+                   <div class="contact__grid-item" data-animate="fade-top">
+                       <div class="contact__img">
+                           <img class="contact__img-item" src="img/contact.jpg" alt="">
+                       </div>
+                   </div>
+                   <div class="contact__grid-item" data-animate="fade-top">
+                       <div class="contact-form">
+                           <div class="contact-form__wrapper">
+                               <div class="contact-form__block contact-form__block-header">
+                                   <p class="contact-form__title">Contact Us</p>
+                               </div>
+                               <div class="contact-form__block">
+                                   <input type="text"  name="name" placeholder="Name" class="contact-form__input">
+                               </div>
+                               <div class="contact-form__block">
+                                   <input type="text"  name="email" placeholder="Email" class="contact-form__input">
+                               </div>
+                               <div class="contact-form__block">
+                                   <input type="text"  name="phoneNumber" placeholder="Phone Number" class="contact-form__input">
+                               </div>
+                               <div class="contact-form__block">
+                                   <textarea class="contact-form__input contact-form__input-text" name="text" placeholder="Tell us how we can help you"></textarea>
+                               </div>
+                               <div class="contact-form__block contact-form__block-footer">
+                                   <input class="contact-form__btn" type="submit" class="button button-white" value="send">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+    </div>
+</div>
+
+
+<script src="script/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,730 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff2') format('woff2'),
+  url('../fonts/PlayfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff2') format('woff2'),
+  url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff2') format('woff2'),
+  url('../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$min_width: 375px;
+$max_width: 1200px;
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+
+*[data-animate]{
+  opacity: 0;
+
+  transition: .5s opacity linear, .75s all linear;
+
+  &.animated{
+    opacity: 1;
+  }
+}
+
+*[data-animate='fade-right']{
+  transform: translateX(-100%);
+
+  &.animated{
+    transform: translateX(0);
+  }
+}
+
+*[data-animate='fade-left']{
+  transform: translateX(100%);
+
+  &.animated{
+    transform: translateX(0);
+  }
+}
+
+
+*[data-animate='fade-top']{
+  transform: translateY(100%);
+
+  &.animated{
+    transform: translateY(0);
+  }
+}
+
+
+*[data-animate='fade-bottom']{
+  transform: translateY(-100%);
+
+  &.animated{
+    transform: translateY(0);
+  }
+}
+
+*[data-animate='fade']{
+  opacity: 0;
+
+  &.animated{
+    opacity: 1;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(18, 18, 18);
+}
+
+.container {
+  padding: 0 80px;
+}
+
+.page-wrapper{
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: 100px auto;
+  &__header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  &__content{
+    padding: 100px 0 50px 0;
+  }
+}
+
+.button {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  &-white {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+
+    font-family: 'Playfair Display', sans-serif;
+    @include fluid-type($min_width, $max_width, 14px, 18px);
+    font-weight: 400;
+
+  }
+}
+
+.header {
+  &__wrapper {
+    background-color: rgb(18, 18, 18);
+  }
+
+  &__burger{
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    height: 100px;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+  }
+
+  &-list {
+    &__item {
+      & + & {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+
+  &-item {
+    &__link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #fff;
+
+      text-decoration: none;
+    }
+  }
+}
+
+.hero {
+  &__wrapper {
+    min-height: 600px;
+    height: calc(100vh - 100px);
+
+    background: url("../img/hero-bg.png") center center/cover no-repeat;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 100%;
+
+    &-block {
+      background-color: rgba(44, 44, 44, 0.4);
+
+      grid-column-start: 2;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__header, &__desc {
+    max-width: 47%;
+  }
+
+  &__title {
+    font-family: 'Playfair Display', sans-serif;
+    @include fluid-type($min_width, $max_width, 32px, 88px);
+    font-weight: 400;
+    line-height: 1.2em;
+
+    color: #fff;
+
+    text-align: center;
+  }
+
+  &__desc {
+    margin: 25px 0 0 0;
+  }
+
+  &__text {
+    font-family: 'Playfair Display', sans-serif;
+    @include fluid-type($min_width, $max_width, 24px, 40px);
+    line-height: 1.35em;
+
+    color: #fff;
+
+    text-align: center;
+  }
+}
+
+.prayers {
+  &__wrapper {
+    padding: 166px 0 60px 0;
+  }
+
+  &__mobile{
+    padding: 30px 0;
+    &-text{
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 25px;
+
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+
+    &-item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 130%;
+      height: 130%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__header, &__desc {
+    max-width: 460px;
+  }
+
+  &__title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.34em;
+
+    text-align: center;
+  }
+
+  &__desc {
+    margin: 30px 0 0 0;
+  }
+
+  &__text {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    text-align: center;
+
+    line-height: 1.75em;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__footer {
+    margin: 60px 0 0 0;
+  }
+
+  &__button {
+    width: 385px;
+  }
+
+  &__list {
+    margin: 60px 0 0 0;
+  }
+
+  &__footer {
+    max-width: 780px;
+    margin: 63px auto 0 auto;
+  }
+
+  &-list {
+    &__item {
+      padding: 66px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      list-style: none;
+
+      &-title {
+        font-family: 'Playfair Display', sans-serif;
+        @include fluid-type($min_width, $max_width, 24px, 40px);
+        font-weight: 700;
+        text-align: center;
+      }
+
+      &-link {
+        font-family: 'Playfair Display', sans-serif;
+        @include fluid-type($min_width, $max_width, 20px, 22px);
+        text-decoration: none;
+
+        color: #fff;
+
+        display: block;
+
+        margin: 66px 0 0 0;
+      }
+    }
+  }
+}
+
+.contact{
+  &-form{
+    max-width: 460px;
+    width: 100%;
+    &__wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      width: 100%;
+    }
+    &__title{
+      font-family: 'Playfair Display', sans-serif;
+      @include fluid-type($min_width, $max_width, 22px, 28px);
+    }
+    &__block{
+      width: 100%;
+      &-header + &{
+        margin: 15px 0 0 0;
+      }
+      & + &{
+        margin: 10px 0 0 0;
+      }
+      & + &-footer{
+        margin: 30px 0 0 0;
+      }
+      &-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__input{
+      -webkit-appearance: none;
+      outline: none;
+
+      border: 1px solid transparent;
+      border-bottom-color: #fff;
+
+      background: none;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      color:#fff;
+
+      padding:10px 12px;
+
+      width: 100%;
+      height: 60px;
+
+      transition: .5s border-color;
+
+      &::placeholder{
+        opacity: 1;
+        color:#fff;
+      }
+      &:hover,&:focus{
+        border-color: #fff;
+      }
+
+      &-text{
+        resize: none;
+        height: 175px;
+      }
+    }
+    &__btn{
+      width: 200px;
+      height: 70px;
+
+      text-transform: capitalize;
+
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 18px;
+    }
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__img{
+    height: calc(100vh - 150px);
+    width: 100%;
+    min-height: 500px;
+    &-item{
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
+
+.join{
+  height: 100%;
+  &__wrapper{
+    height: 100%;
+
+    padding: 150px 0 0 0;
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 30px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+  }
+  &__img{
+    width: 100%;
+    height: 306px;
+    &-item{
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+  &__title{
+    font-family: 'Playfair Display', sans-serif;
+    @include fluid-type($min_width, $max_width, 26px, 50px);
+    text-align: center;
+  }
+  &__desc{
+    max-width: 330px;
+
+    margin: 70px auto 0 auto;
+  }
+  &__text{
+    font-family: 'Playfair Display', sans-serif;
+    @include fluid-type($min_width, $max_width, 17px, 20px);
+
+    text-align: center;
+
+    margin: 0;
+    a{
+      color:#Fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.burger{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  width: 30px;
+  height: 20px;
+  &:hover{
+    cursor: pointer;
+  }
+  &.active{
+    position: relative;
+    .burger{
+      &__item{
+        position: absolute;
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(1){
+          left: 0;
+          top: 10px;
+
+          transform: rotate(45deg);
+        }
+        &:nth-child(3){
+          right: 0;
+          top: 10px;
+
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__item{
+    height: 2px;
+    width: 100%;
+
+    background-color: #fff;
+
+    transition: .5s all linear;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .prayers{
+    &__mobile{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container{
+    padding: 0 20px;
+  }
+  .header{
+    &__burger{
+      display: block;
+    }
+  }
+  .nav{
+    position: fixed;
+    top: 100px;
+    left: 0;
+
+    width: 250px;
+    height: calc(100% - 100px);
+
+    background-color: #121212;
+
+    padding: 50px 0;
+
+    opacity: 0;
+    z-index: -1;
+
+    transform: translateX(-100%);
+
+    transition: .5s all linear;
+    &.active{
+      transform: translateX(0);
+      opacity: 1;
+      z-index: 11;
+    }
+    &__list{
+      flex-direction: column;
+    }
+    &-list{
+      &__item{
+        & + &{
+          margin: 15px 0 0 0;
+        }
+      }
+    }
+  }
+  .hero{
+    &__wrapper{
+      min-height: 500px;
+      height: calc(100vh - 100px);
+    }
+    &__content{
+      grid-template-columns: minmax(0,1fr);
+    }
+    &__header, &__desc {
+      max-width: 100%;
+    }
+  }
+  .prayers{
+    &__wrapper{
+      padding: 0 0 30px 0;
+    }
+    &__content{
+      grid-template-columns: minmax(0,1fr);
+
+      padding: 40px 0;
+      position: relative;
+      &-block{
+        &:nth-child(1){
+          position: absolute;
+          left: -20px;
+          top: 0;
+          height: 100%;
+          width: calc(100% + 40px);
+          z-index: 1;
+        }
+        &:nth-child(2){
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+    &__list{
+      margin: 20px 0 0 0;
+    }
+    &__footer{
+      margin: 30px 0 0 0;
+    }
+    &-list{
+      &__item{
+        padding: 22px 0;
+        &-link{
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+  }
+  .contact{
+    &__grid{
+      grid-template-columns: minmax(0,1fr);
+      gap: 30px;
+    }
+    &__img{
+      height: calc(100vh / 2);
+      min-height: auto;
+    }
+    &-form{
+      &__title{
+        text-align: center;
+      }
+      &__block{
+        &-header + &{
+          margin:30px 0 0 0;
+        }
+      }
+    }
+  }
+  .join{
+    &__wrapper{
+      padding: 30px 0 0 0;
+    }
+    &__grid{
+      grid-template-columns: minmax(0,1fr);
+    }
+    &__desc{
+      margin: 30px auto 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .prayers{
+    &__button{
+      max-width: 100%;
+      width: 100%;
+
+      padding: 0 15px;
+    }
+  }
+}
