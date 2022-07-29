@@ -1,7 +1,7 @@
-const sliderTabsInit = (slider,newIndex = 0) => {
+const sliderTabsInit = (slider,sliderTabs, newIndex = 0) => {
     const sliderTabsNavLink = document.querySelectorAll('.slider-tabs__link');
 
-    sliderTabsNavLink.forEach((element,index) => {
+    sliderTabsNavLink.forEach((element, index) => {
         element.addEventListener('click', (e) => {
             e.preventDefault();
             changeSliderTabs(index);
@@ -35,15 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-            on:{
-                init:function(){
-                    sliderTabsInit(this);
+            on: {
+                init: function () {
+                    sliderTabsInit(this, sliderTabs);
                 }
             }
         });
 
-    slider.on('slideChange',()=>{
+    slider.on('slideChange', () => {
         changeSliderTabs(slider.realIndex);
+        sliderTabs.slideTo(slider.realIndex)
     });
 
     document.querySelector('.boxes-btn').addEventListener('click', (e) => {
