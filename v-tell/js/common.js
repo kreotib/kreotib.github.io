@@ -30,28 +30,28 @@ const faqInit = (faqNameStart = 'all') => {
         });
     });
 
-    const faqChange = (faqName, faqTagsItems) => {
-        const faqWrapper = document.querySelector('.faq-wrapper'),
-            faqItems = faqWrapper.querySelectorAll('.faq-wrapper__item');
-
-        faqTagsItems.forEach(faqElement => {
-            faqName === faqElement.dataset.name ? faqElement.classList.add('active') : faqElement.classList.remove('active');
-        });
-
-        if (faqName === 'all') {
-            faqItems.forEach(faqElement => {
-                faqElement.classList.remove('hidden');
-            });
-        } else {
-            faqItems.forEach(faqElement => {
-                faqName === faqElement.dataset.name ? faqElement.classList.remove('hidden') : faqElement.classList.add('hidden');
-            });
-        }
-    }
-
     faqChange(faqNameStart, faqTagsItems);
 
 };
+
+const faqChange = (faqName, faqTagsItems) => {
+    const faqWrapper = document.querySelector('.faq-wrapper'),
+        faqItems = faqWrapper.querySelectorAll('.faq-wrapper__item');
+
+    faqTagsItems.forEach(faqElement => {
+        faqName === faqElement.dataset.name ? faqElement.classList.add('active') : faqElement.classList.remove('active');
+    });
+
+    if (faqName === 'all') {
+        faqItems.forEach(faqElement => {
+            faqElement.classList.remove('hidden');
+        });
+    } else {
+        faqItems.forEach(faqElement => {
+            faqName === faqElement.dataset.name ? faqElement.classList.remove('hidden') : faqElement.classList.add('hidden');
+        });
+    }
+}
 
 const animateBlock = (section) => {
     const animationBlock = section.querySelectorAll('*[data-animate]');
@@ -123,7 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }),
         planSlider = new Swiper('.plan-slider', {
             slidesPerView: 'auto',
-            spaceBetween: 39
+            spaceBetween: 39,
+            pagination: {
+                el: '.section-plan__pagination',
+                clickable:true,
+            },
+            navigation: {
+                nextEl: '.section-plan-button-next',
+                prevEl: '.section-plan-button-prev',
+            },
         }),
         navSlider = new Swiper('.plan-tabs__nav', {
             slidesPerView: 'auto',
@@ -132,6 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navSliderSecond = new Swiper('.regulation-tabs__nav', {
             slidesPerView: 'auto',
             freeMode: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable:true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         }),
         navSliderThird = new Swiper('.delivery-tabs__nav', {
             slidesPerView: 'auto',
@@ -140,16 +156,48 @@ document.addEventListener('DOMContentLoaded', () => {
         navSliderFifth = new Swiper('.zone-tabs__nav', {
             slidesPerView: 'auto',
             freeMode: true,
+            pagination: {
+                el: '.zone-tabs__pagination',
+                clickable:true,
+            },
+            navigation: {
+                nextEl: '.zone-tabs-button-next',
+                prevEl: '.zone-tabs-button-prev',
+            },
         }),
         navSliderFourth = new Swiper('.faq-tags', {
             slidesPerView: 'auto',
             freeMode: true,
-            spaceBetween: 8
+            spaceBetween: 8,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable:true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         }),
         navSliderSix = new Swiper('.settings-tabs__nav', {
             slidesPerView: 'auto',
             freeMode: true,
         });
+
+    const zoneTabs = document.querySelector('.zone-tabs');
+
+    navSliderFifth.on('slideChange',()=>{
+       changeTab(zoneTabs, navSliderFifth.realIndex);
+    });
+
+    if(zoneTabs){
+        const zoneTabsNavLink = document.querySelectorAll('.zone-tabs__nav-link');
+
+        zoneTabsNavLink.forEach((element,index)=>{
+           element.addEventListener('click',()=>{
+              navSliderFifth.slideTo(index);
+           });
+        });
+    }
 
 
     customSelect('select');
