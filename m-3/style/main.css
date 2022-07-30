@@ -1008,6 +1008,9 @@ body.hidden {
     align-items: flex-start;
     justify-content: flex-start;
   }
+  .slider-box__img + .slider-box__info {
+    margin: 0;
+  }
   .slider-box__text {
     margin: 0;
   }
@@ -1166,6 +1169,10 @@ body.hidden {
 
   .advantages__title-text {
     max-width: 200px;
+  }
+
+  .slider-box__text {
+    font-size: 14px;
   }
 }
 @keyframes showHide {

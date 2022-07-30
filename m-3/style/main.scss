@@ -1410,6 +1410,10 @@ body {
         }
       }
 
+      &__img + &__info{
+        margin: 0;
+      }
+
       &__text {
         margin: 0;
       }
@@ -1625,6 +1629,9 @@ body {
         max-width: 200px;
       }
     }
+  }
+  .slider-box__text{
+    font-size: 14px;
   }
 }
 
