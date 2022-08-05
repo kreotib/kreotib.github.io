@@ -1811,6 +1811,14 @@ body.no-scroll-m {
   margin: 8px 0 0 0;
 }
 
+.training-form__description {
+  font-family: 'Graphik LCG', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2F2F2F;
+}
+
 .training-question__list {
   display: -webkit-box;
   display: -ms-flexbox;
