@@ -294,6 +294,7 @@ body.hidden {
 
 .ozon-btn {
   text-decoration: none;
+  max-width: 100%;
 }
 .ozon-btn__wrapper-row {
   display: flex;
@@ -770,7 +771,7 @@ body.hidden {
     padding: 40px 0 0 0;
   }
   .boxes__button {
-    margin: 20px auto 0 auto;
+    margin: 40px auto 0 auto;
   }
   .boxes__footer {
     margin: 40px auto 0 auto;
@@ -925,7 +926,6 @@ body.hidden {
 
   .ozon-btn {
     width: 100%;
-    max-width: 320px;
   }
   .ozon-btn__wrapper {
     width: 100%;

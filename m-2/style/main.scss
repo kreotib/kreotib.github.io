@@ -407,6 +407,8 @@ body {
   &-btn {
     text-decoration: none;
 
+    max-width: 100%;
+
     &__wrapper {
       &-row {
         display: flex;
@@ -1021,7 +1023,7 @@ body {
       padding: 40px 0 0 0;
     }
     &__button{
-      margin: 20px auto 0 auto;
+      margin: 40px auto 0 auto;
     }
     &__footer{
       margin: 40px auto 0 auto;
@@ -1222,7 +1224,6 @@ body {
   .ozon {
     &-btn {
       width: 100%;
-      max-width: 320px;
 
       &__wrapper {
         width: 100%;
