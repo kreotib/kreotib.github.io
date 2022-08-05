@@ -304,6 +304,10 @@ body.no-scroll-m {
   line-height: 20px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .button-white {
   background: #FFFFFF;
   font-family: 'Gilroy',sans-serif;
@@ -2272,11 +2276,14 @@ body.no-scroll-m {
 @media screen and (max-width: 1280px) {
   .training__header-wrapper {
     gap: 0;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: auto 415px;
   }
   .training__text-small {
     max-height: unset;
     max-width: unset;
+  }
+  .training-info__wrapper-block + .training-info__wrapper-block {
+    margin: 0 0 0 10px;
   }
   .training-banner__wrapper-content {
     margin: 0 0 0 30px;
