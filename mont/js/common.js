@@ -192,4 +192,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+
+    const backTop = document.querySelector('.back-top');
+
+    backTop.addEventListener('click',(e)=>{
+       e.preventDefault();
+
+       document.body.scrollIntoView({
+           behavior:'smooth',
+       });
+    });
+
+    document.addEventListener('scroll',()=>{
+        window.pageYOffset > 200 ? backTop.classList.remove('hidden') : backTop.classList.add('hidden');
+    })
 });

@@ -283,6 +283,34 @@ body.no-scroll-m {
   text-align: center;
 }
 
+.back-top {
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  bottom: 100px;
+  right: 80px;
+  z-index: 10;
+  -webkit-transition: .5s all linear;
+  -o-transition: .5s all linear;
+  transition: .5s all linear;
+}
+
+.back-top:hover {
+  cursor: pointer;
+}
+
+.back-top.hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+.back-top__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .button {
   -webkit-appearance: none;
   border: none;
@@ -715,6 +743,12 @@ body.no-scroll-m {
 }
 
 @media screen and (max-width: 600px) {
+  .back-top {
+    right: 15px;
+    bottom: 15px;
+    width: 38px;
+    height: 38px;
+  }
   .cookie-alert {
     bottom: 15px;
     right: -40px;
