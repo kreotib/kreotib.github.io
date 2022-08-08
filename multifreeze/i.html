@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+#rec477166722 #rec477166721
+// Id блока, в котором будет слайдер
+var blockReviewVideo = $("#rec475857576");
+// Class элемента, в котором будет находиться слайдер
+var wrapReviewVideo = $(".review-slider-video");
+// Id блоков, которые будут слайдами
+var slidesReviewVideo = $("#rec476734190, #rec476735335, #rec476735336, #rec476736211");
+
+
+wrapReviewVideo.addClass("review-slider-owl");
+var boxReviewVideo = wrapReviewVideo.find(".tn-atom");
+boxReviewVideo.append('<div class="swiper review-slider-video-wrapper"><div class="swiper-wrapper"></div></div>');
+slidesReviewVideo.addClass('swiper-slide');
+boxReviewVideo.find('.swiper-pagination').addClass('review-slider-pagination');
+slidesReviewVideo.appendTo(wrapReviewVideo.find('.swiper-wrapper'));
+const ReviewSlider = new Swiper('.review-slider-wrapper', {
+slidesPerView:'auto',
+spaceBetween:20,
+navigation:{
+nextEl: '.review-button-next',
+prevEl: '.review-button-prev',
+},
+});
+
+</body>
+</html>
