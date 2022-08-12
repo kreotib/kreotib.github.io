@@ -353,7 +353,7 @@ body.hidden {
   background-repeat: no-repeat;
 }
 .ozon-btn__img::after {
-  background-image: url("../images/ozon-logo.svg");
+  background-image: url("../images/ozon-logo-second.svg");
   opacity: 1;
 }
 
