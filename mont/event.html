@@ -84,268 +84,358 @@
       </div>
       <div class="page-wrapper__content">
         <div class="page-header">
-          <div class="page-header__wrapper">
+          <div class="page-header__wrapper page-header__wrapper-big page-header__wrapper-big_yellow">
             <div class="container">
               <div class="page-header__breadcrumb">
                 <div class="breadcrumb">
                   <ul class="breadcrumb__list breadcrumb-list">
-                    <li class="breadcrumb-list__item"><a class="breadcrumb-list__link" href="#">Главная</a></li>
-                    <li class="breadcrumb-list__item"><a class="breadcrumb-list__link" href="#">Обучение</a></li>
-                    <li class="breadcrumb-list__item"><a class="breadcrumb-list__link" href="#">Тренинг</a></li>
+                    <li class="breadcrumb-list__item breadcrumb-list__item_white"><a class="breadcrumb-list__link" href="#">Главная</a></li>
+                    <li class="breadcrumb-list__item breadcrumb-list__item_white"><a class="breadcrumb-list__link" href="#">Мероприятия</a></li>
                   </ul>
                 </div>
               </div>
               <div class="page-header__title">
-                <h2 class="title title_size-medium title_position-center title_position-center title_color-white">Обучение</h2>
+                <h2 class="title title_size-medium title_position-center title_position-center title_color-white">Мероприятия</h2>
               </div>
             </div>
           </div>
         </div>
-        <div class="page-training">
-          <div class="page-training__wrapper">
-            <div class="training">
-              <div class="training__header">
-                <div class="container">
-                  <div class="training__header-wrapper">
-                    <div class="training__header-block">
-                      <div class="training-header">
-                        <div class="training-header__label">
-                          <p class="leeson-header__label-text">Тренинг</p>
+        <div class="page-catalog tabs event-tabs">
+          <div class="page-catalog__wrapper">
+            <div class="container">
+              <div class="page-catalog__header">
+                <div class="catalog-theme">
+                  <div class="catalog-theme__wrapper">
+                    <div class="catalog-theme__header">
+                      <p class="title title_size-small">Популярные темы</p>
+                    </div>
+                    <div class="catalog-theme__content">
+                      <ul class="theme-list">
+                        <li class="theme-list__item active theme-list__item_yellow"><a class="theme-list__link" href="#">Импортозамещение</a></li>
+                        <li class="theme-list__item theme-list__item_yellow"><a class="theme-list__link" href="#">ИБ</a></li>
+                        <li class="theme-list__item theme-list__item_yellow"><a class="theme-list__link" href="#">Новости ИТ-рынка</a></li>
+                        <li class="theme-list__item theme-list__item_yellow"><a class="theme-list__link" href="#">Кибербезопасность</a></li>
+                        <li class="theme-list__item theme-list__item_yellow"><a class="theme-list__link" href="#">MONT</a></li>
+                        <li class="theme-list__item theme-list__item_yellow"><a class="theme-list__link" href="#">Мониторинг киберугроз</a></li>
+                        <li class="theme-list__item theme-list__item_yellow"><a class="theme-list__link" href="#">Лаборатория Касперского</a></li>
+                        <li class="theme-list__item theme-list__item_yellow theme-list__item_all"><a class="theme-list__link" href="#">Выбрать все</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-catalog__search">
+                <div class="catalog-search">
+                  <div class="catalog-search__wrapper catalog-search__wrapper-big">
+                    <div class="catalog-search__wrapper-block"></div>
+                    <div class="catalog-search__wrapper-block">
+                      <div class="filter-list">
+                        <ul class="filter-list__block filter__list">
+                          <li class="filter__list-item"><a class="filter__list-link" href="#">Онлайн</a></li>
+                          <li class="filter__list-item"><a class="filter__list-link" href="#">Регистрация открыта</a></li>
+                          <li class="filter__list-item"><a class="filter__list-link" href="#">Прикладные решения</a></li>
+                          <li class="filter__list-item"><a class="filter__list-link filter__list-link-reset" href="#">Сбросить всё</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-catalog__sort page-catalog__sort_big">
+                <div class="tabs-nav event-tabs__nav">
+                  <div class="tabs-nav__item event-tabs__item"><a class="tabs-nav__link event-tabs__link" href="#">Вид списка</a></div>
+                  <div class="tabs-nav__item event-tabs__item"><a class="tabs-nav__link event-tabs__link" href="#">Вид календаря</a></div>
+                </div>
+                <div class="sort page-catalog__sort-filter">
+                  <div class="sort__wrapper">
+                    <div class="sort__item trigger-wrapper"><a class="sort__link trigger-link" href="#"><span class="sort__link-text">По популярности</span><span class="sort__link-icon">
+                          <svg class="icon icon-sort ">
+                            <use xlink:href="img/svg/sprite.svg#sort"></use>
+                          </svg></span></a>
+                      <div class="sort__content trigger-block">
+                        <ul class="sort__list">
+                          <li class="sort__list-item"><a class="sort__list-link" href="#">По длительности курса</a></li>
+                          <li class="sort__list-item"><a class="sort__list-link" href="#">По кол-ву баллов</a></li>
+                          <li class="sort__list-item"><a class="sort__list-link" href="#">По сложности</a></li>
+                          <li class="sort__list-item"><a class="sort__list-link" href="#">По дате добавления</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="sort__item sort__item-mobile"><a class="sort__link filter-show" href="#"><span class="sort__link-icon">
+                          <svg class="icon icon-filter ">
+                            <use xlink:href="img/svg/sprite.svg#filter"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-catalog__content">
+                <div class="page-catalog__content-filter filter-wrapper">
+                  <div class="filter">
+                    <div class="filter__wrapper">
+                      <div class="filter-close filter__wrapper-close"><img class="filter__wrapper-close-img" src="img/close-blue.svg"></div>
+                      <div class="filter__wrapper-header">
+                        <p class="filter__wrapper-title">Фильтр</p>
+                      </div>
+                      <div class="filter__wrapper-tags">
+                        <div class="filter-list">
+                          <ul class="filter-list__block filter__list">
+                            <li class="filter__list-item"><a class="filter__list-link" href="#">Начальная сложность</a></li>
+                            <li class="filter__list-item"><a class="filter__list-link" href="#">Средняя сложность</a></li>
+                            <li class="filter__list-item"><a class="filter__list-link" href="#">Лицензирование</a></li>
+                            <li class="filter__list-item"><a class="filter__list-link" href="#">Инфраструктура</a></li>
+                            <li class="filter__list-item"><a class="filter__list-link" href="#">Задания проверяются модератором</a></li>
+                            <li class="filter__list-item"><a class="filter__list-link filter__list-link-reset" href="#">Сбросить всё</a></li>
+                          </ul>
                         </div>
-                        <div class="training-header__title">
-                          <p class="title title_size-smallest">Какая-то тематика тренинга от MONT</p>
-                        </div>
-                        <div class="training__header-img training__header-img_mobile"><img src="img/training-1.png"></div>
-                        <div class="training-header__info">
-                          <div class="training-info">
-                            <div class="training-info__wrapper">
-                              <div class="training-info__wrapper-block training-info__wrapper-block_bonus">
-                                <div class="bonus">
-                                  <div class="bonus__wrapper">
-                                    <div class="bonus__content">
-                                      <p class="bonus__text">+8</p>
-                                    </div>
+                      </div>
+                      <div class="filter__wrapper-block">
+                        <div class="filter-block">
+                          <div class="filter-block__wrapper trigger-wrapper">
+                            <div class="filter-block__header trigger-link">
+                              <p class="title title_size-small">Формат мероприятия</p>
+                            </div>
+                            <div class="filter-block__content trigger-block">
+                              <div class="filter-checkbox">
+                                <div class="filter-checkbox__list">
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Онлайн</span></span></label>
+                                  </div>
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Офлайн</span></span></label>
                                   </div>
                                 </div>
                               </div>
-                              <div class="training-info__wrapper-block">
-                                <div class="training-info__icon">
-                                  <svg class="icon icon-calendar ">
-                                    <use xlink:href="img/svg/sprite.svg#calendar"></use>
-                                  </svg>
-                                </div>
-                                <div class="training-info__content">
-                                  <p class="training-info__text">12.05.2022, пн</p>
-                                </div>
-                              </div>
-                              <div class="training-info__wrapper-block">
-                                <div class="training-info__icon">
-                                  <svg class="icon icon-clock ">
-                                    <use xlink:href="img/svg/sprite.svg#clock"></use>
-                                  </svg>
-                                </div>
-                                <div class="training-info__content">
-                                  <p class="training-info__text">14:00, MSK</p>
-                                </div>
-                              </div>
-                              <div class="training-info__wrapper-block">
-                                <div class="training-info__icon">
-                                  <svg class="icon icon-clock-sand ">
-                                    <use xlink:href="img/svg/sprite.svg#clock-sand"></use>
-                                  </svg>
-                                </div>
-                                <div class="training-info__content">
-                                  <p class="training-info__text">2 часа</p>
-                                </div>
-                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="training-header__favorite training-header__favorite--active">
-                          <div class="favorite-block favorite-block--active">
-                            <div class="favorite-block__wrapper">
-                              <div class="favorite-block__button"><a class="favorite-block__button-item favorite-block__button-item--active button button-bordered button-white button-text-blue" href="#">Добавить в Моё обучение</a></div>
-                              <div class="favorite-block__content">
-                                <p class="favorite-block__text">Добавь тренинг в план своего обучения, чтобы не потерять и получать уведомления на почту!</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="training-header__favorite-btn"><a class="button button-blue button-bordered" href="#">Зарегистрироваться</a></div>
                         </div>
                       </div>
-                    </div>
-                    <div class="training__header-block">
-                      <div class="training__header-img"><img src="img/training-1.png"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="training__tags">
-                <div class="container">
-                  <div class="training__tags-wrapper">
-                    <div class="training-tags">
-                      <div class="training-tags__wrapper">
-                        <div class="training-tags__wrapper-item">
-                          <div class="training-tag">
-                            <div class="training-tag__wrapper">
-                              <div class="training-tag__icon">
-                                <svg class="icon icon-bookmark ">
-                                  <use xlink:href="img/svg/sprite.svg#bookmark"></use>
-                                </svg>
-                              </div>
-                              <div class="training-tag__content">
-                                <p class="training-tag__title">Сложность</p>
-                                <p class="training-tag__text">Начальный уровень</p>
-                              </div>
+                      <div class="filter__wrapper-block">
+                        <div class="filter-block">
+                          <div class="filter-block__wrapper trigger-wrapper">
+                            <div class="filter-block__header trigger-link">
+                              <p class="title title_size-small">Регистрация</p>
                             </div>
-                          </div>
-                        </div>
-                        <div class="training-tags__wrapper-item">
-                          <div class="training-tag">
-                            <div class="training-tag__wrapper">
-                              <div class="training-tag__icon">
-                                <svg class="icon icon-bookmark ">
-                                  <use xlink:href="img/svg/sprite.svg#bookmark"></use>
-                                </svg>
-                              </div>
-                              <div class="training-tag__content">
-                                <p class="training-tag__title">Тематика</p>
-                                <p class="training-tag__text">Лицензирование</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="training-tags__wrapper-item">
-                          <div class="training-tag">
-                            <div class="training-tag__wrapper">
-                              <div class="training-tag__icon">
-                                <svg class="icon icon-bookmark ">
-                                  <use xlink:href="img/svg/sprite.svg#bookmark"></use>
-                                </svg>
-                              </div>
-                              <div class="training-tag__content">
-                                <p class="training-tag__title">Направление</p>
-                                <p class="training-tag__text">Прикладные решения</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="training-tags__wrapper-item">
-                          <div class="training-tag">
-                            <div class="training-tag__wrapper">
-                              <div class="training-tag__icon">
-                                <svg class="icon icon-bookmark ">
-                                  <use xlink:href="img/svg/sprite.svg#bookmark"></use>
-                                </svg>
-                              </div>
-                              <div class="training-tag__content">
-                                <p class="training-tag__title">Проверка знаний</p>
-                                <p class="training-tag__text">Без тестирования</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="training-tags__wrapper-item">
-                          <div class="training-tag">
-                            <div class="training-tag__wrapper">
-                              <div class="training-tag__icon">
-                                <svg class="icon icon-bookmark ">
-                                  <use xlink:href="img/svg/sprite.svg#bookmark"></use>
-                                </svg>
-                              </div>
-                              <div class="training-tag__content">
-                                <p class="training-tag__title">Сертификация</p>
-                                <p class="training-tag__text">Сертификат вендора</p>
+                            <div class="filter-block__content trigger-block">
+                              <div class="filter-checkbox">
+                                <div class="filter-checkbox__list">
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Открыта</span></span></label>
+                                  </div>
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Закрыта</span></span></label>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="training__description">
-                <div class="container">
-                  <div class="training__description-wrapper training__grid">
-                    <div class="training__description-block">
-                      <div class="training-description">
-                        <div class="training-description__block">
-                          <div class="training-description__block-header">
-                            <p class="training__description__block-title title title_size-smallest">Об обучении</p>
-                          </div>
-                          <div class="training-description__block-content">
-                            <div class="training__desc">
-                              <p>Приглашаем на обучение  специалистов и интересующихся темой BI. Переходите по кнопке «Зарегистрироваться» на страницу с расписанием открытых обучений, выбирайте подходящий день и учитесь!</p>
+                      <div class="filter__wrapper-block">
+                        <div class="filter-block">
+                          <div class="filter-block__wrapper trigger-wrapper">
+                            <div class="filter-block__header trigger-link">
+                              <p class="title title_size-small">Поставщики/вендоры</p>
                             </div>
-                          </div>
-                          <div class="training-description__block-text">
-                            <div class="training__text">
-                              <p>Регулярные интенсивы для обмена опытом в области развития бизнеса с помощью аналитики. Проводятся каждый четверг.</p>
-                              <p>За один день вы научитесь:</p>
-                              <ul>
-                                <li>базовым принципам построения дэшбордов (для построения дэшбордов необходим ноутбук на Windows);</li>
-                                <li>загружать данные и строить их метаструктуру в BI-платформе;</li>
-                                <li>самостоятельно делать проект аналитических панелей на демо-данных.</li>
-                              </ul>
-                              <p>Расширенная демонстрация платформы Visiology <br> Проводится каждую пятницу и включает следующие блоки:</p>
-                              <ul>
-                                <li>демонстрацию возможностей платформы;</li>
-                                <li>глубокий технический разбор архитектуры решения;</li>
-                                <li>Roadmap;</li>
-                                <li>особенности перехода с зарубежных BI-систем.</li>
-                              </ul>
+                            <div class="filter-block__content trigger-block">
+                              <div class="filter-search filter-block__search">
+                                <div class="search-input">
+                                  <div class="search-input__wrapper">
+                                    <input class="search-input__item" type="text">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="filter-checkbox">
+                                <div class="filter-checkbox__list vendor-list expandable-list" data-count="2">
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Выбрать всё</span></span></label>
+                                  </div>
+                                  <div class="vendor-list-wrapper">
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                    </div>
+                                    <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                    </div>
+                                  </div><a class="vendor-list-link expandable-list-link" href="#">ещё 40 поставщиков</a>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="training__description-block">
-                      <div class="training-description">
-                        <div class="training-description__block">
-                          <div class="training-description__block-header">
-                            <p class="training__description__block-title title title_size-smallest">Вопросы лектору</p>
-                          </div>
-                          <div class="training-description__block-content">
-                            <form class="form training-form">
-                              <div class="training-form__header">
-                                <p class="training-form__description">Заполните форму, чтобы оставить лектору предстоящего мероприятия интересующие вас вопросы.</p>
-                              </div>
-                              <div class="training-form__content">
-                                <div class="form-input form-input_textarea training-form__textarea">
-                                  <textarea class="form-input__item" placeholder="Текст вопроса"></textarea>
+                      <div class="filter__wrapper-block">
+                        <div class="filter-block">
+                          <div class="filter-block__wrapper trigger-wrapper">
+                            <div class="filter-block__header trigger-link">
+                              <p class="title title_size-small">Направление</p>
+                            </div>
+                            <div class="filter-block__content trigger-block">
+                              <div class="filter-checkbox">
+                                <div class="filter-checkbox__list">
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Выбрать всё</span></span></label>
+                                  </div>
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Информационная безопасность</span></span></label>
+                                  </div>
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Инфраструктура</span></span></label>
+                                  </div>
+                                  <div class="filter-checkbox__list-item">
+                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                        <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Прикладные решения</span></span></label>
+                                  </div>
                                 </div>
                               </div>
-                              <div class="training-form__footer">
-                                <input class="button button-blue button-bordered" type="submit" value="Отправить">
-                              </div>
-                            </form>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="training__banner">
-                <div class="training__banner-wrapper">
-                  <div class="container">
-                    <div class="training-banner">
-                      <div class="training-banner__wrapper">
-                        <div class="training-banner__wrapper-img"><img src="img/lesson-banner.svg"></div>
-                        <div class="training-banner__wrapper-content">
-                          <p class="training-banner__wrapper-title">Присоединяйся! Тебе понравится! <br> или любой другой кликбейтный заголовок</p><a class="button button-bordered button-blue training-banner__wrapper-button" href="#">Зарегистрироваться</a>
+                <div class="page-catalog__content-item">
+                  <div class="tabs-content">
+                    <div class="tabs-content__item">
+                      <div class="page-catalog__event">
+                        <div class="page-catalog__event-item">
+                          <div class="card">
+                            <div class="card__wrapper card__wrapper_small">
+                              <div class="card__header card__header_center">
+                                <div class="card__header-block"><img class="card__img" src="img/card-logo.png"></div>
+                                <div class="card__header-block card__header-block_info">
+                                  <p class="card__time">Вебинар</p>
+                                </div>
+                                <div class="card__header-block card__header-block_info card__header-block_desktop">
+                                  <p class="card__time">31.05.2022, пн</p>
+                                  <p class="card__time">15:00, MSK</p>
+                                  <p class="card__time">2 часа</p>
+                                </div>
+                                <div class="card__header-block card__header-block_info card__header-block_desktop">
+                                  <p class="card__time">Онлайн</p>
+                                </div>
+                              </div>
+                              <div class="card__content card__content_visible card__content_big">
+                                <p class="card__text card__text_second">Резервное копирование системы виртуализации АЭРОДИСК АИСТ с помощью Rubackup</p>
+                              </div>
+                              <div class="card__footer card__footer_full">
+                                <div class="card__footer-block card__footer_desktop">
+                                  <div class="card__content">
+                                    <p class="card__text card__text_third">Узнайте все о востребованном продукте RuBackup и о сценариях применения Rubackup в системе виртуализации АИСТ.</p>
+                                  </div>
+                                </div>
+                                <div class="card__footer-block card__footer_mobile">
+                                  <div class="card__footer-text">
+                                    <p class="card__time">Онлайн</p>
+                                  </div>
+                                  <div class="card__footer-text">
+                                    <p class="card__time">31.05.2022, пн</p>
+                                  </div>
+                                  <div class="card__footer-text">
+                                    <p class="card__time">15:00, MSK (2 часа)</p>
+                                  </div>
+                                </div>
+                                <div class="card__footer-block card__footer-block_right"><svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.3821 27.9936L23.3567 27.9924L23.3312 27.9925C23.2544 27.9928 23.178 27.9747 23.1081 27.939L15.4467 23.8683L14.9775 23.619L14.5082 23.8683L6.84186 27.9416L6.84025 27.9425C6.75797 27.9864 6.66638 28.0055 6.57555 27.9987C6.48469 27.9919 6.39615 27.9593 6.32016 27.9029C6.24403 27.8464 6.18314 27.7679 6.14637 27.675C6.10956 27.582 6.099 27.4796 6.11643 27.38L6.11644 27.38L7.61965 18.7909L7.71006 18.2743L7.33648 17.9062L1.14943 11.8099C1.08554 11.7439 1.03882 11.6603 1.01586 11.5671C0.993195 11.4751 0.99488 11.3785 1.02055 11.2877C1.05178 11.1959 1.10636 11.1162 1.17673 11.0563L0.53697 10.3054L1.17673 11.0563C1.2492 10.9945 1.33568 10.9559 1.42596 10.9429L1.42938 10.9424L9.99769 9.67614L10.5221 9.59865L10.7523 9.12116L14.5253 1.29487L14.5254 1.29487L14.5271 1.29129C14.57 1.20122 14.6361 1.1274 14.7158 1.07669C14.7954 1.02607 14.886 1 14.9775 1C15.0689 1 15.1595 1.02607 15.2391 1.07669C15.3188 1.1274 15.3849 1.20122 15.4278 1.29129L15.4278 1.29131L15.4319 1.29976L19.2501 9.11079L19.4814 9.5839L20.0023 9.66089L28.5706 10.9271L28.574 10.9276C28.6643 10.9406 28.7508 10.9793 28.8233 11.041C28.8936 11.101 28.9482 11.1806 28.9795 11.2724C29.0051 11.3633 29.0068 11.4598 28.9841 11.5518C28.9612 11.645 28.9145 11.7286 28.8506 11.7946L22.6635 17.8909L22.2899 18.259L22.3803 18.7756L23.8836 27.3647L23.8835 27.3647L23.8857 27.3767C23.9048 27.4781 23.8947 27.5826 23.8573 27.6776C23.8206 27.7707 23.7597 27.8493 23.6837 27.9058C23.5937 27.9685 23.4879 27.9986 23.3821 27.9936Z" fill="#FFA319" stroke="#FFA319" stroke-width="2"/>
+</svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="training-banner__wrapper-social">
-                          <div class="training-banner__social">
-                            <p class="training-banner__social-title">Поделиться тренингом:</p>
-                            <div class="training-banner__social-list"><a class="training-banner__social-item" href="#">
-                                <svg class="icon icon-vk ">
-                                  <use xlink:href="img/svg/sprite.svg#vk"></use>
-                                </svg></a><a class="training-banner__social-item" href="#">
-                                <svg class="icon icon-ok ">
-                                  <use xlink:href="img/svg/sprite.svg#ok"></use>
-                                </svg></a></div>
+                        <div class="page-catalog__event-item">
+                          <div class="card">
+                            <div class="card__wrapper card__wrapper_small">
+                              <div class="card__header card__header_center">
+                                <div class="card__header-block"><img class="card__img" src="img/card-logo.png"></div>
+                                <div class="card__header-block card__header-block_info">
+                                  <p class="card__time">Вебинар</p>
+                                </div>
+                                <div class="card__header-block card__header-block_info card__header-block_desktop">
+                                  <p class="card__time">31.05.2022, пн</p>
+                                  <p class="card__time">15:00, MSK</p>
+                                  <p class="card__time">2 часа</p>
+                                </div>
+                                <div class="card__header-block card__header-block_info card__header-block_desktop">
+                                  <p class="card__time">Онлайн</p>
+                                </div>
+                              </div>
+                              <div class="card__content card__content_visible card__content_big">
+                                <p class="card__text card__text_second">Резервное копирование системы виртуализации АЭРОДИСК АИСТ с помощью Rubackup</p>
+                              </div>
+                              <div class="card__footer card__footer_full">
+                                <div class="card__footer-block card__footer_desktop">
+                                  <div class="card__content">
+                                    <p class="card__text card__text_third">Узнайте все о востребованном продукте RuBackup и о сценариях применения Rubackup в системе виртуализации АИСТ.</p>
+                                  </div>
+                                </div>
+                                <div class="card__footer-block card__footer_mobile">
+                                  <div class="card__footer-text">
+                                    <p class="card__time">Онлайн</p>
+                                  </div>
+                                  <div class="card__footer-text">
+                                    <p class="card__time">31.05.2022, пн</p>
+                                  </div>
+                                  <div class="card__footer-text">
+                                    <p class="card__time">15:00, MSK (2 часа)</p>
+                                  </div>
+                                </div>
+                                <div class="card__footer-block card__footer-block_right"><svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.3821 27.9936L23.3567 27.9924L23.3312 27.9925C23.2544 27.9928 23.178 27.9747 23.1081 27.939L15.4467 23.8683L14.9775 23.619L14.5082 23.8683L6.84186 27.9416L6.84025 27.9425C6.75797 27.9864 6.66638 28.0055 6.57555 27.9987C6.48469 27.9919 6.39615 27.9593 6.32016 27.9029C6.24403 27.8464 6.18314 27.7679 6.14637 27.675C6.10956 27.582 6.099 27.4796 6.11643 27.38L6.11644 27.38L7.61965 18.7909L7.71006 18.2743L7.33648 17.9062L1.14943 11.8099C1.08554 11.7439 1.03882 11.6603 1.01586 11.5671C0.993195 11.4751 0.99488 11.3785 1.02055 11.2877C1.05178 11.1959 1.10636 11.1162 1.17673 11.0563L0.53697 10.3054L1.17673 11.0563C1.2492 10.9945 1.33568 10.9559 1.42596 10.9429L1.42938 10.9424L9.99769 9.67614L10.5221 9.59865L10.7523 9.12116L14.5253 1.29487L14.5254 1.29487L14.5271 1.29129C14.57 1.20122 14.6361 1.1274 14.7158 1.07669C14.7954 1.02607 14.886 1 14.9775 1C15.0689 1 15.1595 1.02607 15.2391 1.07669C15.3188 1.1274 15.3849 1.20122 15.4278 1.29129L15.4278 1.29131L15.4319 1.29976L19.2501 9.11079L19.4814 9.5839L20.0023 9.66089L28.5706 10.9271L28.574 10.9276C28.6643 10.9406 28.7508 10.9793 28.8233 11.041C28.8936 11.101 28.9482 11.1806 28.9795 11.2724C29.0051 11.3633 29.0068 11.4598 28.9841 11.5518C28.9612 11.645 28.9145 11.7286 28.8506 11.7946L22.6635 17.8909L22.2899 18.259L22.3803 18.7756L23.8836 27.3647L23.8835 27.3647L23.8857 27.3767C23.9048 27.4781 23.8947 27.5826 23.8573 27.6776C23.8206 27.7707 23.7597 27.8493 23.6837 27.9058C23.5937 27.9685 23.4879 27.9986 23.3821 27.9936Z" fill="#FFA319" stroke="#FFA319" stroke-width="2"/>
+</svg>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -359,7 +449,7 @@
       </div>
       <div class="page-wrapper__footer">
         <footer class="footer">
-          <div class="footer__wrapper footer__wrapper-blue">
+          <div class="footer__wrapper footer__wrapper-light-yellow">
             <div class="container">
               <div class="footer__row footer__row-second">
                 <div class="footer__row-block footer__row-block_full">
@@ -730,7 +820,7 @@
             </div>
           </div>
         </div>
-        <div class="back-top"><img class="back-top__img" src="img/triangle-blue.svg"></div>
+        <div class="back-top"><img class="back-top__img" src="img/triangle-yellow.svg"></div>
         <script src="libs/swiper/swiper.js"></script>
         <script src="js/common.js"></script>
       </div>

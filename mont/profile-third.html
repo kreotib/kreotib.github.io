@@ -53,18 +53,10 @@
                     <div class="header__profile-block header__profile-block_profile">
                       <div class="header-profile trigger-wrapper">
                         <div class="header-profile__wrapper">
-                          <div class="header-profile__wrapper-block"><a class="header-profile__link trigger-link" href="#"><span class="header-profile__link-icon">
+                          <div class="header-profile__wrapper-block"><a class="header-profile__link header-profile__link--active" href="#"><span class="header-profile__link-icon">
                                 <svg class="icon icon-profile ">
                                   <use xlink:href="img/svg/sprite.svg#profile"></use>
                                 </svg></span></a></div>
-                          <div class="header-profile__wrapper-block">
-                            <ul class="header-profile__list trigger-block">
-                              <li class="header-profile__list-item"><a class="header-profile__list-link" href="#">Моё обучение</a></li>
-                              <li class="header-profile__list-item"><a class="header-profile__list-link" href="#">Мои мероприятия</a></li>
-                              <li class="header-profile__list-item"><a class="header-profile__list-link" href="#">Личный кабинет</a></li>
-                              <li class="header-profile__list-item"><a class="header-profile__list-link header-profile__list-link_enter" href="#" data-popup="popup-enter">Войти</a></li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -83,29 +75,156 @@
         </header>
       </div>
       <div class="page-wrapper__content">
-        <div class="page-pages">
-          <div class="page-pages__wrapper">
+        <div class="page-profile">
+          <div class="page-profile__wrapper">
             <div class="container">
-              <ul class="pages-list">
-                <li><a href="event.html">Мероприятия</a></li>
-                <li><a href="education.html">Образование</a></li>
-                <li><a href="profile.html">Профиль</a></li>
-                <li><a href="profile-second.html">Профиль 2</a></li>
-                <li><a href="profile-third.html">Профиль 3</a></li>
-                <li><a href="profile-4.html">Профиль 4</a></li>
-                <li><a href="test-result.html">Тест результат</a></li>
-                <li><a href="lesson.html">Уроки</a></li>
-                <li><a href="test.html">Тест (вид 1)</a></li>
-                <li><a href="test-2.html">Тест (вид 2)</a></li>
-                <li><a href="test-3.html">Тест (вид 3)</a></li>
-                <li><a href="test-4.html">Тест (вид 4)</a></li>
-                <li><a href="test-finish.html">Тест (заверешение)</a></li>
-                <li><a href="training-2.html">Тренинг от MONT</a></li>
-                <li><a href="training-3.html">Тренинг (открыл впервые)</a></li>
-                <li><a href="training-4.html">Тренинг (прохождение)</a></li>
-                <li><a href="training-5.html">Тренинг (сертификат)</a></li>
-                <li><a href="training-6.html">Тренинг (без сертификата)</a></li>
-              </ul>
+              <div class="page-profile__wrapper-block">
+                <div class="page-profile__header">
+                  <h2 class="title title_size-medium title_color-blue title_position-center">Сотрудники</h2>
+                </div>
+                <div class="page-profile__content">
+                  <div class="page-profile__search">
+                    <div class="page-profile__search-block">
+                      <div class="page-profile__search-header">
+                        <p class="page-profile__search-title">Название обучения</p>
+                      </div>
+                      <div class="page-profile__search-content">
+                        <div class="search-input">
+                          <div class="search-input__wrapper">
+                            <input class="search-input__item" type="text">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="page-profile__search-block">
+                      <div class="filter-list">
+                        <ul class="filter-list__block filter__list">
+                          <li class="filter__list-item"><a class="filter__list-link" href="#">Data-driven компетенции с Visiology</a></li>
+                          <li class="filter__list-item"><a class="filter__list-link" href="#">Какая-то тематика онлайн курса от MONT</a></li>
+                          <li class="filter__list-item"><a class="filter__list-link filter__list-link-reset" href="#">Сбросить всё</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page-profile__search">
+                    <div class="page-profile__search-block">
+                      <div class="page-profile__search-header">
+                        <p class="page-profile__search-title">Фамилия Имя</p>
+                      </div>
+                      <div class="page-profile__search-content">
+                        <div class="search-input">
+                          <div class="search-input__wrapper">
+                            <input class="search-input__item" type="text">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="page-profile__search-block">
+                      <div class="filter-list">
+                        <ul class="filter-list__block filter__list">
+                          <li class="filter__list-item"><a class="filter__list-link" href="#">Иванов Иван</a></li>
+                          <li class="filter__list-item"><a class="filter__list-link" href="#">Петров Петр</a></li>
+                          <li class="filter__list-item"><a class="filter__list-link filter__list-link-reset" href="#">Сбросить всё</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page-profile__table">
+                    <div class="page-profile__link"><a class="profile-link link-blue" href="#">Скачать Excel</a></div>
+                    <div class="profile-table">
+                      <div class="profile-table__header">
+                        <div class="profile-table__row profile-table__row-title">
+                          <div class="profile-table__row-block profile-table__row-block-center">
+                            <p class="profile-table__text">Фамилия Имя</p>
+                          </div>
+                          <div class="profile-table__row-block profile-table__row-block-center">
+                            <p class="profile-table__text">Пройденные <br> обучения</p>
+                          </div>
+                          <div class="profile-table__row-block profile-table__row-block-center">
+                            <p class="profile-table__text">Начатые <br> обучений</p>
+                          </div>
+                          <div class="profile-table__row-block profile-table__row-block-center">
+                            <p class="profile-table__text">Дата начала <br> обучения</p>
+                          </div>
+                          <div class="profile-table__row-block profile-table__row-block-center">
+                            <p class="profile-table__text">Дата окончания <br> обучения</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile-table__content">
+                        <div class="profile-table__row">
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">Иванов Иван</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">1</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">2</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                        </div>
+                        <div class="profile-table__row">
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">Иванов Иван</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">1</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">2</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                        </div>
+                        <div class="profile-table__row">
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">Иванов Иван</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">1</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">2</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                        </div>
+                        <div class="profile-table__row">
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">Иванов Иван</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">1</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text">2</p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                          <div class="profile-table__row-block">
+                            <p class="profile-table__text"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

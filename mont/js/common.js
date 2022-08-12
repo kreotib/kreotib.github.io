@@ -1,3 +1,43 @@
+const tabsInit = () => {
+    const tabs = document.querySelectorAll('.tabs');
+
+    if (tabs.length > 0) {
+        tabs.forEach(el => {
+            changeTab(el);
+        });
+
+        const tabsNavLinkArray = document.querySelectorAll('.tabs-nav__link');
+        tabsNavLinkArray.forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                changeTab(el.closest('.tabs'), findTabIndex(el));
+            })
+        });
+    }
+}
+
+const changeTab = (block, newIndex = 0) => {
+    const tabsNavArray = block.querySelector('.tabs-nav'),
+        tabsContentArray = block.querySelector('.tabs-content'),
+        tabsNavItemArray = tabsNavArray.querySelectorAll('.tabs-nav__item'),
+        tabsContentItemArray = [...tabsContentArray.children];
+
+    changeIndex(tabsNavItemArray, newIndex);
+    changeIndex(tabsContentItemArray, newIndex);
+};
+
+const changeIndex = (array, newIndex) => {
+    array.forEach((el, index) => {
+        index === newIndex ? el.classList.add('active') : el.classList.remove('active')
+    });
+};
+
+const findTabIndex = (el) => {
+    const tabsItemArray = [...el.closest('.tabs').querySelectorAll('.tabs-nav__item')];
+
+    return tabsItemArray.indexOf(el.closest('.tabs-nav__item'));
+};
+
 const expandableListInit = (expandableList, count) => {
     const expandableListItems = expandableList.querySelectorAll('.expandable-list-item'),
         expandableListLink = expandableList.querySelector('.expandable-list-link'),
@@ -55,7 +95,50 @@ const commentTextExpand = (slider) => {
     });
 };
 
+const popupOpen = (selector) => {
+    const popup = document.querySelector(`.${selector}`);
+
+    popupClose();
+
+    popup.classList.add('active');
+}
+
+const popupClose = () => {
+    const popups = document.querySelectorAll('.popup');
+
+    popups.forEach(el => {
+        el.classList.remove('active');
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    tabsInit();
+
+    const popups = document.querySelectorAll('.popup'),
+        popupBtns = document.querySelectorAll('*[data-popup]');
+
+    if (popups.length > 0) {
+        popups.forEach(el => {
+            const popupCloseBtn = el.querySelector('.popup-close');
+
+            popupCloseBtn.addEventListener('click', () => {
+                popupClose();
+            });
+
+            el.addEventListener('click', (e) => {
+                e.target.classList.contains('popup-wrapper') ? popupClose() : null;
+            });
+        });
+    }
+    if (popupBtns.length > 0) {
+        popupBtns.forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                popupOpen(el.dataset.popup);
+            });
+        })
+    }
+
     const triggerLinks = document.querySelectorAll('.trigger-link');
 
     if (triggerLinks.length > 0) {
@@ -143,16 +226,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const starBlockItems = element.querySelectorAll('.star-block-item'),
                 starBlockLinks = element.querySelectorAll('.star-block__link');
 
-            const changeStarBlock = (count) =>{
+            const changeStarBlock = (count) => {
                 starBlockItems.forEach((starItem, starIndex) => {
                     starIndex + 1 <= count ? starItem.classList.add('active') : starItem.classList.remove('active');
                 });
             }
 
-            starBlockLinks.forEach((starLink, starLinkIndex) =>{
-                starLink.addEventListener('click',()=>{
-                   changeStarBlock(starLinkIndex + 1);
-                   element.dataset.count = starLinkIndex + 1;
+            starBlockLinks.forEach((starLink, starLinkIndex) => {
+                starLink.addEventListener('click', () => {
+                    changeStarBlock(starLinkIndex + 1);
+                    element.dataset.count = starLinkIndex + 1;
                 });
             });
 
@@ -173,38 +256,93 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-
     const commentSlider = new Swiper('.comment-slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 40,
-        autoHeight: true,
-        pagination: {
-            el: ".comment-slider-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: '.comment-slider-button-next',
-            prevEl: '.comment-slider-button-prev',
-        },
-        on: {
-            beforeInit: function () {
-                commentTextExpand(this);
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            autoHeight: true,
+            pagination: {
+                el: ".comment-slider-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: '.comment-slider-button-next',
+                prevEl: '.comment-slider-button-prev',
+            },
+            on: {
+                beforeInit: function () {
+                    commentTextExpand(this);
+                }
             }
-        }
-    });
+        }),
+        loginFormSlider = new Swiper(".login-form-slider", {
+            autoHeight:true,
+            pagination: {
+                el: ".login-form-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".login-form-button-next",
+                prevEl: ".login-form-button-prev",
+            },
+            on: {
+                init: function () {
+                    const loginFormCurrent = document.querySelector('.login-form-controls-current'),
+                        loginFormMax = document.querySelector('.login-form-controls-max');
 
+                    loginFormCurrent.textContent = this.realIndex + 1;
+                    loginFormMax.textContent = this.slides.length;
+                },
+            },
+        }),
+        cardSlider = new Swiper(".card-slider", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            breakpoints:{
+              600:{
+                slidesPerView:2,
+              },
+              1280:{
+                  slidesPerView:4,
+              }
+            },
+            navigation: {
+                nextEl: ".card-slider-button-next",
+                prevEl: ".card-slider-button-prev",
+            },
+        });
+
+    loginFormSlider.on('slideChange', function () {
+        const loginFormCurrent = document.querySelector('.login-form-controls-current');
+
+        loginFormCurrent.textContent = this.realIndex + 1;
+    });
 
     const backTop = document.querySelector('.back-top');
 
-    backTop.addEventListener('click',(e)=>{
-       e.preventDefault();
+    if (backTop) {
+        document.addEventListener('scroll', () => {
+            window.pageYOffset > 200 ? backTop.classList.remove('hidden') : backTop.classList.add('hidden');
+        })
 
-       document.body.scrollIntoView({
-           behavior:'smooth',
-       });
-    });
+        backTop.addEventListener('click', (e) => {
+            e.preventDefault();
 
-    document.addEventListener('scroll',()=>{
-        window.pageYOffset > 200 ? backTop.classList.remove('hidden') : backTop.classList.add('hidden');
-    })
+            document.body.scrollIntoView({
+                behavior: 'smooth',
+            });
+        });
+    }
+
+    const testAnswerFilters = document.querySelectorAll('.test-answers-filter');
+
+    if (testAnswerFilters.length > 0) {
+        testAnswerFilters.forEach(element => {
+            element.addEventListener('click', () => {
+                testAnswerFilters.forEach(el => {
+                    el.classList.remove('active');
+                });
+                element.classList.add('active');
+            });
+        });
+    }
 });
