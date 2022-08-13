@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <link rel="stylesheet" href="libs/custom-select/custom-select.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="page-wrapper__header">
+        <header class="header">
+          <div class="container">
+            <div class="header__wrapper">
+              <div class="header__block header__block-logo">
+                <div class="header__logo">
+                  <p class="header__logo-text">Школа финансов <br> Натальи Смирновой</p>
+                </div>
+              </div>
+              <div class="header__nav header__nav-mobile">
+                <nav class="header-nav">
+                  <ul class="header-nav__list header-list">
+                    <li class="header-list__item header-list__item-mobile"><a class="header-list__link" href="#">Мои курсы</a></li>
+                    <li class="header-list__item header-list__item-mobile"><a class="header-list__link" href="#">Каталог</a></li>
+                    <li class="header-list__item header-list__item"><a class="header-list__link" href="#">База знаний</a></li>
+                    <li class="header-list__item header-list__item-desktop"><a class="header-list__link" href="#">Расписание</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__block">
+                <div class="header__profile">
+                  <div class="header__profile-block">
+                    <div class="header__notification">
+                      <div class="notification trigger-wrapper">
+                        <div class="notification-link trigger-link">
+                          <svg class="icon icon-bell-full ">
+                            <use xlink:href="img/svg/sprite.svg#bell-full"></use>
+                          </svg><span class="notification-link__count">2</span>
+                        </div>
+                        <div class="notification-block trigger-block">
+                          <div class="notification-block__wrapper">
+                            <p class="notification-block__title">Все уведомления</p>
+                            <div class="notification-block__content">
+                              <div class="notification-item">
+                                <div class="notification-item__wrapper">
+                                  <p class="notification-item__time">07.09.22</p>
+                                  <div class="notification-item__content">
+                                    <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса длинное»</a></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="notification-item">
+                                <div class="notification-item__wrapper">
+                                  <p class="notification-item__time">07.09.22</p>
+                                  <div class="notification-item__content">
+                                    <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="notification-item notification-item_read">
+                                <div class="notification-item__wrapper">
+                                  <p class="notification-item__time">07.09.22</p>
+                                  <div class="notification-item__content">
+                                    <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="notification-item notification-item_read">
+                                <div class="notification-item__wrapper">
+                                  <p class="notification-item__time">07.09.22</p>
+                                  <div class="notification-item__content">
+                                    <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="notification-item notification-item_read">
+                                <div class="notification-item__wrapper">
+                                  <p class="notification-item__time">07.09.22</p>
+                                  <div class="notification-item__content">
+                                    <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="notification-item notification-item_read">
+                                <div class="notification-item__wrapper">
+                                  <p class="notification-item__time">07.09.22</p>
+                                  <div class="notification-item__content">
+                                    <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="notification-block__footer"><a class="notification-block__btn btn btn-accent-light" href="#">Очистить список</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__profile-block">
+                    <div class="header-profile trigger-wrapper">
+                      <div class="header-profile__link trigger-link">
+                        <div class="header-profile__img"><img class="header-profile__img-item" src="img/profile.jpg"></div>
+                        <div class="header-profile__link-icon">
+                          <svg class="icon icon-arrow-accent ">
+                            <use xlink:href="img/svg/sprite.svg#arrow-accent"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="header-profile__list trigger-block">
+                        <nav class="page-nav">
+                          <ul class="page-nav__list">
+                            <li class="page-nav__list-item page-nav__item page-nav__item_desktop"><a class="page-nav__item-link" href="#"><span class="page-nav__item-icon">
+                                  <svg class="icon icon-profile ">
+                                    <use xlink:href="img/svg/sprite.svg#profile"></use>
+                                  </svg></span><span class="page-nav__item-text">Мой профиль</span></a></li>
+                            <li class="page-nav__list-item page-nav__item page-nav__item_mobile trigger-wrapper"><a class="page-nav__item-link page-nav__item-link_not-read trigger-link" href="#"><span class="page-nav__item-icon">
+                                  <svg class="icon icon-bell-accent ">
+                                    <use xlink:href="img/svg/sprite.svg#bell-accent"></use>
+                                  </svg></span><span class="page-nav__item-text">Уведомления</span></a>
+                              <div class="notification-block trigger-block">
+                                <div class="notification-block__wrapper">
+                                  <p class="notification-block__title">Все уведомления</p>
+                                  <div class="notification-block__content">
+                                    <div class="notification-item">
+                                      <div class="notification-item__wrapper">
+                                        <p class="notification-item__time">07.09.22</p>
+                                        <div class="notification-item__content">
+                                          <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="notification-item">
+                                      <div class="notification-item__wrapper">
+                                        <p class="notification-item__time">07.09.22</p>
+                                        <div class="notification-item__content">
+                                          <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="notification-item notification-item_read">
+                                      <div class="notification-item__wrapper">
+                                        <p class="notification-item__time">07.09.22</p>
+                                        <div class="notification-item__content">
+                                          <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="notification-item notification-item_read">
+                                      <div class="notification-item__wrapper">
+                                        <p class="notification-item__time">07.09.22</p>
+                                        <div class="notification-item__content">
+                                          <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="notification-item notification-item_read">
+                                      <div class="notification-item__wrapper">
+                                        <p class="notification-item__time">07.09.22</p>
+                                        <div class="notification-item__content">
+                                          <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="notification-item notification-item_read">
+                                      <div class="notification-item__wrapper">
+                                        <p class="notification-item__time">07.09.22</p>
+                                        <div class="notification-item__content">
+                                          <p class="notification-item__text">Вы оплатили <a href='#'>«Название курса»</a></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="notification-block__footer"><a class="notification-block__btn btn btn-accent-light" href="#">Очистить список</a></div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="page-nav__list-item page-nav__item"><a class="page-nav__item-link" href="#"><span class="page-nav__item-icon">
+                                  <svg class="icon icon-home ">
+                                    <use xlink:href="img/svg/sprite.svg#home"></use>
+                                  </svg></span><span class="page-nav__item-text">Мои курсы</span></a></li>
+                            <li class="page-nav__list-item page-nav__item"><a class="page-nav__item-link" href="#"><span class="page-nav__item-icon">
+                                  <svg class="icon icon-catalog ">
+                                    <use xlink:href="img/svg/sprite.svg#catalog"></use>
+                                  </svg></span><span class="page-nav__item-text">Каталог</span></a></li>
+                            <li class="page-nav__list-item page-nav__item"><a class="page-nav__item-link" href="#"><span class="page-nav__item-icon">
+                                  <svg class="icon icon-base ">
+                                    <use xlink:href="img/svg/sprite.svg#base"></use>
+                                  </svg></span><span class="page-nav__item-text">База знаний</span></a></li>
+                            <li class="page-nav__list-item page-nav__item"><a class="page-nav__item-link" href="#"><span class="page-nav__item-icon">
+                                  <svg class="icon icon-calendar ">
+                                    <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                                  </svg></span><span class="page-nav__item-text">Расписание</span></a></li>
+                            <li class="page-nav__list-item page-nav__item page-nav__item_desktop"><a class="page-nav__item-link" href="#"><span class="page-nav__item-icon">
+                                  <svg class="icon icon-logout ">
+                                    <use xlink:href="img/svg/sprite.svg#logout"></use>
+                                  </svg></span><span class="page-nav__item-text">Выход</span></a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-wrapper__content">
+        <div class="page-content">
+          <div class="container">
+            <div class="page-content__header">
+              <div class="page-content__header-block">
+                <h1 class="page-content__title">Каталог</h1>
+              </div>
+            </div>
+            <div class="page-content__wrapper">
+              <div class="tabs page-tabs">
+                <div class="tabs-nav">
+                  <ul class="page-tabs__nav">
+                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">Курсы</a></li>
+                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">Подписка</a></li>
+                    <li class="tabs-nav__item page-tabs__nav-item"><a class="tabs-nav__link page-tabs__nav-link" href="#">Консультации</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-content page-tabs__content page-tabs__content-small">
+                  <div class="tabs-content__item">
+                    <div class="filter">
+                      <div class="filter-wrapper">
+                        <div class="filter-wrapper__search">
+                          <input class="filter-wrapper__search-input" type="search" placeholder="Поиск">
+                        </div>
+                        <div class="filter-wrapper__category">
+                          <ul class="filter-category__list">
+                            <li class="filter-category__list-item filter-link" data-name="theme"><a class="filter-category__list-link" href="#">Выбрать тему</a></li>
+                            <li class="filter-category__list-item filter-category__list-item_mobile filter-choise__block filter-block" data-name="theme">
+                              <div class="filter-choises">
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">🚀 Гипотезы роста</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">🏫 EdTech</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">☁️ SaaS</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">📣 Питч проекта</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">🚫 Ограничения</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">💸 Привлечение инвестиций</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">👩‍ Mental Health</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">📈 Маркетинг</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">👫 Управление командой</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block"><a class="filter-choises__btn" href="#"><span class="filter-choises__btn-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 18L6 6" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 6L6 18" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span><span class="filter-choises__btn-text">Снять выбор</span></a></div>
+                              </div>
+                            </li>
+                            <li class="filter-category__list-item filter-link filter-category__list-item selected" data-name="difficult"><a class="filter-category__list-link" href="#">Выбрать сложность (2)</a></li>
+                            <li class="filter-category__list-item filter-category__list-item_mobile filter-choise__block filter-block" data-name="difficult">
+                              <div class="filter-choises">
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Доступные всем</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Для опытных</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block">
+                                  <div class="filter-checkbox">
+                                    <label class="filter-checkbox__label">
+                                      <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Самые сложные</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="filter-choises__block"><a class="filter-choises__btn" href="#"><span class="filter-choises__btn-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 18L6 6" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 6L6 18" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span><span class="filter-choises__btn-text">Снять выбор</span></a></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="filter-choise filter-choise_desktop">
+                        <div class="filter-choise__block filter-block" data-name="theme">
+                          <div class="filter-choises">
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">🚀 Гипотезы роста</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">🏫 EdTech</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">☁️ SaaS</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">📣 Питч проекта</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">🚫 Ограничения</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">💸 Привлечение инвестиций</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">👩‍ Mental Health</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">📈 Маркетинг</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">👫 Управление командой</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block"><a class="filter-choises__btn" href="#"><span class="filter-choises__btn-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 18L6 6" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 6L6 18" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span><span class="filter-choises__btn-text">Снять выбор</span></a></div>
+                          </div>
+                        </div>
+                        <div class="filter-choise__block filter-block" data-name="expert">
+                          <div class="filter-choises">
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Константинопольский К. К.</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Константинопольский К. К.</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Константинопольский К. К.</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Константинопольский К. К.</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Константинопольский К. К.</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Константинопольский К. К.</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Константинопольский К. К.</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block"><a class="filter-choises__btn" href="#"><span class="filter-choises__btn-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 18L6 6" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 6L6 18" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span><span class="filter-choises__btn-text">Снять выбор</span></a></div>
+                          </div>
+                        </div>
+                        <div class="filter-choise__block filter-block" data-name="difficult">
+                          <div class="filter-choises">
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Доступные всем</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Для опытных</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block">
+                              <div class="filter-checkbox">
+                                <label class="filter-checkbox__label">
+                                  <input class="filter-checkbox__input" type="checkbox"><span class="filter-checkbox__checkmark">Самые сложные</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="filter-choises__block"><a class="filter-choises__btn" href="#"><span class="filter-choises__btn-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 18L6 6" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 6L6 18" stroke="#FF7940" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span><span class="filter-choises__btn-text">Снять выбор</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="courses-grid">
+                      <div class="courses-grid__item"><a class="courses-card" href="#">
+                          <div class="courses-card__wrapper">
+                            <div class="courses-card__img"><img class="courses-card__img-item" src="img/card-bg-1.jpg"></div>
+                            <div class="courses-card__content">
+                              <div class="courses-card__header">
+                                <div class="courses-card__info">
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-clock ">
+                                        <use xlink:href="img/svg/sprite.svg#clock"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">2 недели</p>
+                                    </div>
+                                  </div>
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-infinity ">
+                                        <use xlink:href="img/svg/sprite.svg#infinity"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">доступ навсегда</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="courses-card__box">
+                                <p class="courses-card__title">Название курса длиной в две строки</p>
+                                <p class="courses-card__text">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования</p>
+                              </div>
+                              <div class="courses-card__footer">
+                                <object><a class="btn btn-accent courses-card__btn" href="#">Подробнее</a></object>
+                              </div>
+                            </div>
+                          </div></a></div>
+                      <div class="courses-grid__item"><a class="courses-card" href="#">
+                          <div class="courses-card__wrapper">
+                            <div class="courses-card__img"><img class="courses-card__img-item" src="img/card-bg-1.jpg"></div>
+                            <div class="courses-card__content">
+                              <div class="courses-card__header">
+                                <div class="courses-card__info">
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-clock ">
+                                        <use xlink:href="img/svg/sprite.svg#clock"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">2 недели</p>
+                                    </div>
+                                  </div>
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-infinity ">
+                                        <use xlink:href="img/svg/sprite.svg#infinity"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">доступ навсегда</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="courses-card__box">
+                                <p class="courses-card__title">Название курса длиной в две строки</p>
+                                <p class="courses-card__text">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования</p>
+                              </div>
+                              <div class="courses-card__footer">
+                                <object><a class="btn btn-accent courses-card__btn" href="#">Подробнее</a></object>
+                              </div>
+                            </div>
+                          </div></a></div>
+                      <div class="courses-grid__item"><a class="courses-card" href="#">
+                          <div class="courses-card__wrapper">
+                            <div class="courses-card__img"><img class="courses-card__img-item" src="img/card-bg-1.jpg"></div>
+                            <div class="courses-card__content">
+                              <div class="courses-card__header">
+                                <div class="courses-card__info">
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-clock ">
+                                        <use xlink:href="img/svg/sprite.svg#clock"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">2 недели</p>
+                                    </div>
+                                  </div>
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-infinity ">
+                                        <use xlink:href="img/svg/sprite.svg#infinity"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">доступ навсегда</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="courses-card__box">
+                                <p class="courses-card__title">Название курса длиной в две строки</p>
+                                <p class="courses-card__text">Ускорьте развитие и увеличьте продажи действующего бизнеса всего за 3 месяца при поддержке экспертов лидера рынка онлайн-образования</p>
+                              </div>
+                              <div class="courses-card__footer">
+                                <object><a class="btn btn-accent courses-card__btn" href="#">Подробнее</a></object>
+                              </div>
+                            </div>
+                          </div></a></div>
+                      <div class="courses-grid__item"><a class="courses-card" href="#">
+                          <div class="courses-card__wrapper">
+                            <div class="courses-card__img"><img class="courses-card__img-item" src="img/card-bg-2.jpg"></div>
+                            <div class="courses-card__content">
+                              <div class="courses-card__header">
+                                <div class="courses-card__info">
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-clock ">
+                                        <use xlink:href="img/svg/sprite.svg#clock"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">2 недели</p>
+                                    </div>
+                                  </div>
+                                  <div class="courses-card__info-item">
+                                    <div class="courses-card__info-icon">
+                                      <svg class="icon icon-infinity ">
+                                        <use xlink:href="img/svg/sprite.svg#infinity"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="courses-card__info-content">
+                                      <p class="courses-card__info-text">доступ навсегда</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="courses-card__box">
+                                <p class="courses-card__title">Название курса длиной в две строки</p>
+                                <p class="courses-card__text">Ускорьте развитие и увеличьте продажи действующего</p>
+                              </div>
+                              <div class="courses-card__footer">
+                                <object><a class="btn btn-accent courses-card__btn" href="#">Подробнее</a></object>
+                              </div>
+                            </div>
+                          </div></a></div>
+                    </div>
+                    <div class="catalog-preload">
+                      <div class="loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-wrapper__footer">
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__row">
+                <div class="footer__block">
+                  <div class="footer__logo">
+                    <p class="footer__logo-text">Школа финансов <br> Натальи Смирновой</p>
+                  </div>
+                </div>
+                <div class="footer__block">
+                  <div class="footer-social">
+                    <ul class="footer-social__list">
+                      <li class="footer-social__list-item"><a class="footer-social__list-link" href="#"><span class="footer-social__list-icon"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.09992 5.70829C5.39487 3.83705 8.25885 2.60341 9.69185 2.00738C13.7834 0.30558 14.6335 0.00996026 15.1877 9.46359e-05C15.3095 -0.00194823 15.582 0.0282562 15.7586 0.171489C15.9076 0.292432 15.9486 0.455809 15.9683 0.570476C15.9879 0.685143 16.0123 0.946358 15.9929 1.15046C15.7712 3.48009 14.8118 9.13349 14.3237 11.7427C14.1172 12.8468 13.7105 13.217 13.3168 13.2532C12.4613 13.3319 11.8116 12.6878 10.9829 12.1446C9.68624 11.2946 8.95369 10.7654 7.69503 9.936C6.24042 8.97744 7.18338 8.4506 8.01236 7.58959C8.22931 7.36426 11.999 3.93546 12.0719 3.62441C12.0811 3.58551 12.0895 3.44051 12.0034 3.36394C11.9172 3.28737 11.7901 3.31355 11.6983 3.33438C11.5683 3.36389 9.4968 4.73307 5.48389 7.4419C4.89591 7.84565 4.36333 8.04237 3.88616 8.03206C3.36012 8.0207 2.34822 7.73463 1.59598 7.49011C0.673328 7.19019 -0.0599784 7.03162 0.00387615 6.52227C0.0371355 6.25697 0.402482 5.98564 1.09992 5.70829Z" fill="white"/>
+</svg></span></a></li>
+                      <li class="footer-social__list-item"><a class="footer-social__list-link" href="#"><span class="footer-social__list-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.6 2.10039C15.4 1.40039 14.9 0.900391 14.2 0.700391C13 0.400391 7.89999 0.400391 7.89999 0.400391C7.89999 0.400391 2.90001 0.400391 1.60001 0.700391C0.900006 0.900391 0.399997 1.40039 0.199997 2.10039C-3.05474e-06 3.40039 0 6.00039 0 6.00039C0 6.00039 3.03984e-06 8.60039 0.300003 9.90039C0.500003 10.6004 0.999997 11.1004 1.7 11.3004C2.9 11.6004 8 11.6004 8 11.6004C8 11.6004 13 11.6004 14.3 11.3004C15 11.1004 15.5 10.6004 15.7 9.90039C16 8.60039 16 6.00039 16 6.00039C16 6.00039 16 3.40039 15.6 2.10039ZM6.39999 8.40039V3.60039L10.6 6.00039L6.39999 8.40039Z" fill="white"/>
+</svg></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__row">
+                <div class="footer__block">
+                  <p class="footer__copyright">&#169; Наталья Смирнова, 2022</p>
+                </div>
+                <div class="footer__block"><a class="footer__link" href="#">Политика конфиденциальности</a></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="libs/custom-select/custom-select.js"></script>
+        <script src="js/common.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
