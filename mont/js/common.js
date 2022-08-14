@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     triggerBlock = triggerWrapper.querySelectorAll('.trigger-block');
 
                 trigger.classList.toggle('active');
-                triggerBlock.forEach(element=>{
+                triggerBlock.forEach(element => {
                     element.classList.toggle('active');
                 })
             });
@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const fileInputClose = element.querySelector('.file-input-close');
 
-                fileInputClose.addEventListener('click',()=>{
+                fileInputClose.addEventListener('click', () => {
                     fileInputItem.value = '';
 
                     fileInputFiles.innerHTML = '';
@@ -394,14 +394,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const rangeSliderWrapper = document.querySelector('.range-slider-wrapper');
 
-    if(rangeSliderWrapper){
+    if (rangeSliderWrapper) {
         const rangeSlider = rangeSliderWrapper.querySelector('.range-slider'),
             rangeSliderInputs = rangeSliderWrapper.querySelectorAll('.filter-block__range-input-item');
         noUiSlider.create(rangeSlider, {
             connect: true,
             behaviour: 'tap',
             start: [0, 50],
-            step:1,
+            step: 1,
             range: {
                 // Starting at 500, step the value by 500,
                 // until 4000 is reached. From there, step by 1000.
@@ -414,12 +414,52 @@ document.addEventListener('DOMContentLoaded', () => {
             rangeSliderInputs[handle].value = values[handle];
         });
 
-        rangeSliderInputs.forEach((element,index)=>{
-           element.addEventListener('change',()=>{
-               rangeSlider.noUiSlider.set(rangeSliderInputs[0].value,rangeSliderInputs[1].value);
-
-               console.log(element.value);
-           });
+        rangeSliderInputs.forEach((element, index) => {
+            element.addEventListener('change', () => {
+                rangeSlider.noUiSlider.set(rangeSliderInputs[0].value, rangeSliderInputs[1].value);
+            });
         });
+    }
+
+    const filterBlockDate = document.querySelector('.filter-block__date-input');
+
+    if (filterBlockDate) {
+        const datepickerFirst = datepicker('.date-input', {
+                customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                customDays: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+
+                onShow: instance => {
+                    datepickerFirst.parent.classList.add('active');
+                },
+                onHide: instance => {
+                    datepickerFirst.parent.classList.remove('active');
+                },
+            }),
+            datepickerSecond = datepicker('.date-input-second', {
+                customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                customDays: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                position: 'br',
+                onShow: instance => {
+                    datepickerSecond.parent.classList.add('active');
+                },
+                onHide: instance => {
+                    datepickerSecond.parent.classList.remove('active');
+                },
+            });
+    }
+
+    const pie = document.querySelector('.pie');
+
+    if(pie){
+        const circle = new CircularProgressBar("pie");
+        circle.initial();
     }
 });

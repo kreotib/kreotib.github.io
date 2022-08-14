@@ -1223,6 +1223,109 @@ body.no-scroll-m {
   cursor: pointer;
 }
 
+.qs-month, .qs-year {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  color: #2F2F2F;
+}
+
+.qs-month-year {
+  border: none;
+}
+
+.qs-month-year:hover {
+  border: none;
+}
+
+.qs-squares {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0 8px;
+}
+
+.qs-day {
+  margin: 0 0 8px 0;
+}
+
+.qs-square {
+  width: 100%;
+  font-family: 'Graphik LCG', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  height: 28px;
+}
+
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+  background: #6776FF;
+  color: #fff;
+}
+
+.qs-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.qs-arrow:hover {
+  background: none;
+}
+
+.qs-arrow::after {
+  border: none;
+  background: url("../img/arrow-date.svg") center center/contain no-repeat;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.qs-arrow.qs-right::after {
+  top: calc(50% - 8px);
+  left: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.qs-arrow.qs-left::after {
+  top: calc(50% - 8px);
+  left: 0;
+  -webkit-transform: unset;
+      -ms-transform: unset;
+          transform: unset;
+}
+
+.qs-active {
+  background: #6776FF;
+  color: #fff;
+}
+
+.qs-day {
+  color: #2F2F2F;
+}
+
+.qs-datepicker-container {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 20px rgba(7, 14, 77, 0.15);
+          box-shadow: 0px 2px 20px rgba(7, 14, 77, 0.15);
+  border-radius: 10px;
+  border: none;
+  width: 275px;
+}
+
+.qs-controls {
+  padding: 16px 11px;
+  background: none;
+}
+
+.qs-squares {
+  padding: 0 16px 16px 16px;
+}
+
 @media screen and (max-width: 1366px) {
   .page-profile__card {
     grid-template-columns: minmax(0, 1fr);
@@ -4678,10 +4781,19 @@ body.no-scroll-m {
   left: 0;
   top: 0;
   z-index: 2;
-  width: 100%;
-  height: 100%;
+  width: 150px !important;
+  height: 150px !important;
   background: #FFFFFF;
   border-radius: 50%;
+}
+
+.circle-test__item svg {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.circle-test__item svg circle {
+  r: 45px !important;
 }
 
 .circle-test__text {
@@ -5119,13 +5231,22 @@ body.no-scroll-m {
 }
 
 .profile-bonus__item-icon {
-  width: 70px;
-  height: 70px;
+  width: 70px !important;
+  height: 70px !important;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
   border-radius: 50%;
   background: #D9D9D9;
+}
+
+.profile-bonus__item-icon svg {
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.profile-bonus__item-icon svg circle {
+  r: 45 !important;
 }
 
 .profile-bonus__item-wrapper {
@@ -5858,6 +5979,11 @@ body.no-scroll-m {
   padding: 17px;
 }
 
+.form-input__item-date {
+  height: 42px;
+  padding: 0 12px;
+}
+
 .form-input__item-promt {
   padding-top: 24px;
   padding-bottom: 12px;
@@ -5909,6 +6035,30 @@ body.no-scroll-m {
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
+}
+
+.form-input-date::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: calc(50% - 8px);
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: url("../img/arrow-date.svg") center center/contain no-repeat;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: .1s all;
+  -o-transition: .1s all;
+  transition: .1s all;
+}
+
+.form-input-date.active::after {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .comment-item__wrapper {
@@ -6659,6 +6809,14 @@ body.no-scroll-m {
   background: #6776FF;
 }
 
+.filter-block__date-input {
+  position: relative;
+}
+
+.filter-block__date-input .qs-datepicker-container {
+  top: 58px !important;
+}
+
 .filter-checkbox__list-item + .filter-checkbox__list-item {
   margin: 8px 0 0 0;
 }
@@ -6837,5 +6995,11 @@ body.no-scroll-m {
     padding: 4px 6px;
     font-size: 12px;
     border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filter-block__date-input .qs-datepicker-container {
+    width: calc(100vw - 80px);
   }
 }

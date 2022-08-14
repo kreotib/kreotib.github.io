@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
+    <link rel="stylesheet" href="libs/datepicker/datepicker.min.css">
     <link rel="stylesheet" href="libs/noUiSlider/noUiSlider.css">
     <link rel="stylesheet" href="libs/swiper/swiper.css">
     <link rel="stylesheet" href="css/main.css">
@@ -273,12 +274,38 @@
                               <div class="filter-checkbox">
                                 <div class="filter-checkbox__list">
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Онлайн</span></span></label>
                                   </div>
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Офлайн</span></span></label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter__wrapper-block">
+                        <div class="filter-block">
+                          <div class="filter-block__wrapper trigger-wrapper">
+                            <div class="filter-block__header trigger-link">
+                              <p class="title title_size-small">Период</p>
+                            </div>
+                            <div class="filter-block__content trigger-block active">
+                              <div class="filter-block__range">
+                                <div class="filter-block__range-wrapper">
+                                  <div class="filter-block__range-input filter-block__date-input filter-block__date-input-left">
+                                    <div class="form-input form-input-date">
+                                      <input class="form-input__item form-input__item-date date-input" type="text" placeholder="14.07.2022">
+                                    </div>
+                                  </div>
+                                  <div class="filter-block__range-text"><span class="filter-block__range-divider"></span></div>
+                                  <div class="filter-block__range-input filter-block__date-input filter-block__date-input-right">
+                                    <div class="form-input form-input-date">
+                                      <input class="form-input__item form-input__item-date date-input-second" type="text" placeholder="14.07.2022">
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -296,11 +323,11 @@
                               <div class="filter-checkbox">
                                 <div class="filter-checkbox__list">
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Открыта</span></span></label>
                                   </div>
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Закрыта</span></span></label>
                                   </div>
                                 </div>
@@ -326,56 +353,56 @@
                               <div class="filter-checkbox">
                                 <div class="filter-checkbox__list vendor-list expandable-list" data-count="2">
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Выбрать всё</span></span></label>
                                   </div>
                                   <div class="vendor-list-wrapper">
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
                                     </div>
                                     <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
-                                      <label class="checkbox"><span class="checkbox__wrapper">
+                                      <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                           <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
                                     </div>
                                   </div><a class="vendor-list-link expandable-list-link" href="#">ещё 40 поставщиков</a>
@@ -395,19 +422,19 @@
                               <div class="filter-checkbox">
                                 <div class="filter-checkbox__list">
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Выбрать всё</span></span></label>
                                   </div>
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Информационная безопасность</span></span></label>
                                   </div>
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Инфраструктура</span></span></label>
                                   </div>
                                   <div class="filter-checkbox__list-item">
-                                    <label class="checkbox"><span class="checkbox__wrapper">
+                                    <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
                                         <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Прикладные решения</span></span></label>
                                   </div>
                                 </div>
@@ -993,6 +1020,7 @@
         <div class="back-top"><img class="back-top__img" src="img/triangle-yellow.svg"></div>
         <script src="libs/swiper/swiper.js"></script>
         <script src="libs/noUiSlider/noUiSlider.js"></script>
+        <script src="libs/datepicker/datepicker.js"></script>
         <script src="js/common.js"></script>
       </div>
     </div>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
+    <link rel="stylesheet" href="libs/datepicker/datepicker.min.css">
     <link rel="stylesheet" href="libs/noUiSlider/noUiSlider.css">
     <link rel="stylesheet" href="libs/swiper/swiper.css">
     <link rel="stylesheet" href="css/main.css">
@@ -180,7 +181,7 @@
                             <div class="test-result__info-circle">
                               <div class="circle-test">
                                 <div class="circle-test__wrapper">
-                                  <div class="circle-test__item"></div>
+                                  <div class="circle-test__item pie" data-pie="{ &quot;percent&quot;: 20 ,&quot;colorSlice&quot;: &quot;#FFA319&quot;, &quot;number&quot;:false,  &quot;round&quot;: true}"></div>
                                   <div class="test-cirlce__content">
                                     <p class="circle-test__text">2/5</p>
                                   </div>
@@ -199,7 +200,7 @@
                             <div class="test-result__info-circle">
                               <div class="circle-test">
                                 <div class="circle-test__wrapper">
-                                  <div class="circle-test__item"></div>
+                                  <div class="circle-test__item pie" data-pie="{ &quot;percent&quot;: 80 ,&quot;colorSlice&quot;: &quot;#FFA319&quot;, &quot;number&quot;:false,  &quot;round&quot;: true}"></div>
                                   <div class="test-cirlce__content">
                                     <p class="circle-test__text">0/10</p>
                                   </div>
@@ -230,7 +231,7 @@
                             <div class="test-result__info-circle">
                               <div class="circle-test">
                                 <div class="circle-test__wrapper">
-                                  <div class="circle-test__item"></div>
+                                  <div class="circle-test__item pie" data-pie="{ &quot;percent&quot;: 90 ,&quot;colorSlice&quot;: &quot;#FFA319&quot;, &quot;number&quot;:false,  &quot;round&quot;: true}"></div>
                                   <div class="test-cirlce__content">
                                     <p class="circle-test__text">00:05</p>
                                   </div>
@@ -809,9 +810,10 @@
             </div>
           </div>
         </div>
-        <div class="back-top"><img class="back-top__img" src="img/triangle-blue.svg"></div>
+        <div class="back-top"><img class="back-top__img" src="img/triangle-blue.svg"></div><script src="https://cdn.jsdelivr.net/gh/tomik23/circular-progress-bar@1.1.9/dist/circularProgressBar.min.js"></script>
         <script src="libs/swiper/swiper.js"></script>
         <script src="libs/noUiSlider/noUiSlider.js"></script>
+        <script src="libs/datepicker/datepicker.js"></script>
         <script src="js/common.js"></script>
       </div>
     </div>
