@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Главная</title>
+    <link rel="stylesheet" href="libs/noUiSlider/noUiSlider.css">
     <link rel="stylesheet" href="libs/swiper/swiper.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -58,61 +59,66 @@
                               <div class="notification-content__header">
                                 <p class="title title_color-blue title_size-smallest notification-content__title">Уведомления</p><a class="link-blue notification-content__link" href="#">Отметить все прочитанными</a>
                               </div>
-                              <div class="notification-content__block">
-                                <div class="notification__item">
-                                  <div class="notification-item">
-                                    <div class="notification-item__wrapper">
-                                      <div class="notification-item__header">
-                                        <div class="notification-item__header-block">
-                                          <p class="notification-item__text">Курс <span class="notification-item__title">Data-driven компетенции с Visiology</span></p>
-                                          <p class="notification-item__text notification-item__date">21.05.2022, 10:00</p>
-                                        </div>
-                                        <div class="notification-item__header-block">
-                                          <p class="notification-item__text">Урок <span class="notification-item__title">4</span></p>
+                              <div class="notification-content__block swiper notification-content-slider">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="notification__item">
+                                      <div class="notification-item">
+                                        <div class="notification-item__wrapper">
+                                          <div class="notification-item__header">
+                                            <div class="notification-item__header-block">
+                                              <p class="notification-item__text">Курс <span class="notification-item__title">Data-driven компетенции с Visiology</span></p>
+                                              <p class="notification-item__text notification-item__date">21.05.2022, 10:00</p>
+                                            </div>
+                                            <div class="notification-item__header-block">
+                                              <p class="notification-item__text">Урок <span class="notification-item__title">4</span></p>
+                                            </div>
+                                          </div>
+                                          <div class="notification-item__content">
+                                            <p class="notification-item__text">Ответ куратора: “Lorem ipsum dolor sit amet. Eos officia placeat eos libero excepturi molestiae inventore ut laudantium soluta ex eaque sunt est quibusdam error aut nulla assumenda! Ab error doloribus eos aspernatur minus est rerum quos! Lorem ipsum dolor sit amet.</p>
+                                          </div>
+                                          <div class="notification-item__footer"><a class="notification-item__link" href="#">Подробнее</a></div>
                                         </div>
                                       </div>
-                                      <div class="notification-item__content">
-                                        <p class="notification-item__text">Ответ куратора: “Lorem ipsum dolor sit amet. Eos officia placeat eos libero excepturi molestiae inventore ut laudantium soluta ex eaque sunt est quibusdam error aut nulla assumenda! Ab error doloribus eos aspernatur minus est rerum quos! Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div class="notification__item">
+                                      <div class="notification-item notification-item_undread">
+                                        <div class="notification-item__wrapper">
+                                          <div class="notification-item__header">
+                                            <div class="notification-item__header-block">
+                                              <p class="notification-item__text">Курс <span class="notification-item__title">Data-driven компетенции с Visiology</span></p>
+                                              <p class="notification-item__text notification-item__date">21.05.2022, 10:00</p>
+                                            </div>
+                                            <div class="notification-item__header-block">
+                                              <p class="notification-item__text">Урок <span class="notification-item__title">4</span></p>
+                                            </div>
+                                          </div>
+                                          <div class="notification-item__content">
+                                            <p class="notification-item__text">Ответ куратора: “Lorem ipsum dolor sit amet. Eos officia placeat eos libero excepturi molestiae inventore ut laudantium soluta ex eaque sunt est quibusdam error aut nulla assumenda! Ab error doloribus eos aspernatur minus est rerum quos! Lorem ipsum dolor sit amet.</p>
+                                          </div>
+                                          <div class="notification-item__footer"><a class="notification-item__link" href="#">Подробнее</a></div>
+                                        </div>
                                       </div>
-                                      <div class="notification-item__footer"><a class="notification-item__link" href="#">Подробнее</a></div>
+                                    </div>
+                                    <div class="notification__item">
+                                      <div class="notification-item">
+                                        <div class="notification-item__wrapper">
+                                          <div class="notification-item__header">
+                                            <div class="notification-item__header-block">
+                                              <p class="notification-item__title">В разделе «<a href='#'>Моё обучение</a>» появились новые курсы</p>
+                                              <p class="notification-item__text notification-item__date">21.05.2022, 10:00</p>
+                                            </div>
+                                          </div>
+                                          <div class="notification-item__content">
+                                            <p class="notification-item__text">Ответ куратора: “Lorem ipsum dolor sit amet. Eos officia placeat eos libero excepturi molestiae inventore ut laudantium soluta ex eaque sunt est quibusdam error aut nulla assumenda! Ab error doloribus eos aspernatur minus est rerum quos! Lorem ipsum dolor sit amet.</p>
+                                          </div>
+                                          <div class="notification-item__footer"><a class="notification-item__link" href="#">Подробнее</a></div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="notification__item">
-                                  <div class="notification-item notification-item_undread">
-                                    <div class="notification-item__wrapper">
-                                      <div class="notification-item__header">
-                                        <div class="notification-item__header-block">
-                                          <p class="notification-item__text">Курс <span class="notification-item__title">Data-driven компетенции с Visiology</span></p>
-                                          <p class="notification-item__text notification-item__date">21.05.2022, 10:00</p>
-                                        </div>
-                                        <div class="notification-item__header-block">
-                                          <p class="notification-item__text">Урок <span class="notification-item__title">4</span></p>
-                                        </div>
-                                      </div>
-                                      <div class="notification-item__content">
-                                        <p class="notification-item__text">Ответ куратора: “Lorem ipsum dolor sit amet. Eos officia placeat eos libero excepturi molestiae inventore ut laudantium soluta ex eaque sunt est quibusdam error aut nulla assumenda! Ab error doloribus eos aspernatur minus est rerum quos! Lorem ipsum dolor sit amet.</p>
-                                      </div>
-                                      <div class="notification-item__footer"><a class="notification-item__link" href="#">Подробнее</a></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="notification__item">
-                                  <div class="notification-item">
-                                    <div class="notification-item__wrapper">
-                                      <div class="notification-item__header">
-                                        <div class="notification-item__header-block">
-                                          <p class="notification-item__title">В разделе «<a href='#'>Моё обучение</a>» появились новые курсы</p>
-                                          <p class="notification-item__text notification-item__date">21.05.2022, 10:00</p>
-                                        </div>
-                                      </div>
-                                      <div class="notification-item__content">
-                                        <p class="notification-item__text">Ответ куратора: “Lorem ipsum dolor sit amet. Eos officia placeat eos libero excepturi molestiae inventore ut laudantium soluta ex eaque sunt est quibusdam error aut nulla assumenda! Ab error doloribus eos aspernatur minus est rerum quos! Lorem ipsum dolor sit amet.</p>
-                                      </div>
-                                      <div class="notification-item__footer"><a class="notification-item__link" href="#">Подробнее</a></div>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="swiper-scrollbar"></div>
                               </div>
                             </div>
                           </div>
@@ -197,6 +203,18 @@
                                   <div class="test-cirlce__content">
                                     <p class="circle-test__text">0/10</p>
                                   </div>
+                                  <div class="circle-test__help">
+                                    <div class="help trigger-wrapper">
+                                      <div class="help__icon trigger-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="9.5" stroke="#6776FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.35656 8.0935C7.14356 8.0935 6.97106 7.91575 7.00406 7.70575C7.21031 6.43 8.18231 5.5 9.86906 5.5C11.5566 5.5 12.6943 6.52 12.6943 7.91125C12.6943 8.91925 12.1956 9.62725 11.3518 10.141C10.5268 10.6352 10.2913 10.9795 10.2913 11.6485V11.671C10.2913 11.7705 10.2518 11.8658 10.1815 11.9362C10.1112 12.0065 10.0158 12.046 9.91631 12.046H9.33881C9.24 12.046 9.14519 12.007 9.07497 11.9375C9.00475 11.868 8.9648 11.7736 8.96381 11.6747L8.96156 11.5247C8.92931 10.609 9.31931 10.024 10.1953 9.49075C10.9678 9.01675 11.2431 8.6395 11.2431 7.96975C11.2431 7.2355 10.6746 6.69625 9.79856 6.69625C9.04181 6.69625 8.51606 7.093 8.34506 7.74775C8.29556 7.93825 8.13656 8.0935 7.94006 8.0935H7.35731H7.35656ZM9.62231 14.5C10.0888 14.5 10.4436 14.1445 10.4436 13.6825C10.4436 13.219 10.0888 12.8635 9.62231 12.8635C9.16781 12.8635 8.80706 13.219 8.80706 13.6818C8.80706 14.1445 9.16781 14.5 9.62231 14.5Z" fill="#6776FF"/>
+</svg>
+                                      </div>
+                                      <div class="help__content help__content-right trigger-block">
+                                        <p class="help__text">К сожалению, вы не заработали баллы за эту попытку, так как минимально нужно дать 4 правильных ответа. Но у вас есть ещё 2 попытки, чтобы улучшить результат)</p>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -226,7 +244,7 @@
                   </div>
                   <div class="test-result__buttons">
                     <div class="test-result__buttons-item"><a class="button button-bordered button-blue" href="#">Пройти ещё раз</a></div>
-                    <div class="test-result__buttons-item"><a class="button button-bordered button-blue button-blue-light" href="#">Завершить</a></div>
+                    <div class="test-result__buttons-item"><a class="button button-bordered button-blue-light" href="#">Завершить</a></div>
                   </div>
                   <div class="test-result__answers">
                     <div class="test-result__answers-header">
@@ -313,6 +331,7 @@
                             </div>
                           </div>
                         </div>
+                        <div class="test-answers__footer"><a class="button button-bordered button-blue" href="#">Пройти ещё раз</a></div>
                       </div>
                     </div>
                   </div>
@@ -792,6 +811,7 @@
         </div>
         <div class="back-top"><img class="back-top__img" src="img/triangle-blue.svg"></div>
         <script src="libs/swiper/swiper.js"></script>
+        <script src="libs/noUiSlider/noUiSlider.js"></script>
         <script src="js/common.js"></script>
       </div>
     </div>

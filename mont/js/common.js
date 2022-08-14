@@ -111,6 +111,20 @@ const popupClose = () => {
     });
 }
 
+const createFileBlock = (text) => {
+    const blockFile = document.createElement('span'),
+        blockFileClose = document.createElement('span');
+
+    blockFile.classList.add('file-input-text');
+    blockFile.textContent = text;
+
+    blockFileClose.classList.add('file-input-close');
+
+    blockFile.append(blockFileClose);
+
+    return blockFile;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     tabsInit();
 
@@ -147,10 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
 
                 const triggerWrapper = trigger.closest('.trigger-wrapper'),
-                    triggerBlock = triggerWrapper.querySelector('.trigger-block');
+                    triggerBlock = triggerWrapper.querySelectorAll('.trigger-block');
 
                 trigger.classList.toggle('active');
-                triggerBlock.classList.toggle('active');
+                triggerBlock.forEach(element=>{
+                    element.classList.toggle('active');
+                })
             });
         });
     }
@@ -275,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }),
         loginFormSlider = new Swiper(".login-form-slider", {
-            autoHeight:true,
+            autoHeight: true,
             pagination: {
                 el: ".login-form-pagination",
                 type: "progressbar",
@@ -297,17 +313,25 @@ document.addEventListener('DOMContentLoaded', () => {
         cardSlider = new Swiper(".card-slider", {
             slidesPerView: 1,
             spaceBetween: 16,
-            breakpoints:{
-              600:{
-                slidesPerView:2,
-              },
-              1280:{
-                  slidesPerView:4,
-              }
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                },
+                1280: {
+                    slidesPerView: 4,
+                }
             },
             navigation: {
                 nextEl: ".card-slider-button-next",
                 prevEl: ".card-slider-button-prev",
+            },
+        }),
+        notificationSlider = new Swiper(".notification-content-slider", {
+            slidesPerView: 'auto',
+            direction: 'vertical',
+            freeMode: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
             },
         });
 
@@ -343,6 +367,59 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 element.classList.add('active');
             });
+        });
+    }
+
+    const fileInput = document.querySelectorAll('.file-input');
+
+    if (fileInput.length > 0) {
+        fileInput.forEach(element => {
+            const fileInputItem = element.querySelector('.file-input-item'),
+                fileInputFiles = element.querySelector('.file-input-files');
+
+            fileInputItem.addEventListener('change', () => {
+                fileInputFiles.innerHTML = '';
+                fileInputFiles.append(createFileBlock(fileInputItem.files[0].name));
+
+                const fileInputClose = element.querySelector('.file-input-close');
+
+                fileInputClose.addEventListener('click',()=>{
+                    fileInputItem.value = '';
+
+                    fileInputFiles.innerHTML = '';
+                });
+            });
+        });
+    }
+
+    const rangeSliderWrapper = document.querySelector('.range-slider-wrapper');
+
+    if(rangeSliderWrapper){
+        const rangeSlider = rangeSliderWrapper.querySelector('.range-slider'),
+            rangeSliderInputs = rangeSliderWrapper.querySelectorAll('.filter-block__range-input-item');
+        noUiSlider.create(rangeSlider, {
+            connect: true,
+            behaviour: 'tap',
+            start: [0, 50],
+            step:1,
+            range: {
+                // Starting at 500, step the value by 500,
+                // until 4000 is reached. From there, step by 1000.
+                'min': [0],
+                'max': [100]
+            },
+        });
+
+        rangeSlider.noUiSlider.on('update', function (values, handle, unencoded, isTap, positions) {
+            rangeSliderInputs[handle].value = values[handle];
+        });
+
+        rangeSliderInputs.forEach((element,index)=>{
+           element.addEventListener('change',()=>{
+               rangeSlider.noUiSlider.set(rangeSliderInputs[0].value,rangeSliderInputs[1].value);
+
+               console.log(element.value);
+           });
         });
     }
 });
