@@ -332,7 +332,9 @@ document.addEventListener('DOMContentLoaded', () => {
             freeMode: true,
             scrollbar: {
                 el: ".swiper-scrollbar",
+                draggable: true,
             },
+
         });
 
     loginFormSlider.on('slideChange', function () {

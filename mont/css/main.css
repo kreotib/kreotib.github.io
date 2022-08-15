@@ -7040,6 +7040,14 @@ body.no-scroll-m {
           align-items: center;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 90px;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+}
+
+.calendar__arrow:hover {
+  padding: 0 12px;
+  cursor: pointer;
 }
 
 .calendar__arrow::before {
