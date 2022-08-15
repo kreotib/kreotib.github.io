@@ -478,4 +478,53 @@ document.addEventListener('DOMContentLoaded', () => {
         const circle = new CircularProgressBar("pie");
         circle.initial();
     }
+
+    const inputWrappersLinks = document.querySelectorAll('.input-wrappers-link');
+
+    if(inputWrappersLinks.length > 0){
+        inputWrappersLinks.forEach(element=>{
+           element.addEventListener('click',(e)=>{
+               e.preventDefault();
+
+
+               element.classList.toggle('active');
+
+               const inputWrapper = element.closest('.input-wrappers'),
+                   inputWrapperItems = inputWrapper.querySelectorAll('.input-wrappers-item');
+
+               inputWrapperItems.forEach(inputItem=>{
+
+                   element.classList.contains('active') ? inputItem.checked = true : inputItem.checked = false;
+               });
+           });
+        });
+    }
+
+    const filterListLinks = document.querySelectorAll('.filter__list-close');
+
+    if(filterListLinks.length > 0){
+        filterListLinks.forEach(element=>{
+           element.addEventListener('click',()=>{
+
+               const elementParent = element.closest('.filter__list-item');
+
+               elementParent.classList.add('hidden');
+           });
+        });
+    }
+
+    const filterListLinkReset = document.querySelectorAll('.filter__list-link-reset');
+
+    if(filterListLinkReset.length > 0){
+        filterListLinkReset.forEach(element=>{
+           element.addEventListener('click',()=>{
+               const filterList = element.closest('.filter-list'),
+                   filterListItems = filterList.querySelectorAll('.filter__list-item');
+
+               filterListItems.forEach(filterElement=>{
+                   filterElement.classList.add('hidden');
+               });
+           });
+        });
+    }
 });
