@@ -1327,6 +1327,14 @@ body.no-scroll-m {
   padding: 0 16px 16px 16px;
 }
 
+.tabs-content__item {
+  display: none;
+}
+
+.tabs-content__item.active {
+  display: block;
+}
+
 @media screen and (max-width: 1366px) {
   .page-profile__card {
     grid-template-columns: minmax(0, 1fr);
@@ -2371,11 +2379,15 @@ body.no-scroll-m {
 }
 
 .section-event__content {
-  margin: 8px 0 0 0;
+  margin: 18px 0 0 0;
 }
 
 .section-event__list {
   display: none;
+}
+
+.section-event__filter {
+  margin: 8px 0 0 0;
 }
 
 .section-event__footer {
@@ -2602,10 +2614,6 @@ body.no-scroll-m {
 .section-anounce__button {
   -webkit-box-shadow: 0px 2px 6px rgba(0, 35, 103, 0.05);
           box-shadow: 0px 2px 6px rgba(0, 35, 103, 0.05);
-}
-
-.section-event__calendar {
-  margin: 48px 0 0 0;
 }
 
 @media screen and (max-width: 991px) {
@@ -7173,6 +7181,60 @@ body.no-scroll-m {
   border-radius: 90px;
 }
 
+.calendar-filter__wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.calendar-filter__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2F2F2F;
+}
+
+.calendar-filter__link svg {
+  width: 22px;
+  height: 22px;
+  margin: 0 0 0 8px;
+}
+
+.calendar-filter__content {
+  position: absolute;
+  width: 100%;
+  max-width: 320px;
+  height: 760px;
+  padding: 24px;
+  right: 0;
+  top: calc(100% + 18px);
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 20px rgba(7, 14, 77, 0.15);
+          box-shadow: 0px 2px 20px rgba(7, 14, 77, 0.15);
+  border-radius: 30px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: .3s all linear;
+  -o-transition: .3s all linear;
+  transition: .3s all linear;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.calendar-filter__content.active {
+  opacity: 1;
+  z-index: 10;
+}
+
 .calendar__content {
   margin: 16px 0 0 0;
 }
@@ -7308,8 +7370,11 @@ body.no-scroll-m {
 
 .calendar__event {
   position: relative;
-  z-index: 2;
   border-radius: 20px;
+}
+
+.calendar__event:hover {
+  z-index: 3;
 }
 
 .calendar__event_purple {

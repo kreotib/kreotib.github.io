@@ -432,6 +432,217 @@
               <div class="section-event__header">
                 <h2 class="title title_size-medium title_position-center">Анонсы мероприятий</h2>
               </div>
+              <div class="section-event__filter">
+                <div class="calendar-filter">
+                  <div class="calendar-filter__wrapper trigger-wrapper">
+                    <div class="calendar-filter__header trigger-link"><a class="calendar-filter__link" href="#">Фильтр
+                        <svg class="icon icon-filter ">
+                          <use xlink:href="img/svg/sprite.svg#filter"></use>
+                        </svg></a></div>
+                    <div class="calendar-filter__content trigger-block">
+                      <div class="filter">
+                        <div class="filter__wrapper">
+                          <div class="filter-close filter__wrapper-close"><img class="filter__wrapper-close-img" src="img/close-blue.svg"></div>
+                          <div class="filter__wrapper-header">
+                            <p class="filter__wrapper-title">Фильтр</p>
+                          </div>
+                          <div class="filter__wrapper-tags">
+                            <div class="filter-list">
+                              <ul class="filter-list__block filter__list">
+                                <li class="filter__list-item"><a class="filter__list-link" href="#">Начальная сложность</a></li>
+                                <li class="filter__list-item"><a class="filter__list-link" href="#">Средняя сложность</a></li>
+                                <li class="filter__list-item"><a class="filter__list-link" href="#">Лицензирование</a></li>
+                                <li class="filter__list-item"><a class="filter__list-link" href="#">Инфраструктура</a></li>
+                                <li class="filter__list-item"><a class="filter__list-link" href="#">Задания проверяются модератором</a></li>
+                                <li class="filter__list-item"><a class="filter__list-link filter__list-link-reset" href="#">Сбросить всё</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="filter__wrapper-block">
+                            <div class="filter-block">
+                              <div class="filter-block__wrapper trigger-wrapper">
+                                <div class="filter-block__header trigger-link">
+                                  <p class="title title_size-small">Формат мероприятия</p>
+                                </div>
+                                <div class="filter-block__content trigger-block">
+                                  <div class="filter-checkbox">
+                                    <div class="filter-checkbox__list">
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Онлайн</span></span></label>
+                                      </div>
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Офлайн</span></span></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__wrapper-block">
+                            <div class="filter-block">
+                              <div class="filter-block__wrapper trigger-wrapper">
+                                <div class="filter-block__header trigger-link">
+                                  <p class="title title_size-small">Период</p>
+                                </div>
+                                <div class="filter-block__content trigger-block">
+                                  <div class="filter-block__range">
+                                    <div class="filter-block__range-wrapper">
+                                      <div class="filter-block__range-input filter-block__date-input filter-block__date-input-left">
+                                        <div class="form-input form-input-date">
+                                          <input class="form-input__item form-input__item-date date-input" type="text" placeholder="14.07.2022">
+                                        </div>
+                                      </div>
+                                      <div class="filter-block__range-text"><span class="filter-block__range-divider"></span></div>
+                                      <div class="filter-block__range-input filter-block__date-input filter-block__date-input-right">
+                                        <div class="form-input form-input-date">
+                                          <input class="form-input__item form-input__item-date date-input-second" type="text" placeholder="14.07.2022">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__wrapper-block">
+                            <div class="filter-block">
+                              <div class="filter-block__wrapper trigger-wrapper">
+                                <div class="filter-block__header trigger-link">
+                                  <p class="title title_size-small">Регистрация</p>
+                                </div>
+                                <div class="filter-block__content trigger-block">
+                                  <div class="filter-checkbox">
+                                    <div class="filter-checkbox__list">
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Открыта</span></span></label>
+                                      </div>
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Закрыта</span></span></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__wrapper-block">
+                            <div class="filter-block">
+                              <div class="filter-block__wrapper trigger-wrapper">
+                                <div class="filter-block__header trigger-link">
+                                  <p class="title title_size-small">Поставщики/вендоры</p>
+                                </div>
+                                <div class="filter-block__content trigger-block">
+                                  <div class="filter-search filter-block__search">
+                                    <div class="search-input">
+                                      <div class="search-input__wrapper">
+                                        <input class="search-input__item" type="text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="filter-checkbox">
+                                    <div class="filter-checkbox__list vendor-list expandable-list" data-count="2">
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Выбрать всё</span></span></label>
+                                      </div>
+                                      <div class="vendor-list-wrapper">
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 1</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 2</span></span></label>
+                                        </div>
+                                        <div class="filter-checkbox__list-item vendor-list-item expandable-list-item">
+                                          <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                              <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Поставщик 3</span></span></label>
+                                        </div>
+                                      </div><a class="vendor-list-link expandable-list-link" href="#">ещё 40 поставщиков</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__wrapper-block">
+                            <div class="filter-block">
+                              <div class="filter-block__wrapper trigger-wrapper">
+                                <div class="filter-block__header trigger-link">
+                                  <p class="title title_size-small">Направление</p>
+                                </div>
+                                <div class="filter-block__content trigger-block">
+                                  <div class="filter-checkbox">
+                                    <div class="filter-checkbox__list">
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Выбрать всё</span></span></label>
+                                      </div>
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Информационная безопасность</span></span></label>
+                                      </div>
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Инфраструктура</span></span></label>
+                                      </div>
+                                      <div class="filter-checkbox__list-item">
+                                        <label class="checkbox"><span class="checkbox__wrapper checkbox__wrapper-center">
+                                            <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span><span class="checkbox__label">Прикладные решения</span></span></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="section-event__content">
                 <div class="section-event__calendar">
                   <div class="calendar">
