@@ -330,6 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 'auto',
             direction: 'vertical',
             freeMode: true,
+            mousewheel: {
+                invert: false,
+            },
             scrollbar: {
                 el: ".swiper-scrollbar",
                 draggable: true,
