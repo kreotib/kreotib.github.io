@@ -293,6 +293,11 @@ body {
   background: #FFE6DA;
 }
 
+.btn-accent_disabled {
+  background-color: rgba(255, 121, 64, 0.5);
+  pointer-events: none;
+}
+
 .back-link {
   width: 100px;
   height: 40px;
@@ -2906,7 +2911,7 @@ body {
 
 .feedback-wrapper__btn {
   width: 100%;
-  max-width: 390px;
+  max-width: 270px;
   height: 60px;
   font-weight: 600;
 }
