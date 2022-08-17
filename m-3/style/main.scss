@@ -819,35 +819,66 @@ body {
   }
 
   &__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0,460px) auto minmax(0,460px);
+    gap: 30px;
 
-    padding: 0 55px;
+    margin: 60px 0 0 0;
+
+    border-radius: 20px;
+  }
+
+  &__block{
+    padding: 20px 40px;
+
+    min-height: 312px;
+
+    border: 1px solid #FBEAFF;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__desc{
+    box-shadow: 70px 20px 120px rgba(0, 0, 0, 0.08);
+    &-text{
+      margin: 20px 0 0 0;
+    }
   }
 
   &__img {
-    width: 190px;
-    height: 190px;
-
     flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &-item {
-      width: 100%;
-      height: 100%;
+      width: 190px;
+      height: 190px;
       object-fit: contain;
     }
   }
 
-  &__desc {
-    max-width: 428px;
-  }
-
   &__title {
-    max-width: 370px;
-
+    box-shadow: -70px 20px 120px rgba(0, 0, 0, 0.08);
     &-text {
       display: none;
+    }
+  }
+
+  &__footer{
+    margin: 60px auto 0 auto;
+
+    max-width: 380px;
+
+    &-button{
+      height: 50px;
     }
   }
 }
@@ -1136,10 +1167,6 @@ body {
     &__content {
       padding: 0;
     }
-
-    &__desc {
-      max-width: 282px;
-    }
   }
   .slider {
     &-item {
@@ -1303,13 +1330,28 @@ body {
     }
 
     &__content {
+      margin: 40px 0 0 0;
+
+      display: flex;
       justify-content: flex-start;
       align-items: flex-start;
     }
 
+    &__block{
+      align-items: flex-start;
+      justify-content: flex-start;
+      box-shadow: none;
+      border: none;
+
+      padding: 0;
+    }
+
     &__desc {
-      max-width: 100%;
-      margin: 0 0 0 40px;
+      max-width: 470px;
+    }
+
+    &__footer{
+      display: none;
     }
 
     &__title {
@@ -1318,8 +1360,8 @@ body {
       &-text {
         display: block;
 
-        margin: 0 0 20px 0;
-        max-width: 400px;
+        margin: 0 0 40px 0;
+        max-width: 470px;
       }
     }
   }
@@ -1514,15 +1556,27 @@ body {
     &__img {
       width: 90px;
       height: 90px;
+      &-item{
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    &__content{
+      gap: 0;
     }
 
     &__desc {
       margin: 0 0 0 20px;
+
+      max-width: 270px;
     }
 
     &__title {
       &-text {
-        max-width: 140px;
+        max-width: 270px;
+
+        margin: 0 0 30px 0;
       }
     }
   }
@@ -1622,8 +1676,15 @@ body {
   }
   .advantages {
     &__title {
-      &-text {
-        max-width: 200px;
+      &-text,&-label {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+    &__desc{
+      &-text{
+        font-size: 14px;
+        line-height: 23px;
       }
     }
   }

@@ -56,4 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 
+
+    document.querySelector('.slider-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+
+        document.querySelector('.section-slider').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    });
+
 });
