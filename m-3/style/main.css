@@ -1035,7 +1035,14 @@ body.hidden {
     max-width: 470px;
   }
   .advantages__footer {
-    display: none;
+    display: block;
+    margin: 40px 0 0 auto;
+    padding: 0 0 0 220px;
+    max-width: 100%;
+  }
+  .advantages__footer-button {
+    width: 100%;
+    max-width: 100%;
   }
   .advantages__title {
     display: none;
@@ -1189,6 +1196,9 @@ body.hidden {
     margin: 0 0 0 20px;
     max-width: 270px;
   }
+  .advantages__footer {
+    padding: 0;
+  }
   .advantages__title-text {
     max-width: 270px;
     margin: 0 0 30px 0;
@@ -1203,6 +1213,10 @@ body.hidden {
   }
 }
 @media screen and (max-width: 375px) {
+  .advantages__footer-button::before {
+    display: none;
+  }
+
   .info__label-wrapper {
     max-width: 100%;
   }

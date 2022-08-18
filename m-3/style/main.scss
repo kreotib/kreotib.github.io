@@ -1409,7 +1409,18 @@ body {
     }
 
     &__footer{
-      display: none;
+      display: block;
+
+      margin: 40px 0 0 auto;
+
+      padding: 0 0 0 220px;
+
+      max-width: 100%;
+
+      &-button{
+        width: 100%;
+        max-width: 100%;
+      }
     }
 
     &__title {
@@ -1630,6 +1641,10 @@ body {
       max-width: 270px;
     }
 
+    &__footer{
+      padding: 0;
+    }
+
     &__title {
       &-text {
         max-width: 270px;
@@ -1651,6 +1666,15 @@ body {
 }
 
 @media screen and (max-width: 375px) {
+  .advantages{
+    &__footer{
+      &-button{
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
   .info{
     &__label{
       &-wrapper{
