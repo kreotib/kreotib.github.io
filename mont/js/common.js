@@ -24,6 +24,13 @@ const changeTab = (block, newIndex = 0) => {
 
     changeIndex(tabsNavItemArray, newIndex);
     changeIndex(tabsContentItemArray, newIndex);
+
+    if(block.classList.contains('event-tabs')){
+        const tabsNav = block.querySelector('.tabs-nav');
+
+        newIndex === 1 ? tabsNav.classList.add('event-tabs__nav-right') : tabsNav.classList.remove('event-tabs__nav-right');
+
+    }
 };
 
 const changeIndex = (array, newIndex) => {
@@ -578,7 +585,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const notification = document.querySelector('.notification');
+    const notification = document.querySelector('.notification'),
+        headerProfile = document.querySelector('.header-profile');
 
     document.addEventListener('click', (e) => {
         const helpBlocks = document.querySelectorAll('.help');
@@ -601,6 +609,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!(notification.contains(e.target))) {
                 notificationTrigger.classList.remove('active');
                 notificationBlock.classList.remove('active');
+            }
+        }
+
+        if(headerProfile){
+            const headerTrigger = headerProfile.querySelector('.header-profile__link'),
+                headerBlock = headerProfile.querySelector('.header-profile__list');
+
+            if (!(headerProfile.contains(e.target))) {
+                headerTrigger.classList.remove('active');
+                headerBlock.classList.remove('active');
             }
         }
     });
