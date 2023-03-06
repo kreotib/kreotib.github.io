@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'iconFont';
+  src:  url('/assets/fonts/iconFont/iconFont.eot?aelg0i');
+  src:  url('/assets/fonts/iconFont/iconFont.eot?aelg0i#iefix') format('embedded-opentype'),
+	url('/assets/fonts/iconFont/iconFont.ttf?aelg0i') format('truetype'),
+	url('/assets/fonts/iconFont/iconFont.woff?aelg0i') format('woff'),
+	url('/assets/fonts/iconFont/iconFont.svg?aelg0i#iconFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('/assets/fonts/SourceSansPro/SourceSansPro-Regular/SourceSansPro-Regular.eot');
+	src: url('/assets/fonts/SourceSansPro/SourceSansPro-Regular/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-Regular/SourceSansPro-Regular.woff2') format('woff2'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-Regular/SourceSansPro-Regular.woff') format('woff'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-Regular/SourceSansPro-Regular.ttf') format('truetype'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-Regular/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('/assets/fonts/SourceSansPro/SourceSansPro-SemiBold/SourceSansPro-SemiBold.eot');
+	src: url('/assets/fonts/SourceSansPro/SourceSansPro-SemiBold/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-SemiBold/SourceSansPro-SemiBold.woff2') format('woff2'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-SemiBold/SourceSansPro-SemiBold.woff') format('woff'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-SemiBold/SourceSansPro-SemiBold.ttf') format('truetype'),
+		url('/assets/fonts/SourceSansPro/SourceSansPro-SemiBold/SourceSansPro-SemiBold.svg#SourceSansPro-SemiBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
